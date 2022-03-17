@@ -14,10 +14,10 @@ import Profile from '../pages/Profile';
 const Routes = () => {
     return (
         <Switch>
-            <Route
+            {/* <Route
                 path='/:category/search/:keyword'
                 component={Catalog}
-            />
+            /> */}
             <Route
                 path='/:category/:id'
                 component={Detail}
