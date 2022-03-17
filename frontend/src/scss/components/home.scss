@@ -32,6 +32,9 @@ section {
             }
             .iconPost {
                 @include flex(center, flex-start);
+                i {
+                    color: $main-color;
+                }
             }
         }
     }
