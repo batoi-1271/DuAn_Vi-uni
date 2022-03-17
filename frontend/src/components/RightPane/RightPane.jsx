@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import './rightPane.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
