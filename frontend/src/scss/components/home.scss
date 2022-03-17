@@ -25,11 +25,13 @@ section {
             margin-right: 20px;
         }
         .contentPost {
-            
             input {
                 border: none;
                 background: $body-bg;
                 font-size: 1.3rem;
+            }
+            .iconPost {
+                @include flex(center, flex-start);
             }
         }
     }
