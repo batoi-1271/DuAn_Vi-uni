@@ -1,0 +1,54 @@
+@use "../../scss/"as *;
+
+
+#header {
+    border-left: 1px solid gray;
+    height: 100%;
+    width: 30%;
+}
+
+.header {
+    height: $header-height;
+    position: fixed;
+    padding-left: 50px;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    transition: height 0.3s ease, background-color 0.3s ease;
+
+    &__nav {
+        margin-top: 2rem;
+
+        li {
+            padding: 5px 0;
+            font-weight: 700;
+            position: relative;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            width: fit-content;
+            @include flex(center, center);
+
+            i {
+                font-size: 25px;
+                margin-right: 20px;
+            }
+
+            &.active {
+                content: "";
+                transition: width 0.5s ease;
+                color: $main-color;
+            }
+
+            Button {
+                @include colorGradient;
+                width: 250px;
+                height: 45px;
+                border-radius: 50px;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+        }
+
+
+    }
+}
