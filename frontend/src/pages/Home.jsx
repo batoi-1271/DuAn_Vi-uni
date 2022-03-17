@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component,useState } from 'react'
 import Button from '@mui/material/Button';
 
 
 import "../scss/components/home.scss"
 
 const Home = () => {
+  const [foodState, setFoodState] = useState("dumpling");
   return (
     <section>
       <header className='home'>
@@ -21,6 +22,17 @@ const Home = () => {
               <input type="text" placeholder="What's happening?"/>
             </div>
             <div className="privacy">
+            <select
+              className="custom-select"
+              onChange={(e) => {
+                const selectedFood = e.target.value;
+                setFoodState(selectedFood);
+              }}
+           >
+              <option value="steak">Công khai</option>
+              <option value="sandwich">Bạn bè</option>
+              <option value="dumpling">Chỉ mình tôi</option>
+            </select>
             </div>
             <div className="iconPost">
               <div className="icon">
