@@ -85,6 +85,22 @@ useEffect(() => {
                       <Button variant="contained">Post</Button>
                     </li>
                 </ul>
+                <div className='infoUser'>
+                     <button className="account">
+                         <div className="avatar">
+                            <img 
+                                alt="Dương Ngô Tùng"
+                                src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg"/>
+                         </div>
+                         <div className='info'>
+                             <div className="name">Dương Ngô Tùng</div>
+                             <div className="username">@DngNgTng1</div>
+                         </div>
+                         <div className="edit">
+                            <i class="fa-solid fa-ellipsis"></i>
+                         </div>
+                     </button>
+                 </div>
             </div>
         </div>
   );

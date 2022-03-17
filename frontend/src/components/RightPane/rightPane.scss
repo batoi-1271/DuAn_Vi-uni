@@ -48,7 +48,40 @@
                 font-weight: bold;
             }
         }
-
-
+    }
+    &__wrap {
+        .infoUser{
+            bottom: 1.5em;
+            button.account {
+                width: 250px;
+                @include flex(center, space-between);
+                cursor: pointer;
+                color: $txt-color;
+                font-size: 1em;
+                border: none;
+                background-color: $body-bg;
+            }
+            .avatar{
+                border-radius: 100%;
+                height: 2.5em;
+                width: 2.5em;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 100%;
+            }
+            .info {
+                .name{
+                    font-weight: 700;
+                }
+                .username{
+                    font-size: 0.8em;
+                    color: #8899a6;
+                }
+                
+            }
+        }
     }
 }
