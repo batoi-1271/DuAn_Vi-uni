@@ -2,14 +2,14 @@
 
 
 #header {
-    border-left: 1px solid gray;
+    border-left: 1px solid #bde0fe;
     height: 100%;
-    width: 30%;
+    flex-basis: 25%;
 }
 
 .header {
     height: $header-height;
-    position: fixed;
+    position: sticky;
     padding-left: 50px;
     top: 0;
     right: 0;

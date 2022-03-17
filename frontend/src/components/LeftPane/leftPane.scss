@@ -2,15 +2,16 @@
 
 
 #paneLeft {
-    border-right: 1px solid black;
+    border-right: 1px solid #bde0fe;
     height: 100%;
-    width: 24%;
+    flex-basis: 25%;
+
 }
 
 .paneLeft {
-    position: fixed;
+    position: sticky;
+    align-self: flex-start;
     padding-top: 10px;
-    padding-left: 20px;
     top: 0;
     left: 0;
     z-index: 99;
@@ -63,7 +64,7 @@
         margin-top: 10px;
         width: 320px;
         height: auto;
-        border: 1px solid #8899a6;
+        background-color: $color-btn;
         h3 {
             margin-left: 10px;
         }
@@ -90,11 +91,26 @@
             .username{
                 font-size: 0.8em;
                 color: #8899a6;
-            }
-            
+            } 
+         }
+         .addFr {
+             Button {
+                @include btnAddFr;
+                @include colorGradient;
+
+             }
          }
         }
 
+    }
+    span {
+        a {
+            color: $main-color;
+            margin-left: 20px;
+        }
+    }
+    .follow {
+        margin-top: 30px;
     }
     
 }

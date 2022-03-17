@@ -1,7 +1,10 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import './leftPane.scss';
+import Button from '@mui/material/Button';
+
 import logo from '../../assets/logo.png';
+
 
 
 const users = [
@@ -28,13 +31,21 @@ const users = [
     imageUrl: <img
       alt="Dương Ngô Tùng"
       src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg" />,
-  }
+  },
 ];
-
 const LeftPane = () => {
   const { pathname } = useLocation();
   const headerRef = useRef(null);
 
+  const [isAdded, setAdded] = useState(false);
+    const addFriend = ()=> {
+      setAdded(true);
+    };
+
+    const cancelFriend = ()=> {
+      setAdded(false);
+    };
+    
 
   return (
     <div ref={headerRef} className="paneLeft" id='paneLeft'>
@@ -58,10 +69,40 @@ const LeftPane = () => {
                 </div>
                 <div className='info'>
                   <div className="name">{e.name}</div>
-                  <div className="username">{e.username}</div>
+                  <div className="username">@{e.username}</div>
                 </div>
                 <div className="addFr">
-                  <button>Add friend</button>
+                  {isAdded ? (
+                      <Button variant="contained" onClick={cancelFriend} className="add-btn-disabled">Cancel</Button>
+                  ) : (
+                      <Button variant="contained" className="add-btn" id={e.id} onClick={addFriend}>ADD</Button>
+                  )}
+                  
+                </div>
+
+              </li>
+            ))
+          }
+
+        </ul>
+        <span><a href="">See more</a></span>
+      </div>
+
+      <div className="box_paneLeft follow">
+        <h3>Who to follow</h3>
+        <ul className="paneLeft__info">
+          {
+            users.map((e, i) => (
+              <li key={i} className="infoUser">
+                <div className="avatar">
+                  {e.imageUrl}
+                </div>
+                <div className='info'>
+                  <div className="name">{e.name}</div>
+                  <div className="username">@{e.username}</div>
+                </div>
+                <div className="addFr">
+                  <Button variant="contained" onClick={addFriend}>Add</Button>
                 </div>
               </li>
             ))
