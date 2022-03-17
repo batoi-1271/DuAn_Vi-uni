@@ -3,16 +3,39 @@
 section {
     flex-basis: 45%;
     height: 1000px;
-    // background-color: aqua;
     header {
+        height: $header-height;
+        background: #E7EBF0;
+        align-items: center;
+        display: flex;
+        position: sticky;
+        top: 0;
+        transition: all 1.5s ease;
         h2 {
-            color: aqua;
+            font-size: 1.5rem;
+            margin-left: 2rem;
+        }
+    }
+
+    .postUser {
+        @include flex(center, flex-start);
+        padding: 20px;
+        .avatar {
+            @include imgAvatar;
+            margin-right: 20px;
+        }
+        .contentPost {
+            
+            input {
+                border: none;
+                background: $body-bg;
+                font-size: 1.3rem;
+            }
         }
     }
 }
 
 .a {
-    // background-color: red;
     flex-basis: 54%;
     height: 100px;
 }
