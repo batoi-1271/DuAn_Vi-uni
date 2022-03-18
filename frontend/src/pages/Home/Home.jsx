@@ -1,7 +1,7 @@
 import React, { Component,useState } from 'react'
 import Button from '@mui/material/Button';
 
-import "../scss/components/home.scss"
+import './home.scss';
 
 const Home = () => {
   const [foodState, setState] = useState("Onlyme");
