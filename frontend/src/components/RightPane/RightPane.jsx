@@ -5,8 +5,6 @@ import Button from '@mui/material/Button';
 import './rightPane.scss';
 
 
-
-
 const headerNav = [
   {
     icon: <i class="fa-solid fa-house-chimney"></i>,
