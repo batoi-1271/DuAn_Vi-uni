@@ -1,11 +1,10 @@
 import React, { Component,useState } from 'react'
 import Button from '@mui/material/Button';
 
-
 import "../scss/components/home.scss"
 
 const Home = () => {
-  const [foodState, setFoodState] = useState("dumpling");
+  const [foodState, setState] = useState("Onlyme");
   return (
     <section>
       <header className='home'>
@@ -25,13 +24,12 @@ const Home = () => {
             <select
               className="custom-select"
               onChange={(e) => {
-                const selectedFood = e.target.value;
-                setFoodState(selectedFood);
-              }}
-           >
-              <option value="steak">Công khai</option>
-              <option value="sandwich">Bạn bè</option>
-              <option value="dumpling">Chỉ mình tôi</option>
+                const selected = e.target.value;
+                setState(selected);
+              }}>
+              <option value="Everyone">Everyone</option>
+              <option value="Friends">Friends</option>
+              <option value="Onlyme">Only me</option>
             </select>
             </div>
             <div className="iconPost">
