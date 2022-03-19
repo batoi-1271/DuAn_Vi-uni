@@ -10,12 +10,12 @@
         display: flex;
         align-items: center;
         height: $header-height;
-        background: #E7EBF0;
+
+        background: $body-bg;
         position: fixed;
+        z-index: 99;
         top: 0;
-        background-color: #cc2b5e;
         width: 45%;
-        z-index: 1;
         .card-back{
             
             margin:  20px;
@@ -48,6 +48,7 @@
             // background: -webkit-linear-gradient(to top, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
             // background: linear-gradient(to top, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             .card-content-cover-img{
+                margin-top: 64px;
                 height: 205px;
                 width: 100%;
                 img{

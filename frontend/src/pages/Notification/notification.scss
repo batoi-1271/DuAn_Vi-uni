@@ -12,12 +12,15 @@
     height: auto;
     position: sticky;
     z-index: 99;
+    box-shadow: $box-shadow;
+
     top: 0;
     &__header {
         height: $header-height;
         background: $body-bg;
         transition: all 1.5s ease;
         @include flex(center, space-between);
+
         h2 {
             font-size: 1.5rem;
             margin-left: 2rem;

@@ -1,7 +1,6 @@
-import React, { Component, useState, useRef } from "react";
+import React, {useRef } from "react";
 import "../Profile/profile.scss";
-import { BrowserRouter, Route, Link, useLocation } from "react-router-dom";
-
+import {Link, useLocation } from "react-router-dom";
 
 const headerAc = [
     {
@@ -24,15 +23,14 @@ const HeaderProfile = () => {
   
     const active = headerAc.findIndex((e) => e.path === pathname);
     return (
-      <>
         <div className="cards">
           <div className="card-header">
             <div className="card-back">
-              <i class="fa-solid fa-arrow-left"></i>
+              <Link to="/home"><i class="fa-solid fa-arrow-left"></i></Link>
             </div>
             <div className="card-text">
               <h3>Dương Ngô Tùng</h3>
-              <p>3 Post </p>
+              <p>3 Posts </p>
             </div>
           </div>
           <div className="card-content">
@@ -82,7 +80,6 @@ const HeaderProfile = () => {
             </div>
           </div>
         </div>
-      </>
     );
 }
 
