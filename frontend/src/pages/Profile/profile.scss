@@ -11,6 +11,7 @@
         align-items: center;
         height: $header-height;
         background: #E7EBF0;
+        position: sticky;
         .card-back{
             margin:  20px;
             padding:5px 10px;
@@ -35,9 +36,9 @@
             position: relative;
             height: 410px;
             width: 100%;
-            background: #cc2b5e;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to top, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to top, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            // background: #cc2b5e;  /* fallback for old browsers */
+            // background: -webkit-linear-gradient(to top, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
+            // background: linear-gradient(to top, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             .card-content-cover-img{
                 height: 205px;
                 width: 100%;
@@ -71,14 +72,18 @@
                     .card-content-btn-pro{
                         button{
                             padding:8px 20px;
-                            font-size: 14px;
                             border-radius: 10px;
+                            @include colorGradient;
+                            width: 150px;
+                            height: 45px;
+                            border-radius: 50px;
+                            // font-size: 1.2rem;
+                            font-weight: bold;
                             border: none;
                             cursor: pointer;
-                            font-weight: 700;
-                            background:#fff;
-                            &:hover{
-                                background: #E7EBF0;
+                            color: #fff;
+                            &:hover{   
+                                box-shadow: $box-shadow-1;
                             }
                         }
                     }
@@ -122,11 +127,26 @@
         .card-content-activitis {
             .header-nav {
                 @include flex(center, space-between);
+                display: flex;
+                flex: 1fr 1fr 1fr;
+                align-content: center;
+                // background: #009FFF; 
+                // background: -webkit-linear-gradient(to bottom, #ec2F4B, #009FFF); 
+                // background: linear-gradient(to bottom, #ec2F4B, #009FFF);
+
                 li {
+                    // background: #ec2F4B;
+                    padding: 10px 40px;
+                    font-weight: 700;
+                    width: 33%;
+                    text-align: center;
                     &.active {
                         content: "";
                         transition: width 0.5s ease;
                         color: $main-color;
+                    }
+                    &:hover{
+                        box-shadow: $box-shadow;
                     }
                 }
             }
