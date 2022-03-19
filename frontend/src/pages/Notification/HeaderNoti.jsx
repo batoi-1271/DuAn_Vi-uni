@@ -32,7 +32,9 @@ const HeaderNoti = () => {
         <ul className="header-nav">
           {headerAc.map((e, i) => (
             <li key={i} className={`${i === active ? "active" : ""}`}>
-              <Link to={e.path}>{e.display}</Link>
+              <Link to={e.path}>
+                {e.display}
+              </Link>
             </li>
           ))}
         </ul>

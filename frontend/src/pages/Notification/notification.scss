@@ -10,18 +10,29 @@
 .notification {
     flex-basis: 45%;
     height: auto;
+    position: sticky;
+    z-index: 99;
+    top: 0;
     &__header {
-        @include header;
+        height: $header-height;
+        background: $body-bg;
+        transition: all 1.5s ease;
+        @include flex(center, space-between);
+        h2 {
+            font-size: 1.5rem;
+            margin-left: 2rem;
+        }
         span {
             padding-right: 20px;
         }
     }
     &__main {
         .header-nav {
+
             @include flex(center, space-between);
             li {
                 width: 50%;
-                border-right: 1px solid #E7EBF0;
+                border-right: 3px solid #E7EBF0;
                 background-color: $body-bg;
                 text-align: center;
                 cursor: pointer;
@@ -39,7 +50,7 @@
                     transition: width 0.5s ease;
                     color: $main-color;
                     transition: all 300ms ease;
-                    border-bottom: 1px solid #E7EBF0;
+                    border-bottom: 3px solid #E7EBF0;
                     
                 }
             }
