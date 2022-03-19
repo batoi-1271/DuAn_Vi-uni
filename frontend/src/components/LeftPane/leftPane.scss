@@ -3,7 +3,7 @@
 
 #paneLeft {
     border-right: 1px solid #bde0fe;
-    height: 100%;
+    height: 100vh;
     flex-basis: 25%;
 
 }
@@ -42,6 +42,11 @@
         vertical-align: middle;
         white-space: nowrap;
         position: relative;
+        box-shadow: $box-shadow-1;
+        transition: all 300ms ease;
+        &:hover {
+            box-shadow: none;
+        }
         .icon {
             position: absolute;
             margin-left: 17px;
@@ -58,13 +63,56 @@
             width: 100%;
             @include input;
         }
+
+        .dropContainer {
+            position: absolute;
+            z-index: 999;
+            top: 100%;
+            .dropList {
+                width: 250px;
+                height: auto;
+                padding: 0 0.3rem 0.5rem 0.3rem;
+                background: #ffffff;
+                color: #000;
+                font-size: 1rem;
+                font-weight: 500;
+                box-shadow: $box-shadow-1;
+
+                &:first-child {
+                    padding-top: 0.8em;
+                }
+
+                .title {
+                    margin-bottom: 1em;
+                    @include flex(center, space-between)
+                }
+
+                .items {
+                    height: 50px;
+                    cursor: pointer;
+                    @include flex(center, space-between);
+                    user-select: none;
+                    list-style: none;
+                    padding: 5px;
+                    border-radius: 10px;
+                    &:hover {
+                        background-color: $color-btn;
+                    }
+                }
+            }
+        }
     }
     .box_paneLeft{
         border-radius: 20px;
         margin-top: 10px;
         width: 320px;
         height: auto;
-        background-color: $color-btn;
+        background-color: $body-bg;
+        box-shadow: $box-shadow-1;
+        transition: all 300ms ease;
+        &:hover {
+            box-shadow: none;
+        }
         h3 {
             margin-left: 10px;
         }

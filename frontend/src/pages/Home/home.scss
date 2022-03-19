@@ -1,17 +1,20 @@
-@use '../../scss/' as *;
+@use '../../scss/'as *;
 
 section {
     flex-basis: 45%;
     height: 1000px;
+
     header {
         height: $header-height;
-        background: #E7EBF0;
+        background: $body-bg;
         align-items: center;
+        box-shadow: $box-shadow;
         display: flex;
         position: sticky;
         z-index: 99;
         top: 0;
         transition: all 1.5s ease;
+
         h2 {
             font-size: 1.5rem;
             margin-left: 2rem;
@@ -21,22 +24,76 @@ section {
     .postUser {
         @include flex(center, flex-start);
         padding: 20px;
+
         .avatar {
             @include imgAvatar;
             margin-right: 20px;
         }
+
         .contentPost {
             input {
                 border: none;
                 background: $body-bg;
                 font-size: 1.3rem;
             }
+
             .iconPost {
                 @include flex(center, flex-start);
+
                 i {
                     color: $main-color;
                 }
             }
+        }
+
+        .privacy {
+            //   display: flex;
+            // width: 20em;
+            // height: 3em;
+            // border-radius: .25em;
+            // overflow: hidden;
+
+            .select {
+                font-weight: bold;
+                font-size: 1rem;
+                color: $main-color;
+                cursor: pointer;
+                user-select: none;
+                position: relative;
+            }
+
+            .dropContainer {
+                position: absolute;
+                z-index: 999;
+                .dropList {
+                    width: 350px;
+                    padding: 0;
+                    margin: 0;
+                    padding-left: 1em;
+                    background: #ffffff;
+                    border: 2px solid #e5e5e5;
+                    box-sizing: border-box;
+                    color: #000;
+                    font-size: 1rem;
+                    font-weight: 500;
+
+                    &:first-child {
+                        padding-top: 0.8em;
+                    }
+
+                    .title {
+                        margin-bottom: 1em;
+                    }
+
+                    .items {
+                        cursor: pointer;
+                        user-select: none;
+                        list-style: none;
+                        margin-bottom: 1em;
+                    }
+                }
+            }
+
         }
     }
 }

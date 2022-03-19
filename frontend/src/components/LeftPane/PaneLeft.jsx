@@ -36,14 +36,23 @@ const LeftPane = () => {
   const headerRef = useRef(null);
 
   const [isAdded, setAdded] = useState(false);
-    const addFriend = ()=> {
-      setAdded(true);
-    };
+  const addFriend = () => {
+    setAdded(true);
+  };
 
-    const cancelFriend = ()=> {
-      setAdded(false);
-    };
-    
+  const cancelFriend = () => {
+    setAdded(false);
+  };
+  const options = ["Gia Truong", "Sy Hoang", "Hoang Duc", "Thanh An"];
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const toggling = () => setIsOpen(!isOpen);
+
+  const onOptionClicked = value => () => {
+    setSelectedOption(value);
+    setIsOpen(false);
+    console.log(selectedOption);
+  };
 
   return (
     <div ref={headerRef} className="paneLeft" id='paneLeft'>
@@ -53,8 +62,31 @@ const LeftPane = () => {
         </div>
         <div className="search">
           <span class="icon"><i class="fa fa-search"></i></span>
-          <input type="text" placeholder='Search Vi-uni' />
+          <input type="text" onClick={toggling} placeholder='Search Vi-uni' />
+
+          {isOpen && (
+            <div className='dropContainer'>
+              <div className='dropList'>
+                <div className='title'>
+                  <h4>Recent searches</h4>
+                  <span><a href="">Edit</a></span>
+
+                </div>
+                {options.map(option => (
+
+                  <div className='items' onClick={onOptionClicked(option)} key={Math.random()}>
+                    {option}
+                    <button type="button" class="close" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+
+                ))}
+              </div>
+            </div>
+          )}
         </div>
+
       </div>
       <div className="box_paneLeft">
         <h3>You might like</h3>
@@ -71,11 +103,11 @@ const LeftPane = () => {
                 </div>
                 <div className="addFr">
                   {isAdded ? (
-                      <Button variant="contained" onClick={cancelFriend} className="add-btn-disabled">Cancel</Button>
+                    <Button variant="contained" onClick={cancelFriend} className="add-btn-disabled">Cancel</Button>
                   ) : (
-                      <Button variant="contained" className="add-btn" id={e.id} onClick={addFriend}>ADD</Button>
+                    <Button variant="contained" className="add-btn" id={e.id} onClick={addFriend}>ADD</Button>
                   )}
-                  
+
                 </div>
 
               </li>
