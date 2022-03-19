@@ -1,8 +1,6 @@
-
 import React, { Component, useState } from 'react'
-
+import Button from '@mui/material/Button';
 import './home.scss';
-
 
 
 const Home = () => {
@@ -32,7 +30,7 @@ const Home = () => {
         </div>
         <div className="contentPost">
           <div className="contentPost__user">
-            <input type="text" placeholder="What's happening?" />
+            <textarea type="text" placeholder="What's happening?" />
           </div>
           <div className="privacy">
 
@@ -45,7 +43,7 @@ const Home = () => {
                   <div className='title'>
                     <h4>Who can reply?</h4>
                     <p>Choose who can reply to this Tweet. Anyone mentioned can always reply.</p>
-                </div>
+                  </div>
                   {options.map(option => (
                     <div className='items' onClick={onOptionClicked(option)} key={Math.random()}>
                       {option}
@@ -55,16 +53,20 @@ const Home = () => {
               </div>
             )}
           </div>
-          {/* <div className="iconPost">
-            <div className="icon">
-              <a href=""><i class="fa-solid fa-image"></i></a>
-              <a href=""><i class="fa-solid fa-location-pin"></i></a>
-              <a href=""><i class="fa-regular fa-face-grin"></i></a>
-            </div>
-            <div className="btnPost">
-              <Button variant="contained">Post</Button>
-            </div>
-          </div> */}
+
+        </div>
+
+      </div>
+      <div className="iconPost">
+        <div className="content">
+          <div className="icon">
+            <a href=""><i class="fa-solid fa-image"></i></a>
+            <a href=""><i class="fa-solid fa-location-pin"></i></a>
+            <a href=""><i class="fa-regular fa-face-grin"></i></a>
+          </div>
+          <div className="btnPost">
+            <Button variant="contained">Post</Button>
+          </div>
         </div>
       </div>
     </section>
