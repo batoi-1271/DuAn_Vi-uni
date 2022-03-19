@@ -39,7 +39,7 @@ const headerNav = [
   {
     icon: <i class="fa-solid fa-ellipsis"></i>,
     display: 'More',
-    path: '/more'
+    // path: '/more'
   }
 ]
 

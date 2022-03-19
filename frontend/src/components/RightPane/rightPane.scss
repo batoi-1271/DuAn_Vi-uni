@@ -3,7 +3,7 @@
 
 #header {
     border-left: 1px solid #bde0fe;
-    height: 100%;
+    height:100vh;
     flex-basis: 25%;
 }
 
@@ -24,9 +24,22 @@
             font-weight: 700;
             position: relative;
             font-size: 1.2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            padding: 10px;
             width: fit-content;
-            @include flex(center, center);
+            border-radius: 25px;
+            cursor: pointer;
+            width: 200px;
+            @include flex(center, space-between);
+            transition: all 300ms ease;
+        &:hover {
+            background-color: $body-bg;
+            box-shadow: $box-shadow-1;
+            color: $main-color;
+        }
+        &:nth-last-child(1) {
+            background: none;
+        }
 
             i {
                 font-size: 25px;
@@ -37,6 +50,11 @@
                 content: "";
                 transition: width 0.5s ease;
                 color: $main-color;
+                box-shadow: $box-shadow-1;
+                transition: all 300ms ease;
+                &:hover {
+                    box-shadow: none
+                }
             }
 
             Button {

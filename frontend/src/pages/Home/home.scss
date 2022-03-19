@@ -6,8 +6,9 @@ section {
 
     header {
         height: $header-height;
-        background: #E7EBF0;
+        background: $body-bg;
         align-items: center;
+        box-shadow: $box-shadow;
         display: flex;
         position: sticky;
         z-index: 99;
