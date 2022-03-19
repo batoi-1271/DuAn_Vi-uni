@@ -6,12 +6,20 @@ section {
 
     header {
         @include header;
+        @include flex(center, space-between);
+        position: fixed;
+        width: 45%;
+        box-shadow: $box-shadow;
+        h2 {
+            font-size: 1.5rem;
+            margin-left: 2rem;
+        }
     }
 
     .postUser {
         @include flex(center, flex-start);
         padding: 20px;
-
+        margin-top: 60px;
         .avatar {
             @include imgAvatar;
             margin-right: 20px;

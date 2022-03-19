@@ -10,10 +10,7 @@
         .post-avatar{
             width: 8%;
             height: auto;
-            // background: #009FFF; 
-            // background: -webkit-linear-gradient(to bottom, #ec2F4B, #009FFF); 
-            // background: linear-gradient(to bottom, #ec2F4B, #009FFF);
-            img{
+            img {
                 @include imgAvatar;
                 
             }
@@ -22,9 +19,6 @@
             width: 92%;
             height: auto;
             padding-left: 20px;
-            // background: #cc2b5e;
-            // background: -webkit-linear-gradient(to top, #753a88, #cc2b5e);
-            // background: linear-gradient(to top, #753a88, #cc2b5e);
             .post-info-header{
                 display: flex;
                 justify-content: space-between;
