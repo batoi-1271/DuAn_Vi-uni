@@ -1,0 +1,8 @@
+@use '../../../scss/' as *;
+
+.post {
+    width: 100%;
+    height: auto;
+    flex-basis: 45%;
+    background-color: red;
+}

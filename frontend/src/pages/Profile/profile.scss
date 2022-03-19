@@ -1,0 +1,135 @@
+@use '../../scss/' as *;
+.User-profile {
+    flex-basis: 45%;
+    // height: 100vh;
+}
+.cards {
+    flex-basis: 45%;
+    height: auto;
+    .card-header{
+        display: flex;
+        align-items: center;
+        height: $header-height;
+        background: #E7EBF0;
+        .card-back{
+            margin:  20px;
+            padding:5px 10px;
+            cursor: pointer;
+            border-radius: 100%;
+            &:hover{
+                background:#fff;
+            }
+        }
+        .card-text{
+            cursor: pointer;
+            h3{
+                font-size: 20px;
+                font-weight: 700;
+            }
+        }
+    }
+    .card-content{
+        width: inherit;
+
+        .card-content-info{
+            position: relative;
+            height: 410px;
+            width: 100%;
+            background: #cc2b5e;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            .card-content-cover-img{
+                height: 205px;
+                width: 100%;
+                img{
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                    cursor: pointer;
+                }
+            }
+            .card-content-information {
+                height: 205px; 
+                width: 100%;
+                position: absolute;
+                padding: 0 30px;
+                .card-content-pro{
+                    height: 70px;
+                    width: 100%;
+                    @include flex(center, space-between);
+                    .card-content-avatar{
+                        
+                        img{
+                            object-fit: cover;
+                            width: 145px;
+                            height: 145px;
+                            border-radius: 100%;
+                            border: 5px solid #fff;
+                            margin-top: -62.5px;
+                        }
+                    }
+                    .card-content-btn-pro{
+                        button{
+                            padding:8px 20px;
+                            font-size: 14px;
+                            border-radius: 10px;
+                            border: none;
+                            cursor: pointer;
+                            font-weight: 700;
+                            background:#fff;
+                            &:hover{
+                                background: #E7EBF0;
+                            }
+                        }
+                    }
+                }
+                .card-content-name,
+                .card-content-time,
+                .card-content-follow{
+                    padding-top: 5px;
+                }
+                .card-content-follow{
+                    cursor: pointer;
+                }
+            }
+        }
+        .card-content-home{
+            background: #cc2b5e;
+            background: -webkit-linear-gradient(to top, #753a88, #cc2b5e);
+            background: linear-gradient(to top, #753a88, #cc2b5e);
+            display: flex;
+            flex: 1fr 1fr 1fr;
+            justify-content: center;
+            text-align: center;
+            padding: 10px 40px;
+            .card-content-post{
+                cursor: pointer;
+                width: 33%;
+                background: #753a88;
+                
+            }
+            .card-content-media{
+                cursor: pointer;
+                width: 33%;
+                background: #cc2b5e;
+            }
+            .card-content-like{
+                cursor: pointer;
+                width: 33%;
+                background: #E7EBF0;
+            }
+        }
+        .card-content-activitis {
+            .header-nav {
+                @include flex(center, space-between);
+                li {
+                    &.active {
+                        content: "";
+                        transition: width 0.5s ease;
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+}
