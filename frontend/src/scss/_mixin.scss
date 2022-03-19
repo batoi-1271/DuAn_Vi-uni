@@ -1,3 +1,4 @@
+@use "./variables" as *;
 @mixin flex($aligin-item, $justify-content) {
     display: flex;
     align-items: $aligin-item;
@@ -41,4 +42,19 @@
         object-fit: cover;
         border-radius: 100%;
     }
+}
+
+@mixin header {
+        height: $header-height;
+        background: $body-bg;
+        box-shadow: $box-shadow;
+        position: sticky;
+        z-index: 99;
+        top: 0;
+        transition: all 1.5s ease;
+        @include flex(center, space-between);
+        h2 {
+            font-size: 1.5rem;
+            margin-left: 2rem;
+        }
 }

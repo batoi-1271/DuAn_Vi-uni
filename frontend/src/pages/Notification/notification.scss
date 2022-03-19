@@ -1,0 +1,48 @@
+@use "../../scss/" as *;
+
+
+.User-notification {
+    flex-basis: 45%;
+    height: 1000px;
+    
+}
+
+.notification {
+    flex-basis: 45%;
+    height: auto;
+    &__header {
+        @include header;
+        span {
+            padding-right: 20px;
+        }
+    }
+    &__main {
+        .header-nav {
+            @include flex(center, space-between);
+            li {
+                width: 50%;
+                border-right: 1px solid #E7EBF0;
+                background-color: $body-bg;
+                text-align: center;
+                cursor: pointer;
+                line-height: 50px;
+                height: 50px;
+                font: {
+                    size: 1.1rem;
+                    weight: 700;
+                }
+                &:hover {
+                    box-shadow: $box-shadow-1;
+                }
+                &.active {
+                    content: "";
+                    transition: width 0.5s ease;
+                    color: $main-color;
+                    transition: all 300ms ease;
+                    border-bottom: 1px solid #E7EBF0;
+                    
+                }
+            }
+        }
+    }
+}
