@@ -15,6 +15,7 @@ const Notification = () => {
             <>
               <HeaderNoti {...props} />
               <RoutesNo />
+              
             </>
           )}
         />
