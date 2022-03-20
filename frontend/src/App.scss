@@ -12,6 +12,9 @@
     font-family: 'Segoe UI', 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
+    // &.pathname {
+    //     display: none;
+    // }
   }
 html {
     font-size: 100%;
@@ -86,3 +89,5 @@ iframe {
 .section__header {
     @include flex(center, space-between);
 }
+
+

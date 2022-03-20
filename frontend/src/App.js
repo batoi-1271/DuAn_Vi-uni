@@ -14,7 +14,7 @@ function App() {
                 <div className='app'>
                 <Route render={props => (
                     <>
-                        <LeftPane {...props}/>
+                        <LeftPane {...props} className="LeftPane"/>
                         <Routes/>
                         <RightPane/>
                     </>
