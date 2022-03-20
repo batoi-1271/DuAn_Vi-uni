@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import './home.scss';
 
 
-const Home = () => {
+const Home = (close) => {
   const options = ["Everyone", "Friends", "Only me"];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const Home = () => {
   };
 
   return (
-    <section>
+    <section onClick={() => close()}>
       <header className='home'>
         <h2>Home</h2>
       </header>
@@ -32,7 +32,7 @@ const Home = () => {
           <div className="contentPost__user">
             <textarea type="text" placeholder="What's happening?" />
           </div>
-          <div className="privacy">
+          <div className="privacy" >
 
             <div className='select' onClick={toggling}>
               {selectedOption || "Everyone"}
@@ -53,9 +53,7 @@ const Home = () => {
               </div>
             )}
           </div>
-
         </div>
-
       </div>
       <div className="iconPost">
         <div className="content">

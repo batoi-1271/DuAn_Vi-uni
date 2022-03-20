@@ -21,7 +21,7 @@ const Likes = () => {
                 </div>
                 <div className="post-content">
                     <div className="post-content-title">
-                        <p>Tới không bê đê</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                     </div>
                     <div className="post-content-img">
                         <img src="https://pbs.twimg.com/media/FOIOPAgVkAAinpk?format=jpg&name=small" alt="" />
@@ -111,7 +111,7 @@ const Likes = () => {
                 </div>
                 <div className="post-content">
                     <div className="post-content-title">
-                        <p>Tới không bê đê</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                     </div>
                     <div className="post-content-img">
                         <img src="" alt="" />
