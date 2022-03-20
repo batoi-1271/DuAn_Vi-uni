@@ -1,0 +1,48 @@
+// @use '../../../scss/' as *;
+@use '../../scss/' as *;
+
+.message{
+    flex-basis: 25%;
+    .message-hearder{
+        padding: 0 0 10px 0;
+        // border-bottom: 1px solid ;
+        box-shadow: 1px 1px rebeccapurple;
+        padding: 10px;
+
+    }
+    .message_head{
+        display: flex;
+        justify-content: space-between;
+        .fab,
+        .fas{
+            cursor: pointer;
+        }
+        .fa-cog{
+            margin-left: 15px;
+        }
+    }
+    .message_search{
+        border: 1px solid red;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        border-radius: 30px;
+        padding: 15px 0 15px 10px;
+        .fa-search{
+            color: #ccc;
+        }
+        input{
+            font-weight: 100;
+            
+            width: 200px;
+            margin-left: 5px;
+            border: none;
+            outline: none;
+            background-color: unset;
+        }
+    }
+}
+
+
+
+
