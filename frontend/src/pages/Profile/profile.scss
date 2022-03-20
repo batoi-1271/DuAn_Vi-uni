@@ -10,12 +10,14 @@
         display: flex;
         align-items: center;
         height: $header-height;
+
         background: $body-bg;
         position: fixed;
         z-index: 99;
         top: 0;
         width: 45%;
         .card-back{
+            
             margin:  20px;
             padding:5px 10px;
             cursor: pointer;
@@ -26,6 +28,9 @@
         }
         .card-text{
             cursor: pointer;
+            
+            
+
             h3{
                 font-size: 20px;
                 font-weight: 700;

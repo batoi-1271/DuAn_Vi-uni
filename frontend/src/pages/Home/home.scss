@@ -17,26 +17,34 @@ section {
     }
 
     .postUser {
-        @include flex(center, flex-start);
-        padding: 20px;
-        margin-top: 60px;
+        background-color: red;
+        width: 100%;
+        // @include flex(center, flex-start);
+        display: flex;
+        align-self: flex-start;
+        // padding: 20px;
+        margin-top: 70px;
         .avatar {
             @include imgAvatar;
             margin-right: 20px;
         }
 
         .contentPost {
-            input {
-                border: none;
-                background: $body-bg;
-                font-size: 1.3rem;
-            }
-
-            .iconPost {
-                @include flex(center, flex-start);
-
-                i {
-                    color: $main-color;
+            width: inherit;
+            &__user {
+                width: inherit;
+                textarea {
+                    width: 95%;
+                    border: none;
+                    background: $body-bg;
+                    font-size: 1.3rem;
+                    word-break: break-all;
+                    resize: none;
+                    outline: none;
+                    overflow:auto;
+                    &::-webkit-scrollba {
+                        display: none;
+                    }
                 }
             }
         }
@@ -89,6 +97,25 @@ section {
                 }
             }
 
+        }
+    }
+    .iconPost {
+        background-color: red;
+        width: 90%;
+        display: flex;
+        flex-direction: column-reverse;
+        // margin: 0 auto;
+        // justify-content: center;
+        // align-items: center;
+        .content {
+        @include flex(center, space-between);
+        }
+        .icon {
+            width: 30%;
+            background-color: aqua;
+            i {
+                color: $main-color;
+            }
         }
     }
 }
