@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import './rightPane.scss';
+import LeftPane from '../LeftPane/PaneLeft';
 
 
 const headerNav = [
@@ -47,27 +48,13 @@ const headerNav = [
 const RightPane = () => {
   const {pathname} = useLocation();
   const headerRef = useRef(null);
+  const LeftPane = true;
 
 const active = headerNav.findIndex(e => e.path === pathname);
-
-useEffect(() => {
-  const shrinkHeader = () => {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      headerRef.current.classList.add('shrink');
-    } else {
-      headerRef.current.classList.remove('shrink');
-    }
-  }
-  window.addEventListener('scroll', shrinkHeader);
-  return () => {
-    window.removeEventListener('scroll', shrinkHeader);
-  };
-}, []);
-
   return (
     <div ref={headerRef} className="header" id='header'>
             <div className="header__wrap container">
-                <ul className="header__nav">
+                <ul className="header__nav nav">
                     {
                         headerNav.map((e, i) => (
                             <li key={i} className={`${i === active ? 'active' : ''}`}>
