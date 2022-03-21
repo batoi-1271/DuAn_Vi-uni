@@ -3,6 +3,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import './rightPane.scss';
+import  Modal  from './Modal/Modal';
+import PostUser from '../../pages/Home/PostUser';
 
 
 const headerNav = [
@@ -45,6 +47,9 @@ const headerNav = [
 
 
 const RightPane = () => {
+  const [modal, setModal] = useState(false);
+  const Toggle = () => setModal(!modal);
+
   const { pathname } = useLocation();
   const headerRef = useRef(null);
 
@@ -55,9 +60,9 @@ const RightPane = () => {
         <ul className="header__nav nav">
           {
             headerNav.map((e, i) => (
-              
+
               <li key={i} className={`${i === active ? 'active' : ''}`}>
-                
+
                 <Link to={e.path}>
                   <span>{e.icon}</span>
                   {e.display}
@@ -65,10 +70,17 @@ const RightPane = () => {
               </li>
             ))
           }
-          <li>
-            <Button variant="contained">Post</Button>
+          <li className='post'>
+            
+            <Button variant="contained" onClick={() => Toggle()}>Post</Button>
+
+            <Modal show={modal} close={Toggle} title="Create post">
+              <PostUser/>
+          </Modal>
+
           </li>
         </ul>
+        
         <div className='infoUser'>
           <button className="account">
             <div className="avatar">
