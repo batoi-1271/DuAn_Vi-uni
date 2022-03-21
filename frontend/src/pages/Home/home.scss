@@ -17,12 +17,10 @@ section {
     }
 
     .postUser {
-        // background-color: red;
         width: 100%;
-        // @include flex(center, flex-start);
         display: flex;
+        padding: 10px 30px;
         align-self: flex-start;
-        // padding: 20px;
         margin-top: 70px;
         .avatar {
             @include imgAvatar;
@@ -30,7 +28,7 @@ section {
         }
 
         .contentPost {
-        border-bottom: 2px solid red;
+        
 
             width: inherit;
             &__user {
@@ -52,11 +50,6 @@ section {
         }
 
         .privacy {
-            //   display: flex;
-            // width: 20em;
-            // height: 3em;
-            // border-radius: .25em;
-            // overflow: hidden;
 
             .select {
                 font-weight: bold;
@@ -102,21 +95,24 @@ section {
         }
     }
     .iconPost {
-        border-bottom: 2px solid red;
-        // background-color: red;
-        width: 90%;
-        display: flex;
-        flex-direction: column-reverse;
-        // margin: 0 auto;
-        // justify-content: center;
-        // align-items: center;
+        border-bottom: 2px solid #b7b7a4;
+        border-radius: 20px;
         .content {
-        @include flex(center, space-between);
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+        }
+        .btnPost{
+            button{
+                border-radius: 15px;
+                background-color: rgba(0, 206, 213, 0.5);
+            }
         }
         .icon {
-            width: 30%;
-            background-color: aqua;
+            margin-left: 50px;
             i {
+                margin-left: 10px;
                 color: $main-color;
             }
         }

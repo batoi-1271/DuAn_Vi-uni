@@ -67,6 +67,9 @@ const Home = (close) => {
           </div>
         </div>
       </div>
+      <div className="homelists">
+        
+      </div>
     </section>
   );
 }
