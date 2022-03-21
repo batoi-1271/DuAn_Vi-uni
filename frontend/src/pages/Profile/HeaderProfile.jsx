@@ -53,15 +53,10 @@ const HeaderProfile = () => {
                     />
                   </div>
                   <div className="card-content-btn-pro">
-<<<<<<< HEAD
-                    <button variant="contained">Edit profile</button>
-=======
                   
                   <button onClick={() => Toggle()}>Edit profile</button>
                   <ButtonEdit show={modal} close = {Toggle} title = "Edit profile">
                   </ButtonEdit>
-
->>>>>>> 78d11733ad6a8344f46465db6411852ca251e597
                   </div>
                 </div>
                 <div className="card-content-name">
