@@ -2,7 +2,7 @@
 
 section {
     flex-basis: 45%;
-    height: 1000px;
+    height: auto;
 
     header {
         @include header;
@@ -16,12 +16,15 @@ section {
         }
     }
 
+   
+
     .postUser {
         width: 100%;
         display: flex;
         padding: 10px 30px;
         align-self: flex-start;
         margin-top: 70px;
+        height: 150px;
         .avatar {
             @include imgAvatar;
             margin-right: 20px;
@@ -30,11 +33,11 @@ section {
         .contentPost {
         
 
-            width: inherit;
+            width: 90%;
             &__user {
                 width: inherit;
                 textarea {
-                    width: 95%;
+                    width: 90%;
                     border: none;
                     background: $body-bg;
                     font-size: 1.3rem;
@@ -95,18 +98,20 @@ section {
         }
     }
     .iconPost {
-        border-bottom: 2px solid #b7b7a4;
-        border-radius: 20px;
+        border-bottom:1px solid $main-color;
         .content {
             margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
+            @include flex(center, space-between);
             padding: 0 30px;
         }
         .btnPost{
-            button{
+            Button{
+                width: 50px;
+                height: 35px;
+                font-size: 0.9rem;
+                font-weight: 100;
                 border-radius: 15px;
-                background-color: rgba(0, 206, 213, 0.5);
+                @include colorGradient;
             }
         }
         .icon {
@@ -119,7 +124,66 @@ section {
     }
 }
 
-.a {
-    flex-basis: 54%;
-    height: 100px;
+.content-post{
+    padding: 30px 10px 30px 30px;
+    display: flex;
+    &:hover{
+        background-color: rgba(250,225,221,0.2);
+        box-shadow: $box-shadow-1;
+        cursor: not-allowed;
+    }
+    .post-avatar{
+        width: 8%;
+        height: auto;
+        img {
+            @include imgAvatar;
+            
+        }
+    }
+    .post-info{
+        width: 92%;
+        height: auto;
+        padding-left: 20px;
+        .post-info-header{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0px;
+            .post-name{
+                display: flex;
+                p{
+                    padding-left: 5px;
+                    opacity: 0.6;
+                }
+            }
+        }
+        .post-content{
+            .post-content-img{
+                padding-top:10px ;
+                img{
+                    border-radius: 15px;
+
+                }
+            }
+        }
+        .post-interactive{
+            padding: 5px 0 20px 5px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            i{
+                
+                display: flex;
+                width: 33%;
+                cursor: pointer;
+                color: rgb(168, 148, 148);
+                p{
+                    padding-left: 15px;
+                    color: black;
+                }
+            }
+        }
+    }
+
 }
+
+

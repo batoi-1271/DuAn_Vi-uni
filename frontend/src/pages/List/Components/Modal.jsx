@@ -10,6 +10,7 @@ const Modal = ({ show, close, title, children }) => {
                 <header className="modal_header">
                     <h2 className="modal_header-title">{title}</h2>
                     <i class="fa-solid fa-xmark close" onClick={() => close()}></i>
+
                 </header>
                 <main className="modal_content">
                     {/* {children} */}
