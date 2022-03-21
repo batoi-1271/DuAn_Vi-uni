@@ -26,7 +26,7 @@ const HeaderProfile = () => {
         <div className="cards" ref={headerRef}>
           <div className="card-header">
             <div className="card-back">
-              <Link to={"/"}><i class="fa-solid fa-arrow-left"></i></Link>
+              <Link to="/"><i class="fa-solid fa-arrow-left"></i></Link>
             </div>
             <div className="card-text">
               <h3>Dương Ngô Tùng</h3>

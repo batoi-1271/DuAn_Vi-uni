@@ -11,7 +11,7 @@ const headerNav = [
     icon: <i class="fa-solid fa-house-chimney"></i>,
     display: 'Home',
     path: '/'
-  }, 
+  },
   {
     icon: <i class="fa-regular fa-bell"></i>,
     display: 'Notifications',
@@ -46,60 +46,51 @@ const headerNav = [
 
 
 const RightPane = () => {
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
   const headerRef = useRef(null);
-  
-const active = headerNav.findIndex(e => e.path === pathname);
 
-const [message, setMessage] = React.useState(true);
-
-const onClick = () => {
-  if (active === 2) {
-    setMessage(!message);
-  } 
-} 
-
-{
-  message && <LeftPane/>
-}
+  const active = headerNav.findIndex(e => e.path === pathname);
   return (
+
     <div ref={headerRef} className="header" id='header'>
-            <div className="header__wrap container">
-                <ul className="header__nav nav">
-                    {
-                        headerNav.map((e, i) => (
-                            <li key={i} onClick= {onClick}  className={`${i === active ? 'active' : ''}`}>
-                                <Link to={e.path}>
-                                    <span>{e.icon}</span>
-                                    {e.display}
-                                </Link>
-                            </li>
-                        ))
-                    }
-                    <li>
-                      <Button variant="contained">Post</Button>
-                    </li>
-                </ul>
-                <div className='infoUser'>
-                     <button className="account">
-                         <div className="avatar">
-                            <img 
-                                alt="Dương Ngô Tùng"
-                                src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg"/>
-                         </div>
-                         <div className='info'>
-                             <div className="name">Dương Ngô Tùng</div>
-                             <div className="username">@DngNgTng1</div>
-                         </div>
-                         <div className="edit">
-                            <i class="fa-solid fa-ellipsis"></i>
-                         </div>
-                     </button>
-                 </div>
+      <div className="header__wrap container">
+        <ul className="header__nav nav">
+          {
+            headerNav.map((e, i) => (
+              
+              <li key={i} className={`${i === active ? 'active' : ''}`}>
+                
+                <Link to={e.path}>
+                  <span>{e.icon}</span>
+                  {e.display}
+                </Link>
+              </li>
+            ))
+          }
+          <li>
+            <Button variant="contained">Post</Button>
+          </li>
+        </ul>
+        <div className='infoUser'>
+          <button className="account">
+            <div className="avatar">
+              <img
+                alt="Dương Ngô Tùng"
+                src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg" />
             </div>
+            <div className='info'>
+              <div className="name">Dương Ngô Tùng</div>
+              <div className="username">@DngNgTng1</div>
+            </div>
+            <div className="edit">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </button>
         </div>
+      </div>
+    </div>
   );
-            
+
 }
 
 export default RightPane;
