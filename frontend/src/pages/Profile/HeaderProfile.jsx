@@ -1,6 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef,useState } from "react";
 import "../Profile/profile.scss";
+import '../Profile/Post/Button/ButtonEdit';
 import { Link, useLocation } from "react-router-dom";
+import ButtonEdit from "../Profile/Post/Button/ButtonEdit";
 
 const headerAc = [
   {
@@ -20,6 +22,8 @@ const headerAc = [
 const HeaderProfile = () => {
   const { pathname } = useLocation();
   const headerRef = useRef(null);
+  const [modal, setModal] = useState(false);
+  const Toggle = () => setModal(!modal);
 
   const active = headerAc.findIndex((e) => e.path === pathname);
   return (
@@ -27,11 +31,6 @@ const HeaderProfile = () => {
       {pathname.includes("/profile") && (
         <div className="cards" ref={headerRef}>
           <div className="card-header">
-            <div className="card-back">
-            <Link to="/">
-                <i class="fa-solid fa-arrow-left"></i>
-              </Link>
-            </div>
             <div className="card-text">
               <h3>Dương Ngô Tùng</h3>
               <p>3 Posts </p>
@@ -54,7 +53,11 @@ const HeaderProfile = () => {
                     />
                   </div>
                   <div className="card-content-btn-pro">
-                    <button>Edit profile</button>
+                  
+                  <button onClick={() => Toggle()}>Edit profile</button>
+                  <ButtonEdit show={modal} close = {Toggle} title = "Edit profile">
+                  </ButtonEdit>
+
                   </div>
                 </div>
                 <div className="card-content-name">
