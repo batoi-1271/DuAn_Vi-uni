@@ -7,7 +7,7 @@ import List from '../pages/List/List';
 import Messages from '../pages/Message/Messages';
 import Notification from '../pages/Notification/Notification';
 import Profile from '../pages/Profile/Profile';
-import Bookmarks from '../pages/Saved/Bookmarks';
+import Save from '../pages/Saved/Save';
 
 
 const Routes = () => {
@@ -23,7 +23,7 @@ const Routes = () => {
             />
             <Route
                 path='/saved'
-                component={Bookmarks}
+                component={Save}
             />
             <Route
                 path='/message'

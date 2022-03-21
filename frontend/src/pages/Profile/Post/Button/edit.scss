@@ -1,0 +1,77 @@
+@use '../../../../scss/' as *;
+
+.modalContainer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    flex-basis: 43%;
+    @include flex(center, center);
+
+    background-color: rgba($color: #000000, $alpha: 0.35);
+
+    .modal {
+        background-color: $body-bg;
+        flex-basis: 43%;
+        width: 100%;
+        height: auto; 
+        border-radius: 20px;
+        
+
+        .modal_header {
+            position: relative;
+            border-bottom: 1px solid  #dddddd;
+            display: flex;
+            height: 50px;
+            justify-content: center;
+            padding: 2rem;
+            align-items: center;
+            &-title {
+                text-align: center;
+            }
+
+            .close {
+                position: absolute;
+                left: 0;
+                
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                &:hover{
+                    background: #dddddd;
+                }
+            }
+            .submit{
+                position: absolute;
+                right: 0;
+                align-items: center;
+            }
+        }
+    .card_content-img{
+        position: relative;
+        .card_content-icon{
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            .ok{                
+                i{
+                    background-color: red;
+                }
+            }
+        }
+    }
+    
+
+
+
+
+
+    }
+}

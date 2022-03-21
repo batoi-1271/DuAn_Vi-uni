@@ -17,12 +17,12 @@ const Post = () => {
                             <p>22h</p>   
                         </div>
                         <div className="post-dot">
-                        <i class="fa-solid fa-ellipsis"></i>
+                            <i class="fa-solid fa-ellipsis"></i>
                         </div>
                     </div>
                     <div className="post-content">
                         <div className="post-content-title">
-                            <p>Tới không bê đê</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
                         <div className="post-content-img">
                             <img src="https://pbs.twimg.com/media/FOIOPAgVkAAinpk?format=jpg&name=small" alt="" />
@@ -82,7 +82,7 @@ const Post = () => {
                     </div>
                     <div className="post-content">
                         <div className="post-content-title">
-                            <p>Tới không bê đê</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
                         <div className="post-content-img">
                             <img src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.6435-9/193226360_1207246593071491_9157876366763072431_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=2Py6h5PZ1E0AX9Wcdmy&_nc_ht=scontent.fhan5-3.fna&oh=00_AT9LKcERIiW4FP8NCoeqFiYA6E6x2e48ocnyiYh3SlRp1Q&oe=625A0794" alt="" />
@@ -112,7 +112,7 @@ const Post = () => {
                     </div>
                     <div className="post-content">
                         <div className="post-content-title">
-                            <p>Tới không bê đê</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
                         <div className="post-content-img">
                             <img src="" alt="" />

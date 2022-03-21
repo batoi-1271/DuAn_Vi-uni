@@ -2,13 +2,18 @@
 @use '../../scss/' as *;
 
 .message{
-    flex-basis: 25%;
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: row-reverse;
     .message-hearder{
         padding: 0 0 10px 0;
-        // border-bottom: 1px solid ;
+        flex-basis: 40%;
         box-shadow: 1px 1px rebeccapurple;
         padding: 10px;
-
+        border-left: 1px solid red;
+    }
+    .message-new{
+        width: 60%;
     }
     .message_head{
         display: flex;

@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Post from './Post/Post';
 import Media from './Media/Media';
 import Likes from './Likes/Likes';
+import Home from '../Home/Home';
 
 const RouterProfile = () => {
     return ( 
@@ -20,6 +21,11 @@ const RouterProfile = () => {
             <Route
                 path='/profile/likes'
                 component={Likes}
+            />
+            <Route
+                path='/'
+                exact
+                component={Home}
             />
         </Switch>
      );
