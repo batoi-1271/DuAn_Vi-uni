@@ -9,7 +9,7 @@ const Modal = ({ show, close, title, children }) => {
             <div className="modal" onClick={(e) => e.stopPropagation()}>
                 <header className="modal_header">
                     <h2 className="modal_header-title">{title}</h2>
-                    <button className="close" onClick={() => close()}>Close</button>
+                    <button className="close" onClick={() => close()}><i class="fa-solid fa-xmark"></i></button>
                 </header>
                 <main className="modal_content">
                     {children}

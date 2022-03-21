@@ -24,6 +24,7 @@ section {
         padding: 10px 30px;
         align-self: flex-start;
         margin-top: 70px;
+        height: 150px;
         .avatar {
             @include imgAvatar;
             margin-right: 20px;
@@ -32,11 +33,11 @@ section {
         .contentPost {
         
 
-            width: inherit;
+            width: 90%;
             &__user {
                 width: inherit;
                 textarea {
-                    width: 95%;
+                    width: 90%;
                     border: none;
                     background: $body-bg;
                     font-size: 1.3rem;
@@ -97,8 +98,7 @@ section {
         }
     }
     .iconPost {
-        border-bottom: 2px solid #b7b7a4;
-        border-radius: 20px;
+        border-bottom:1px solid $main-color;
         .content {
             margin-bottom: 10px;
             display: flex;
@@ -106,9 +106,13 @@ section {
             padding: 0 30px;
         }
         .btnPost{
-            button{
+            Button{
+                width: 50px;
+                height: 35px;
+                font-size: 0.9rem;
+                font-weight: 100;
                 border-radius: 15px;
-                background-color: rgba(0, 206, 213, 0.5);
+                @include colorGradient;
             }
         }
         .icon {
@@ -121,9 +125,6 @@ section {
     }
 }
 
-.home__post{
-    // margin-top: 30px;
-}
 .content-post{
     padding: 30px 10px 30px 30px;
     display: flex;
