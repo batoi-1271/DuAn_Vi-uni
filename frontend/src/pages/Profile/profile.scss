@@ -23,14 +23,11 @@
             cursor: pointer;
             border-radius: 100%;
             &:hover{
-                background:#fff;
+                background: $body-bg;
             }
         }
         .card-text{
             cursor: pointer;
-            
-            
-
             h3{
                 font-size: 20px;
                 font-weight: 700;
@@ -44,9 +41,6 @@
             position: relative;
             height: 410px;
             width: 100%;
-            // background: #cc2b5e;  /* fallback for old browsers */
-            // background: -webkit-linear-gradient(to top, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
-            // background: linear-gradient(to top, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             .card-content-cover-img{
                 margin-top: 64px;
                 height: 205px;
@@ -139,12 +133,7 @@
                 display: flex;
                 flex: 1fr 1fr 1fr;
                 align-content: center;
-                // background: #009FFF; 
-                // background: -webkit-linear-gradient(to bottom, #ec2F4B, #009FFF); 
-                // background: linear-gradient(to bottom, #ec2F4B, #009FFF);
-
                 li {
-                    // background: #ec2F4B;
                     padding: 10px 40px;
                     font-weight: 700;
                     width: 33%;

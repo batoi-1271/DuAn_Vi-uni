@@ -54,7 +54,7 @@ const HeaderProfile = () => {
                     />
                   </div>
                   <div className="card-content-btn-pro">
-                    <button>Edit profile</button>
+                    <button variant="contained">Edit profile</button>
                   </div>
                 </div>
                 <div className="card-content-name">
