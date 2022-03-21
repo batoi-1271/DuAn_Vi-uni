@@ -1,8 +1,7 @@
 import React, { useRef,useState } from "react";
 import "../Profile/profile.scss";
-import '../Profile/Post/Button/ButtonEdit';
 import { Link, useLocation } from "react-router-dom";
-import ButtonEdit from "../Profile/Post/Button/ButtonEdit";
+import ButtonEdit from "./Button/ButtonEdit";
 
 const headerAc = [
   {
@@ -29,52 +28,52 @@ const HeaderProfile = () => {
   return (
     <>
       {pathname.includes("/profile") && (
-        <div className="cards" ref={headerRef}>
-          <div className="card-header">
-            <div className="card-text">
+        <div className="profile" ref={headerRef}>
+          <div className="profile__header">
+            <div className="profileName-user">
               <h3>Dương Ngô Tùng</h3>
               <p>3 Posts </p>
             </div>
           </div>
-          <div className="card-content">
-            <div className="card-content-info">
-              <div className="card-content-cover-img">
+          <div className="profile__Info">
+            <div className="infoContent">
+              <div className="infoContent__Cover-img">
                 <img
                   src="https://lovablemessages.com/wp-content/uploads/2021/12/bo-hinh-nen-3d-that-dep-va-that-hap-dan-24-1068x601.jpg"
                   alt=""
                 />
               </div>
-              <div className="card-content-information">
-                <div className="card-content-pro">
-                  <div className="card-content-avatar">
+              <div className="infoContent__TextInfo">
+                <div className="infoUser">
+                  <div className="infoUser__userAvatar">
                     <img
                       src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg"
                       alt=""
                     />
                   </div>
-                  <div className="card-content-btn-pro">
+                  <div className="infoUser__userEdit">
                   
                   <button onClick={() => Toggle()}>Edit profile</button>
                   <ButtonEdit show={modal} close = {Toggle} title = "Edit profile">
                   </ButtonEdit>
                   </div>
                 </div>
-                <div className="card-content-name">
+                <div className="userName">
                   <h3>Dương Ngô Tùng</h3>
                   <p>@DngNgTng1</p>
                 </div>
-                <div className="card-content-time">
+                <div className="dateCreate">
                   <span>
                     <i class="fa-solid fa-calendar-days"></i> Joined December
                     2021
                   </span>
                 </div>
-                <div className="card-content-follow">
+                <div className="follower">
                   <p>7 Following</p>
                 </div>
               </div>
             </div>
-            <div className="card-content-activitis">
+            <div className="profileItems-menu">
               <ul className="header-nav">
                 {headerAc.map((e, i) => (
                   <li key={i} className={`${i === active ? "active" : ""}`}>
@@ -91,8 +90,3 @@ const HeaderProfile = () => {
 };
 
 export default HeaderProfile;
-
-
-
-
-
