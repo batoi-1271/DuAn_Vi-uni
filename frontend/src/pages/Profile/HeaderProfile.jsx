@@ -1,32 +1,36 @@
-import React, {useRef } from "react";
+import React, { useRef } from "react";
 import "../Profile/profile.scss";
-import {Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const headerAc = [
-    {
-      display: "Post",
-      path: "/profile",
-    },
-    {
-        display: "Media",
-      path: "/profile/media",
-    },
-    {
-        display: "Likes",
-      path: "/profile/likes",
-    },
-  ];
+  {
+    display: "Post",
+    path: "/profile",
+  },
+  {
+    display: "Media",
+    path: "/profile/media",
+  },
+  {
+    display: "Likes",
+    path: "/profile/likes",
+  },
+];
 
 const HeaderProfile = () => {
-    const { pathname } = useLocation();
-    const headerRef = useRef(null);
-  
-    const active = headerAc.findIndex((e) => e.path === pathname);
-    return (
+  const { pathname } = useLocation();
+  const headerRef = useRef(null);
+
+  const active = headerAc.findIndex((e) => e.path === pathname);
+  return (
+    <>
+      {pathname.includes("/profile") && (
         <div className="cards" ref={headerRef}>
           <div className="card-header">
             <div className="card-back">
-              <Link to="/"><i class="fa-solid fa-arrow-left"></i></Link>
+            <Link to="/">
+                <i class="fa-solid fa-arrow-left"></i>
+              </Link>
             </div>
             <div className="card-text">
               <h3>Dương Ngô Tùng</h3>
@@ -59,7 +63,8 @@ const HeaderProfile = () => {
                 </div>
                 <div className="card-content-time">
                   <span>
-                    <i class="fa-solid fa-calendar-days"></i> Joined December 2021
+                    <i class="fa-solid fa-calendar-days"></i> Joined December
+                    2021
                   </span>
                 </div>
                 <div className="card-content-follow">
@@ -68,25 +73,22 @@ const HeaderProfile = () => {
               </div>
             </div>
             <div className="card-content-activitis">
-            <ul className="header-nav">
-              {headerAc.map((e, i) => (
-                <li key={i} className={`${i === active ? "active" : ""}`}>
-                  <Link to={e.path}>
-                      {e.display}
-                  </Link>
-                </li>
-              ))}
+              <ul className="header-nav">
+                {headerAc.map((e, i) => (
+                  <li key={i} className={`${i === active ? "active" : ""}`}>
+                    <Link to={e.path}>{e.display}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
-    );
-}
+      )}
+    </>
+  );
+};
 
 export default HeaderProfile;
-
-
-
 
 
 

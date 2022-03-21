@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import './rightPane.scss';
-import LeftPane from '../LeftPane/PaneLeft';
 
 
 const headerNav = [
@@ -51,7 +50,6 @@ const RightPane = () => {
 
   const active = headerNav.findIndex(e => e.path === pathname);
   return (
-
     <div ref={headerRef} className="header" id='header'>
       <div className="header__wrap container">
         <ul className="header__nav nav">
