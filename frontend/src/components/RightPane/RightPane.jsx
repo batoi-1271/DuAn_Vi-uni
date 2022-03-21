@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 import { Link, useLocation } from 'react-router-dom';
 import Button from '@mui/material/Button';
@@ -48,16 +48,27 @@ const headerNav = [
 const RightPane = () => {
   const {pathname} = useLocation();
   const headerRef = useRef(null);
-  const LeftPane = true;
-
+  
 const active = headerNav.findIndex(e => e.path === pathname);
+
+const [message, setMessage] = React.useState(true);
+
+const onClick = () => {
+  if (active === 2) {
+    setMessage(!message);
+  } 
+} 
+
+{
+  message && <LeftPane/>
+}
   return (
     <div ref={headerRef} className="header" id='header'>
             <div className="header__wrap container">
                 <ul className="header__nav nav">
                     {
                         headerNav.map((e, i) => (
-                            <li key={i} className={`${i === active ? 'active' : ''}`}>
+                            <li key={i} onClick= {onClick}  className={`${i === active ? 'active' : ''}`}>
                                 <Link to={e.path}>
                                     <span>{e.icon}</span>
                                     {e.display}
@@ -88,6 +99,7 @@ const active = headerNav.findIndex(e => e.path === pathname);
             </div>
         </div>
   );
+            
 }
 
 export default RightPane;

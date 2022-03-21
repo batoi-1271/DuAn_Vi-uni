@@ -23,10 +23,10 @@ const HeaderProfile = () => {
   
     const active = headerAc.findIndex((e) => e.path === pathname);
     return (
-        <div className="cards">
+        <div className="cards" ref={headerRef}>
           <div className="card-header">
             <div className="card-back">
-              <Link to="/home"><i class="fa-solid fa-arrow-left"></i></Link>
+              <Link to={"/"}><i class="fa-solid fa-arrow-left"></i></Link>
             </div>
             <div className="card-text">
               <h3>Dương Ngô Tùng</h3>
