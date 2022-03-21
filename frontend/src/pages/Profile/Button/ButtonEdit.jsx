@@ -1,4 +1,4 @@
-import '../Button/edit.scss'
+import './edit.scss'
 
 const ButtonEdit = ({ show, close, title, children }) => {
     return ( 
@@ -13,17 +13,17 @@ const ButtonEdit = ({ show, close, title, children }) => {
                     <button className="submit">Save</button>
                 </header>
                 <main className="modal_content">
-                    <div className="card_content">
-                        <div className="card_content-img">
+                    <div className="cardContent">
+                        <div className="cardContent_imgCover">
                             <img src="https://lovablemessages.com/wp-content/uploads/2021/12/bo-hinh-nen-3d-that-dep-va-that-hap-dan-24-1068x601.jpg" alt="" />
-                            <div className="card_content-icon">
-                            <button className='ok'>
-                                <i class="fa-solid fa-xmark"></i>
-                            </button>
-                            <button>
-                                <i class="fa-solid fa-camera"></i>
-                            </button>
-                            </div>
+                                <div className="editIcon">
+                                    <button>
+                                        <i class="fa-solid fa-camera"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
                         </div>
                     </div>
                 </main>
