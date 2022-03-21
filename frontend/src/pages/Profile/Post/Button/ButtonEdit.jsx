@@ -13,15 +13,17 @@ const ButtonEdit = ({ show, close, title, children }) => {
                     <button className="submit">Save</button>
                 </header>
                 <main className="modal_content">
-                     <div className="cover-img">
-                        <img src="https://lovablemessages.com/wp-content/uploads/2021/12/bo-hinh-nen-3d-that-dep-va-that-hap-dan-24-1068x601.jpg" alt="" />
-                    </div>
-                    <div className="avatar-img">
-                        <div className="img">
-                            <img src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_400x400.jpg" alt="" />
-                        </div>
-                        <div className="cam">
-                            <i class="fa-solid fa-camera-rotate"></i>
+                    <div className="card_content">
+                        <div className="card_content-img">
+                            <img src="https://lovablemessages.com/wp-content/uploads/2021/12/bo-hinh-nen-3d-that-dep-va-that-hap-dan-24-1068x601.jpg" alt="" />
+                            <div className="card_content-icon">
+                            <button className='ok'>
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-camera"></i>
+                            </button>
+                            </div>
                         </div>
                     </div>
                 </main>
