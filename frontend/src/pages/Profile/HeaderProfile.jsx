@@ -1,5 +1,5 @@
 import React, { useRef,useState } from "react";
-import "../Profile/profile.scss";
+import "./profile.scss";
 import { Link, useLocation } from "react-router-dom";
 import ButtonEdit from "./Button/ButtonEdit";
 
@@ -90,3 +90,8 @@ const HeaderProfile = () => {
 };
 
 export default HeaderProfile;
+
+
+
+
+

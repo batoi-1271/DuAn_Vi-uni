@@ -18,19 +18,7 @@
         z-index: 99;
         top: 0;
         width: 45%;
-        .card-back{
-            
-            margin:  20px;
-            padding:5px 10px;
-            cursor: pointer;
-            border-radius: 100%;
-            &:hover{
-                background: $body-bg;
-            }
-        }
-        .card-text{
-            cursor: pointer;
-            h3{
+
         .profileName-user {
             cursor: pointer;
             margin: 50px;
@@ -41,106 +29,106 @@
             }
         }
     }
+        &__Info {
+            width: inherit;
 
-&__Info {
-        width: inherit;
-
-        .infoContent {
-            position: relative;
-            height: 410px;
-            width: 100%;
-
-            &__Cover-img {
-                margin-top: 64px;
-                height: 205px;
+            .infoContent {
+                position: relative;
+                height: 410px;
                 width: 100%;
 
-                img {
-                    object-fit: cover;
-                    height: 100%;
+                &__Cover-img {
+                    margin-top: 64px;
+                    height: 205px;
                     width: 100%;
-                    cursor: pointer;
-                }
-            }
 
-            &__TextInfo {
-                height: 205px;
-                width: 100%;
-                position: absolute;
-                padding: 0 30px;
-
-                .infoUser {
-                    height: 70px;
-                    width: 100%;
-                    @include flex(center, space-between);
-
-                    &__userAvatar {
-
-                        img {
-                            object-fit: cover;
-                            width: 145px;
-                            height: 145px;
-                            border-radius: 100%;
-                            border: 5px solid #fff;
-                            margin-top: -62.5px;
-                        }
+                    img {
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                        cursor: pointer;
                     }
+                }
 
-                    &__userEdit {
-                        button {
-                            padding: 8px 20px;
-                            border-radius: 10px;
-                            @include colorGradient;
-                            width: 150px;
-                            height: 45px;
-                            border-radius: 50px;
-                            font-weight: bold;
-                            border: none;
-                            cursor: pointer;
-                            color: #fff;
+                &__TextInfo {
+                    height: 205px;
+                    width: 100%;
+                    position: absolute;
+                    padding: 0 30px;
 
-                            &:hover {
-                                box-shadow: $box-shadow-1;
+                    .infoUser {
+                        height: 70px;
+                        width: 100%;
+                        @include flex(center, space-between);
+
+                        &__userAvatar {
+
+                            img {
+                                object-fit: cover;
+                                width: 145px;
+                                height: 145px;
+                                border-radius: 100%;
+                                border: 5px solid #fff;
+                                margin-top: -62.5px;
+                            }
+                        }
+
+                        &__userEdit {
+                            button {
+                                padding: 8px 20px;
+                                border-radius: 10px;
+                                @include colorGradient;
+                                width: 150px;
+                                height: 45px;
+                                border-radius: 50px;
+                                font-weight: bold;
+                                border: none;
+                                cursor: pointer;
+                                color: #fff;
+
+                                &:hover {
+                                    box-shadow: $box-shadow-1;
+                                }
                             }
                         }
                     }
-                }
 
-                .userName,
-                .dateCreate,
-                .follower {
-                    padding-top: 5px;
-                }
-
-                .follower {
-                    cursor: pointer;
-                }
-            }
-        }
-
-        .profileItems-menu {
-            .header-nav {
-                @include flex(center, space-between);
-                display: flex;
-                flex: 1fr 1fr 1fr;
-                align-content: center;
-
-                li {
-                    padding: 10px 40px;
-                    font-weight: 700;
-                    width: 33%;
-                    text-align: center;
-
-                    &.active {
-                        content: "";
-                        transition: width 0.5s ease;
-                        color: $main-color;
+                    .userName,
+                    .dateCreate,
+                    .follower {
+                        padding-top: 5px;
                     }
 
-                    &:hover {
-                        box-shadow: $box-shadow;
+                    .follower {
+                        cursor: pointer;
                     }
                 }
             }
+
+            .profileItems-menu {
+                .header-nav {
+                    @include flex(center, space-between);
+                    display: flex;
+                    flex: 1fr 1fr 1fr;
+                    align-content: center;
+
+                    li {
+                        padding: 10px 40px;
+                        font-weight: 700;
+                        width: 33%;
+                        text-align: center;
+
+                        &.active {
+                            content: "";
+                            transition: width 0.5s ease;
+                            color: $main-color;
+                        }
+
+                        &:hover {
+                            box-shadow: $box-shadow;
+                        }
+                    }
+                }
+            }
         }
-    }}}}
+    }
