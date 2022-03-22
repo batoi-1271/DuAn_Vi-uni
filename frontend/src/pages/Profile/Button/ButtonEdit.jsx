@@ -3,6 +3,7 @@ import TextField from '@mui/material/TextField';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import FormControl from '@mui/material/FormControl';
 
 
 const ButtonEdit = ({ show, close, title, children }) => {
@@ -45,12 +46,18 @@ const ButtonEdit = ({ show, close, title, children }) => {
                         <footer className="modal_footer">
                             <form action="">
                                 <div className="name">
-                                    <TextField
-                                        id="name"
-                                        label="Name"
-                                        defaultValue="Dương Ngô Tùng"
-                                        helperText="Some important text"
-                                    />
+                                    <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+                                        <FormControl fullWidth sx={{ m: 1 }} variant="standard">
+                                        <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
+                                        <TextField
+                                            id="name"
+                                            label="Name"
+                                            defaultValue="Dương Ngô Tùng"
+                                            helperText="Some important text"
+                                        />
+                                        </FormControl>
+                                    </Box>
+
                                 </div>
                                 <div className="bio">
                                     <TextField
@@ -59,7 +66,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                         multiline
                                         rows={4}
                                         defaultValue="Hoa rơi cửa phật. 5 chục 1 quật."
-                                        helperText="Some important text"
+
                                     />
                                 </div>
                                 <div className="location">
@@ -67,7 +74,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                         id="location"
                                         label="Location"
                                         defaultValue="Hoa rơi cửa phật. 5 chục 1 quật."
-                                        helperText="Some important text"
+                                        helperText=""
                                     />
                                 </div>
                                 <div className="dateOfBirth">
