@@ -44,10 +44,12 @@ const Home = () => {
               </div>
             </div>
             <div className="post-interactive">
-              <i class="fa-solid fa-comment">
+              <i class="fa-regular fa-comment-dots">
                 <p>1</p>
               </i>
-              <Heart isClick={isClick} onClick={() => setClick(!isClick)} />
+                <div id="heart">
+                    <Heart className="heart" isClick={isClick} onClick={() => setClick(!isClick)} />
+                </div>
                 <p>1</p>
               <i class="fa-solid fa-arrow-up-from-bracket"></i>
             </div>
@@ -83,7 +85,7 @@ const Home = () => {
               </div>
             </div>
             <div className="post-interactive">
-              <i class="fa-solid fa-comment">
+            <i class="fa-regular fa-comment-dots">
                 <p>1</p>
               </i>
               <i class="fa-solid fa-heart">
@@ -123,7 +125,7 @@ const Home = () => {
               </div>
             </div>
             <div className="post-interactive">
-              <i class="fa-solid fa-comment">
+            <i class="fa-regular fa-comment-dots">
                 <p>1</p>
               </i>
               <i class="fa-solid fa-heart">
