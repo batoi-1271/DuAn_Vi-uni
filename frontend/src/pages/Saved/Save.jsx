@@ -21,8 +21,8 @@ const Save = () => {
             <div className="post-info">
                 <div className="post-info-header">
                     <div className="post-name">
-                        <h4>Dương Ngô Tùng</h4>
-                        <p>@DngNgTng1</p>
+                        <h4>Nguyển Bá Tới</h4>
+                        <p>@Toiba2001</p>
                         <p>22h</p>   
                     </div>
                     <div className="post-dot">
@@ -51,8 +51,8 @@ const Save = () => {
             <div className="post-info">
                 <div className="post-info-header">
                     <div className="post-name">
-                        <h4>Dương Ngô Tùng</h4>
-                        <p>@DngNgTng1</p>
+                        <h4>Nguyển Bá Tới</h4>
+                        <p>@Toiba2001</p>
                         <p>22h</p>   
                     </div>
                     <div className="post-dot">
@@ -81,8 +81,8 @@ const Save = () => {
             <div className="post-info">
                 <div className="post-info-header">
                     <div className="post-name">
-                        <h4>Dương Ngô Tùng</h4>
-                        <p>@DngNgTng1</p>
+                        <h4>Nguyển Bá Tới</h4>
+                        <p>@Toiba2001</p>
                         <p>22h</p>   
                     </div>
                     <div className="post-dot">

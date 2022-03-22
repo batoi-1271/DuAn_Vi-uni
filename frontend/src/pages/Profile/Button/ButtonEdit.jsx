@@ -3,6 +3,7 @@ import TextField from '@mui/material/TextField';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import FormControl from '@mui/material/FormControl';
 
 
 const ButtonEdit = ({ show, close, title, children }) => {
@@ -45,8 +46,8 @@ const ButtonEdit = ({ show, close, title, children }) => {
                         <footer className="modal_footer">
                             <form action="">
                                 <div className="name">
-                                    {/* <input type="text" name="" id="" placeholder='Name' /> */}
                                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
+                                        <FormControl fullWidth sx={{ m: 1 }} variant="standard">
                                         <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                                         <TextField
                                             id="name"
@@ -54,6 +55,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                             defaultValue="Dương Ngô Tùng"
                                             helperText="Some important text"
                                         />
+                                        </FormControl>
                                     </Box>
 
                                 </div>
