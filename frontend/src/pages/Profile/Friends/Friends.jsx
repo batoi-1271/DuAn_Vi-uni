@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route } from "react-router-dom";
-import './pagefriend.scss';
+// import './pagefriend.scss';
 import RouterFriends from './RouterFiends';
 import Pagefrends from './Pagefrends';
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import './pagefriend.scss';
+// import './pagefriend.scss';
 import { Link, useLocation, useHistory } from "react-router-dom";
 
 const headerAc = [
