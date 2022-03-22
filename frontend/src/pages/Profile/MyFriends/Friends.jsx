@@ -1,8 +1,10 @@
-import React from 'react'
+import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import './pagefriend.scss';
-import RouterFriends from './RouterFiends';
-import Pagefrends from './Pagefrends';
+
+import "./friends.scss";
+
+import HeaderFr from "./HeaderFr";
+import RoutesFr from "./RoutesFr";
 
 const Friends = () => {
   return (
@@ -11,15 +13,14 @@ const Friends = () => {
         <Route
           render={(props) => (
             <>
-              <Pagefrends {...props} />
-              <RouterFriends />
-              
+              <HeaderFr {...props} />
+              <RoutesFr />
             </>
           )}
         />
       </div>
     </BrowserRouter>
-  )
-}
+  );
+};
 
 export default Friends;

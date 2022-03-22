@@ -15,7 +15,6 @@ const headerAc = [
 
 const HeaderNoti = () => { 
   const { pathname } = useLocation();
-  const headerRef = useRef(null);
 
   const active = headerAc.findIndex((e) => e.path === pathname);
   return (

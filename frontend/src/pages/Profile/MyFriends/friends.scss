@@ -1,0 +1,76 @@
+@use "../../../scss/" as *;
+
+
+.User-friends {
+    flex-basis: 45%;
+    height: auto;
+    
+}
+
+.fiends {
+    flex-basis: 45%;
+    height: auto;
+    position: sticky;
+    z-index: 99;
+    box-shadow: $box-shadow;
+
+    top: 0;
+    &__header {
+        height: $header-height;
+        background: $body-bg;
+        transition: all 1.5s ease;
+        @include flex(center, flex-start);
+
+        .backProfile {
+            button {
+                width: 30px;
+                height: 30px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                border-radius: 50%;
+                &:hover {
+                    color: $main-color;
+                    background-color: rgb(223, 222, 222);
+                }
+            }
+        }
+        .nameHeader {
+            h3 {
+                font-size: 1.5rem;
+                margin-left: 2rem;
+            }
+        }
+        
+    }
+    &__main {
+        .header-nav {
+
+            @include flex(center, space-between);
+            li {
+                width: 50%;
+                border-right: 3px solid #E7EBF0;
+                background-color: $body-bg;
+                text-align: center;
+                cursor: pointer;
+                line-height: 50px;
+                height: 50px;
+                font: {
+                    size: 1.1rem;
+                    weight: 700;
+                }
+                &:hover {
+                    box-shadow: $box-shadow-1;
+                }
+                &.active {
+                    content: "";
+                    transition: width 0.5s ease;
+                    color: $main-color;
+                    transition: all 300ms ease;
+                    border-bottom: 3px solid #E7EBF0;
+                    
+                }
+            }
+        }
+    }
+}
