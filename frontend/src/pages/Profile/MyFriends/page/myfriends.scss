@@ -1,0 +1,8 @@
+@use '../../../../scss/' as *;
+
+.myFriends{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 45%;
+    width: 100%;
+}

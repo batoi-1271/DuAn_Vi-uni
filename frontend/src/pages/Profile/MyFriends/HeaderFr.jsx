@@ -1,11 +1,11 @@
-import React from 'react'
-// import './pagefriend.scss';
-import { Link, useLocation, useHistory } from "react-router-dom";
+import React from "react";
+import {Link, useLocation, useHistory  } from "react-router-dom";
+import "./friends.scss";
 
 const headerAc = [
   {
     display: "Friends",
-    path: "/friends/",
+    path: "/friends",
   },
   {
     display: "Following",
@@ -13,29 +13,30 @@ const headerAc = [
   },
 ];
 
-const Pagefrends = () => {
-
+const HeaderFr = () => { 
   const { pathname } = useLocation();
   const history = useHistory();
 
   function handleClick() {
     history.push("/profile");
   }
+
   const active = headerAc.findIndex((e) => e.path === pathname);
   return (
-    <div className="pageFriend">
-      <div className="pageHeader">
-        <div className="iconHeader">
-          <button type="button" onClick={handleClick}>
-            <i class="fa-solid fa-arrow-left"></i>
-          </button>
+    <div className="fiends">
+      <div className="fiends__header">
+        <div className="backProfile">
+              <button type="button" onClick={handleClick}>
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
         </div>
         <div className="nameHeader">
-          <h3>Dương Ngô Tùng</h3>
-          <p>@DngNgTng1</p>
+              <h3>Dương Ngô Tùng :))</h3>
+              <p>@DngNgTng1</p>
         </div>
-      </div>
-      <div className="friends__main">
+    </div>
+
+      <div className="fiends__main">
         <ul className="header-nav">
           {headerAc.map((e, i) => (
             <li key={i} className={`${i === active ? "active" : ""}`}>
@@ -50,4 +51,4 @@ const Pagefrends = () => {
   );
 };
 
-export default Pagefrends;
+export default HeaderFr;

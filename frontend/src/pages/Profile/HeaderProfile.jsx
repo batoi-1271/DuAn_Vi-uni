@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "./profile.scss";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import ButtonEdit from "./Button/ButtonEdit";
@@ -20,7 +20,6 @@ const headerAc = [
 
 const HeaderProfile = () => {
   const { pathname } = useLocation();
-  const headerRef = useRef(null);
   const [modal, setModal] = useState(false);
   const Toggle = () => setModal(!modal);
 
@@ -29,7 +28,7 @@ const HeaderProfile = () => {
   return (
     <>
       {pathname.includes("/profile") && (
-        <div className="profile" ref={headerRef}>
+        <div className="profile">
           <div className="profile__header">
             <div className="profileName-user">
               <h3>Dương Ngô Tùng</h3>
@@ -72,12 +71,10 @@ const HeaderProfile = () => {
                   </span>
                 </div>
                 <div className="friends">
-                  
                   <Link to="/friends">
                     {" "}
                     <p>7 Friends</p>{" "}
                   </Link>
-                  {/* <p>7 Following</p> */}
                 </div>
               </div>
             </div>
