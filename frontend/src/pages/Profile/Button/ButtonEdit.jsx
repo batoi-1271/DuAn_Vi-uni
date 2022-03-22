@@ -45,17 +45,12 @@ const ButtonEdit = ({ show, close, title, children }) => {
                         <footer className="modal_footer">
                             <form action="">
                                 <div className="name">
-                                    {/* <input type="text" name="" id="" placeholder='Name' /> */}
-                                    <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                                        <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-                                        <TextField
-                                            id="name"
-                                            label="Name"
-                                            defaultValue="Dương Ngô Tùng"
-                                            helperText="Some important text"
-                                        />
-                                    </Box>
-
+                                    <TextField
+                                        id="name"
+                                        label="Name"
+                                        defaultValue="Dương Ngô Tùng"
+                                        helperText="Some important text"
+                                    />
                                 </div>
                                 <div className="bio">
                                     <TextField
@@ -64,7 +59,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                         multiline
                                         rows={4}
                                         defaultValue="Hoa rơi cửa phật. 5 chục 1 quật."
-
+                                        helperText="Some important text"
                                     />
                                 </div>
                                 <div className="location">
@@ -72,7 +67,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                         id="location"
                                         label="Location"
                                         defaultValue="Hoa rơi cửa phật. 5 chục 1 quật."
-                                        helperText=""
+                                        helperText="Some important text"
                                     />
                                 </div>
                                 <div className="dateOfBirth">
