@@ -69,7 +69,7 @@ const HeaderProfile = () => {
                   </span>
                 </div>
                 <div className="follower">
-                  <p>7 Following</p>
+                  <p>3 Following</p>
                 </div>
               </div>
             </div>
