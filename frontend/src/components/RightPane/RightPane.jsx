@@ -65,6 +65,7 @@ const RightPane = () => {
 
                 <Link to={e.path}>
                   <span>{e.icon}</span>
+                  
                   {e.display}
                 </Link>
               </li>

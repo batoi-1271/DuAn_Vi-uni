@@ -1,6 +1,6 @@
-import React, { useRef,useState } from "react";
+import React, { useRef, useState } from "react";
 import "./profile.scss";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import ButtonEdit from "./Button/ButtonEdit";
 
 const headerAc = [
@@ -23,6 +23,7 @@ const HeaderProfile = () => {
   const headerRef = useRef(null);
   const [modal, setModal] = useState(false);
   const Toggle = () => setModal(!modal);
+
 
   const active = headerAc.findIndex((e) => e.path === pathname);
   return (
@@ -52,18 +53,17 @@ const HeaderProfile = () => {
                     />
                   </div>
                   <div className="infoUser__userEdit">
-                  
-                  <button onClick={() => Toggle()}>Edit profile</button>
-                  <ButtonEdit show={modal} close = {Toggle} title = "Edit profile">
-                  </ButtonEdit>
+                    <button onClick={() => Toggle()}>Edit profile</button>
+                    <ButtonEdit
+                      show={modal}
+                      close={Toggle}
+                      title="Edit profile"
+                    ></ButtonEdit>
                   </div>
                 </div>
                 <div className="userName">
                   <h3>Dương Ngô Tùng</h3>
                   <p>@DngNgTng1</p>
-                </div>
-                <div className="bio">
-                  <p>Ra xã hội làm ăn bươn chải, liều thì ăn nhiều, không liều thì ăn ít. Muốn thành công thì phải chấp nhận trải qua đắng cay ngọt bùi</p>
                 </div>
                 <div className="dateCreate">
                   <span>
@@ -71,8 +71,13 @@ const HeaderProfile = () => {
                     2021
                   </span>
                 </div>
-                <div className="follower">
-                  <p>3 Following</p>
+                <div className="friends">
+                  
+                  <Link to="/friends">
+                    {" "}
+                    <p>7 Friends</p>{" "}
+                  </Link>
+                  {/* <p>7 Following</p> */}
                 </div>
               </div>
             </div>
@@ -93,8 +98,3 @@ const HeaderProfile = () => {
 };
 
 export default HeaderProfile;
-
-
-
-
-

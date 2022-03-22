@@ -5,6 +5,8 @@ import Post from './Post/Post';
 import Media from './Media/Media';
 import Likes from './Likes/Likes';
 import Home from '../Home/Home';
+import Friends from './Friends/Friends';
+import Pagefrends from './Friends/Pagefrends';
 
 const RouterProfile = () => {
     return ( 
@@ -26,6 +28,9 @@ const RouterProfile = () => {
                 path='/'
                 exact
                 component={Home}
+            />
+            <Route path='/friends'
+            component={Pagefrends}
             />
         </Switch>
      );

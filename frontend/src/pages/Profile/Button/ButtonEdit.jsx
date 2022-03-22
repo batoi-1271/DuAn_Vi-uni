@@ -61,6 +61,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                             id="bio"
                                             label="Bio"
                                             multiline
+                                            fullWidth
                                             rows={4}
                                             defaultValue="Ra xã hội làm ăn bươn chải, liều thì ăn nhiều, không liều thì ăn ít. Muốn thành công thì phải chấp nhận trải qua đắng cay ngọt bùi"
                                         />
