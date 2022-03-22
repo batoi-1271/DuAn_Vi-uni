@@ -2,8 +2,11 @@ import React, { Component, useState } from "react";
 import Button from "@mui/material/Button";
 import "./home.scss";
 import PostUser from "./PostUser";
+import Heart from "react-animated-heart";
+
 
 const Home = () => {
+  const [isClick, setClick] = useState(false);
   return (
     <section>
       <header className="home">
@@ -44,9 +47,8 @@ const Home = () => {
               <i class="fa-solid fa-comment">
                 <p>1</p>
               </i>
-              <i class="fa-solid fa-heart">
+              <Heart isClick={isClick} onClick={() => setClick(!isClick)} />
                 <p>1</p>
-              </i>
               <i class="fa-solid fa-arrow-up-from-bracket"></i>
             </div>
           </div>
