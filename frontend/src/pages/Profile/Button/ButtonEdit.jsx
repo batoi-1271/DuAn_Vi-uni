@@ -20,7 +20,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                             <h2 className="modal_header-title">{title}</h2>
                             <button className="submit">Save</button>
                         </header>
-                        <main className="modal_content">
+                        <div className="modal_content">
                             <div className="cardContent">
                                 <div className="cardContent_imgCover">
                                     <img src="https://lovablemessages.com/wp-content/uploads/2021/12/bo-hinh-nen-3d-that-dep-va-that-hap-dan-24-1068x601.jpg" alt="" />
@@ -42,28 +42,24 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                     </div>
                                 </div>
                             </div>
-                        </main>
+                        </div>
                         <footer className="modal_footer">
                             <form action="">
                                 <div className="name">
-                                    <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                                        <FormControl fullWidth sx={{ m: 1 }} variant="standard">
-                                        <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
                                         <TextField
                                             id="name"
                                             label="Name"
+                                            fullWidth
                                             defaultValue="Dương Ngô Tùng"
                                             helperText="Some important text"
                                         />
-                                        </FormControl>
-                                    </Box>
-
                                 </div>
                                 <div className="bio">
                                     <TextField
                                         id="bio"
-                                        label="bio"
+                                        label="Bio"
                                         multiline
+                                        fullWidth
                                         rows={4}
                                         defaultValue="Hoa rơi cửa phật. 5 chục 1 quật."
 
@@ -73,7 +69,8 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                     <TextField
                                         id="location"
                                         label="Location"
-                                        defaultValue="Hoa rơi cửa phật. 5 chục 1 quật."
+                                        fullWidth
+                                        defaultValue=""
                                         helperText=""
                                     />
                                 </div>
