@@ -62,6 +62,9 @@ const HeaderProfile = () => {
                   <h3>Dương Ngô Tùng</h3>
                   <p>@DngNgTng1</p>
                 </div>
+                <div className="bio">
+                  <p>Ra xã hội làm ăn bươn chải, liều thì ăn nhiều, không liều thì ăn ít. Muốn thành công thì phải chấp nhận trải qua đắng cay ngọt bùi</p>
+                </div>
                 <div className="dateCreate">
                   <span>
                     <i class="fa-solid fa-calendar-days"></i> Joined December
@@ -69,7 +72,7 @@ const HeaderProfile = () => {
                   </span>
                 </div>
                 <div className="follower">
-                  <p>7 Following</p>
+                  <p>3 Following</p>
                 </div>
               </div>
             </div>

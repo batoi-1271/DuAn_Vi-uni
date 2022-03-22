@@ -135,5 +135,26 @@
                 }
             }
         }
+        &_footer{
+            position: relative;
+            width: 100%;
+            height: auto;
+            // background: linear-gradient(to bottom, #2c3e50, #3498db);
+            .name,
+            .bio,
+            .location{
+                position: relative;
+                width: 100%;
+                #name{
+                    width: 100%;
+                }
+            }
+            .dateOfBirth{
+                padding: 10px 10px;
+                p{
+                    padding-bottom: 10px;
+                }
+            }
+        }
     }
 }

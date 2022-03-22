@@ -46,41 +46,51 @@ const ButtonEdit = ({ show, close, title, children }) => {
                         <footer className="modal_footer">
                             <form action="">
                                 <div className="name">
+<<<<<<< HEAD
                                     <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
                                         <FormControl fullWidth sx={{ m: 1 }} variant="standard">
                                         <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
+=======
+                                    <FormControl fullWidth sx={{ m: 1 }} variant="standard">
+>>>>>>> main
                                         <TextField
                                             id="name"
                                             label="Name"
                                             defaultValue="Dương Ngô Tùng"
                                             helperText="Some important text"
                                         />
+<<<<<<< HEAD
                                         </FormControl>
                                     </Box>
 
+=======
+                                    </FormControl>
+>>>>>>> main
                                 </div>
                                 <div className="bio">
-                                    <TextField
-                                        id="bio"
-                                        label="bio"
-                                        multiline
-                                        rows={4}
-                                        defaultValue="Hoa rơi cửa phật. 5 chục 1 quật."
-
-                                    />
+                                    <FormControl fullWidth sx={{ m: 1 }} variant="standard">
+                                        <TextField
+                                            id="bio"
+                                            label="Bio"
+                                            multiline
+                                            rows={4}
+                                            defaultValue="Ra xã hội làm ăn bươn chải, liều thì ăn nhiều, không liều thì ăn ít. Muốn thành công thì phải chấp nhận trải qua đắng cay ngọt bùi"
+                                        />
+                                    </FormControl>
                                 </div>
                                 <div className="location">
-                                    <TextField
-                                        id="location"
-                                        label="Location"
-                                        defaultValue="Hoa rơi cửa phật. 5 chục 1 quật."
-                                        helperText=""
-                                    />
+                                    <FormControl fullWidth sx={{ m: 1 }} variant="standard">
+                                        <TextField
+                                            id="location"
+                                            label="Location"
+                                            defaultValue=""
+                                        />
+                                    </FormControl>
                                 </div>
                                 <div className="dateOfBirth">
                                     <h5>Birth date</h5>
                                     <p>This should be your date of birth, whether this account is for your business, event, or even your cat.</p>
-                                    <TextField
+                                    <TextField 
                                         id="date"
                                         label="Birthday"
                                         type="date"

@@ -4,11 +4,10 @@
     flex-basis: 45%;
     height: auto;
 }
-
+// Header ProFile
 .profile {
     flex-basis: 45%;
     height: auto;
-
     &__header {
         display: flex;
         align-items: center;
@@ -34,7 +33,7 @@
 
             .infoContent {
                 position: relative;
-                height: 410px;
+                height: 500px;
                 width: 100%;
 
                 &__Cover-img {
@@ -92,7 +91,11 @@
                             }
                         }
                     }
-
+                    .bio{
+                        p{
+                            padding: 10px 0;
+                        }
+                    }
                     .userName,
                     .dateCreate,
                     .follower {
@@ -101,6 +104,13 @@
 
                     .follower {
                         cursor: pointer;
+                        p{
+                            width: fit-content;
+                            padding: 5px;
+                            &:hover{
+                                box-shadow: $box-shadow;
+                            }
+                        }
                     }
                 }
             }
