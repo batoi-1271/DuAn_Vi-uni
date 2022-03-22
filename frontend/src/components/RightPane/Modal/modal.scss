@@ -23,25 +23,24 @@
 
         &_header {
             position: relative;
-            border-bottom: 1px solid  #dddddd;
+            border-bottom: 1px solid #dddddd;
 
             &-title {
                 text-align: center;
+                color: #000000;
             }
 
             .close {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 20px;
-                height: 20px;
+                width: 25px;
+                height: 25px;
                 border: none;
                 background: none;
                 cursor: pointer;
-                i {
-                    &:hover {
-                        color: $main-color;
-                    }
+                &:hover{
+                    color: $main-color;
                 }
             }
         }

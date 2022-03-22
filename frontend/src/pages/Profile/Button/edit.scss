@@ -1,0 +1,139 @@
+@use '../../../scss/' as *;
+
+.modalContainer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    flex-basis: 43%;
+    @include flex(center, center);
+    background-color: rgba($color: #000000, $alpha: 0.35);
+
+    .modal {
+        position: absolute;
+        background-color: $body-bg;
+        width: 42%;
+        top: 6%;
+        left: 33%;
+        height: 640px;
+        overflow-y: scroll;
+        border-radius: 20px;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &_header {
+            position: relative;
+            display: flex;
+            height: 50px;
+            justify-content: center;
+            padding: 2rem;
+            align-items: center;
+            position: fixed;
+            top: 6%;
+            left: 33%;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            z-index: 1000;
+            background-color: $body-bg;
+            width: 42%;
+
+            &-title {
+                text-align: center;
+            }
+
+            .close {
+                position: absolute;
+                left: 5%;
+                top: 25%;
+                width: 30px;
+                height: 30px;
+                @include flex(center, center);
+                border-radius: 100%;
+
+                &:hover {
+                    color: $main-color;
+                    background: #dddddd;
+                }
+            }
+
+            .submit {
+                position: absolute;
+                right: 5%;
+                align-items: center;
+            }
+        }
+
+        &_content {
+            .cardContent {
+                position: relative;
+                &_imgCover {
+                    position: relative;
+                    height: 220px;
+                    width: 100%;
+                    img {
+                        height: 220px;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    .editIcon {
+                        position: absolute;
+                        display: flex;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%); 
+                        button {
+                            margin-left: 20px;
+                            width: 65px;
+                            height: 50px;
+                            cursor: pointer;
+                            border: none;
+                            background: rgba($color: #000000, $alpha: 0.35);
+                            &:hover {
+                                border: 1px solid white;
+                            }
+                            i {
+                                font-size: 20px;
+                                color: white;
+                            }
+                        }
+                    }
+                    
+                }
+                &_imgAvatar {
+                    position: absolute;
+                    @include imgAvatar;
+                    width: 105px;
+                    height: 105px;
+                    bottom: -20%;
+                    left: 5%;
+                    img {
+                        border: 5px solid white;
+                    }
+                    .editAvatar {
+                        position: absolute;
+                        top: 30%;
+                        left: 4%;
+                        button {
+                            margin-left: 20px;
+                            width: 55px;
+                            height: 40px;
+                            cursor: pointer;
+                            border: none;
+                            background: rgba($color: #000000, $alpha: 0.35);
+                            &:hover {
+                                border: 1px solid white;
+                            }
+                            i {
+                                font-size: 15px;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -119,6 +119,9 @@ section {
             i {
                 margin-left: 10px;
                 color: $main-color;
+                &:hover {
+                    color: #023047;
+                }
             }
         }
     }
