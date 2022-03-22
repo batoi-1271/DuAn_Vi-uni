@@ -45,27 +45,15 @@ const ButtonEdit = ({ show, close, title, children }) => {
                         </main>
                         <footer className="modal_footer">
                             <form action="">
-                                <div className="name">
-<<<<<<< HEAD
-                                    <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-                                        <FormControl fullWidth sx={{ m: 1 }} variant="standard">
-                                        <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
-=======
+                                <div className="name"></div>
                                     <FormControl fullWidth sx={{ m: 1 }} variant="standard">
->>>>>>> main
                                         <TextField
                                             id="name"
                                             label="Name"
                                             defaultValue="Dương Ngô Tùng"
                                             helperText="Some important text"
                                         />
-<<<<<<< HEAD
-                                        </FormControl>
-                                    </Box>
-
-=======
                                     </FormControl>
->>>>>>> main
                                 </div>
                                 <div className="bio">
                                     <FormControl fullWidth sx={{ m: 1 }} variant="standard">
