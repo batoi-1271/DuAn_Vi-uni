@@ -135,5 +135,15 @@
                 }
             }
         }
+        &_footer{
+            width: 100%;
+            height: auto;
+            background: linear-gradient(to bottom, #2c3e50, #3498db);
+            .name,
+            .bio,
+            .location{
+                
+            }
+        }
     }
 }
