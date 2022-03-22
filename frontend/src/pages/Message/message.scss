@@ -7,17 +7,55 @@
     flex-direction: row-reverse;
     .message-hearder{
         padding: 0 0 10px 0;
-        flex-basis: 40%;
+        flex-basis: 45%;
         box-shadow: 1px 1px rebeccapurple;
-        padding: 10px;
+        // padding: 10px;
         border-left: 1px solid red;
+        .message-friend{
+            margin-top: 50px;
+            padding: 0;
+            .message-friend-avt{
+                display: flex;
+                padding: 10px;
+                &:hover{
+                    background-color: pink;
+                }
+            }
+            .message-friend-avt-text{
+                margin-right: 20px;
+            }
+                img {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+        }
     }
     .message-new{
-        width: 60%;
+        padding: 0 100px;
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2{
+            font-size: 40px;
+        }
+        button{
+            width: fit-content;          
+            padding: 15px 30px;
+            border-radius: 25px;
+            outline: none;
+            border: none;
+            background-color: rgba(0, 206, 213, 0.9);
+            cursor: pointer;
+            margin-top: 20px;
+        }
     }
     .message_head{
         display: flex;
         justify-content: space-between;
+        padding: 10px 10px 0 10px;
         .fab,
         .fas{
             cursor: pointer;
@@ -27,6 +65,7 @@
         }
     }
     .message_search{
+        margin: 10px;
         border: 1px solid red;
         margin-top: 20px;
         display: flex;
@@ -46,6 +85,7 @@
             background-color: unset;
         }
     }
+   
 }
 
 

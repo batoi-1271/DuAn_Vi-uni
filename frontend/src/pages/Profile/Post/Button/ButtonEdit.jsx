@@ -1,3 +1,4 @@
+
 import '../Button/edit.scss'
 
 const ButtonEdit = ({ show, close, title, children }) => {
@@ -36,5 +37,6 @@ const ButtonEdit = ({ show, close, title, children }) => {
         </>
      );
 }
- 
 export default ButtonEdit;
+
+ 

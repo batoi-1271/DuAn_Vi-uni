@@ -130,7 +130,7 @@ section {
     &:hover{
         background-color: rgba(250,225,221,0.2);
         box-shadow: $box-shadow-1;
-        cursor: not-allowed;
+        cursor: pointer;
     }
     .post-avatar{
         width: 8%;
