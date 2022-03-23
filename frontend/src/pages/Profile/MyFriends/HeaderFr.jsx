@@ -17,16 +17,16 @@ const HeaderFr = () => {
   const { pathname } = useLocation();
   const history = useHistory();
 
-  function handleClick() {
-    history.push("/profile");
-  }
+  // function handleClick() {
+  //   history.push("/profile");
+  // }
 
   const active = headerAc.findIndex((e) => e.path === pathname);
   return (
     <div className="fiends">
       <div className="fiends__header">
         <div className="backProfile">
-              <button type="button" onClick={handleClick}>
+              <button type="button" onClick={history.goBack}>
                 <i class="fa-solid fa-arrow-left"></i>
               </button>
         </div>

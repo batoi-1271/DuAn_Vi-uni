@@ -3,8 +3,9 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import './rightPane.scss';
-import  Modal  from './Modal/Modal';
+import Modal from './Modal/Modal';
 import PostUser from '../../pages/Home/PostUser';
+import More from './More/More';
 
 
 const headerNav = [
@@ -38,17 +39,17 @@ const headerNav = [
     display: 'Profile',
     path: '/profile'
   },
-  {
-    icon: <i class="fa-solid fa-ellipsis"></i>,
-    display: 'More',
-    // path: '/more'
-  }
+
 ]
 
 
 const RightPane = () => {
   const [modal, setModal] = useState(false);
   const Toggle = () => setModal(!modal);
+
+
+  const [more, setMore] = useState(false);
+  const ToggleMore = () => setMore(!more);
 
   const { pathname } = useLocation();
   const headerRef = useRef(null);
@@ -60,28 +61,30 @@ const RightPane = () => {
         <ul className="header__nav nav">
           {
             headerNav.map((e, i) => (
-
               <li key={i} className={`${i === active ? 'active' : ''}`}>
 
                 <Link to={e.path}>
                   <span>{e.icon}</span>
-                  
                   {e.display}
                 </Link>
               </li>
             ))
           }
-          <li className='post'>
-            
+          <div className='more'>
+          
+            <button onClick={() => ToggleMore()}><i class="fa-solid fa-ellipsis"/>More</button>
+            <More show={more} close={ToggleMore} title="">
+            </More>
+          </div>
+          <div className='post'>
             <Button variant="contained" onClick={() => Toggle()}>Post</Button>
-
             <Modal show={modal} close={Toggle} title="Create post">
-              <PostUser/>
-          </Modal>
+              <PostUser />
+            </Modal>
 
-          </li>
+          </div>
         </ul>
-        
+
         <div className='infoUser'>
           <button className="account">
             <div className="avatar">
