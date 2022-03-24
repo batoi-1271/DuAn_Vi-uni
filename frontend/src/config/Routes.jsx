@@ -18,10 +18,10 @@ const Routes = () => {
                 path='/profile'
                 component={Profile}
             />
-            <Route
+            {/* <Route
                 path='/list'
                 component={List}
-            />
+            /> */}
             <Route
                 path='/saved'
                 component={Save}
