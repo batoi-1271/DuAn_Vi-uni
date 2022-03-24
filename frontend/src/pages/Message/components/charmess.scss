@@ -1,0 +1,88 @@
+.modalcontainer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: #000000, $alpha: 0.35);
+    animation: topbottom ease-in 0.2s;
+
+    .modal{
+        background-color: rgba(255, 255, 255, 1);
+        width: 800px;
+        height: auto;
+        padding: 30px;
+        border-radius: 20px;
+        &_header {
+            position: relative;
+            border-bottom: 2px solid red;
+            padding-bottom: 10px;
+            .fa-search{
+                color: aqua;
+            }
+            input{
+                border: none;
+                outline: none;
+                margin-left: 10px;
+            }
+            .close{
+                font-size: 26px;
+                .fa-solid{
+
+                }
+            }
+        }
+        &_content{
+            border-bottom: 1px solid orange;
+            padding: 20px 0;
+        }
+        &_footer{
+            padding: 20px 0;
+
+            button{
+                float: right;
+                background-color: antiquewhite;
+                padding: 10px 15px;
+                border-radius: 15px;
+                
+            }
+            .modal-close,
+            .submit{
+                margin-right: 10px;
+                &:hover{
+                    background-color: rgba(250, 235, 215,0.5);
+                }
+            }
+        }
+
+        .modal_header-title{
+            text-align: center;
+        }
+        .close{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    
+    
+}
+
+
+
+
+
+@keyframes topbottom {
+    from{
+        opacity: 0;
+        // transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        // transform: translateY(0);
+    }
+}

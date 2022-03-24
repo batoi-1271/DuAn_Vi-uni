@@ -5,4 +5,34 @@
     flex-direction: column;
     flex-basis: 45%;
     width: 100%;
+    .friends-lish{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        &:hover{
+            background-color: rgba(255, 232, 214,0.3)
+        }
+        .friends-lish-profile{
+            display: flex;
+            .friends-lish-avt{
+                margin-right: 10px;
+            }
+        }
+        .friends-lish-fow{
+            button{
+                margin-right: 20px;
+                outline: none;
+                padding: 7px 20px;
+                border-radius: 40px;
+                border: 1px solid #ccc;
+            }
+        }
+        .friends-lish-avt{
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50px;
+            }
+        }
+    }
 }

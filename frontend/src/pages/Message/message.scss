@@ -2,9 +2,10 @@
 @use '../../scss/' as *;
 
 .message{
-    flex-basis: 65%;
+    flex-basis: calc(68% + 8px);
     display: flex;
     flex-direction: row-reverse;
+    height: auto;
     .message-hearder{
         padding: 0 0 10px 0;
         flex-basis: 45%;
