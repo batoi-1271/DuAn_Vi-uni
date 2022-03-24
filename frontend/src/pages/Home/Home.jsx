@@ -43,14 +43,14 @@ const Home = () => {
               </div>
             </div>
             <div className="post-interactive">
-              <i class="fa-regular fa-comment-dots">
+              <i title="Comment" class="fa-regular fa-comment-dots">
                 <p>1</p>
               </i>
-                <div id="heart">
+                <div id="heart" title="Like">
                     <Heart className="heart" isClick={isClick} onClick={() => setClick(!isClick)} />
                 </div>
                 <p>1</p>
-              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              <i title="Share" class="fa-solid fa-arrow-up-from-bracket"></i>
             </div>
           </div>
         </div>

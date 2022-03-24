@@ -29,11 +29,11 @@ const headerNav = [
     display: 'Saved',
     path: '/saved'
   },
-  {
-    icon: <i class="fa-solid fa-list"></i>,
-    display: 'Lists',
-    path: '/list'
-  },
+  // {
+  //   icon: <i class="fa-solid fa-list"></i>,
+  //   display: 'Lists',
+  //   path: '/list'
+  // },
   {
     icon: <i class="fa-regular fa-user"></i>,
     display: 'Profile',
@@ -46,8 +46,6 @@ const headerNav = [
 const RightPane = () => {
   const [modal, setModal] = useState(false);
   const Toggle = () => setModal(!modal);
-
-
   const [more, setMore] = useState(false);
   const ToggleMore = () => setMore(!more);
 
@@ -60,7 +58,7 @@ const RightPane = () => {
       <div className="header__wrap container">
         <ul className="header__nav nav">
           {
-            headerNav.map((e, i) => (
+             headerNav.map((e, i) => (
               <li key={i} className={`${i === active ? 'active' : ''}`}>
 
                 <Link to={e.path}>
