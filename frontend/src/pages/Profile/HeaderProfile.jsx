@@ -23,6 +23,7 @@ const HeaderProfile = () => {
   const [modal, setModal] = useState(false);
   const Toggle = () => setModal(!modal);
 
+  const history = useHistory();
 
   const active = headerAc.findIndex((e) => e.path === pathname);
   return (
@@ -30,6 +31,11 @@ const HeaderProfile = () => {
       {pathname.includes("/profile") && (
         <div className="profile">
           <div className="profile__header">
+          <div className="backProfile">
+              <button type="button" onClick={history.goBack}>
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+        </div>
             <div className="profileName-user">
               <h3>Dương Ngô Tùng</h3>
               <p>3 Posts </p>

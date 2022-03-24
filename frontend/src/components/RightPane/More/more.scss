@@ -1,0 +1,62 @@
+@use '../../../scss/' as *;
+
+.modalContainerPost {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    @include flex(center, center);
+    background-color: rgba($color: #000000, $alpha: 0.35);
+
+    .more {
+        background-color: $body-bg;
+        width: 20%;
+        height: 200px;
+        padding: 2rem;
+        position: absolute;
+        bottom: 35%;
+        right: 7%;
+        border-radius: 20px;
+
+        &_content {
+            height: 200px;
+            width: 100%;
+            margin-top: -10px;
+
+            ul {
+                li {
+                    cursor: pointer;
+                    width: inherit;
+                    padding: 0;
+                    padding-bottom: 0.8rem;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    border-radius: 0;
+                    @include flex(center, flex-start);
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 0;
+                        transition: width 0.5s ease;
+                        backface-visibility:hidden;
+                        height: 2px;
+                        background-color: $main-color;
+                    }
+        
+                    &.active::after,
+                    &:hover::after {
+                        width: 100%;
+                    }
+                    i {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

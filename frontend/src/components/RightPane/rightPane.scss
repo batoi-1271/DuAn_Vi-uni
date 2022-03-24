@@ -20,18 +20,8 @@
         margin-top: 2rem;
 
         li {
-            padding: 5px 0;
-            font-weight: 700;
-            position: relative;
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            padding: 10px;
-            width: fit-content;
-            border-radius: 25px;
-            cursor: pointer;
-            width: 200px;
+            @include btnMenu;
             @include flex(center, space-between);
-            transition: all 300ms ease;
         &:hover {
             background-color: $body-bg;
             box-shadow: $box-shadow-1;
@@ -57,16 +47,41 @@
                 }
             }
 
-            Button {
-                @include colorGradient;
-                width: 250px;
+           
+        }
+        .more {
+            button {
+                background: none;
+                border: none;
+                width: 200px;
                 height: 45px;
-                border-radius: 50px;
-                font-size: 1.2rem;
-                font-weight: bold;
+                @include btnMenu;
+                @include flex(center, flex-start);
+                &:hover {
+                    background-color: $body-bg;
+                    box-shadow: $box-shadow-1;
+                    color: $main-color;
+                }
+                i {
+                    font-size: 25px;
+                    margin-right: 20px;
+                }
             }
         }
     }
+
+    .post {
+        margin-bottom: 30px;
+        Button {
+            @include colorGradient;
+            width: 200px;
+            height: 45px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    }
+    
     &__wrap {
         .infoUser{
             bottom: 1.5em;

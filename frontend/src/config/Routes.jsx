@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Switch, Route } from 'react-router-dom';
+import More from '../components/RightPane/More/More';
 
 import Home from '../pages/Home/Home';
 import List from '../pages/List/List';
@@ -17,10 +18,10 @@ const Routes = () => {
                 path='/profile'
                 component={Profile}
             />
-            <Route
+            {/* <Route
                 path='/list'
                 component={List}
-            />
+            /> */}
             <Route
                 path='/saved'
                 component={Save}
