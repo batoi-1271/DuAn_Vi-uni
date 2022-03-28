@@ -2,6 +2,8 @@ import React, { Component, useState } from "react";
 import Button from "@mui/material/Button";
 import "./home.scss";
 
+import OutsideClickHandler from 'react-outside-click-handler';
+
 const PostUser = () => {
   const options = ["Everyone", "Friends", "Only me"];
 
@@ -14,9 +16,10 @@ const PostUser = () => {
     setSelectedOption(value);
     setIsOpen(false);
     console.log(selectedOption);
+
   };
   return (
-    <section>
+    <section >
       <div className="postUser" id="postUser">
         <div className="avatar">
           <img
@@ -28,9 +31,11 @@ const PostUser = () => {
           <div className="contentPost__user">
             <textarea type="text" placeholder="What's happening?" />
           </div>
+
+          <OutsideClickHandler onOutsideClick={() => {setIsOpen(false)}}>
           <div className="privacy">
-            <div className="select" onClick={toggling}>
-              {selectedOption || "Everyone"}
+            <div className="select" onClick={toggling} >
+              {selectedOption ? selectedOption + ' can reply' : 'Select private'}
             </div>
             {isOpen && (
               <div className="dropContainer">
@@ -55,6 +60,8 @@ const PostUser = () => {
               </div>
             )}
           </div>
+        </OutsideClickHandler>
+
         </div>
       </div>
       <div className="iconPost">
