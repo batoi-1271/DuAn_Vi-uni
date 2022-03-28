@@ -15,24 +15,60 @@
         .message-friend{
             margin-top: 50px;
             padding: 0;
-            .message-friend-avt{
-                display: flex;
-                padding: 10px;
-                &:hover{
-                    background-color: pink;
-                }
+            &__message {
+                width: 100%;
             }
-            .message-friend-avt-text{
-                margin-right: 20px;
-            }
-                img {
-                    width: 60px;
-                    height: 60px;
-                    border-radius: 50%;
-                    margin-right: 10px;
-                }
         }
     }
+
+    .infoUser{
+        user-select: none;
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px 10px 10px;
+        height: 70px;
+        border-bottom: 1px $color-btn solid;
+        &:hover {
+            background-color: $color-btn;
+        }
+        &:active {
+            background-color: $white;
+        }
+        .infoUser-left{
+            display: flex;
+            .infoUser__avatar{
+                margin-right: 10px;
+            }
+        }
+        &__avatar {
+            @include imgAvatar;
+           
+        }
+        &__content {
+            
+            .userName {
+                width: inherit;
+                display: flex;
+                .name{
+                    margin-right: 10px;
+                }
+                .time{
+                    margin-left: 10px;
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+
     .message-new{
         padding: 0 100px;
         width: 55%;

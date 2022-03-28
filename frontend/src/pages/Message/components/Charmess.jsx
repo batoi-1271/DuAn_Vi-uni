@@ -1,21 +1,26 @@
-import React from 'react'
-import './charmess.scss';
+import React from "react";
+import "./charmess.scss";
 
 const Charmess = ({ show, close, title, children }) => {
   return (
     <>
       {show ? (
-        <div className="modalcontainer" onClick={()=>close()}>
-          <div className="modal" onClick={(e)=>e.stopPropagation()}>
+        <div className="modalcontainer" onClick={() => close()}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
             <header className="modal_header">
-              <h2 className="modal_header-title">{title}</h2>
+              <div className="modal_header-title">
+                <h2 className="modal_header-tit">{title}</h2>
+                <i onClick={() => close()} class="fa-solid fa-xmark"></i>
+              </div>
               <i class="fas fa-search"></i>
-              <input type="text" placeholder='Search people' />
+              <input type="text" placeholder="Search people" />
               {/* <button className="close" onClick={() => close()}><i class="fa-solid fa-xmark"></i></button> */}
             </header>
             <main className="modal_content">{children}</main>
             <footer className="modal_footer">
-              <button className="modal-close" onClick={()=>close()} >Cacel</button>
+              <button className="modal-close" onClick={() => close()}>
+                Cancel
+              </button>
               <button className="submit">Submit</button>
             </footer>
           </div>
