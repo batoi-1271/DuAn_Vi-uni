@@ -5,8 +5,8 @@ import './App.scss';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import Routes from './config/Routes';
-import LeftPane from './components/LeftPane/PaneLeft';
 import RightPane from './components/RightPane/RightPane';
+import LeftPane from './components/LeftPane/LeftPane';
 
 function App() {
     return (

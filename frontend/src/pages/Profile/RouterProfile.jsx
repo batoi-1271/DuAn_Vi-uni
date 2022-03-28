@@ -5,7 +5,7 @@ import Post from './Post/Post';
 import Media from './Media/Media';
 import Likes from './Likes/Likes';
 import Home from '../Home/Home';
-import Friends from './MyFriends/Friends';
+import Friends from '../../components/MyFriends/Friends';
 
 
 const RouterProfile = () => {
