@@ -13,7 +13,7 @@ const headerAc = [
     path: "/profile/media",
   },
   {
-    display: "Likes",
+    display: "Share",
     path: "/profile/likes",
   },
 ];
@@ -69,6 +69,9 @@ const HeaderProfile = () => {
                 <div className="userName">
                   <h3>Dương Ngô Tùng</h3>
                   <p>@DngNgTng1</p>
+                </div>
+                <div className="bio">
+                  <p>Không có công việc nào không có áp lực, tuy nhiên chỉ có không đam mê công việc mới là áp lớn lực khiến ta từ bỏ công việc đó.</p>
                 </div>
                 <div className="dateCreate">
                   <span>

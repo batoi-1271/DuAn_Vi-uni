@@ -14,7 +14,6 @@ const Charmess = ({ show, close, title, children }) => {
               </div>
               <i class="fas fa-search"></i>
               <input type="text" placeholder="Search people" />
-              {/* <button className="close" onClick={() => close()}><i class="fa-solid fa-xmark"></i></button> */}
             </header>
             <main className="modal_content">{children}</main>
             <footer className="modal_footer">
