@@ -45,7 +45,7 @@ const HeaderProfile = () => {
             <div className="infoContent">
               <div className="infoContent__Cover-img">
                 <img
-                  src="https://lovablemessages.com/wp-content/uploads/2021/12/bo-hinh-nen-3d-that-dep-va-that-hap-dan-24-1068x601.jpg"
+                  src="https://images.unsplash.com/photo-1640622308238-70e5f22fe0be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                   alt=""
                 />
               </div>

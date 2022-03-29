@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./message.scss";
 import "./components/Charmess";
 import Charmess from "./components/Charmess";
+
 const Messages = () => {
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
@@ -73,7 +74,7 @@ const Messages = () => {
       ),
     },
     {
-      id: 4,
+      id: 6,
       name: "Nguyen Ba Toi",
       username: "Toiba2001",
       time: "Mar 20",
@@ -105,7 +106,8 @@ const Messages = () => {
           <div className="message-friend">
             <ul className="message-friend__message">
               {users.map((e, i) => (
-                <li key={i} className="infoUser">
+
+                <li key={i} className="infoUser" >
                   <div className="infoUser-left">
                     <div className="infoUser__avatar">{e.imageUrl}</div>
                     <div className="infoUser__content">
