@@ -94,8 +94,8 @@ const Messages = () => {
           <div className="message_head">
             <h3>Messages</h3>
             <div className="message_header-icon">
-              <i class="fab fa-facebook-messenger"></i>
-              <i class="fas fa-cog"></i>
+              <i onClick={() => toggle()} class="fab fa-facebook-messenger"></i>
+              {/* <i class="fas fa-cog"></i> */}
             </div>
           </div>
           <div className="message_search">
@@ -125,11 +125,29 @@ const Messages = () => {
             </ul>
           </div>
         </div>
-        <div className="message-new">
-          <h2>You don’t have a message selected</h2>
-          <p>Choose one from your existing messages, or start a new one.</p>
-          <button onClick={() => toggle()}>New message</button>
-
+        <div className="message-new" id="message-new">
+          <div className="message-new-header">
+            <div className="message-new-header-top">
+              <img
+                src="https://images.unsplash.com/photo-1459486552538-e489387b26bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
+                alt=""
+              />
+              <div className="message-new-header-name">
+                <a href="">Hào Trần</a>
+                <p>@DngNgTng1</p>
+              </div>
+            </div>
+          </div>
+          <div className="message-new-footer">
+            <div className="message-new-footer-char">
+              <i class="far fa-image-polaroid"></i>
+              <div className="message-new-footer-input">
+              <input className="message-input" type="text" placeholder="Start a new message"/>
+              <i class="far fa-smile"></i>
+              </div>
+              <i class="fal fa-paper-plane"></i>
+            </div>
+          </div>
           <Charmess show={modal} close={toggle} title="New Message">
             Content
           </Charmess>

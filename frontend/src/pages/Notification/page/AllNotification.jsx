@@ -13,11 +13,11 @@ const AllNotification = () => {
           </div>
           <div className="all-user">
             <img
-              src="https://scontent-hkt1-2.xx.fbcdn.net/v/t39.30808-6/276067823_3120353008252530_440324924059207916_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=a4a2d7&_nc_ohc=xj6RlmTT3S0AX_BqC7H&_nc_ht=scontent-hkt1-2.xx&oh=00_AT93LvhzDm0o5JaDsxpLoxg2UZCs_qqqpPx2PiAWoisCMA&oe=623A866A"
+              src="https://images.unsplash.com/photo-1484399172022-72a90b12e3c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               alt=""
             />
             <h2>
-              In case you missed <a href="">haotran</a> haha
+            In case you missed GetSmarterAboutMoney's Tweet
             </h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
@@ -39,11 +39,11 @@ const AllNotification = () => {
           </div>
           <div className="all-user">
             <img
-              src="https://scontent-hkt1-2.xx.fbcdn.net/v/t39.30808-6/276067823_3120353008252530_440324924059207916_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=a4a2d7&_nc_ohc=xj6RlmTT3S0AX_BqC7H&_nc_ht=scontent-hkt1-2.xx&oh=00_AT93LvhzDm0o5JaDsxpLoxg2UZCs_qqqpPx2PiAWoisCMA&oe=623A866A"
+              src="https://images.unsplash.com/photo-1496440737103-cd596325d314?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"
               alt=""
             />
-            <h2>
-              In case you missed <a href="">haotran</a> haha
+            <h2>             
+              GetSmarterAboutMoney liked a photo from Durham Regional Police
             </h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
@@ -65,11 +65,11 @@ const AllNotification = () => {
           </div>
           <div className="all-user">
             <img
-              src="https://scontent-hkt1-2.xx.fbcdn.net/v/t39.30808-6/276067823_3120353008252530_440324924059207916_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=a4a2d7&_nc_ohc=xj6RlmTT3S0AX_BqC7H&_nc_ht=scontent-hkt1-2.xx&oh=00_AT93LvhzDm0o5JaDsxpLoxg2UZCs_qqqpPx2PiAWoisCMA&oe=623A866A"
+              src="https://images.unsplash.com/photo-1570589867666-621ad57383a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80"
               alt=""
             />
             <h2>
-              In case you missed <a href="">haotran</a> haha
+            In case you missed Bitcoin Magazine's Tweet
             </h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
@@ -91,11 +91,11 @@ const AllNotification = () => {
           </div>
           <div className="all-user">
             <img
-              src="https://scontent-hkt1-2.xx.fbcdn.net/v/t39.30808-6/276067823_3120353008252530_440324924059207916_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=a4a2d7&_nc_ohc=xj6RlmTT3S0AX_BqC7H&_nc_ht=scontent-hkt1-2.xx&oh=00_AT93LvhzDm0o5JaDsxpLoxg2UZCs_qqqpPx2PiAWoisCMA&oe=623A866A"
+              src="https://images.unsplash.com/photo-1636668170940-f00a766b8303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
               alt=""
             />
-            <h2>
-              In case you missed <a href="">haotran</a> haha
+            <h2>  
+              In case you missed WonderHero's Tweet
             </h2>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
