@@ -5,11 +5,17 @@
     flex-basis: calc(68% + 8px);
     display: flex;
     flex-direction: row-reverse;
+    height: 100vh;
     .message-hearder{
         padding: 0 0 10px 0;
         flex-basis: 45%;
         box-shadow: 1px 1px rebeccapurple;
         border-left: 1px solid red;
+        overflow: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+          }
+       
 
         .message_header-icon{
             .fa-facebook-messenger{
@@ -119,7 +125,6 @@
         flex-direction: column;
         width: 55%;
         padding: 10px;
-        overflow: scroll;
         i{
             font-size: 20px;
         }

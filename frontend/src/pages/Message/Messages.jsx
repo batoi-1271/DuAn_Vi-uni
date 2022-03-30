@@ -7,6 +7,7 @@ const Messages = () => {
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
 
+
   const users = [
     {
       id: 1,
@@ -86,6 +87,72 @@ const Messages = () => {
         />
       ),
     },
+    {
+      id: 6,
+      name: "Nguyen Ba Toi",
+      username: "Toiba2001",
+      time: "Mar 20",
+      content: "Last mesage....",
+      imageUrl: (
+        <img
+          alt="Dương Ngô Tùng"
+          src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
+        />
+      ),
+    },
+    {
+      id: 6,
+      name: "Nguyen Ba Toi",
+      username: "Toiba2001",
+      time: "Mar 20",
+      content: "Last mesage....",
+      imageUrl: (
+        <img
+          alt="Dương Ngô Tùng"
+          src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
+        />
+      ),
+    },
+    {
+      id: 6,
+      name: "Nguyen Ba Toi",
+      username: "Toiba2001",
+      time: "Mar 20",
+      content: "Last mesage....",
+      imageUrl: (
+        <img
+          alt="Dương Ngô Tùng"
+          src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
+        />
+      ),
+    },
+    {
+      id: 6,
+      name: "Nguyen Ba Toi",
+      username: "Toiba2001",
+      time: "Mar 20",
+      content: "Last mesage....",
+      imageUrl: (
+        <img
+          alt="Dương Ngô Tùng"
+          src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
+        />
+      ),
+    },
+    {
+      id: 6,
+      name: "Nguyen Ba Toi",
+      username: "Toiba2001",
+      time: "Mar 20",
+      content: "Last mesage....",
+      imageUrl: (
+        <img
+          alt="Dương Ngô Tùng"
+          src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
+        />
+      ),
+    },
+    
   ];
 
   return (
@@ -96,7 +163,6 @@ const Messages = () => {
             <h3>Messages</h3>
             <div className="message_header-icon">
               <i onClick={() => toggle()} class="fab fa-facebook-messenger"></i>
-              {/* <i class="fas fa-cog"></i> */}
             </div>
           </div>
           <div className="message_search">
