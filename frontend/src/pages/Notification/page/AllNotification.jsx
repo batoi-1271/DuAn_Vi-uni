@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import OutsideClickHandler from 'react-outside-click-handler';
+import { Link } from "react-router-dom";
 
 import "./allnotification.scss";
-import logo from "../../../assets/logo.png";
+
 
 const AllNotification = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggling = () => setIsOpen(!isOpen);
+
   return (
     <div className="notification_all">
       <div className="all-list">
         <div className="all-left">
-          <div className="all_twitter">
-            <img src={logo} alt="" />
-          </div>
           <div className="all-user">
             <img
-              src="https://scontent-hkt1-2.xx.fbcdn.net/v/t39.30808-6/276067823_3120353008252530_440324924059207916_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=a4a2d7&_nc_ohc=xj6RlmTT3S0AX_BqC7H&_nc_ht=scontent-hkt1-2.xx&oh=00_AT93LvhzDm0o5JaDsxpLoxg2UZCs_qqqpPx2PiAWoisCMA&oe=623A866A"
+              src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
               alt=""
             />
             <h2>
@@ -23,92 +26,25 @@ const AllNotification = () => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
               asperiores, nesciunt autem, reiciendis incidunt accusantium
               eveniet et sequi quos odio fuga quae aperiam recusandae nobis
-              libero odit sint commodi optio?
+              libero odit sint commodi option? 
             </p>
-            <span>footer</span>
           </div>
         </div>
-        <div className="all-more">
-          <i class="fas fa-ellipsis-h"></i>
-        </div>
-      </div>
-      <div className="all-list">
-        <div className="all-left">
-          <div className="all_twitter">
-            <img src={logo} alt="" />
+        
+        <OutsideClickHandler onOutsideClick={() => { setIsOpen(false) }}>
+          <div className="search">
+            <div className="all-more">
+              <button onClick={toggling}><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+            {isOpen && (
+              <div className="dropContainer">
+                  <span>
+                    <Link to="#">See less often</Link>
+                  </span>
+              </div>
+            )}
           </div>
-          <div className="all-user">
-            <img
-              src="https://images.unsplash.com/photo-1648458461360-d2e724ac5321?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"
-              alt=""
-            />
-            <h2>
-              In case you missed <a href="">haotran</a> haha
-            </h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
-              asperiores, nesciunt autem, reiciendis incidunt accusantium
-              eveniet et sequi quos odio fuga quae aperiam recusandae nobis
-              libero odit sint commodi optio?
-            </p>
-            <span>footer</span>
-          </div>
-        </div>
-        <div className="all-more">
-          <i class="fas fa-ellipsis-h"></i>
-        </div>
-      </div>
-      <div className="all-list">
-        <div className="all-left">
-          <div className="all_twitter">
-            <img src={logo} alt="" />
-          </div>
-          <div className="all-user">
-            <img
-              src="https://scontent-hkt1-2.xx.fbcdn.net/v/t39.30808-6/276067823_3120353008252530_440324924059207916_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=a4a2d7&_nc_ohc=xj6RlmTT3S0AX_BqC7H&_nc_ht=scontent-hkt1-2.xx&oh=00_AT93LvhzDm0o5JaDsxpLoxg2UZCs_qqqpPx2PiAWoisCMA&oe=623A866A"
-              alt=""
-            />
-            <h2>
-              In case you missed <a href="">haotran</a> haha
-            </h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
-              asperiores, nesciunt autem, reiciendis incidunt accusantium
-              eveniet et sequi quos odio fuga quae aperiam recusandae nobis
-              libero odit sint commodi optio?
-            </p>
-            <span>footer</span>
-          </div>
-        </div>
-        <div className="all-more">
-          <i class="fas fa-ellipsis-h"></i>
-        </div>
-      </div>
-      <div className="all-list">
-        <div className="all-left">
-          <div className="all_twitter">
-            <img src={logo} alt="" />
-          </div>
-          <div className="all-user">
-            <img
-              src="https://scontent-hkt1-2.xx.fbcdn.net/v/t39.30808-6/276067823_3120353008252530_440324924059207916_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=a4a2d7&_nc_ohc=xj6RlmTT3S0AX_BqC7H&_nc_ht=scontent-hkt1-2.xx&oh=00_AT93LvhzDm0o5JaDsxpLoxg2UZCs_qqqpPx2PiAWoisCMA&oe=623A866A"
-              alt=""
-            />
-            <h2>
-              In case you missed <a href="">haotran</a> haha
-            </h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
-              asperiores, nesciunt autem, reiciendis incidunt accusantium
-              eveniet et sequi quos odio fuga quae aperiam recusandae nobis
-              libero odit sint commodi optio?
-            </p>
-            <span>footer</span>
-          </div>
-        </div>
-        <div className="all-more">
-          <i class="fas fa-ellipsis-h"></i>
-        </div>
+        </OutsideClickHandler>
       </div>
     </div>
   );

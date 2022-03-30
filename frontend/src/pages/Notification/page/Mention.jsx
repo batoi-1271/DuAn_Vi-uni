@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import "./mention.scss";
+import "./mention.scss";
 import "./allnotification.scss";
 import logo from "../../../assets/logo.png";
 

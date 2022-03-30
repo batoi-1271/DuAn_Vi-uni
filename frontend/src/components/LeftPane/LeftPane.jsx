@@ -126,6 +126,7 @@ const LeftPane = () => {
                   placeholder="Search Vi-uni"
                   value={selectedOption}
                   autoComplete="off"
+                  onChange={(e) => setSelectedOption(e.target.value)}
                 />
                 
                 {isOpen && (
