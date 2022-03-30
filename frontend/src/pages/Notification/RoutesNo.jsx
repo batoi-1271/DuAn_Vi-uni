@@ -11,11 +11,11 @@ const RoutesNo = () => {
         exact 
         component={AllNotification}
       />
-
       <Route 
         path="/notifications/mention" 
         component={Mention} 
       />
+
     </Switch>
   );
 };

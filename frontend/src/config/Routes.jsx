@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { Switch, Route } from 'react-router-dom';
-import More from '../components/RightPane/More/More';
+import Friends from '../components/MyFriends/Friends';
 
 import Home from '../pages/Home/Home';
-import List from '../pages/List/List';
 import Messages from '../pages/Message/Messages';
 import Notification from '../pages/Notification/Notification';
+import Mention from '../pages/Notification/page/Mention';
 import Profile from '../pages/Profile/Profile';
 import Save from '../pages/Saved/Save';
 
@@ -18,10 +18,10 @@ const Routes = () => {
                 path='/profile'
                 component={Profile}
             />
-            {/* <Route
-                path='/list'
-                component={List}
-            /> */}
+            <Route
+                path='/friends'
+                component={Friends}
+            />
             <Route
                 path='/saved'
                 component={Save}
@@ -34,11 +34,13 @@ const Routes = () => {
                 path='/notifications'
                 component={Notification}
             />
+            
             <Route
                 path='/'
                 exact
                 component={Home}
             />
+            
         </Switch>
     );
 }

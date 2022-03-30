@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./leftPane.scss";
 import Button from "@mui/material/Button";
+import OutsideClickHandler from 'react-outside-click-handler';
 
 import logo from "../../assets/logo.png";
 
@@ -86,9 +87,11 @@ const LeftPane = () => {
   const cancelFriend = () => {
     setAdded(false);
   };
-  const options = ["Gia Truong", "Sy Hoang", "Hoang Duc", "Thanh An"];
+  const historySearch = ["Gia Truong", "Sy Hoang", "Hoang Duc", "Thanh An"];
+
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
+
   const toggling = () => setIsOpen(!isOpen);
 
   const onOptionClicked = (value) => () => {
@@ -107,41 +110,51 @@ const LeftPane = () => {
                 <img src={logo} alt="" />
               </Link>
             </div>
-            <div className="search">
-              <span class="icon">
-                <i class="fa fa-search"></i>
-              </span>
-              <input
-                type="text"
-                onClick={toggling}
-                placeholder="Search Vi-uni"
-              />
 
-              {isOpen && (
-                <div className="dropContainer">
-                  <div className="dropList">
+
+
+            <OutsideClickHandler onOutsideClick={() => {setIsOpen(false)}}>
+              <div className="search">
+
+                <span class="icon">
+                  <i class="fa fa-search"></i>
+                </span>
+                <input
+                name="search"
+                  type="text"
+                  onClick={toggling}
+                  placeholder="Search Vi-uni"
+                  value={selectedOption}
+                  autoComplete="off"
+                />
+                
+                {isOpen && (
+                  <div className="dropContainer">
+                    <div className="dropList">
                     <div className="title">
                       <h4>Recent searches</h4>
                       <span>
                         <a href="">Edit</a>
                       </span>
                     </div>
-                    {options.map((option) => (
+
+                    {historySearch.map((option) => (
                       <div
                         className="items"
                         onClick={onOptionClicked(option)}
                         key={Math.random()}
                       >
                         {option}
-                        <button type="button" class="close" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
+                        <button type="button" className="delete" aria-label="delete">
+                          <span><i class="fa-solid fa-xmark"></i></span>
                         </button>
                       </div>
                     ))}
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
+        </OutsideClickHandler>
           </div>
           <div className="box_paneLeft">
             <h3>You might like</h3>

@@ -2,7 +2,7 @@ import React, { Component, useState } from "react";
 import "./home.scss";
 import PostUser from "./PostUser";
 import Heart from "react-animated-heart";
-
+import Tooltip from '@mui/material/Tooltip';
 
 const Home = () => {
   const [isClick, setClick] = useState(false);
@@ -43,14 +43,22 @@ const Home = () => {
               </div>
             </div>
             <div className="post-interactive">
-              <i title="Comment" class="fa-regular fa-comment-dots">
-                <p>1</p>
-              </i>
-                <div id="heart" title="Like">
-                    <Heart className="heart" isClick={isClick} onClick={() => setClick(!isClick)} />
-                </div>
-                <p>1</p>
-              <i title="Share" class="fa-solid fa-arrow-up-from-bracket"></i>
+              
+              <Tooltip title="Comment" arrow>
+                <button><i title="Comment" class="fa-regular fa-comment-dots"/></button>
+              </Tooltip>
+              <p>1</p>
+
+              <Tooltip id="heart" title="Like" arrow>
+                <button><i class="fa-regular fa-heart"></i></button>
+              </Tooltip>
+              <p>1</p>
+
+              <Tooltip title="Share" arrow>
+                <button><i title="Share" class="fa-solid fa-arrow-up-from-bracket"></i></button>
+              </Tooltip>
+              <p>1</p>
+              
             </div>
           </div>
         </div>
@@ -84,7 +92,7 @@ const Home = () => {
               </div>
             </div>
             <div className="post-interactive">
-            <i class="fa-regular fa-comment-dots">
+              <i class="fa-regular fa-comment-dots">
                 <p>1</p>
               </i>
               <i class="fa-solid fa-heart">
@@ -124,7 +132,7 @@ const Home = () => {
               </div>
             </div>
             <div className="post-interactive">
-            <i class="fa-regular fa-comment-dots">
+              <i class="fa-regular fa-comment-dots">
                 <p>1</p>
               </i>
               <i class="fa-solid fa-heart">
