@@ -29,7 +29,7 @@ const AllNotification = () => {
           </div>
         </div>
         <div className="all-more">
-          <i class="fas fa-ellipsis-h"></i>
+          <i clas s="fas fa-ellipsis-h"></i>
         </div>
       </div>
       <div className="all-list">
