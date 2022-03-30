@@ -194,6 +194,7 @@ const Messages = () => {
           </div>
         </div>
         <div className="message-new" id="message-new">
+          <div className="message-new-headering">
           <div className="message-new-header">
             <div className="message-new-header-top">
               <img
@@ -205,6 +206,10 @@ const Messages = () => {
                 <p>@DngNgTng1</p>
               </div>
             </div>
+            <div className="message-new-icon">
+            <i class="fas fa-cog"></i>
+            </div>
+          </div>
           </div>
           <div className="message-new-footer">
             <div className="message-new-footer-char">
