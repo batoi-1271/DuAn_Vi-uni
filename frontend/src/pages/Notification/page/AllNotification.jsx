@@ -3,9 +3,6 @@ import OutsideClickHandler from 'react-outside-click-handler';
 import { Link } from "react-router-dom";
 
 import "./allnotification.scss";
-import logo from "../../../assets/logo.png";
-import "./components/funtion";
-import funtion from "./components/funtion";
 
 
 const AllNotification = () => {
@@ -17,62 +14,9 @@ const AllNotification = () => {
     <div className="notification_all">
       <div className="all-list">
         <div className="all-left">
-          <div className="all_twitter">
-            <img src={logo} alt="" />
-          </div>
           <div className="all-user">
             <img
-              src="https://images.unsplash.com/photo-1496440737103-cd596325d314?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"
-              alt=""
-            />
-            <h2>
-              GetSmarterAboutMoney liked a photo from Durham Regional Police
-            </h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
-              asperiores, nesciunt autem, reiciendis incidunt accusantium
-              eveniet et sequi quos odio fuga quae aperiam recusandae nobis
-              libero odit sint commodi optio?
-            </p>
-            <span>footer</span>
-          </div>
-        </div>
-        <div className="all-more">
-          <i class="fas fa-ellipsis-h"></i>
-        </div>
-      </div>
-      <div className="all-list">
-        <div className="all-left">
-          <div className="all_twitter">
-            <img src={logo} alt="" />
-          </div>
-          <div className="all-user">
-            <img
-              src="https://images.unsplash.com/photo-1570589867666-621ad57383a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80"
-              alt=""
-            />
-            <h2>In case you missed Bitcoin Magazine's Tweet</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
-              asperiores, nesciunt autem, reiciendis incidunt accusantium
-              eveniet et sequi quos odio fuga quae aperiam recusandae nobis
-              libero odit sint commodi optio?
-            </p>
-            <span>footer</span>
-          </div>
-        </div>
-        <div className="all-more">
-          <i class="fas fa-ellipsis-h"></i>
-        </div>
-      </div>
-      <div className="all-list">
-        <div className="all-left">
-          <div className="all_twitter">
-            <img src={logo} alt="" />
-          </div>
-          <div className="all-user">
-            <img
-              src="https://images.unsplash.com/photo-1636668170940-f00a766b8303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80"
+              src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
               alt=""
             />
             <h2>In case you missed WonderHero's Tweet</h2>
@@ -84,30 +28,21 @@ const AllNotification = () => {
             </p>
           </div>
         </div>
-        <div className="all-more">
-          <i class="fas fa-ellipsis-h"></i>
-        </div>
-      </div>
-      <div className="all-list">
-        <div className="all-left">
-          <div className="all_twitter">
-            <img src={logo} alt="" />
+        
+        <OutsideClickHandler onOutsideClick={() => { setIsOpen(false) }}>
+          <div className="search">
+            <div className="all-more">
+              <button onClick={toggling}><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+            {isOpen && (
+              <div className="dropContainer">
+                  <span>
+                    <Link to="#">See less often</Link>
+                  </span>
+              </div>
+            )}
           </div>
-          <div className="all-user">
-            <img src="https://images.unsplash.com/photo-1553272725-086100aecf5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" />
-            <h2>In case you missed WonderHero's Tweet</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
-              asperiores, nesciunt autem, reiciendis incidunt accusantium
-              eveniet et sequi quos odio fuga quae aperiam recusandae nobis
-              libero odit sint commodi optio?
-            </p>
-            <span>footer</span>
-          </div>
-        </div>
-        <div className="all-more">
-          <i class="fas fa-ellipsis-h"></i>
-        </div>
+        </OutsideClickHandler>
       </div>
     </div>
   );
