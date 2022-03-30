@@ -5,13 +5,27 @@
     flex-basis: calc(68% + 8px);
     display: flex;
     flex-direction: row-reverse;
-    height: auto;
+    height: 100vh;
     .message-hearder{
         padding: 0 0 10px 0;
         flex-basis: 45%;
         box-shadow: 1px 1px rebeccapurple;
-        // padding: 10px;
         border-left: 1px solid red;
+        overflow: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+          }
+       
+
+        .message_header-icon{
+            .fa-facebook-messenger{
+                padding: 10px;
+                &:hover{
+                    background-color: rgba(173 ,181 ,189 ,0.4);
+                    border-radius: 15px;
+                }
+            }
+        }
         .message-friend{
             margin-top: 50px;
             padding: 0;
@@ -68,27 +82,6 @@
 
 
 
-
-    .message-new{
-        padding: 0 100px;
-        width: 55%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        h2{
-            font-size: 40px;
-        }
-        button{
-            width: fit-content;          
-            padding: 15px 30px;
-            border-radius: 25px;
-            outline: none;
-            border: none;
-            background-color: rgba(0, 206, 213, 0.9);
-            cursor: pointer;
-            margin-top: 20px;
-        }
-    }
     .message_head{
         display: flex;
         justify-content: space-between;
@@ -122,8 +115,81 @@
             background-color: unset;
         }
     }
-   
+    
+    
+    
+    
 }
+    .message-new{
+        display: flex;
+        flex-direction: column;
+        width: 55%;
+        padding: 5px 0px 10px 10px;
+        i{
+            font-size: 20px;
+        }
+        .message-new-headering{
+            flex: 1;
+        }
+        .message-new-header{
+            background-color: $body-bg;
+            box-shadow: $box-shadow;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .message-new-header-top{
+               display: flex;
+               align-items: center;
+               height: 50px;
+               
+
+            }
+            .message-new-icon{
+                i{
+                    margin-right: 10px;
+                }
+            }
+           
+            a{
+                font-weight: 900;
+            }
+            img{
+                margin-right: 10px;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        .message-new-footer{
+            border-top: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding-right: 10px;
+            .message-new-footer-char{
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+                cursor: pointer;
+                .message-new-footer-input{
+                    display: flex;
+                    border:1px solid red;
+                    border-radius: 20px;
+                    align-items: center;
+                    width: 100%;
+                    margin: 0 10px;
+                    input{
+                        height: 40px;
+                        border:none;
+                        outline: none;
+                        padding: 0 0 0 20px;
+                        background-color: transparent;
+                        width: 90%;
+                    }
+                }
+            }
+           
+        }
+    }
 
 
 
