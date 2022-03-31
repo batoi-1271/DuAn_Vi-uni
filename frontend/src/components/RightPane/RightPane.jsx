@@ -1,10 +1,11 @@
 import React, { useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import './rightPane.scss';
+import './more.scss';
+import OutsideClickHandler from 'react-outside-click-handler';
 
 import Modal from './Modal/Modal';
 import PostUser from '../../pages/Home/PostUser';
-import More from './More/More';
 
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
@@ -13,7 +14,7 @@ import Avatar from '@mui/material/Avatar';
 
 const headerNav = [
   {
-    icon:<i class="fas fa-house-user"></i>,
+    icon: <i class="fas fa-house-user"></i>,
     display: 'Home',
     path: '/'
   },
@@ -89,6 +90,9 @@ const RightPane = () => {
   const [more, setMore] = useState(false);
   const ToggleMore = () => setMore(!more);
 
+  const [isOpen, setIsOpen] = useState(false);
+  const toggling = () => setIsOpen(!isOpen);
+
   const active = headerNav.findIndex(e => e.path === pathname);
 
   return (
@@ -106,12 +110,24 @@ const RightPane = () => {
               </li>
             ))
           }
-          <div className='more'>
 
-            <button onClick={() => ToggleMore()}><i class="far fa-ellipsis-h"/>More</button>
-            <More show={more} close={ToggleMore} title="">
-            </More>
-          </div>
+          <OutsideClickHandler onOutsideClick={() => { setIsOpen(false) }}>
+            <div className="moreRight">
+              <div className='more'>
+                <button onClick={toggling}><i class="far fa-ellipsis-h" />More</button>
+              </div>
+              {isOpen && (
+                <div className="dropContainer">
+                  <ul>
+                    <li className='items'><Link to="#"><i class="far fa-cogs"></i>Setting and private</Link></li>
+                    <li className='items'><Link to="#"><i class="far fa-question-circle"></i>Help center</Link></li>
+                    <li className='items'><Link to="#"><i class="fas fa-fill-drip"></i>Display</Link></li>
+                  </ul>
+                </div>
+              )}
+            </div>
+          </OutsideClickHandler>
+
           <div className='post'>
             <Button variant="contained" onClick={() => Toggle()}>Post</Button>
             <Modal show={modal} close={Toggle} title="Create post">
@@ -137,12 +153,13 @@ const RightPane = () => {
                 alt="Dương Ngô Tùng"
                 src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg" />
             </div> */}
+
             <div className='info'>
               <div className="name">Dương Ngô Tùng</div>
               <div className="username">@DngNgTng1</div>
             </div>
             <div className="edit">
-            <i class="fas fa-ellipsis-h"></i>
+              <i class="fas fa-ellipsis-h"></i>
             </div>
           </button>
         </div>

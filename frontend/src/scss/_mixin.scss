@@ -67,3 +67,10 @@
     width: 200px;
     transition: all 300ms ease;
 }
+
+@mixin center-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
