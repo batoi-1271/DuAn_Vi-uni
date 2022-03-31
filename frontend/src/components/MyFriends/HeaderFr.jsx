@@ -27,7 +27,7 @@ const HeaderFr = () => {
             </button>
         </div>
         <div className="nameHeader">
-              <h3>Dương Ngô Tùng :))</h3>
+              <h3>Dương Ngô Tùng</h3>
               <p>@DngNgTng1</p>
         </div>
     </div>

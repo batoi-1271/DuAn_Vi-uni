@@ -14,7 +14,7 @@ const headerAc = [
   },
   {
     display: "Share",
-    path: "/profile/likes",
+    path: "/profile/share",
   },
 ];
 
@@ -81,8 +81,7 @@ const HeaderProfile = () => {
                 </div>
                 <div className="friends">
                   <Link to="/friends">
-                    {" "}
-                    <p>7 Friends</p>{" "}
+                    <p>7 Friends</p>
                   </Link>
                 </div>
               </div>
