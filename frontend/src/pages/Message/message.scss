@@ -131,7 +131,8 @@
         display: flex;
         flex-direction: column;
         width: 55%;
-        padding: 5px 0px 10px 10px;
+        padding: 0px 0px 10px 0px;
+        border-left: 1px solid red;
         i{
             font-size: 20px;
         }
@@ -171,7 +172,7 @@
         .message-new-footer{
             border-top: 1px solid #ccc;
             margin-bottom: 10px;
-            padding-right: 10px;
+            padding: 0 10px;
             .message-new-footer-char{
                 display: flex;
                 align-items: center;

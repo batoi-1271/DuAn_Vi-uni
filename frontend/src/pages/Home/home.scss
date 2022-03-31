@@ -132,7 +132,8 @@ section {
     padding: 30px 10px 30px 30px;
     display: flex;
     &:hover{
-        background-color: rgba(250,225,221,0.2);
+        // background-color: rgba(250,225,221,0.2);
+        background-color: white;
         box-shadow: $box-shadow-1;
         cursor: pointer;
     }
@@ -160,6 +161,19 @@ section {
                    border: none;
                    background-color: transparent;
                    margin-right: 10px;
+                   .fa-comment-dots,
+                   .fa-share-square{
+                       &:hover{
+                           color: $main-color;
+                           box-shadow: 0px 0px 50px 1px $main-color;
+                       }
+                   }
+                   .fa-heart{
+                       &:hover{
+                           color: red;
+                           box-shadow: 0px 0px 50px   red;
+                       }
+                   }
                    i{
                        color: $txt-color;
                        font-size: 20px;

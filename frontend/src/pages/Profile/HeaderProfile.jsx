@@ -14,7 +14,7 @@ const headerAc = [
   },
   {
     display: "Share",
-    path: "/profile/likes",
+    path: "/profile/share",
   },
 ];
 

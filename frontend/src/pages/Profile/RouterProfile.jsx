@@ -3,7 +3,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Post from './Post/Post';
 import Media from './Media/Media';
-import Likes from './Likes/Likes';
+import Share from './share/Share';
 import Home from '../Home/Home';
 import Friends from '../../components/MyFriends/Friends';
 
@@ -21,8 +21,8 @@ const RouterProfile = () => {
                 component={Media}
             />
             <Route
-                path='/profile/likes'
-                component={Likes}
+                path='/profile/share'
+                component={Share}
             />
             <Route
                 path='/'
