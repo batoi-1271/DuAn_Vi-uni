@@ -23,7 +23,7 @@ const HeaderFr = () => {
       <div className="fiends__header">
         <div className="backProfile">
             <button type="button" onClick={history.goBack}>
-              <i class="fa-solid fa-arrow-left"></i>
+            <i class="fas fa-arrow-left"></i>
             </button>
         </div>
         <div className="nameHeader">

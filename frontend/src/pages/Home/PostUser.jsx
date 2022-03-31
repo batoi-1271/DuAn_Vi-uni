@@ -68,13 +68,13 @@ const PostUser = () => {
         <div className="content">
           <div className="icon">
             <a href="">
-              <i class="fa-solid fa-image"></i>
+              <i class="fas fa-image"></i>
             </a>
             <a href="">
-              <i class="fa-solid fa-location-pin"></i>
+              <i class="fas fa-map-marker-alt"></i>
             </a>
             <a href="">
-              <i class="fa-regular fa-face-grin"></i>
+            <i class="far fa-laugh"></i>
             </a>
           </div>
           <div className="btnPost">
