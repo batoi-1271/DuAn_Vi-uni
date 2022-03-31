@@ -81,8 +81,7 @@ const HeaderProfile = () => {
                 </div>
                 <div className="friends">
                   <Link to="/friends">
-                    {" "}
-                    <p>7 Friends</p>{" "}
+                    <p>7 Friends</p>
                   </Link>
                 </div>
               </div>

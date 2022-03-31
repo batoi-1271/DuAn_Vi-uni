@@ -61,7 +61,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                         multiline
                                         fullWidth
                                         rows={4}
-                                        defaultValue="Hoa rơi cửa phật. 5 chục 1 quật."
+                                        defaultValue="Không có công việc nào không có áp lực, tuy nhiên chỉ có không đam mê công việc mới là áp lớn lực khiến ta từ bỏ công việc đó."
 
                                     />
                                 </div>

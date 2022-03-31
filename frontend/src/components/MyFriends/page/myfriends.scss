@@ -5,12 +5,13 @@
     flex-direction: column;
     flex-basis: 45%;
     width: 100%;
+    height: 100vh;
     .friends-lish{
         padding: 20px;
         display: flex;
         justify-content: space-between;
         &:hover{
-            background-color: rgba(255, 232, 214,0.3)
+            background:$white;
         }
         .friends-lish-profile{
             display: flex;
@@ -19,13 +20,32 @@
             }
         }
         .friends-lish-fow{
-            button{
+            Button{
+                width: auto;
+                color: white;
                 margin-right: 20px;
                 outline: none;
                 padding: 7px 20px;
                 border-radius: 40px;
                 border: 1px solid #ccc;
+                font-weight: 700;
+                font-size: 14px;
+                text-transform: none;
+                background: linear-gradient(90deg, rgba(0, 206, 213, 1) 0%, rgba(0, 212, 255, 1) 100%);
+                &:hover{
+                    background: none;
+                    border: 2px solid red;
+                    color: red;
+
+                }
             }
+            Button:hover span {
+                display: none
+              }
+            Button:hover:before {
+                content: "Hào hết yêu Linh rồi !";
+
+              }
         }
         .friends-lish-avt{
             img{
