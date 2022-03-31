@@ -12,10 +12,17 @@
         box-shadow: 1px 1px rebeccapurple;
         border-left: 1px solid red;
         overflow: scroll;
+        padding-top: 80px;
         &::-webkit-scrollbar {
             display: none;
           }
-       
+       .message-header-char{
+           top: 0;
+           position: fixed;
+           width: calc(31% - 4px);  
+           background-color: #fff;
+        
+       }
 
         .message_header-icon{
             .fa-facebook-messenger{

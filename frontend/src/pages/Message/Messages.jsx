@@ -159,21 +159,25 @@ const Messages = () => {
     <>
       <div className="message">
         <div className="message-hearder">
-          <div className="message_head">
-            <h3>Messages</h3>
-            <div className="message_header-icon">
-              <i onClick={() => toggle()} class="fab fa-facebook-messenger"></i>
+          <div className="message-header-char">
+            <div className="message_head">
+              <h3>Messages</h3>
+              <div className="message_header-icon">
+                <i
+                  onClick={() => toggle()}
+                  class="fab fa-facebook-messenger"
+                ></i>
+              </div>
             </div>
-          </div>
-          <div className="message_search">
-            <i class="fa fa-search" aria-hidden="true"></i>
-            <input type="text" placeholder="Search for people and groups" />
+            <div className="message_search">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              <input type="text" placeholder="Search for people and groups" />
+            </div>
           </div>
           <div className="message-friend">
             <ul className="message-friend__message">
               {users.map((e, i) => (
-
-                <li key={i} className="infoUser" >
+                <li key={i} className="infoUser">
                   <div className="infoUser-left">
                     <div className="infoUser__avatar">{e.imageUrl}</div>
                     <div className="infoUser__content">
@@ -195,28 +199,32 @@ const Messages = () => {
         </div>
         <div className="message-new" id="message-new">
           <div className="message-new-headering">
-          <div className="message-new-header">
-            <div className="message-new-header-top">
-              <img
-                src="https://images.unsplash.com/photo-1459486552538-e489387b26bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
-                alt=""
-              />
-              <div className="message-new-header-name">
-                <a href="">Hào Trần</a>
-                <p>@DngNgTng1</p>
+            <div className="message-new-header">
+              <div className="message-new-header-top">
+                <img
+                  src="https://images.unsplash.com/photo-1459486552538-e489387b26bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"
+                  alt=""
+                />
+                <div className="message-new-header-name">
+                  <a href="">Hào Trần</a>
+                  <p>@DngNgTng1</p>
+                </div>
+              </div>
+              <div className="message-new-icon">
+                <i class="fas fa-cog"></i>
               </div>
             </div>
-            <div className="message-new-icon">
-            <i class="fas fa-cog"></i>
-            </div>
-          </div>
           </div>
           <div className="message-new-footer">
             <div className="message-new-footer-char">
               <i class="far fa-image-polaroid"></i>
               <div className="message-new-footer-input">
-              <input className="message-input" type="text" placeholder="Start a new message"/>
-              <i class="far fa-smile"></i>
+                <input
+                  className="message-input"
+                  type="text"
+                  placeholder="Start a new message"
+                />
+                <i class="far fa-smile"></i>
               </div>
               <i class="fal fa-paper-plane"></i>
             </div>

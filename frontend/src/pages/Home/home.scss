@@ -141,13 +141,30 @@ section {
         height: auto;
         img {
             @include imgAvatar;
-            
+            object-fit: cover;
         }
     }
     .post-info{
         width: 92%;
         height: auto;
         padding-left: 20px;
+        .post-interactive{
+            .post-interactive-icon{
+                display: flex;
+                margin-right: 150px;
+                p{
+                    font-size: 20px;
+                }
+            }
+                button{
+                   border: none;
+                   margin-right: 10px;
+                   i{
+                       color: $txt-color;
+                       font-size: 20px;
+                   }
+                }
+        }
         .post-info-header{
             display: flex;
             justify-content: space-between;
@@ -165,7 +182,7 @@ section {
                 padding-top:10px ;
                 img{
                     border-radius: 15px;
-
+                    width: 100%;
                 }
             }
         }
