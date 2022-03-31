@@ -8,7 +8,6 @@
     right: 0;
     z-index: 999;
     @include flex(center, center);
-
     background-color: rgba($color: #000000, $alpha: 0.35);
 
     .modal {
@@ -20,6 +19,7 @@
         top: 10%;
         right: 20%;
         border-radius: 20px;
+        animation: showing-up ease-out 0.3s;
 
         &_header {
             position: relative;
@@ -47,5 +47,16 @@
         &_content {
             margin-top: -50px;
         }
+    }
+}
+
+@keyframes showing-up{
+    from{
+        top: 0;
+        opacity: 0;
+    }
+    to{
+        top: 10%;
+        opacity: 1;
     }
 }

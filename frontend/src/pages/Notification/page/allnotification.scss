@@ -78,7 +78,7 @@
             position: absolute;
             border-radius: 25px;
             box-shadow: $box-shadow-1;
-            animation: topbottom 200ms ease-in;
+            animation: topbottom 200ms ease;
             @include flex(center, center);
 
             &:hover {
@@ -102,7 +102,6 @@
 @keyframes topbottom {
     from{
         opacity: 0;
-       
     }
     to{
         opacity: 1;
