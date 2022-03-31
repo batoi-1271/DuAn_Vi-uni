@@ -53,7 +53,7 @@ const Home = () => {
               <div className="post-interactive-icon">
                 <Tooltip id="heart" title="Like" arrow>
                   <button>
-                    <i class="fa-regular fa-heart"></i>
+                  <i class="fal fa-heart"></i>
                   </button>
                 </Tooltip>
                 <p>1</p>
@@ -102,7 +102,7 @@ const Home = () => {
               <div className="post-interactive-icon">
                 <Tooltip id="comment" title="Comment" arrow>
                   <button>
-                    <i title="Comment" class="fa-regular fa-comment-dots" />
+                    <i class="far fa-comment-dots"></i>
                   </button>
                 </Tooltip>
                 <p>1</p>
@@ -110,7 +110,7 @@ const Home = () => {
               <div className="post-interactive-icon">
                 <Tooltip id="heart" title="Like" arrow>
                   <button>
-                    <i class="fa-regular fa-heart"></i>
+                  <i class="fal fa-heart"></i>
                   </button>
                 </Tooltip>
                 <p>1</p>
@@ -118,10 +118,7 @@ const Home = () => {
               <div className="post-interactive-icon">
               <Tooltip title="Share" arrow>
                 <button>
-                  <i
-                    title="Share"
-                    class="fa-solid fa-arrow-up-from-bracket"
-                  ></i>
+                <i class="far fa-share-square"></i>
                 </button>
               </Tooltip>
               <p>1</p>
@@ -162,7 +159,7 @@ const Home = () => {
               <div className="post-interactive-icon">
                 <Tooltip id="comment" title="Comment" arrow>
                   <button>
-                    <i title="Comment" class="fa-regular fa-comment-dots" />
+                    <i class="far fa-comment-dots"></i>
                   </button>
                 </Tooltip>
                 <p>1</p>
@@ -170,7 +167,7 @@ const Home = () => {
               <div className="post-interactive-icon">
                 <Tooltip id="heart" title="Like" arrow>
                   <button>
-                    <i class="fa-regular fa-heart"></i>
+                  <i class="fal fa-heart"></i>
                   </button>
                 </Tooltip>
                 <p>1</p>
@@ -178,10 +175,7 @@ const Home = () => {
               <div className="post-interactive-icon">
               <Tooltip title="Share" arrow>
                 <button>
-                  <i
-                    title="Share"
-                    class="fa-solid fa-arrow-up-from-bracket"
-                  ></i>
+                <i class="far fa-share-square"></i>
                 </button>
               </Tooltip>
               <p>1</p>
@@ -222,7 +216,7 @@ const Home = () => {
               <div className="post-interactive-icon">
                 <Tooltip id="comment" title="Comment" arrow>
                   <button>
-                    <i title="Comment" class="fa-regular fa-comment-dots" />
+                    <i class="far fa-comment-dots"></i>
                   </button>
                 </Tooltip>
                 <p>1</p>
@@ -230,7 +224,7 @@ const Home = () => {
               <div className="post-interactive-icon">
                 <Tooltip id="heart" title="Like" arrow>
                   <button>
-                    <i class="fa-regular fa-heart"></i>
+                  <i class="fal fa-heart"></i>
                   </button>
                 </Tooltip>
                 <p>1</p>
@@ -238,10 +232,7 @@ const Home = () => {
               <div className="post-interactive-icon">
               <Tooltip title="Share" arrow>
                 <button>
-                  <i
-                    title="Share"
-                    class="fa-solid fa-arrow-up-from-bracket"
-                  ></i>
+                <i class="far fa-share-square"></i>
                 </button>
               </Tooltip>
               <p>1</p>
