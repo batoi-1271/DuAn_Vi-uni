@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./leftPane.scss";
-import Button from "@mui/material/Button";
 import OutsideClickHandler from 'react-outside-click-handler';
 
+import "./leftPane.scss";
+
+import Button from "@mui/material/Button";
 import logo from "../../assets/logo.png";
 
 const users = [
@@ -111,12 +112,9 @@ const LeftPane = () => {
               </Link>
             </div>
 
-
-
             <OutsideClickHandler onOutsideClick={() => {setIsOpen(false)}}>
               <div className="search">
-
-                <span class="icon">
+                <span className="icon">
                   <i class="fa fa-search"></i>
                 </span>
                 <input

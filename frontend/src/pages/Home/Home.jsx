@@ -1,7 +1,6 @@
 import React, { Component, useState } from "react";
 import "./home.scss";
 import PostUser from "./PostUser";
-import Heart from "react-animated-heart";
 import Tooltip from '@mui/material/Tooltip';
 
 const Home = () => {

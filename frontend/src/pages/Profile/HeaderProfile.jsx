@@ -33,7 +33,7 @@ const HeaderProfile = () => {
           <div className="profile__header">
           <div className="backProfile">
               <button type="button" onClick={history.goBack}>
-                <i class="fa-solid fa-arrow-left"></i>
+              <i class="fas fa-arrow-left"></i>
               </button>
         </div>
             <div className="profileName-user">

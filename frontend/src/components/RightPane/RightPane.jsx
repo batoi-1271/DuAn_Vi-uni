@@ -1,34 +1,34 @@
 import React, { useRef, useState } from 'react'
-
 import { Link, useLocation } from 'react-router-dom';
-import Button from '@mui/material/Button';
 import './rightPane.scss';
+
 import Modal from './Modal/Modal';
 import PostUser from '../../pages/Home/PostUser';
 import More from './More/More';
 
 import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
 import Badge from '@mui/material/Badge';
 import Avatar from '@mui/material/Avatar';
 
 const headerNav = [
   {
-    icon: <i class="fa-solid fa-house-chimney"></i>,
+    icon:<i class="fas fa-house-user"></i>,
     display: 'Home',
     path: '/'
   },
   {
-    icon: <i class="fa-regular fa-bell"></i>,
+    icon: <i class="far fa-bells"></i>,
     display: 'Notifications',
     path: '/notifications'
   },
   {
-    icon: <i class="fa-regular fa-message"></i>,
+    icon: <i class="far fa-comments-alt"></i>,
     display: 'Message',
     path: '/message'
   },
   {
-    icon: <i class="fa-regular fa-bookmark"></i>,
+    icon: <i class="far fa-bookmark"></i>,
     display: 'Saved',
     path: '/saved'
   },
@@ -38,7 +38,7 @@ const headerNav = [
   //   path: '/list'
   // },
   {
-    icon: <i class="fa-regular fa-user"></i>,
+    icon: <i class="far fa-user"></i>,
     display: 'Profile',
     path: '/profile'
   },
@@ -48,6 +48,7 @@ const headerNav = [
 
 const RightPane = () => {
 
+  // STYLE ACTIVE AVATAR
 
   const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -78,15 +79,18 @@ const RightPane = () => {
     },
   }));
 
+  const { pathname } = useLocation();
+
+  const headerRef = useRef(null);
+
   const [modal, setModal] = useState(false);
   const Toggle = () => setModal(!modal);
+
   const [more, setMore] = useState(false);
   const ToggleMore = () => setMore(!more);
 
-  const { pathname } = useLocation();
-  const headerRef = useRef(null);
-
   const active = headerNav.findIndex(e => e.path === pathname);
+
   return (
     <div ref={headerRef} className="header" id='header'>
       <div className="header__wrap container">
@@ -104,7 +108,7 @@ const RightPane = () => {
           }
           <div className='more'>
 
-            <button onClick={() => ToggleMore()}><i class="fa-solid fa-ellipsis" />More</button>
+            <button onClick={() => ToggleMore()}><i class="far fa-ellipsis-h"/>More</button>
             <More show={more} close={ToggleMore} title="">
             </More>
           </div>
@@ -138,7 +142,7 @@ const RightPane = () => {
               <div className="username">@DngNgTng1</div>
             </div>
             <div className="edit">
-              <i class="fa-solid fa-ellipsis"></i>
+            <i class="fas fa-ellipsis-h"></i>
             </div>
           </button>
         </div>
