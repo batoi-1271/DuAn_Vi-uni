@@ -16,7 +16,7 @@ const Home = () => {
         <div className="content-post">
           <div className="post-avatar">
             <img
-              src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg"
+              src="https://images.unsplash.com/photo-1648022504736-c04c27b68cb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=378&q=80"
               alt=""
             />
           </div>
@@ -37,42 +37,110 @@ const Home = () => {
               </div>
               <div className="post-content-img">
                 <img
-                  src="https://pbs.twimg.com/media/FOIOPAgVkAAinpk?format=jpg&name=small"
+                  src="https://images.unsplash.com/photo-1640622304293-ec9c89c6bac9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
                   alt=""
                 />
               </div>
             </div>
             <div className="post-interactive">
-              
-              <Tooltip title="Comment" arrow>
-                <button><i title="Comment" class="fa-regular fa-comment-dots"/></button>
-              </Tooltip>
-              <p>1</p>
-
-              <Tooltip id="heart" title="Like" arrow>
-                <button><i class="fa-regular fa-heart"></i></button>
-              </Tooltip>
-              <p>1</p>
-
+              <div className="post-interactive-icon">
+                <Tooltip id="comment" title="Comment" arrow>
+                  <button>
+                    <i class="far fa-comment-dots"></i>
+                  </button>
+                </Tooltip>
+                <p>1</p>
+              </div>
+              <div className="post-interactive-icon">
+                <Tooltip id="heart" title="Like" arrow>
+                  <button>
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </Tooltip>
+                <p>1</p>
+              </div>
+              <div className="post-interactive-icon">
               <Tooltip title="Share" arrow>
-                <button><i title="Share" class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                <button>
+                <i class="far fa-share-square"></i>
+                </button>
               </Tooltip>
               <p>1</p>
-              
+              </div>
             </div>
           </div>
         </div>
         <div className="content-post">
           <div className="post-avatar">
             <img
-              src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg"
+              src="https://images.unsplash.com/photo-1647288850210-f5b9b1ea34a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
               alt=""
             />
           </div>
           <div className="post-info">
             <div className="post-info-header">
               <div className="post-name">
-                <h4>Dương Ngô Tùng</h4>
+                <h4>Trần văn Hào</h4>
+                <p>@t_tranvanhao</p>
+                <p>22h</p>
+              </div>
+              <div className="post-dot">
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+            </div>
+            <div className="post-content">
+              <div className="post-content-title">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+              </div>
+              <div className="post-content-img">
+                <img
+                  src="https://images.unsplash.com/photo-1648668425549-84b695d2ec2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=442&q=80"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div className="post-interactive">
+              <div className="post-interactive-icon">
+                <Tooltip id="comment" title="Comment" arrow>
+                  <button>
+                    <i title="Comment" class="fa-regular fa-comment-dots" />
+                  </button>
+                </Tooltip>
+                <p>1</p>
+              </div>
+              <div className="post-interactive-icon">
+                <Tooltip id="heart" title="Like" arrow>
+                  <button>
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </Tooltip>
+                <p>1</p>
+              </div>
+              <div className="post-interactive-icon">
+              <Tooltip title="Share" arrow>
+                <button>
+                  <i
+                    title="Share"
+                    class="fa-solid fa-arrow-up-from-bracket"
+                  ></i>
+                </button>
+              </Tooltip>
+              <p>1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="content-post">
+          <div className="post-avatar">
+            <img
+              src="https://images.unsplash.com/photo-1646841238177-b3efeafe8b97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+              alt=""
+            />
+          </div>
+          <div className="post-info">
+            <div className="post-info-header">
+              <div className="post-name">
+                <h4>Nguyễn Bá Tới</h4>
                 <p>@DngNgTng1</p>
                 <p>22h</p>
               </div>
@@ -86,33 +154,53 @@ const Home = () => {
               </div>
               <div className="post-content-img">
                 <img
-                  src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.6435-9/193226360_1207246593071491_9157876366763072431_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=2Py6h5PZ1E0AX9Wcdmy&_nc_ht=scontent.fhan5-3.fna&oh=00_AT9LKcERIiW4FP8NCoeqFiYA6E6x2e48ocnyiYh3SlRp1Q&oe=625A0794"
+                  src="https://images.unsplash.com/photo-1648656455858-f03fd496547b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                   alt=""
                 />
               </div>
             </div>
             <div className="post-interactive">
-              <i class="fa-regular fa-comment-dots">
+              <div className="post-interactive-icon">
+                <Tooltip id="comment" title="Comment" arrow>
+                  <button>
+                    <i title="Comment" class="fa-regular fa-comment-dots" />
+                  </button>
+                </Tooltip>
                 <p>1</p>
-              </i>
-              <i class="fa-solid fa-heart">
+              </div>
+              <div className="post-interactive-icon">
+                <Tooltip id="heart" title="Like" arrow>
+                  <button>
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </Tooltip>
                 <p>1</p>
-              </i>
-              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              <div className="post-interactive-icon">
+              <Tooltip title="Share" arrow>
+                <button>
+                  <i
+                    title="Share"
+                    class="fa-solid fa-arrow-up-from-bracket"
+                  ></i>
+                </button>
+              </Tooltip>
+              <p>1</p>
+              </div>
             </div>
           </div>
         </div>
         <div className="content-post">
           <div className="post-avatar">
             <img
-              src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg"
+              src="https://images.unsplash.com/photo-1642697651382-e8c60a220e7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
               alt=""
             />
           </div>
           <div className="post-info">
             <div className="post-info-header">
               <div className="post-name">
-                <h4>Dương Ngô Tùng</h4>
+                <h4>Nguyễn Giá Trường</h4>
                 <p>@DngNgTng1</p>
                 <p>22h</p>
               </div>
@@ -126,19 +214,39 @@ const Home = () => {
               </div>
               <div className="post-content-img">
                 <img
-                  src="https://pbs.twimg.com/media/FOIOPAgVkAAinpk?format=jpg&name=small"
+                  src="https://images.unsplash.com/photo-1640622308205-8ad9478c2386?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                   alt=""
                 />
               </div>
             </div>
             <div className="post-interactive">
-              <i class="fa-regular fa-comment-dots">
+              <div className="post-interactive-icon">
+                <Tooltip id="comment" title="Comment" arrow>
+                  <button>
+                    <i title="Comment" class="fa-regular fa-comment-dots" />
+                  </button>
+                </Tooltip>
                 <p>1</p>
-              </i>
-              <i class="fa-solid fa-heart">
+              </div>
+              <div className="post-interactive-icon">
+                <Tooltip id="heart" title="Like" arrow>
+                  <button>
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+                </Tooltip>
                 <p>1</p>
-              </i>
-              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              </div>
+              <div className="post-interactive-icon">
+              <Tooltip title="Share" arrow>
+                <button>
+                  <i
+                    title="Share"
+                    class="fa-solid fa-arrow-up-from-bracket"
+                  ></i>
+                </button>
+              </Tooltip>
+              <p>1</p>
+              </div>
             </div>
           </div>
         </div>
