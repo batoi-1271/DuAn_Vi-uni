@@ -25,6 +25,9 @@ const Mention = () => {
             asperiores, nesciunt autem, reiciendis incidunt accusantium
             eveniet et sequi quos odio fuga quae aperiam recusandae nobis
             libero odit sint commodi optio?
+            <div className="all-more">
+              <button><i class="fas fa-ellipsis-h"></i></button>
+            </div>
           </p>
           <span>footer</span>
         </div>
