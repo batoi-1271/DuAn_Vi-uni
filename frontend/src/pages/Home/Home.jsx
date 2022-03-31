@@ -42,6 +42,7 @@ const Home = () => {
               </div>
             </div>
             <div className="post-interactive">
+
               <div className="post-interactive-icon">
                 <Tooltip id="comment" title="Comment" arrow>
                   <button>
@@ -50,6 +51,7 @@ const Home = () => {
                 </Tooltip>
                 <p>1</p>
               </div>
+
               <div className="post-interactive-icon">
                 <Tooltip id="heart" title="Like" arrow>
                   <button>
@@ -58,6 +60,7 @@ const Home = () => {
                 </Tooltip>
                 <p>1</p>
               </div>
+
               <div className="post-interactive-icon">
               <Tooltip title="Share" arrow>
                 <button>
@@ -66,6 +69,7 @@ const Home = () => {
               </Tooltip>
               <p>1</p>
               </div>
+              
             </div>
           </div>
         </div>

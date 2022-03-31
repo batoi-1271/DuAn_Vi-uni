@@ -3,7 +3,7 @@
 
 #header {
     border-left: 1px solid #bde0fe;
-    height:100vh;
+    height: 100vh;
     flex-basis: 25%;
 }
 
@@ -18,19 +18,20 @@
 
     &__nav {
         margin-top: 2rem;
-
         li {
             @include btnMenu;
             @include flex(center, space-between);
             user-select: none;
-        &:hover {
-            background-color: $body-bg;
-            box-shadow: $box-shadow-1;
-            color: $main-color;
-        }
-        &:nth-last-child(1) {
-            background: none;
-        }
+
+            &:hover {
+                background-color: $body-bg;
+                box-shadow: $box-shadow-1;
+                color: $main-color;
+            }
+
+            &:nth-last-child(1) {
+                background: none;
+            }
 
             i {
                 font-size: 25px;
@@ -43,13 +44,15 @@
                 color: $main-color;
                 box-shadow: $box-shadow-1;
                 transition: all 300ms ease;
+
                 &:hover {
                     box-shadow: none;
                 }
             }
 
-           
+
         }
+
         .more {
             button {
                 background: none;
@@ -59,11 +62,13 @@
                 @include btnMenu;
                 @include flex(center, flex-start);
                 user-select: none;
+
                 &:hover {
                     background-color: $body-bg;
                     box-shadow: $box-shadow-1;
                     color: $main-color;
                 }
+
                 i {
                     font-size: 25px;
                     margin-right: 20px;
@@ -73,7 +78,8 @@
     }
 
     .post {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
+
         Button {
             @include colorGradient;
             width: 200px;
@@ -81,12 +87,14 @@
             border-radius: 50px;
             font-size: 1.2rem;
             font-weight: bold;
-            
+
         }
     }
-    
+
     &__wrap {
-        .infoUser{
+        
+        .infoUser {
+            position: relative;
             bottom: 1.5em;
             button.account {
                 width: 250px;
@@ -97,21 +105,37 @@
                 border: none;
                 background-color: $body-bg;
             }
-            .avatar{
+
+            .avatar {
                 @include imgAvatar;
             }
+
             .info {
-                .name{
+                .name {
                     font-weight: 700;
                 }
-                .username{
+
+                .username {
                     font-size: 0.8em;
                     color: #8899a6;
                 }
-                
+
+            }
+
+        }
+    }
+    .copyRight {
+        margin-top: 20px;
+        width: 280px;
+        ul {
+            width: inherit;
+            display: flex;
+            flex-flow: wrap;
+            li {
+                margin-top: 5px;
+                margin-left: 10px;
+                font-size: 0.8em;
             }
         }
     }
 }
-
-
