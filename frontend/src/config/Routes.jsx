@@ -34,7 +34,6 @@ const Routes = () => {
                 path='/notifications'
                 component={Notification}
             />
-            
             <Route
                 path='/'
                 exact

@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import {Switch, BrowserRouter, Route } from "react-router-dom";
 
 import "./notification.scss";
 
 import HeaderNoti from "./HeaderNoti";
-import RoutesNo from "./RoutesNo";
+import AllNotification from "./page/AllNotification";
+import Mention from "./page/Mention";
 
 const Notification = () => {
   return (
@@ -14,8 +15,17 @@ const Notification = () => {
           render={(props) => (
             <>
               <HeaderNoti {...props} />
-              <RoutesNo />
-              
+              <Switch>
+                <Route
+                  path="/notifications"
+                  exact
+                  component={AllNotification}
+                />
+                <Route
+                  path="/notifications/mention"
+                  component={Mention}
+                />
+              </Switch>
             </>
           )}
         />
