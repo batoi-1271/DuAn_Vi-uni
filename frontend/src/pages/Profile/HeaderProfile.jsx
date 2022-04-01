@@ -75,7 +75,7 @@ const HeaderProfile = () => {
                 </div>
                 <div className="dateCreate">
                   <span>
-                    <i class="fa-solid fa-calendar-days"></i> Joined December
+                  <i class="fas fa-calendar-alt"></i> Joined December
                     2021
                   </span>
                 </div>
