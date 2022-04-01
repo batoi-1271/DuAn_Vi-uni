@@ -1,7 +1,6 @@
 import { Button } from "@mui/material";
 import React, {useState} from "react";
 import Unfriend from "../../TogUnfriend/Unfriend";
-import Unfrienduser from "../../TogUnfriend/Unfrienduser";
 
 
 import "./myfriends.scss";
@@ -25,7 +24,7 @@ const MyFriends = () => {
           </div>
         </div>
         <div className="friends-lish-fow">
-          <Button><span>Friend</span></Button>
+          <Button onClick={() => Toggle()}><span>Friend</span></Button>
           <i class="fas fa-ellipsis-h"></i>
         </div>
       </div>
@@ -43,7 +42,7 @@ const MyFriends = () => {
           </div>
         </div>
         <div className="friends-lish-fow">
-          <Button><span>Friend</span></Button>
+          <Button onClick={() => Toggle()}><span>Friend</span></Button>
           <i class="fas fa-ellipsis-h"></i>
         </div>
       </div>
@@ -62,9 +61,8 @@ const MyFriends = () => {
         </div>
         <div className="friends-lish-fow">
           <Button onClick={() => Toggle()}><span>Friend</span></Button>
-          <Unfriend show={modal} close={Toggle} title="Create post">
-            <Unfrienduser />
-          </Unfriend>
+
+          <Unfriend show={modal} close={Toggle}/>
           <i class="fas fa-ellipsis-h"></i>
         </div>
       </div>

@@ -1,9 +1,6 @@
 import './edit.scss'
 import TextField from '@mui/material/TextField';
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import FormControl from '@mui/material/FormControl';
 
 
 const ButtonEdit = ({ show, close, title, children }) => {

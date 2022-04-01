@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./profile.scss";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import ButtonEdit from "./Button/ButtonEdit";
+import { color } from "@mui/system";
 
 const headerAc = [
   {
