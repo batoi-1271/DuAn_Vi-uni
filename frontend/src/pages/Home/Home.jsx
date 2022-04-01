@@ -27,7 +27,7 @@ const Home = () => {
                 <p>22h</p>
               </div>
               <div className="post-dot">
-                <i class="fa-solid fa-ellipsis"></i>
+              <i class="fas fa-ellipsis-h"></i>
               </div>
             </div>
             <div className="post-content">
@@ -49,7 +49,7 @@ const Home = () => {
               <div className="post-interactive-icon">
                 <Tooltip id="comment" title="Comment" arrow>
                   <button>
-                    <i class="far fa-comment-dots"></i>
+                  <i class="fas fa-ellipsis-h"></i>
                   </button>
                 </Tooltip>
                 <p>1</p>
@@ -91,7 +91,7 @@ const Home = () => {
                 <p>22h</p>
               </div>
               <div className="post-dot">
-                <i class="fa-solid fa-ellipsis"></i>
+              <i class="fas fa-ellipsis-h"></i>
               </div>
             </div>
             <div className="post-content">
@@ -148,7 +148,7 @@ const Home = () => {
                 <p>22h</p>
               </div>
               <div className="post-dot">
-                <i class="fa-solid fa-ellipsis"></i>
+              <i class="fas fa-ellipsis-h"></i>
               </div>
             </div>
             <div className="post-content">
@@ -205,7 +205,7 @@ const Home = () => {
                 <p>22h</p>
               </div>
               <div className="post-dot">
-                <i class="fa-solid fa-ellipsis"></i>
+              <i class="fas fa-ellipsis-h"></i>
               </div>
             </div>
             <div className="post-content">

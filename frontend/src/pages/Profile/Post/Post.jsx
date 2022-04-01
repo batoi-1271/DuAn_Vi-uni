@@ -20,7 +20,7 @@ const Post = () => {
                 <p>22h</p>
               </div>
               <div className="post-dot">
-                <i class="fa-solid fa-ellipsis"></i>
+                <i class="fas fa-ellipsis-h"></i>
               </div>
             </div>
             <div className="post-content">
@@ -77,7 +77,7 @@ const Post = () => {
                 <p>22h</p>
               </div>
               <div className="post-dot">
-                <i class="fa-solid fa-ellipsis"></i>
+                <i class="fas fa-ellipsis-h"></i>
               </div>
             </div>
             <div className="post-content">
@@ -134,7 +134,7 @@ const Post = () => {
                 <p>22h</p>
               </div>
               <div className="post-dot">
-                <i class="fa-solid fa-ellipsis"></i>
+                <i class="fas fa-ellipsis-h"></i>
               </div>
             </div>
             <div className="post-content">
@@ -191,7 +191,7 @@ const Post = () => {
                 <p>22h</p>
               </div>
               <div className="post-dot">
-                <i class="fa-solid fa-ellipsis"></i>
+                <i class="fas fa-ellipsis-h"></i>
               </div>
             </div>
             <div className="post-content">

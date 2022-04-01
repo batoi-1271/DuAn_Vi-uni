@@ -10,7 +10,7 @@ const Save = () => {
                 <p>@DngNgTng1</p>
             </div>
             <div className="post-dot">
-                <i class="fa-solid fa-ellipsis"></i>
+                <i class="fas fa-ellipsis-h"></i>
             </div>
         </div>
         <div className="save-list">
@@ -26,7 +26,7 @@ const Save = () => {
                         <p>22h</p>   
                     </div>
                     <div className="post-dot">
-                        <i class="fa-solid fa-ellipsis"></i>
+                        <i class="fas fa-ellipsis-h"></i>
                     </div>
                 </div>
                 <div className="post-content">
@@ -56,7 +56,7 @@ const Save = () => {
                         <p>22h</p>   
                     </div>
                     <div className="post-dot">
-                        <i class="fa-solid fa-ellipsis"></i>
+                        <i class="fas fa-ellipsis-h"></i>
                     </div>
                 </div>
                 <div className="post-content">
@@ -86,7 +86,7 @@ const Save = () => {
                         <p>22h</p>   
                     </div>
                     <div className="post-dot">
-                        <i class="fa-solid fa-ellipsis"></i>
+                        <i class="fas fa-ellipsis-h"></i>
                     </div>
                 </div>
                 <div className="post-content">

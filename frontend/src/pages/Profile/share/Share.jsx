@@ -21,7 +21,7 @@ const Likes = () => {
               <p>2day</p>
             </div>
             <div className="post-dot">
-              <i class="fa-solid fa-ellipsis"></i>
+              <i class="fas fa-ellipsis-h"></i>
             </div>
           </div>
           <div className="post-content">
@@ -78,7 +78,7 @@ const Likes = () => {
               <p>2day</p>
             </div>
             <div className="post-dot">
-              <i class="fa-solid fa-ellipsis"></i>
+              <i class="fas fa-ellipsis-h"></i>
             </div>
           </div>
           <div className="post-content">
@@ -135,7 +135,7 @@ const Likes = () => {
               <p>2day</p>
             </div>
             <div className="post-dot">
-              <i class="fa-solid fa-ellipsis"></i>
+              <i class="fas fa-ellipsis-h"></i>
             </div>
           </div>
           <div className="post-content">
@@ -195,7 +195,7 @@ const Likes = () => {
               <p>2day</p>
             </div>
             <div className="post-dot">
-              <i class="fa-solid fa-ellipsis"></i>
+              <i class="fas fa-ellipsis-h"></i>
             </div>
           </div>
           <div className="post-content">

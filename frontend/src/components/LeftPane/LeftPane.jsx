@@ -134,7 +134,7 @@ const LeftPane = () => {
                       >
                         {option}
                         <button type="button" className="delete" aria-label="delete">
-                          <span><i class="fa-solid fa-xmark"></i></span>
+                          <span><i class="fab fa-xing"></i></span>
                         </button>
                       </div>
                     ))}
