@@ -33,11 +33,7 @@ const headerNav = [
     display: 'Saved',
     path: '/saved'
   },
-  // {
-  //   icon: <i class="fa-solid fa-list"></i>,
-  //   display: 'Lists',
-  //   path: '/list'
-  // },
+  
   {
     icon: <i class="far fa-user"></i>,
     display: 'Profile',
