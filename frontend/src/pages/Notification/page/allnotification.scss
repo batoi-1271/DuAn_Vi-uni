@@ -6,7 +6,11 @@
     flex-basis: 45%;
     width: 100%;
     height: 100vh;
-
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+      
     .all-list{
         display: flex;
         padding: 30px 30px 30px 40px;
@@ -43,6 +47,7 @@
                 display: -webkit-box;           /*trình duyệt hỗ trợ */
                 -webkit-box-orient: vertical;   /*tính từ thằng này theo chiều thẳng đứng "vertical"*/
                 -webkit-line-clamp: 2; 
+              
             }
           margin-left: 10px;
             img{
@@ -53,7 +58,7 @@
                 
             }
             p {
-                text-align: justify;
+                // text-align: justify;
         text-justify: inter-word;
             }
         }
