@@ -14,7 +14,7 @@ const Unfriend = ({ show, close }) => {
                                 <h4>Are you want unfollow <span>@NameUser</span></h4>
                             </div>
                             <div className="content">
-                                <Button id="unfollow" variant="outlined"><Link to="#">Unfollow</Link></Button>
+                                <Button id="unfollow" variant="outlined"><Link to="#">UnFriend</Link></Button>
                                 <Button id="cancel" variant="contained" onClick={() => close()}><Link to="#">Cancel</Link></Button>
                             </div>
                         </main>
