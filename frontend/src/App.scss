@@ -12,12 +12,11 @@
     font-family: 'Segoe UI', 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
-    // &.pathname {
-    //     display: none;
-    // }
+    scroll-behavior: smooth;
   }
 html {
     font-size: 100%;
+    
 
     @include tablet {
         font-size: 80%;

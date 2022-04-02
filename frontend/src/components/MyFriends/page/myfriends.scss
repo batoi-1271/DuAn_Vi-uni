@@ -20,8 +20,8 @@
             }
         }
         .friends-lish-fow{
-            Button{
-                width: auto;
+            >Button{
+                width: 100px;
                 color: white;
                 margin-right: 20px;
                 outline: none;
@@ -39,12 +39,11 @@
 
                 }
             }
-            Button:hover span {
+            >Button:hover > span {
                 display: none
               }
-            Button:hover:before {
-                content: "Hào hết yêu Linh rồi !";
-
+            >Button:hover:before {
+                content: "Unfriend";
               }
         }
         .friends-lish-avt{

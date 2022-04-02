@@ -1,25 +1,29 @@
 import React from 'react'
+import "./unfriend.scss";
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
-const Unfriend = ({ show, close, title, children }) => {
-  return (
-    <>
-        { show ? 
-        
-            <div className="modalContainerPost" onClick={() => close()}>
-                <div className="modal" onClick={(e) => e.stopPropagation()}>
-                    <header className="modal_header">
-                        <h2 className="modal_header-title">{title}</h2>
-                        <button className="close" onClick={() => close()}><i class="fa-solid fa-xmark"></i></button>
-                    </header>
-                    <main className="modal_content">
-                        {children}
-                    </main>
+const Unfriend = ({ show, close }) => {
+    return (
+        <>
+            {show ?
+                <div className="modalUnf" onClick={() => close()}>
+                    <div className="modal" onClick={(e) => e.stopPropagation()}>
+                        <main className="modal_content">
+                            <div className="title">
+                                <h4>Are you want unfollow <span>@NameUser</span></h4>
+                            </div>
+                            <div className="content">
+                                <Button id="unfollow" variant="outlined"><Link to="#">Unfollow</Link></Button>
+                                <Button id="cancel" variant="contained" onClick={() => close()}><Link to="#">Cancel</Link></Button>
+                            </div>
+                        </main>
+                    </div>
                 </div>
-            </div>
-        
-        : null }
+
+                : null}
         </>
-  )
+    )
 }
 
-export default Unfriend
+export default Unfriend;

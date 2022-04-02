@@ -121,7 +121,12 @@
                     .follower {
                         padding-top: 5px;
                     }
+                    .dateCreate {
+                        i {
+                        color: $main-color;
 
+                        }
+                    }
                     .follower {
                         cursor: pointer;
                         p{

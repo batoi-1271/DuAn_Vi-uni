@@ -49,7 +49,7 @@ const Home = () => {
               <div className="post-interactive-icon">
                 <Tooltip id="comment" title="Comment" arrow>
                   <button>
-                  <i class="fas fa-ellipsis-h"></i>
+                  <i class="far fa-comment-dots"></i>
                   </button>
                 </Tooltip>
                 <p>1</p>
