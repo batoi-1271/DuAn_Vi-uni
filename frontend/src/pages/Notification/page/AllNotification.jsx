@@ -44,6 +44,7 @@ const AllNotification = () => {
           </div>
         </OutsideClickHandler>
       </div>
+      
     </div>
   );
 };
