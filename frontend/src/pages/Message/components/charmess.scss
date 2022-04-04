@@ -15,14 +15,15 @@
         background-color: rgba(255, 255, 255, 1);
         width: 800px;
         height: auto;
-        padding: 30px;
+        // padding: 30px;
         border-radius: 20px;
         &_header {
+            padding: 30px 30px 0 30px;
             position: relative;
             border-bottom: 2px solid red;
             padding-bottom: 10px;
             .fa-search{
-                color: aqua;
+                color: $main-color;
             }
             input{
                 border: none;
@@ -37,9 +38,45 @@
         &_content{
             border-bottom: 1px solid orange;
             padding: 20px 0;
+            .modal-groups{
+                padding: 0 30px;
+                display: flex;
+                align-items: center;
+                .modal-group{
+                    display: flex;
+                    align-items: center;
+                    margin: 10px 0;
+                }
+                border-bottom:1px solid rebeccapurple;
+                &:hover{
+                    background-color: rgba(206,212,218,0.4);
+                }
+                i{
+                    border: 1px $main-color solid;
+                    padding: 10px;
+                    border-radius: 50%;
+                    color: $main-color;
+                    margin-right: 20px;
+                }
+                p{
+                    color: $main-color;
+                    font-weight: 700;
+                }
+            }
+            .modal-friend{
+                img{
+                    height: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
         }
         &_footer{
             padding: 20px 0;
+            .footer-button{
+                margin-bottom: 30px;
+            }
             button{
                 float: right;
                 padding: 10px 15px;
@@ -55,6 +92,7 @@
                 &:hover{
                     background-color: rgba(250, 235, 215,0.5);
                 }
+            
             }
         }
 

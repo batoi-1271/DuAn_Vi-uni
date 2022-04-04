@@ -102,7 +102,7 @@ const RightPane = () => {
             headerNav.map((e, i) => (
               <li key={i} className={`${i === active ? 'active' : ''}`}>
 
-                <Link to={e.path}>
+                <Link  ink to={e.path}>
                   <span>{e.icon}</span>
                   {e.display}
                 </Link>

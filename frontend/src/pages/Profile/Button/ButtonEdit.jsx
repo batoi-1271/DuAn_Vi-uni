@@ -23,10 +23,10 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                     <img src="https://lovablemessages.com/wp-content/uploads/2021/12/bo-hinh-nen-3d-that-dep-va-that-hap-dan-24-1068x601.jpg" alt="" />
                                     <div className="editIcon">
                                         <button>
-                                            <i class="fa-solid fa-camera"></i>
+                                        <i class="fas fa-camera"></i>
                                         </button>
                                         <button>
-                                            <i class="fa-solid fa-xmark"></i>
+                                        <i class="fal fa-times"></i>
                                         </button>
                                     </div>
                                 </div>
@@ -34,7 +34,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                     <img src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_400x400.jpg" alt="" />
                                     <div className="editAvatar">
                                         <button>
-                                            <i class="fa-solid fa-camera"></i>
+                                        <i class="fas fa-camera"></i>
                                         </button>
                                     </div>
                                 </div>
