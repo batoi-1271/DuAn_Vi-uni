@@ -76,6 +76,9 @@ const HeaderProfile = () => {
                 </div>
                 <div className="dateCreate">
                   <span>
+                  <i class="fas fa-birthday-cake"/> Born October 14, 2001
+                  </span>
+                  <span>
                   <i class="fas fa-calendar-alt"></i> Joined December
                     2021
                   </span>
@@ -83,6 +86,9 @@ const HeaderProfile = () => {
                 <div className="friends">
                   <Link to="/friends">
                     <p>7 Friends</p>
+                  </Link>
+                  <Link to="/friends/following">
+                    <p>0 Following</p>
                   </Link>
                 </div>
               </div>

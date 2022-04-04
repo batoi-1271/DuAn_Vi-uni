@@ -6,9 +6,10 @@
     height: 100vh;
     flex-basis: 25%;
     overflow: scroll;
+
     &::-webkit-scrollbar {
         display: none;
-      }
+    }
 
 }
 
@@ -26,161 +27,198 @@
         position: fixed;
         @include header;
         width: 22%;
-    }
 
-    .logo {
-        font-size: 2rem;
-        font-weight: 600;
+        .logo {
+            font-size: 2rem;
+            font-weight: 600;
 
-        img {
-            margin-right: 10px;
-            width: 50px;
+            img {
+                margin-right: 10px;
+                width: 50px;
 
-            @include mobile {
-                width: 30px;
-                margin-right: 0;
+                @include mobile {
+                    width: 30px;
+                    margin-right: 0;
+                }
             }
         }
-    }
 
-    .search {
-        width: 250px;
-        height: 35px;
-        @include flex(center, space-between);
-        vertical-align: middle;
-        white-space: nowrap;
-        position: relative;
-        box-shadow: $box-shadow-1;
-        transition: all 300ms ease;
-        &:hover {
-            box-shadow: none;
-        }
-        .icon {
-            position: absolute;
-            margin-left: 17px;
-            z-index: 1;
-            color: #4f5b66;
-        }
+        .search {
+            width: 250px;
+            height: 35px;
+            @include flex(center, space-between);
+            vertical-align: middle;
+            white-space: nowrap;
+            position: relative;
+            border-radius: 50px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            transition: all 300ms ease;
 
-        input {
-            font-size: 10pt;
-            float: left;
-            height: 40px;
-            color: rgba(65, 75, 90, 1);
-            padding-left: 45px;
-            width: 100%;
-            @include input;
-        }
+            &:hover {
+                box-shadow: none;
+            }
 
-        .dropContainer {
-            position: absolute;
-            z-index: 999;
-            top: 100%;
-            .dropList {
-                width: 300px;
-                height: auto;
-                padding: 0 0.3rem 0.5rem 0.3rem;
-                background: #ffffff;
-                color: #000;
-                font-size: 1rem;
-                font-weight: 500;
-                box-shadow: $box-shadow-1;
+            .icon {
+                position: absolute;
+                margin-left: 17px;
+                z-index: 1;
+                color: #4f5b66;
+            }
 
-                &:first-child {
-                    padding-top: 0.8em;
-                }
+            input {
+                font-size: 10pt;
+                float: left;
+                height: 40px;
+                color: rgba(65, 75, 90, 1);
+                padding-left: 45px;
+                width: 100%;
+                @include input;
+            }
 
-                .title {
-                    margin-bottom: 1em;
-                    @include flex(center, space-between)
-                }
+            .dropContainer {
+                position: absolute;
+                z-index: 999;
+                top: 100%;
 
-                .items {
-                    height: 50px;
-                    cursor: pointer;
-                    @include flex(center, space-between);
-                    user-select: none;
-                    list-style: none;
-                    padding: 5px;
-                    border-radius: 10px;
-                    &:hover {
-                        background-color: $color-btn;
+                .dropList {
+                    width: 300px;
+                    height: auto;
+                    padding: 0 0.3rem 0.5rem 0.3rem;
+                    background: #ffffff;
+                    color: #000;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    box-shadow: $box-shadow-1;
+
+                    &:first-child {
+                        padding-top: 0.8em;
                     }
-                    .delete {
-                        background: none;
-                        border: none;
+
+                    .title {
+                        margin-bottom: 1em;
+                        @include flex(center, space-between)
+                    }
+
+                    .items {
+                        height: 50px;
                         cursor: pointer;
-                        border-radius: 50%;
-                        width: 20px;
-                        height: 20px;
+                        @include flex(center, space-between);
+                        user-select: none;
+                        list-style: none;
+                        padding: 5px;
+                        border-radius: 10px;
+
                         &:hover {
-                            color: $main-color;
-                            background-color: $body-bg;
+                            background-color: $color-btn;
+                        }
+
+                        .delete {
+                            background: none;
+                            border: none;
+                            cursor: pointer;
+                            border-radius: 50%;
+                            width: 20px;
+                            height: 20px;
+
+                            &:hover {
+                                color: $main-color;
+                                background-color: $body-bg;
+                            }
                         }
                     }
                 }
             }
         }
     }
-    .box_paneLeft{
+
+
+    &_Box {
+        overflow: hidden;
         border-radius: 20px;
         margin-top: 70px;
         width: 320px;
-        height: auto;
+        height: 400px;
         background-color: $body-bg;
         box-shadow: $box-shadow-1;
         transition: all 300ms ease;
+
         &:hover {
             box-shadow: none;
         }
+
         h3 {
-            margin-left: 10px;
-        }
-    }
-    &__info {
-        .infoUser {
-        padding: 10px;
-        @include flex(center, space-between);
-        .avatar {
-            border-radius: 100%;
-            height: 2.5em;
-            width: 2.5em;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 100%;
-            }
-        }
-        .info {
-            flex: 1;
-            padding-left: 1.5rem;
-            .name{
-                font-weight: 700;
-            }
-            .username{
-                font-size: 0.8em;
-                color: #8899a6;
-            } 
-         }
-         .addFr {
-             Button {
-                @include btnAddFr;
-                @include colorGradient;
-
-             }
-         }
+            margin-left: 25px;
+            margin-top: 5px;
         }
 
-    }
-    span {
-        a {
-            color: $main-color;
-            margin-left: 20px;
+        .paneLeftInfo {
+            padding-bottom: 10px;
+
+            .infoUser {
+                padding: 10px;
+                @include flex(center, space-between);
+                cursor: pointer;
+                transition: all 300ms ease;
+                &:hover {
+                    background-color: $white;
+                }
+
+                .avatar {
+                    border-radius: 100%;
+                    height: 2.5em;
+                    width: 2.5em;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 100%;
+                    }
+                }
+
+                .info {
+                    flex: 1;
+                    padding-left: 1.5rem;
+
+                    .name {
+                        font-weight: 700;
+                    }
+
+                    .username {
+                        font-size: 0.8em;
+                        color: #8899a6;
+                    }
+                }
+
+                .addFr {
+                    Button {
+                        @include btnAddFr;
+                        @include colorGradient;
+
+                    }
+                }
+            }
+
+        }
+
+        .seemore {
+            width: 320px;
+            height: 50px;
+            line-height: 40px;
+            cursor: pointer;
+            #seemore {
+                padding-left: 20px;
+            }
+            &:hover {
+                background-color: $color-btn;
+            }
         }
     }
+
+
     .follow {
         margin-top: 30px;
+        margin-bottom: 20px;
     }
-    
+
 }
