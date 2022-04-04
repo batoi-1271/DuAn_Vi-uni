@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import "./home.scss";
 
 import OutsideClickHandler from 'react-outside-click-handler';
+import { Link } from "react-router-dom";
 
 const PostUser = () => {
   const options = ["Everyone", "Friends", "Only me"];
@@ -22,10 +23,11 @@ const PostUser = () => {
     <section >
       <div className="postUser" id="postUser">
         <div className="avatar">
-          <img
+          <Link to="./profile">
+            <img
             alt="Dương Ngô Tùng"
             src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg"
-          />
+          /></Link>
         </div>
         <div className="contentPost">
           <div className="contentPost__user">

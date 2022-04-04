@@ -142,11 +142,13 @@ const LeftPane = () => {
                   </div>
                 )}
               </div>
+
         </OutsideClickHandler>
           </div>
-          <div className="box_paneLeft">
+
+          <div className="paneLeft_Box">
             <h3>You might like</h3>
-            <ul className="paneLeft__info">
+            <ul className="paneLeftInfo">
               {users.map((e, i) => (
                 <li key={i} className="infoUser">
                   <div className="avatar">{e.imageUrl}</div>
@@ -177,14 +179,14 @@ const LeftPane = () => {
                 </li>
               ))}
             </ul>
-            <span>
-              <a href="">See more</a>
-            </span>
+            <div className="seemore">
+                <Link to="#" id="seemore">See more</Link>
+            </div>
           </div>
 
-          <div className="box_paneLeft follow">
-            <h3>Who to follow</h3>
-            <ul className="paneLeft__info">
+          <div className="paneLeft_Box follow">
+            <h3>Following</h3>
+            <ul className="paneLeftInfo">
               {users.map((e, i) => (
                 <li key={i} className="infoUser">
                   <div className="avatar">{e.imageUrl}</div>
@@ -200,9 +202,12 @@ const LeftPane = () => {
                 </li>
               ))}
             </ul>
-            <span>
-              <a href="">See more</a>
-            </span>
+            <div className="seemore">
+                <Link to="/friends/following" id="seemore">See more</Link>
+            </div>
+            {/* <span>
+              <Link to="/friends/following" className="seemore">See more</Link>
+            </span> */}
           </div>
         </div>
       )}

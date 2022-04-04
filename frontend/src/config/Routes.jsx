@@ -6,7 +6,6 @@ import Friends from '../components/MyFriends/Friends';
 import Home from '../pages/Home/Home';
 import Messages from '../pages/Message/Messages';
 import Notification from '../pages/Notification/Notification';
-import Mention from '../pages/Notification/page/Mention';
 import Profile from '../pages/Profile/Profile';
 import Save from '../pages/Saved/Save';
 

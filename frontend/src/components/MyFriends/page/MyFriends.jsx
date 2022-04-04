@@ -1,5 +1,7 @@
 import { Button } from "@mui/material";
 import React, {useState} from "react";
+import { Link, useLocation, useHistory } from "react-router-dom";
+
 import Unfriend from "../../TogUnfriend/Unfriend";
 
 
@@ -8,9 +10,10 @@ import "./myfriends.scss";
 const MyFriends = () => {
   const [modal, setModal] = useState(false);
   const Toggle = () => setModal(!modal);
+  
   return (
-    <div className="myFriends">
-      <div className="friends-lish">
+    <div className="myFriends" >
+      <div  className="friends-lish" >
         <div className="friends-lish-profile">
           <div className="friends-lish-avt">
             <img
@@ -28,7 +31,9 @@ const MyFriends = () => {
           <i class="fas fa-ellipsis-h"></i>
         </div>
       </div>
+
       <div className="friends-lish">
+        
         <div className="friends-lish-profile">
           <div className="friends-lish-avt">
             <img
@@ -40,11 +45,13 @@ const MyFriends = () => {
             <h3>TranVanHao</h3>
             <p>@TranThiHao</p>
           </div>
+          
         </div>
         <div className="friends-lish-fow">
           <Button onClick={() => Toggle()}><span>Friend</span></Button>
           <i class="fas fa-ellipsis-h"></i>
         </div>
+
       </div>
       <div className="friends-lish">
         <div className="friends-lish-profile">
