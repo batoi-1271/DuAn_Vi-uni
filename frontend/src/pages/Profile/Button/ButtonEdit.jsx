@@ -58,6 +58,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                         multiline
                                         fullWidth
                                         rows={4}
+                                        maxLength={15}
                                         defaultValue="Không có công việc nào không có áp lực, tuy nhiên chỉ có không đam mê công việc mới là áp lớn lực khiến ta từ bỏ công việc đó."
 
                                     />
@@ -79,7 +80,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                         label="Birthday"
                                         type="date"
                                         defaultValue="2017-05-24"
-                                        sx={{ width: 220 }}
+                                        sx={{ width: 280 }}
                                         InputLabelProps={{
                                             shrink: true,
                                         }}
