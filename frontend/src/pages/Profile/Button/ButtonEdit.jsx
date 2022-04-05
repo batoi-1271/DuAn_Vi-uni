@@ -5,6 +5,12 @@ import * as React from 'react';
 
 const ButtonEdit = ({ show, close, title, children }) => {
 
+    const [textAreaCount, ChangeTextAreaCount] = React.useState(0);
+
+  const recalculate = e => {
+    ChangeTextAreaCount(e.target.value.length);
+  };
+
     return (
 
         <>
@@ -52,13 +58,16 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                         />
                                 </div>
                                 <div className="bio">
+                                <p>{textAreaCount}/160</p>
                                     <TextField
                                         id="bio"
                                         label="Bio"
                                         multiline
                                         fullWidth
+                                        onChange={recalculate}
                                         rows={4}
-                                        defaultValue="Không có công việc nào không có áp lực, tuy nhiên chỉ có không đam mê công việc mới là áp lớn lực khiến ta từ bỏ công việc đó."
+                                        inputProps={{ maxLength: 160 }}
+                                        defaultValue="Ra xã hội làm ăn bươn chải, liều thì ăn nhiều, không liều thì ăn ít. Muốn thành công thì phải chấp nhận trải qua đắng cay ngọt bùi."
 
                                     />
                                 </div>

@@ -153,6 +153,16 @@
                     width: 100%;
                 }
             }
+            .bio {
+                position: relative;
+                p {
+                    position: absolute;
+                    // top: 0;
+                    right: 2%;
+                    bottom: 0;
+                    color: gray;
+                }
+            }
             .dateOfBirth{
                 padding: 10px 0;
                 p{
