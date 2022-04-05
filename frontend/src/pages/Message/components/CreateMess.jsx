@@ -1,7 +1,7 @@
 import React from "react";
-import "./charmess.scss";
+import "./createMess.scss";
 
-const Charmess = ({ show, close, title, children }) => {
+const CreateMess = ({ show, close, title, children }) => {
   return (
     <>
       {show ? (
@@ -46,4 +46,4 @@ const Charmess = ({ show, close, title, children }) => {
   );
 };
 
-export default Charmess;
+export default CreateMess;

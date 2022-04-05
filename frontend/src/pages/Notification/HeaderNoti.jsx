@@ -10,13 +10,14 @@ const headerAc = [
   {
     display: "Mentions",
     path: "/notifications/mention",
-  },
+  }
 ];
 
 const HeaderNoti = () => { 
   const { pathname } = useLocation();
 
   const active = headerAc.findIndex((e) => e.path === pathname);
+
   return (
     <div className="notification">
       <div className="notification__header">
