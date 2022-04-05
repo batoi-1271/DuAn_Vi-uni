@@ -42,10 +42,8 @@ const Home = () => {
               </div>
             </div>
 
-
             {/* Sử dụng icon và tooltip title    */}
             <div className="post-interactive">
-
               <div className="post-interactive-icon">
                 <Tooltip id="comment" title="Comment" arrow>
                   <button>

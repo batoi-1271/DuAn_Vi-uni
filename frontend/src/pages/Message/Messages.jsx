@@ -167,6 +167,7 @@ const Messages = () => {
                   onClick={() => toggle()}
                   class="fab fa-facebook-messenger"
                 ></i>
+                {/* <i onClick={() => toggle()} class="far fa-users"></i> */}
               </div>
             </div>
             <div className="message_search">
