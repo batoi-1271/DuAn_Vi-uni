@@ -19,7 +19,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                 <div className="modalContainer" onClick={() => close()}>
                     <div className="modal" onClick={(e) => e.stopPropagation()}>
                         <header className="modal_header">
-                            <i class="fa-solid fa-xmark close" onClick={() => close()}></i>
+                            <i class="fa fa-times close" onClick={() => close()}></i>
                             <h2 className="modal_header-title">{title}</h2>
                             <button className="submit">Save</button>
                         </header>
