@@ -14,11 +14,16 @@ import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 
 import CreateMess from "./components/CreateMess";
+import CreateGroup from "./components/CreateGroup";
 
 
 const Messages = () => {
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
+
+
+  const[modal1, setModal1] = useState(false);
+  const toggle1 = () => setModal1(!modal1)
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -185,15 +190,21 @@ const Messages = () => {
               <h3>Messages</h3>
 
               <React.Fragment>
-                <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    textAlign: "center",
+                  }}
+                >
                   <Tooltip title="New message">
                     <IconButton
                       onClick={handleClick}
                       size="small"
                       sx={{ ml: 2 }}
-                      aria-controls={open ? 'account-menu' : undefined}
+                      aria-controls={open ? "account-menu" : undefined}
                       aria-haspopup="true"
-                      aria-expanded={open ? 'true' : undefined}
+                      aria-expanded={open ? "true" : undefined}
                     >
                       <Avatar sx={{ width: 32, height: 32 }}>Vi</Avatar>
                     </IconButton>
@@ -208,38 +219,37 @@ const Messages = () => {
                   PaperProps={{
                     elevation: 0,
                     sx: {
-                      overflow: 'visible',
-                      filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+                      overflow: "visible",
+                      filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
                       mt: 1.5,
-                      '& .MuiAvatar-root': {
+                      "& .MuiAvatar-root": {
                         width: 32,
                         height: 32,
                         ml: -0.5,
                         mr: 1,
                       },
-                      '&:before': {
+                      "&:before": {
                         content: '""',
-                        display: 'block',
-                        position: 'absolute',
+                        display: "block",
+                        position: "absolute",
                         top: 0,
                         right: 14,
                         width: 10,
                         height: 10,
-                        bgcolor: 'background.paper',
-                        transform: 'translateY(-50%) rotate(45deg)',
+                        bgcolor: "background.paper",
+                        transform: "translateY(-50%) rotate(45deg)",
                         zIndex: 0,
                       },
                     },
                   }}
-                  
-                  transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                  anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                  transformOrigin={{ horizontal: "right", vertical: "top" }}
+                  anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
                 >
                   <MenuItem onClick={() => toggle()}>
-                    <MailOutlineIcon sx={{ mr:2 }}/> Message
+                    <MailOutlineIcon sx={{ mr: 2 }} /> Message
                   </MenuItem>
-                  <MenuItem>
-                    <PeopleAltIcon sx={{ mr:2 }}/> Message group
+                  <MenuItem onClick={() => toggle1()}>
+                    <PeopleAltIcon sx={{ mr: 2 }} /> Message group
                   </MenuItem>
                   <Divider />
                   <MenuItem>
@@ -251,9 +261,6 @@ const Messages = () => {
                 </Menu>
               </React.Fragment>
 
-
-
-
               {/* <div className="message_header-icon">
                   <i
                   onClick={() => toggle()}
@@ -261,7 +268,6 @@ const Messages = () => {
 
 
               </div> */}
-
             </div>
             <div className="message_search">
               <i class="fa fa-search" aria-hidden="true"></i>
@@ -323,9 +329,9 @@ const Messages = () => {
               <i class="fal fa-paper-plane"></i>
             </div>
           </div>
-          <CreateMess show={modal} close={toggle} title="New Message">
-            Content
-          </CreateMess>
+          <CreateMess show={modal} close={toggle}></CreateMess>
+          
+          <CreateGroup show={modal1} close={toggle1}></CreateGroup>
         </div>
       </div>
     </>

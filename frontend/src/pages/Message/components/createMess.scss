@@ -36,7 +36,6 @@
             }
         }
         &_content{
-            border-bottom: 1px solid orange;
             .modal-groups{
                 padding: 0 30px;
                 display: flex;
@@ -65,7 +64,8 @@
             .modal-friend{
                     padding: 15px 0 10px 30px;
                     &:hover{
-                        background-color: red;
+                        background-color: rgba(255,200,221,0.1);
+                        cursor: pointer;
                     }
                     .friend-content-img{
                         display: flex;
