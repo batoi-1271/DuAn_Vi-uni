@@ -37,7 +37,6 @@
         }
         &_content{
             border-bottom: 1px solid orange;
-            padding: 20px 0;
             .modal-groups{
                 padding: 0 30px;
                 display: flex;
@@ -64,9 +63,30 @@
                 }
             }
             .modal-friend{
+                    padding: 15px 0 10px 30px;
+                    &:hover{
+                        background-color: red;
+                    }
+                    .friend-content-img{
+                        display: flex;
+                        align-items: center;
+                        img{
+                            margin-right: 10px;
+                        }
+                    }
+                    .modal-friend-follow{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        margin-left: 35px;
+                        i{
+                            padding-right: 10px;
+                        }
+                    }
                 img{
-                    height: 60px;
-                    height: 60px;
+                    
+                    height: 50px;
+                    width: 50px;
                     border-radius: 50%;
                     object-fit: cover;
                 }

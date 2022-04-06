@@ -199,8 +199,8 @@ const Home = () => {
             <div className="post-info">
               <div className="post-info-header">
                 <div className="post-name">
-                  <h4>Nguyễn Giá Trường</h4>
-                  <p>@DngNgTng1</p>
+                  <h4>Trần Văn Hào</h4>
+                  <p>@Tranhao2001</p>
                   <p>22h</p>
                 </div>
                 <div className="post-dot">
