@@ -284,17 +284,6 @@ const Home = () => {
               alt=""
             />
           </div>
-          <div className="post-info">
-            <div className="post-info-header">
-              <div className="post-name">
-                <h4>Nguyễn Giá Trường</h4>
-                <p>@DngNgTng1</p>
-                <p>22h</p>
-              </div>
-              <div className="post-dot">
-                <i class="fas fa-ellipsis-h"></i>
-              </div>
-            </div>
             <div className="post-info">
               <div className="post-info-header">
                 <div className="post-name">
@@ -346,7 +335,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 };
