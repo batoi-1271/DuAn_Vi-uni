@@ -12,7 +12,7 @@
         z-index: 99;
         top: 0;
         width: 45%;
-        padding: 0 40px 0 50px;
+        padding: 0 2rem 0 2rem;
         box-shadow: $box-shadow;
         .card-text{
             cursor: pointer;
@@ -33,9 +33,10 @@
         }
     }
     .save-list{
-        margin-top: 70px;
+        margin-top: 64px;
         .content-post{
-            padding: 0 40px;
+            padding: 10px 10px 30px 30px;
+
             display: flex;
             cursor: pointer;
             .post-avatar{
