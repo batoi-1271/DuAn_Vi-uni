@@ -1,7 +1,7 @@
-import React, { useRef, useState,useEffect} from "react";
+import React, { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import OutsideClickHandler from 'react-outside-click-handler';
-import axios from "axios";
+
 import "./leftPane.scss";
 
 import Button from "@mui/material/Button";
@@ -64,98 +64,7 @@ const users = [
     ),
   }
 ];
-const LeftPane = (props) => {
-
-
-  // ===================
-  const [alluser, setalluser] = useState([]);
-  useEffect(() => {
-
-    async function getdata() {
-      const res = await axios.get('http://viuni.tk/home');
-      return res
-    }
-    getdata().then(res => {
-      console.log(res);
-      setalluser(res.data);
-      setSuggestions(res.data);
-    })
-      .catch(err => {
-        console.log(err)
-      })
-  }, [])
-
-// you might like
-  function onloadprofile () {
-    let profile = Array.from(document.getElementsByClassName("moreu"));
-    var i;
-    for (i = 3; i <= profile.length; i++) {
-      profile[i].style.display = "none";
-    }
-  }
-  function moreprofile () {
-  let profile = Array.from(document.getElementsByClassName("moreu"));
-    console.log(profile);
-    var i;
-    var but = document.getElementById("moretext"); 
-    if (but.innerHTML === "SEE MORE") {
-       but.innerHTML = "See less";
-       for(i = 3;i<= profile.length;i++) {
-        profile[i].style.display = "flex";
-      }
-    }
-    else {
-        but.innerHTML = "SEE MORE";
-        for( i = 3;i<= profile.length;i++) {
-          profile[i].style.display = "none";
-        }
-    }
-}
-  // /// for who to follow
-function loadfollow () {  
-  let profile = Array.from(document.getElementsByClassName("flw"));
-  var i ;
-  for(i = 3;i<= profile.length;i++) {
-    profile[i].style.display = "none";
-}
-}
-function morefollow () {
-  let profile = Array.from(document.getElementsByClassName("flw"));
-    console.log(profile);
-    var i;
-    var but = document.getElementById("morefollow"); 
-    if (but.innerHTML === "SEE MORE") {
-       but.innerHTML = "See less";
-       for(i = 3;i<= profile.length;i++) {
-        profile[i].style.display = "flex";
-      }
-    }
-    else {
-        but.innerHTML = "SEE MORE";
-        for( i = 3;i<= profile.length;i++) {
-          profile[i].style.display = "none";
-        }
-    }
-}
-
-
-function handleClick () {
-  var close = document.getElementsByClassName("add-btn");
-  var i;
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-      var div = this;
-      if (div.innerHTML === "Add") {
-        div.innerHTML = "Cancel";
-      }
-      else {
-        div.innerHTML = "Add";
-      }
-    }
-  }
-}
-
-  //====================
+const LeftPane = () => {
   const { pathname } = useLocation();
 
   const headerRef = useRef(null);
@@ -169,7 +78,7 @@ function handleClick () {
     setAdded(false);
   };
   const historySearch = ["Gia Truong", "Sy Hoang", "Hoang Duc", "Thanh An"];
-  const [suggestions, setSuggestions] = useState([]);
+
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -179,18 +88,7 @@ function handleClick () {
     setSelectedOption(value);
     setIsOpen(false);
     console.log(selectedOption);
-
   };
-
-  const onChangeHandler = (text) => {
-    let matches = []
-    matches = alluser.filter(user => {
-      const regex = new RegExp(`${text}`, "gi");
-      return user.username.match(regex);
-    })
-    setSuggestions(matches);
-    setSelectedOption(text);
-  }
 
   return (
     <>
@@ -215,8 +113,7 @@ function handleClick () {
                   placeholder="Search Vi-uni"
                   value={selectedOption}
                   autoComplete="off"
-                  onChange={e => onChangeHandler(e.target.value)}
-                  // onChange={(e) => setSelectedOption(e.target.value)}
+                  onChange={(e) => setSelectedOption(e.target.value)}
                 />
                 
                 {isOpen && (
@@ -229,13 +126,13 @@ function handleClick () {
                       </span>
                     </div>
 
-                    { suggestions && suggestions.map((option,i) => (
+                    {historySearch.map((option) => (
                       <div
                         className="items"
-                        onClick={onOptionClicked(option.username)}
-                        key={i}
+                        onClick={onOptionClicked(option)}
+                        key={Math.random()}
                       >
-                        {option.username}
+                        {option}
                         <button type="button" className="delete" aria-label="delete">
                           <span><i class="fab fa-xing"></i></span>
                         </button>
@@ -252,53 +149,62 @@ function handleClick () {
           <div className="paneLeft_Box">
             <h3>You might like</h3>
             <ul className="paneLeftInfo">
-            {
-                alluser.map((alluser) => {
-                  return (
-                    <li className="infoUser moreu" key={alluser.id} onLoad={onloadprofile} >
-                      <img className="avatar" src={alluser.avatar_image.link_image} />
-                      <div className="info">
-                        <div className="name"> {alluser.last_name} {alluser.first_name}</div>
-                        <div className="username">@{alluser.username}</div>
-                      </div>
-                      <div className="addFr">
-                        <Button variant="contained" className="add-btn" onClick={handleClick} id="ADD">
-                          Add
-                        </Button>
-                      </div>
-                    </li>
-                  )
-                })
-              }
-              <Button  id="moretext" onClick= {moreprofile}>See more</Button>
+              {users.map((e, i) => (
+                <li key={i} className="infoUser">
+                  <div className="avatar">{e.imageUrl}</div>
+                  <div className="info">
+                    <div className="name">{e.name}</div>
+                    <div className="username">@{e.username}</div>
+                  </div>
+                  <div className="addFr">
+                    {isAdded ? (
+                      <Button
+                        variant="contained"
+                        onClick={cancelFriend}
+                        className="add-btn-disabled"
+                      >
+                        Cancel
+                      </Button>
+                    ) : (
+                      <Button
+                        variant="contained"
+                        className="add-btn"
+                        id={e.id}
+                        onClick={addFriend}
+                      >
+                        ADD
+                      </Button>
+                    )}
+                  </div>
+                </li>
+              ))}
             </ul>
-            
+            <div className="seemore">
+                <Link to="#" id="seemore">See more</Link>
+            </div>
           </div>
 
           <div className="paneLeft_Box follow">
             <h3>Following</h3>
             <ul className="paneLeftInfo">
-            {
-                alluser.map((alluser) => {
-                  return (
-                    // follow  
-                    <li className="infoUser flw" key={alluser.id} onLoad={loadfollow}>
-                      <img className="avatar" src={alluser.avatar_image.link_image} />
-                      <div className="info">
-                        <div className="name">{alluser.last_name} {alluser.first_name} </div>
-                        <div className="username">@{alluser.username}</div>
-                      </div>
-                      <div className="addFr">
-                        <Button variant="contained" className="add-btn" onClick={handleClick} id="ADD">
-                          Add
-                        </Button>
-                      </div>
-                    </li>
-                  )
-                })
-              }
-              <Button  id="morefollow" onClick={morefollow} >See more</Button>
+              {users.map((e, i) => (
+                <li key={i} className="infoUser">
+                  <div className="avatar">{e.imageUrl}</div>
+                  <div className="info">
+                    <div className="name">{e.name}</div>
+                    <div className="username">@{e.username}</div>
+                  </div>
+                  <div className="addFr">
+                    <Button variant="contained" onClick={addFriend}>
+                      Add
+                    </Button>
+                  </div>
+                </li>
+              ))}
             </ul>
+            <div className="seemore">
+                <Link to="/friends/following" id="seemore">See more</Link>
+            </div>
             {/* <span>
               <Link to="/friends/following" className="seemore">See more</Link>
             </span> */}
