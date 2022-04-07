@@ -21,6 +21,7 @@ const PostUser = () => {
   };
   return (
     <section >
+      <form action="">
       <div className="postUser" id="postUser">
         <div className="avatar">
           <Link to="./profile">
@@ -37,7 +38,7 @@ const PostUser = () => {
           <OutsideClickHandler onOutsideClick={() => {setIsOpen(false)}}>
           <div className="privacy">
             <div className="select" onClick={toggling} >
-              {selectedOption ? selectedOption + ' can reply' : 'Select private'}
+              {selectedOption ? selectedOption + ' can reply' : 'Everyone'}
             </div>
             {isOpen && (
               <div className="dropContainer">
@@ -82,8 +83,10 @@ const PostUser = () => {
           <div className="btnPost">
             <Button variant="contained">Post</Button>
           </div>
+          
         </div>
       </div>
+      </form>
     </section>
   );
 };
