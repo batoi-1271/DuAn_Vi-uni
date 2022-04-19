@@ -40,8 +40,6 @@
             }
 
             &.active {
-                content: "";
-                transition: width 0.5s ease;
                 color: $main-color;
                 box-shadow: $box-shadow-1;
                 transition: all 300ms ease;
