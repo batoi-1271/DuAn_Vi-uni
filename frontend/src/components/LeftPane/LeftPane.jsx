@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect} from "react";
 import { Link, useLocation } from "react-router-dom";
 import OutsideClickHandler from 'react-outside-click-handler';
-
+import axios from "axios";
 import "./leftPane.scss";
 
 import Button from "@mui/material/Button";
@@ -64,7 +64,46 @@ const users = [
     ),
   }
 ];
-const LeftPane = () => {
+const LeftPane = (props) => {
+
+
+  // ===================
+  const [alluser, setalluser] = useState([]);
+  useEffect(() => {
+
+    async function getdata() {
+      const res = await axios.get('http://viuni.tk/home');
+      return res
+    }
+    getdata().then(res => {
+      console.log(res);
+      setalluser(res.data);
+      setSuggestions(res.data);
+    })
+      .catch(err => {
+        console.log(err)
+      })
+  }, [])
+
+
+
+function handleClick () {
+  var close = document.getElementsByClassName("add-btn");
+  var i;
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+      var div = this;
+      if (div.innerHTML === "Add") {
+        div.innerHTML = "Cancel";
+      }
+      else {
+        div.innerHTML = "Add";
+      }
+    }
+  }
+}
+
+  //====================
   const { pathname } = useLocation();
 
   const headerRef = useRef(null);
@@ -78,7 +117,7 @@ const LeftPane = () => {
     setAdded(false);
   };
   const historySearch = ["Gia Truong", "Sy Hoang", "Hoang Duc", "Thanh An"];
-
+  const [suggestions, setSuggestions] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -88,7 +127,18 @@ const LeftPane = () => {
     setSelectedOption(value);
     setIsOpen(false);
     console.log(selectedOption);
+
   };
+
+  const onChangeHandler = (text) => {
+    let matches = []
+    matches = alluser.filter(user => {
+      const regex = new RegExp(`${text}`, "gi");
+      return user.username.match(regex);
+    })
+    setSuggestions(matches);
+    setSelectedOption(text);
+  }
 
   return (
     <>
@@ -113,7 +163,8 @@ const LeftPane = () => {
                   placeholder="Search Vi-uni"
                   value={selectedOption}
                   autoComplete="off"
-                  onChange={(e) => setSelectedOption(e.target.value)}
+                  onChange={e => onChangeHandler(e.target.value)}
+                  // onChange={(e) => setSelectedOption(e.target.value)}
                 />
                 
                 {isOpen && (
@@ -126,13 +177,13 @@ const LeftPane = () => {
                       </span>
                     </div>
 
-                    {historySearch.map((option) => (
+                    { suggestions && suggestions.map((option,i) => (
                       <div
                         className="items"
-                        onClick={onOptionClicked(option)}
-                        key={Math.random()}
+                        onClick={onOptionClicked(option.username)}
+                        key={i}
                       >
-                        {option}
+                        {option.username}
                         <button type="button" className="delete" aria-label="delete">
                           <span><i class="fab fa-xing"></i></span>
                         </button>
@@ -149,35 +200,24 @@ const LeftPane = () => {
           <div className="paneLeft_Box">
             <h3>You might like</h3>
             <ul className="paneLeftInfo">
-              {users.map((e, i) => (
-                <li key={i} className="infoUser">
-                  <div className="avatar">{e.imageUrl}</div>
-                  <div className="info">
-                    <div className="name">{e.name}</div>
-                    <div className="username">@{e.username}</div>
-                  </div>
-                  <div className="addFr">
-                    {isAdded ? (
-                      <Button
-                        variant="contained"
-                        onClick={cancelFriend}
-                        className="add-btn-disabled"
-                      >
-                        Cancel
-                      </Button>
-                    ) : (
-                      <Button
-                        variant="contained"
-                        className="add-btn"
-                        id={e.id}
-                        onClick={addFriend}
-                      >
-                        ADD
-                      </Button>
-                    )}
-                  </div>
-                </li>
-              ))}
+            {
+                alluser.map((alluser) => {
+                  return (
+                    <li className="infoUser moreu" key={alluser.id}  >
+                      <img className="avatar" src={alluser.avatar_image.link_image} />
+                      <div className="info">
+                        <div className="name"> {alluser.last_name} {alluser.first_name}</div>
+                        <div className="username">@{alluser.username}</div>
+                      </div>
+                      <div className="addFr">
+                        <Button variant="contained" className="add-btn" onClick={handleClick} id="ADD">
+                          Add
+                        </Button>
+                      </div>
+                    </li>
+                  )
+                })
+              }
             </ul>
             <div className="seemore">
                 <Link to="#" id="seemore">See more</Link>
@@ -187,20 +227,25 @@ const LeftPane = () => {
           <div className="paneLeft_Box follow">
             <h3>Following</h3>
             <ul className="paneLeftInfo">
-              {users.map((e, i) => (
-                <li key={i} className="infoUser">
-                  <div className="avatar">{e.imageUrl}</div>
-                  <div className="info">
-                    <div className="name">{e.name}</div>
-                    <div className="username">@{e.username}</div>
-                  </div>
-                  <div className="addFr">
-                    <Button variant="contained" onClick={addFriend}>
-                      Add
-                    </Button>
-                  </div>
-                </li>
-              ))}
+            {
+                alluser.map((alluser) => {
+                  return (
+                    // follow  
+                    <li className="infoUser flw" key={alluser.id} >
+                      <img className="avatar" src={alluser.avatar_image.link_image} />
+                      <div className="info">
+                        <div className="name">{alluser.last_name} {alluser.first_name} </div>
+                        <div className="username">@{alluser.username}</div>
+                      </div>
+                      <div className="addFr">
+                        <Button variant="contained" className="add-btn" onClick={handleClick} id="ADD">
+                          Add
+                        </Button>
+                      </div>
+                    </li>
+                  )
+                })
+              }
             </ul>
             <div className="seemore">
                 <Link to="/friends/following" id="seemore">See more</Link>
