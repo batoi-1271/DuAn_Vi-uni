@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react';
 import bgLogin from "../../assets/bgLogin.jpg";
 import logo from "../../assets/logo.png";
+import ForgotPass from '../ForgotPass/Forgotpass';
+
+import Register from '../Register/Register';
 
 import "./login.scss";
+
 const Login = () => {
+
+    const [modal, setModal] = useState(false);
+    const toggle = () => setModal(!modal);
+
+
+    const [modalForgot, setModalForgot] = useState(false);
+    const toggleForgot = () => setModalForgot(!modalForgot);
+
     return (
         <div className='login'>
             <div className='imgLogin'>
@@ -33,20 +45,23 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="forgotPass">
-                                <a href="#">Forgot password?</a>
+                                <a  onClick={() => toggleForgot()}>Forgot password?</a>
+                                <ForgotPass show={modalForgot} close={toggleForgot}></ForgotPass>
                             </div>
                         </div>
                         <div className="text">
                             <p>By signing in, you agree to the <a href='#'>Terms of Service</a> and <a href='#'>Privacy Policy</a>, including <a href='#'>Cookie Use</a>.</p>
                         </div>
                         <div className="btnLogin">
-                            <input type="submit" value="SIGN IN" id='signin'/>
+                            <input type="submit" value="SIGN IN" id='signin' />
                         </div>
                     </form>
                 </div>
                 <div className="textSignup">
-                    <p>Don't have an account? <a href='#'>Sign up</a></p>
+                    <p>Don't have an account? <a onClick={() => toggle()}>Sign up</a></p>
+                    <Register show={modal} close={toggle}></Register>
                 </div>
+
             </div>
         </div>
     )
