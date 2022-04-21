@@ -23,7 +23,7 @@ const Messages = () => {
 
 
   const[modal1, setModal1] = useState(false);
-  const toggle1 = () => setModal1(!modal1)
+  const toggle1 = () => setModal1(!modal1);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);

@@ -75,6 +75,7 @@ a {
                       }
                 }
                 .forgotPass {
+                    cursor: pointer;
                     a {
                         font-weight: 500;
                     }
@@ -111,6 +112,11 @@ a {
                         box-shadow: none;
                     }
                 }
+            }
+        }
+        .textSignup {
+            a {
+                cursor: pointer;
             }
         }
         
