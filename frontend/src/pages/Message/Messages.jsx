@@ -306,12 +306,12 @@ const Messages = () => {
                   alt=""
                 />
                 <div className="message-new-header-name">
-                  <a href="">Hào Trần</a>
+                  <a href="">Hao Tran</a>
                   <p>@DngNgTng1</p>
                 </div>
               </div>
               <div className="message-new-icon">
-                <i class="fas fa-cog"></i>
+                {/* <i class="fas fa-cog"></i> */}
               </div>
             </div>
           </div>
