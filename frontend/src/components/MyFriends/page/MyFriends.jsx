@@ -17,7 +17,7 @@ const MyFriends = () => {
         <div className="friends-lish-profile">
           <div className="friends-lish-avt">
             <img
-              src="https://scontent.fhan5-10.fna.fbcdn.net/v/t39.30808-6/275566312_1383381218791360_2262557741591100520_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=8iEuJH1NBFkAX_Lcl1z&_nc_ht=scontent.fhan5-10.fna&oh=00_AT_tAYf7UJ1H9HI_r8inmldj4c7cjYNelap2piDCaoWblw&oe=6249F82F"
+              src="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.6435-9/161981732_1153471218449029_7254779511078894332_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=0debeb&_nc_ohc=GXDMSQa88ycAX-1u6A7&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8lNYzflC4snsScfGBrUOLzbWhudwiJLeJTl5G_x94eeQ&oe=6271A3FD"
               alt=""
             />
           </div>
@@ -37,7 +37,7 @@ const MyFriends = () => {
         <div className="friends-lish-profile">
           <div className="friends-lish-avt">
             <img
-              src="https://scontent.fhan5-5.fna.fbcdn.net/v/t39.30808-6/272437034_1359791891150293_2386689676459694658_n.jpg?stp=dst-jpg_p843x403&_nc_cat=108&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=IH9PHHDnIZsAX8KfW8m&_nc_ht=scontent.fhan5-5.fna&oh=00_AT-RTACN1L5sdkSTiJ3_-tgwjTIE_VgavyGy_6P8cv_eTw&oe=624A43D4"
+              src="https://scontent.fhan14-2.fna.fbcdn.net/v/t1.6435-9/193226360_1207246593071491_9157876366763072431_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=El2SfGZTAX4AX_Tqd8X&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-YRYl7cGzQSMMTSrw9ty7VQ3jU76XBineHz5mKT-bDCw&oe=6271C294"
               alt=""
             />
           </div>

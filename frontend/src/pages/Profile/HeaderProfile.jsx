@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./profile.scss";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import ButtonEdit from "./Button/ButtonEdit";
-import { color } from "@mui/system";
 
 const headerAc = [
   {
@@ -72,7 +71,8 @@ const HeaderProfile = () => {
                   <p>@DngNgTng1</p>
                 </div>
                 <div className="bio">
-                  <p>Không có công việc nào không có áp lực, tuy nhiên chỉ có không đam mê công việc mới là áp lớn lực khiến ta từ bỏ công việc đó.</p>
+                  {/* <p></p> */}
+                  <p>Ra xã hội làm ăn bươn chải, liều thì ăn nhiều, không liều thì ăn ít. Muốn thành công thì phải chấp nhận trải qua đắng cay ngọt bùi.</p>
                 </div>
                 <div className="dateCreate">
                   <span>

@@ -180,9 +180,8 @@ section {
             button {
                 border: none;
                 background-color: transparent;
-                // margin-right: 10px;
-                width: 40px;
-                height: 40px;
+                // width: 40px;
+                // height: 40px;
                 
 
                 .fa-comment-dots,
@@ -197,6 +196,7 @@ section {
                 i {
                     color: $txt-color;
                     font-size: 20px;
+                    margin-right: 10px;
                 }
             }
         }
