@@ -1,5 +1,4 @@
-import './forgotpass.scss'
-
+import './forgotpass.scss';
 import React, { useState } from 'react';
 import Verify from "../Verify/Verify";
 import logo from "../../assets/logo.png";
