@@ -1,6 +1,4 @@
-@use '../../scss/' as *;
-
-// @import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@800&display=swap');
+@use '../../scss/'as *;
 
 .modalContainerRegister {
     position: fixed;
@@ -26,7 +24,8 @@
         &_header {
             position: relative;
             margin-bottom: 50px;
-            img{
+
+            img {
                 position: absolute;
                 right: 50%;
                 top: 0;
@@ -34,8 +33,6 @@
                 width: 40px;
                 object-fit: cover;
             }
-
-           
 
             .close {
                 position: absolute;
@@ -47,68 +44,74 @@
                 background: none;
                 cursor: pointer;
                 font-size: 25px;
-                &:hover{
+
+                &:hover {
                     color: $main-color;
                 }
             }
         }
+
         &_content {
             padding: 40px;
-            .form{
-               width: 100%;
-               .form-input{
-                   padding-left: 20px;
-                   height: 40px;
-                   width: 100%;
-                   border-radius: 10px;
-                   font-size: 14px;
-                   margin-top: 10px;
-                   border: 1px solid #ccc;
-                   &:focus{
-                       border: 1px solid $main-color;
-                   }
-               }
-               .text-date{
-                   margin: 20px 0;
-                   p{
-                       line-height: 20px;
-                       margin-top: 10px;
-                       font-size: 14px;
-                   }
-               }
-               .dateRegister{
-                   
-                   margin-bottom: 20px;
-                   .form-date{
-                       height: 40px;
-                       padding-left: 10px;
-                   }
-               }
-               .nextRegister{
-                   margin-top: 50px;
-                   width: 100%;
-                   .btnNext{
-                       background-color: #1EBADC;
-                       width: 100%;
-                       height: 40px;
-                       border-radius: 20px;
-                       border: 1px solid #1EBADC;
-                       color: white;
 
-                   }
-               }
+            .form {
+                width: 100%;
+
+                .form-input {
+                    padding-left: 20px;
+                    height: 40px;
+                    width: 100%;
+                    border-radius: 10px;
+                    font-size: 14px;
+                    margin-top: 10px;
+                    border: 1px solid #ccc;
+
+                    &:focus {
+                        border: 1px solid $main-color;
+                    }
+                }
+
+                .text-date {
+                    margin: 20px 0;
+
+                    p {
+                        line-height: 20px;
+                        margin-top: 10px;
+                        font-size: 14px;
+                    }
+                }
+
+                .dateRegister {
+
+                    margin-bottom: 20px;
+
+                    .form-date {
+                        height: 40px;
+                        padding-left: 10px;
+                    }
+                }
+
+                .nextRegister {
+                    margin-top: 50px;
+                    width: 100%;
+
+                    .btnNext {
+                        @include btnForm;
+                    }
+                }
             }
-           
+
         }
     }
 }
 
-@keyframes showing-up{
-    from{
+@keyframes showing-up {
+    from {
         top: 0;
         opacity: 0;
     }
-    to{
+
+    to {
         top: 5%;
         opacity: 1;
     }
