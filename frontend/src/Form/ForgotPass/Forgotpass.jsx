@@ -1,4 +1,4 @@
-import './forgotpass.scss'
+import './forgotpass.scss';
 import React, { useState } from 'react';
 import logo from "../../assets/logo.png";
 const ForgotPass = ({ show, close, title, children }) => {
