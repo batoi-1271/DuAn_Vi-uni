@@ -1,5 +1,25 @@
 @use '../../scss/'as *;
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
 .modalContainer_Verify {
     position: fixed;
     top: 0;
@@ -9,6 +29,9 @@
     z-index: 999;
     @include flex(center, center);
     background-color: rgba($color: #000000, $alpha: 0.35);
+    --growth-from: 0.7;
+    --growth-to: 1;
+    animation: growth linear 0.1s;
 
     .modalVerify {
         background-color: $body-bg;
@@ -19,7 +42,8 @@
         left: 50%;
         transform: translateX(-50%);
         border-radius: 20px;
-        animation: showing-up cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
+        animation: fadeIn ease-in 0.3s;
+        // animation: showing-up cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
 
         &_header {
             position: relative;
@@ -52,6 +76,7 @@
         }
 
         &_content {
+
             padding: 40px;
 
             .form {

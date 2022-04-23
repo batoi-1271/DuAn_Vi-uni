@@ -1,11 +1,12 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './verify.scss';  
 import logo from "../../assets/logo.png";
+import Count from '../countDown/Count';
 
 
 const Verify = ({ show, close, title, children, hide }) => {
-    return (
+    return ( 
         
         <>
             {show ?
@@ -22,30 +23,17 @@ const Verify = ({ show, close, title, children, hide }) => {
                                 <div className="nameRegister">
                                     <input className='form-input' type="text" placeholder='UserName' />
                                 </div>
-                                <div className="emailRegister">
-                                    <input className='form-input' type="email" placeholder='Email' />
-                                </div>
-                                <div className="passRegister">
-                                    <input className='form-input' type="password" placeholder='Password' />
-                                </div>
-                                <div className="comfirmRegister">
-                                    <input className='form-input' type="password" placeholder='Re-enter password' />
-                                </div>
-                                <div className="text-date">
-                                    <h4 >Date Of Birth</h4>
-                                    <p>This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</p>
-                                </div>
-                                <div className="dateRegister">
-                                    <input className='form-date' type="date" />
+                                
+                                <div>
+                                    <h4>You can request a new code later <Count seconds={30}/></h4>
                                 </div>
                                 <div className="nextRegister">
-                                    <input className='btnNext' type="submit" value="Next" />
+                                    <input className='btnNext' type="button" value="Next"/>
                                 </div>
                             </form>
                         </main>
                     </div>
                 </div>
-
                 : null}
         </>
     );

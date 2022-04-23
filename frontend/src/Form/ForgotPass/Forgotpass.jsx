@@ -3,12 +3,10 @@ import React, { useState } from 'react';
 import Verify from "../Verify/Verify";
 import logo from "../../assets/logo.png";
 
-const ForgotPass = ({ show, close, title, children, hide }) => {
+const ForgotPass = ({ show, close, title, children }) => {
 
     const [modalVerify, setModalVerify] = useState(false);
     const toggleVerify = () => setModalVerify(!modalVerify);
-
-    const [modalForgot, setModalForgot] = useState(true);
 
     return (
         <>
@@ -26,10 +24,8 @@ const ForgotPass = ({ show, close, title, children, hide }) => {
                                     <input className='form-inputFormgot' type="text" placeholder='Enter Your Emal Or Username' />
                                 </div>
                                 <div className="nextFormgot">
-                                    <input onClick={() => {
-                                        toggleVerify();
-                                    }} className='btnNextFormgot' type="submit" value="Search" />
-                                    <Verify  show={modalVerify} close={toggleVerify}></Verify>
+                                    <button onClick={() => toggleVerify()} className='btnNextFormgot' type="button" value="Search" >Search</button>
+                                    <Verify show={modalVerify} close={toggleVerify}></Verify>
                                 </div>
                             </form>
                         </main>
