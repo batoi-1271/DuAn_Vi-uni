@@ -22,8 +22,8 @@ const Messages = () => {
   const toggle = () => setModal(!modal);
 
 
-  const[modal1, setModal1] = useState(false);
-  const toggle1 = () => setModal1(!modal1);
+  const[modalGroup, setModalGroup] = useState(false);
+  const toggleGroup = () => setModalGroup(!modalGroup);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -248,7 +248,7 @@ const Messages = () => {
                   <MenuItem onClick={() => toggle()}>
                     <MailOutlineIcon sx={{ mr: 2 }} /> Message
                   </MenuItem>
-                  <MenuItem onClick={() => toggle1()}>
+                  <MenuItem onClick={() => toggleGroup()}>
                     <PeopleAltIcon sx={{ mr: 2 }} /> Message group
                   </MenuItem>
                   <Divider />
@@ -331,7 +331,7 @@ const Messages = () => {
           </div>
           <CreateMess show={modal} close={toggle}></CreateMess>
           
-          <CreateGroup show={modal1} close={toggle1}></CreateGroup>
+          <CreateGroup show={modalGroup} close={toggleGroup}></CreateGroup>
         </div>
       </div>
     </>

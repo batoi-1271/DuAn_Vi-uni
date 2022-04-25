@@ -2,16 +2,16 @@ import { Link } from "@mui/material";
 import React from "react";
 import "./createGroup.scss";
 
-const CreateGroup = ({ show1, close1}) => {
+const CreateGroup = ({ show, close }) => {
   return (
     <>
-      {show1 ? (
-        <div className="modalcontainer" onClick={() => close1()}>
+      {show ? (
+        <div className="modalcontainer" onClick={() => close()}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <header className="modal_header">
               <div className="modal_header-title">
                 <h2 className="modal_header-tit">New</h2>
-                <i onClick={() => close1()} class="far fa-times"></i>
+                <i onClick={() => close()} class="far fa-times"></i>
               </div>
               <i class="fas fa-search"></i>
               <input type="text" placeholder="Search people" />
@@ -40,7 +40,7 @@ const CreateGroup = ({ show1, close1}) => {
                     />
                     <div className="riend-content-text">
                       <h3>Hao Tran</h3>
-                    <p>@tranhao21</p>
+                      <p>@tranhao21</p>
                     </div>
                   </div>
                 </div>
@@ -58,7 +58,7 @@ const CreateGroup = ({ show1, close1}) => {
                     />
                     <div className="riend-content-text">
                       <h3>Hao Tran</h3>
-                    <p>@tranhao21</p>
+                      <p>@tranhao21</p>
                     </div>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ const CreateGroup = ({ show1, close1}) => {
 
             <footer className="modal_footer">
               <div className="footer-button">
-                <button className="modal-close" onClick={() => close1()}>
+                <button className="modal-close" onClick={() => close()}>
                   Cancel
                 </button>
                 <button className="submit">Submit</button>
