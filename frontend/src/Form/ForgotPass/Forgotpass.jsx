@@ -1,13 +1,16 @@
 import './forgotpass.scss';
 import React, { useState } from 'react';
+import Verify from "../Verify/Verify";
 import logo from "../../assets/logo.png";
+
 const ForgotPass = ({ show, close, title, children }) => {
+
     const [modalVerify, setModalVerify] = useState(false);
     const toggleVerify = () => setModalVerify(!modalVerify);
+
     return (
         <>
             {show ?
-
                 <div className="modalContainerRegister" onClick={() => close()}>
                     <div className="modal" onClick={(e) => e.stopPropagation()}>
                         <header className="modal_header">
@@ -21,7 +24,8 @@ const ForgotPass = ({ show, close, title, children }) => {
                                     <input className='form-inputFormgot' type="text" placeholder='Enter Your Emal Or Username' />
                                 </div>
                                 <div className="nextFormgot">
-                                    <input onClick={() => toggleVerify()} className='btnNextFormgot' type="submit" value="Search" />
+                                    <button onClick={() => toggleVerify()} className='btnNextFormgot' type="button" value="Search" >Search</button>
+                                    <Verify show={modalVerify} close={toggleVerify}></Verify>
                                 </div>
                             </form>
                         </main>

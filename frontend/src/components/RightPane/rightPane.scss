@@ -2,6 +2,7 @@
 
 
 #header {
+
     border-left: 1px solid #bde0fe;
     height: 100vh;
     flex-basis: 25%;
@@ -15,6 +16,8 @@
     right: 0;
     z-index: 99;
     transition: height 0.3s ease, background-color 0.3s ease;
+    -moz-transition: height 0.3s ease, background-color 0.3s ease;
+    -webkit-transition: height 0.3s ease, background-color 0.3s ease;
 
     &__nav {
         margin-top: 2rem;
@@ -22,7 +25,6 @@
             @include btnMenu;
             @include flex(center, space-between);
             user-select: none;
-            
 
             &:hover {
                 background-color: $body-bg;
@@ -34,22 +36,22 @@
                 background: none;
             }
 
-          i {
-                font-size: 25px;
-                margin-right: 20px;
-            }
-
             &.active {
                 color: $main-color;
                 box-shadow: $box-shadow-1;
                 transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -webkit-transition: all 0.5s ease;
 
                 &:hover {
                     box-shadow: none;
                 }
             }
-
-
+            
+          i {
+                font-size: 25px;
+                margin-right: 20px;
+            }
         }
 
         .more {

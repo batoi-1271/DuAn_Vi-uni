@@ -117,9 +117,7 @@
         }
 
         .modal_header-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include flex(center, space-between);
             i {
                 cursor: pointer;
                 font-size: 30px;

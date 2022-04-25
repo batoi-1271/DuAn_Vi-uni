@@ -3,10 +3,8 @@
     flex-basis: 45%;
     height: auto;
     .card-header{
-        display: flex;
-        align-items: center;
+        @include flex(center, space-between);
         height: $header-height;
-        justify-content: space-between;
         background: $body-bg;
         position: fixed;
         z-index: 99;
