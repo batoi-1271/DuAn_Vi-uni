@@ -12,9 +12,9 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const override = css`
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 52%;
+    transform: translate(-60%, -52%);
   `;
 
 
