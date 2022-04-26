@@ -17,6 +17,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
             {show ?
 
                 <div className="modalContainer" onClick={() => close()}>
+                    <form action="">
                     <div className="modal" onClick={(e) => e.stopPropagation()}>
                         <header className="modal_header">
                             <i class="fa fa-times close" onClick={() => close()}></i>
@@ -47,7 +48,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                             </div>
                         </div>
                         <footer className="modal_footer">
-                            <form action="">
+
                                 <div className="name">
                                         <TextField
                                             id="name"
@@ -94,9 +95,10 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                         }}
                                     />
                                 </div>
-                            </form>
+                            
                         </footer>
                     </div>
+                    </form>
                 </div>
 
                 : null}
