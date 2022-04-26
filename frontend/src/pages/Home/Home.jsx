@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from "react";
-import OutsideClickHandler from 'react-outside-click-handler';
+import OutsideClickHandler from "react-outside-click-handler";
 import { Link } from "react-router-dom";
 import "./home.scss";
 import PostUser from "./PostUser";
@@ -20,7 +20,6 @@ const Home = () => {
     left: 52%;
     transform: translate(-60%, -52%);
   `;
-
 
   useEffect(() => {
     setLoading(true);
