@@ -18,7 +18,7 @@ const Home = () => {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -505);
+  transform: translate(-50%, -50%);
 `;
 
   useEffect(() => {
