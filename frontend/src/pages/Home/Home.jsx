@@ -3,7 +3,7 @@ import "./home.scss";
 import PostUser from "./PostUser";
 import Tooltip from "@mui/material/Tooltip";
 // import FadeLoader from "react-spinners/FadeLoader";
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import FadeLoader from "react-spinners/FadeLoader";
 import { css } from "@emotion/react";
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 2000);
   }, []);
 
   return (
@@ -32,7 +32,7 @@ const Home = () => {
       </header>
       <PostUser />
       {loading ? (
-        <ClimbingBoxLoader
+        <FadeLoader
           color={"#36BBD7"}
           speedMultiplier={2}
           css={override}
