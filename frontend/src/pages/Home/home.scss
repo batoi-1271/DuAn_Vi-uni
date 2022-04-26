@@ -49,7 +49,6 @@ section {
                     resize: none;
                     outline: none;
                     overflow: auto;
-
                     &::-webkit-scrollba {
                         display: none;
                     }
@@ -143,13 +142,6 @@ section {
 .content-post{
     padding: 10px 10px 30px 30px;
     display: flex;
-    transition: all 300ms ease;
-
-    &:hover {
-        background-color: white;
-        box-shadow: $box-shadow-1;
-        cursor: pointer;
-    }
 
     .post-avatar {
         width: 8%;
@@ -180,8 +172,6 @@ section {
             button {
                 border: none;
                 background-color: transparent;
-                // width: 40px;
-                // height: 40px;
                 
 
                 .fa-comment-dots,
@@ -214,6 +204,49 @@ section {
                     opacity: 0.6;
                 }
             }
+            .post-dot {
+                position: relative;
+                button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    transition: all 300ms ease;
+                }
+                .dropContainer {
+                    z-index: 999;
+                    position: absolute;
+                    top: 50;
+                    right: 0;
+                    left: 10;
+                    width: 220px;
+                    height: 100px;
+                    background-color: $white;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    .more {
+                        height: 50px;
+                        align-items: center;
+                        display: flex;
+                        padding-left: 20px;
+                        transition: all 300ms ease;
+                        
+                        &:hover  {
+                            // color: $main-color;
+                            color: rgb(56, 52, 52) !important;
+                            background-color: $body-bg ;
+                        }
+                        i {
+                            width: 20px;
+                            font-size: 1.2rem;
+                            margin-right: 20px;
+                            
+                        }
+                    }
+                }
+            }
+            
         }
 
         .post-content {

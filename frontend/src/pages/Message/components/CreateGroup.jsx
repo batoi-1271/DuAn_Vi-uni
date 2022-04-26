@@ -17,16 +17,7 @@ const CreateGroup = ({ show1, close1}) => {
               <input type="text" placeholder="Search people" />
             </header>
             <main className="modal_content">
-              <div className="modal-groups">
-                <div className="modal-group">
-                  <div className="modal-group-search">
-                    <i class="fas fa-users"></i>
-                  </div>
-                  <div className="modal-group-text">
-                    <p>Creat a group</p>
-                  </div>
-                </div>
-              </div>
+            
               <div className="modal-friend">
                 <div className="modal-friend-follow">
                   <i class="fas fa-user"></i>
