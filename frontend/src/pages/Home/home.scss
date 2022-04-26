@@ -141,18 +141,18 @@ section {
 }
 
 .content-post{
-    padding: 10px 10px 30px 30px;
+    margin-top: 5px;
+    padding: 20px 10px 0px 30px;
     display: flex;
     transition: all 300ms ease;
 
     &:hover {
         background-color: white;
-        box-shadow: $box-shadow-1;
         cursor: pointer;
     }
 
     .post-avatar {
-        width: 8%;
+        // width: 8%;
         height: auto;
 
         img {
@@ -180,10 +180,6 @@ section {
             button {
                 border: none;
                 background-color: transparent;
-                // width: 40px;
-                // height: 40px;
-                
-
                 .fa-comment-dots,
                 .fa-share-square {
                     &:hover {
@@ -201,10 +197,10 @@ section {
             }
         }
 
-        .post-info-header {
+        &_header {
             display: flex;
             justify-content: space-between;
-            padding: 5px 0px;
+            // padding: 5px 0px;
 
             .post-name {
                 display: flex;
@@ -212,6 +208,58 @@ section {
                 p {
                     padding-left: 5px;
                     opacity: 0.6;
+                }
+            }
+            .post-more {
+                &_Content {
+                    position: relative;
+
+                    button {
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        transition: all 100ms ease;
+                        i {
+                            font-size: 1.2em;
+                        }
+                        &:hover {
+                            background-color: $body-bg;
+                            color: $main-color;
+                        }
+                    }
+                    .dropContainer {
+                        z-index: 999;
+                        position: absolute;
+                        top: 0;
+                        right: 20%;
+                        width: 280px;
+                        background-color: $white;
+                        box-shadow: $box-shadow-1;
+                        animation: topbottom 200ms ease;
+                        border-radius: 5px;
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                        user-select: none;
+                        &_content {
+                            display: flex;
+                            align-items: center;
+                            height: 45px;
+                            padding-left: 20px;
+                            transition: all .300ms ease;
+                            font: {
+                                size: 1rem;
+                            }
+                            &:hover {
+                                background-color: $body-bg;
+                            }
+                            i {
+                                margin-right: 10px;
+                                width: 20px;
+                            }
+                        }
+                    }
                 }
             }
         }
