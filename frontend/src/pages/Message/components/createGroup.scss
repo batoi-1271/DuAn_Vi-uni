@@ -28,7 +28,8 @@
             input{
                 border: none;
                 outline: none;
-                margin-left: 10px;
+                margin-left: 20px;
+                font-size: 17px;
             }
             .close{
                 background-color: transparent !important;
@@ -61,20 +62,20 @@
                     font-weight: 700;
                 }
             }
-            .modal-friend{
+            .modal-group{
                     padding: 15px 0 10px 30px;
                     &:hover{
                         background-color: rgba(255,200,221,0.1);
                         cursor: pointer;
                     }
-                    .friend-content-img{
+                    .group-content-img{
                         display: flex;
                         align-items: center;
                         img{
                             margin-right: 10px;
                         }
                     }
-                    .modal-friend-follow{
+                    .modal-group-follow{
                         display: flex;
                         align-items: center;
                         margin-bottom: 10px;
@@ -130,6 +131,7 @@
                     background-color: rgba(207, 198, 198, 0.2);
                 }
             }
+          
         }
         .close{
             position: absolute;
