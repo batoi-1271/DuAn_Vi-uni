@@ -5,6 +5,8 @@ import Tooltip from "@mui/material/Tooltip";
 import FadeLoader from "react-spinners/FadeLoader";
 import { css } from "@emotion/react";
 
+import Comment from '../../components/Comment/Comment';
+
 import "./home.scss";
 
 import PostUser from "./PostUser";
@@ -62,29 +64,29 @@ const Home = () => {
                 </div>
 
                 <OutsideClickHandler onOutsideClick={() => { setIsOpen(false) }}>
-                <div className="post-more">
-                  <div className="post-more_Content">
-                    <button onClick={toggling}><i class="fas fa-ellipsis-h"></i></button>
-                    {isOpen && (
-                      <div className="dropContainer">
-                        <div className="unfollow dropContainer_content">
-                          <i class="fal fa-user-times"></i>
-                          <Link to="#">Unfollow <span>@username</span></Link>
+                  <div className="post-more">
+                    <div className="post-more_Content">
+                      <button onClick={toggling}><i class="fas fa-ellipsis-h"></i></button>
+                      {isOpen && (
+                        <div className="dropContainer">
+                          <div className="unfollow dropContainer_content">
+                            <i class="fal fa-user-times"></i>
+                            <Link to="#">Unfollow <span>@username</span></Link>
+                          </div>
+                          <div className="report dropContainer_content">
+                            <i class="fal fa-flag"></i>
+                            <Link to="#">Report post</Link>
+                          </div>
+                          <div className="save dropContainer_content">
+                            <i class="fal fa-bookmark"></i>
+                            <Link to="#">Save post</Link>
+                          </div>
                         </div>
-                        <div className="report dropContainer_content">
-                          <i class="fal fa-flag"></i>
-                          <Link to="#">Report post</Link>
-                        </div>
-                        <div className="save dropContainer_content">
-                          <i class="fal fa-bookmark"></i>
-                          <Link to="#">Save post</Link>
-                        </div>
-                      </div>
-                  )}
+                      )}
+                    </div>
+
                   </div>
-                  
-                </div>
-              </OutsideClickHandler>
+                </OutsideClickHandler>
 
               </div>
               <div className="post-content">
@@ -100,18 +102,24 @@ const Home = () => {
               </div>
 
               {/* Sử dụng icon và tooltip title    */}
-              
+
               <div className="post-interactive">
-                <div className="post-interactive-icon">
-                  <Tooltip id="comment" title="Comment" arrow>
+                <img src="" alt="" />
+                <div className="post-interactive_icon">
+                  {/* <Tooltip id="comment" title="Comment" arrow>
                     <button>
-                      <i class="far fa-comment-dots"></i>
+                      <i class="far fa-comment-dots"/>
                     </button>
                   </Tooltip>
-                  <p>1</p>
+                  <p>1</p> */}
+                  <Comment 
+                    // title="What is your return policy?"
+                    // content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                  />
+                  {/* <p>1</p> */}
                 </div>
 
-                <div className="post-interactive-icon">
+                {/* <div className="post-interactive_icon">
                   <Tooltip id="heart" title="Like" arrow>
                     <button>
                       <input type="checkbox" id="checkbox" />
@@ -163,14 +171,14 @@ const Home = () => {
                   <p>2k</p>
                 </div>
 
-                <div className="post-interactive-icon">
+                <div className="post-interactive_icon">
                   <Tooltip title="Share" arrow>
                     <button>
                       <i class="far fa-share-square"></i>
                     </button>
                   </Tooltip>
                   <p>1</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
