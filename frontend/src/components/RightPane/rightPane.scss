@@ -8,6 +8,17 @@
     flex-basis: 25%;
 }
 
+a {
+    color: $txt-color;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+
+    &:hover {
+        color: $main-color;
+    }
+}
+
 .header {
     height: $header-height;
     position: sticky;
@@ -21,6 +32,7 @@
 
     &__nav {
         margin-top: 2rem;
+
         li {
             @include btnMenu;
             @include flex(center, space-between);
@@ -32,23 +44,19 @@
                 color: $main-color;
             }
 
+
             &:nth-last-child(1) {
                 background: none;
             }
 
-            &.active {
+            &.active a {
                 color: $main-color;
-                box-shadow: $box-shadow-1;
                 transition: all 0.5s ease;
                 -moz-transition: all 0.5s ease;
                 -webkit-transition: all 0.5s ease;
-
-                &:hover {
-                    box-shadow: none;
-                }
             }
-            
-          i {
+
+            i {
                 font-size: 25px;
                 margin-right: 20px;
             }
@@ -93,10 +101,11 @@
     }
 
     &__wrap {
-        
+
         .infoUser {
             position: relative;
             bottom: 1.5em;
+
             button.account {
                 width: 250px;
                 @include flex(center, space-between);
@@ -125,13 +134,16 @@
 
         }
     }
+
     .copyRight {
         margin-top: 20px;
         width: 280px;
+
         ul {
             width: inherit;
             display: flex;
             flex-flow: wrap;
+
             li {
                 margin-top: 5px;
                 margin-left: 10px;

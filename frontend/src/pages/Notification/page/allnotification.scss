@@ -33,6 +33,7 @@
             }
         }
         .all-user{
+          margin-left: 10px;
             img{
                 object-fit: cover;
             }
@@ -41,7 +42,7 @@
                     color: aqua;
                 }
             }
-            p{
+            p {
                 overflow: hidden;
                 display: block;                     /*nếu trình duyệt k hỗ trọ thì nó sẽ là display : block*/
                 display: -webkit-box;           /*trình duyệt hỗ trợ */
@@ -49,7 +50,6 @@
                 -webkit-line-clamp: 2; 
               
             }
-          margin-left: 10px;
             img{
                 height: 35px;
                 width: 35px;
@@ -58,7 +58,6 @@
                 
             }
             p {
-                // text-align: justify;
                 text-justify: inter-word;
             }
         }
