@@ -1,17 +1,11 @@
 import React, { useState, useRef } from "react";
 import Tooltip from "@mui/material/Tooltip";
 
-import Button from '@mui/material/Button';
-import DeleteIcon from '@mui/icons-material/Delete';
-import SendIcon from '@mui/icons-material/Send';
-import Stack from '@mui/material/Stack';
-
 import "./comment.scss";
-// import avatarCmt from 
+
 function Accordion(props) {
     const [setActive, setActiveState] = useState("");
     const [setHeight, setHeightState] = useState("0px");
-    // const [setRotate, setRotateState] = useState("accordion__icon");
 
     const content = useRef(null);
 
@@ -102,16 +96,53 @@ function Accordion(props) {
                 className="accordion__content">
                 <form className="form">
                     <div className="form_avatar">
+                        <div className="img">
                         <img src="https://scontent.fhan2-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=XZyCERJz-dYAX9qGWO5&_nc_ht=scontent.fhan2-2.fna&oh=00_AT8GRXAdPc0bF1h5tf9EwTdL8xggWc38gAKw04QUfVzNDA&oe=6268F326"
                             alt="" />
+                        </div>
                     </div>
                     <div className="form_contentCmt">
-                        <textarea  type='text' className="userCmt" placeholder="Write a public comment..." />
+                        <textarea type='text' className="userCmt" placeholder="Write a public comment..." />
                     </div>
                     <div className="form_sendCmt">
-                        <input type='submit' className="sendCmt" value='Send'/>
+                        <input type='submit' className="sendCmt" value='Send' />
                     </div>
                 </form>
+                <div className="contentCmt">
+                    <div className="contentCmt_avatar">
+                        <img src="https://scontent-sin6-3.xx.fbcdn.net/v/t1.6435-9/43754125_965806366950023_7453303198267211776_n.jpg?stp=dst-jpg_p640x640&_nc_cat=104&ccb=1-5&_nc_sid=174925&_nc_ohc=0vDBZ0qwqjkAX-pp3Pm&_nc_ht=scontent-sin6-3.xx&oh=00_AT_4d8Gp0xjgrVWpMnc7Xqy-lqsQYiprOpUa7s797dsMpA&oe=62920DBF"
+                            alt="" />
+                    </div>
+                    <div className="contentCmt_Username">
+
+                        <div className="info">
+                            <div className="nameCmt">
+                                <p>Khanh Linh Pham</p>
+                            </div>
+                            <div className="usernameCmt">
+                                <p>&nbsp;@_im_Linh_ </p>
+                            </div>
+                            <div className="timeCreat">
+                                <p>&nbsp;*&nbsp;Feb 17</p>
+                            </div>
+                        </div>
+
+                        <div className="replyWho">
+                            <p>Replying to <span>@userName</span></p>
+                        </div>
+
+                        <div className="cotentUserCmt">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        </div>
+                        
+                    </div>
+                    <div className="contentCmt_moreCmt">
+                        <i class="fal fa-ellipsis-h-alt"></i>
+                    </div>
+                    {/* <div className="cotentUser">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        </div> */}
+                </div>
                 {/* <div
                     className="accordion__text"
                     dangerouslySetInnerHTML={{ __html: props.content }}
