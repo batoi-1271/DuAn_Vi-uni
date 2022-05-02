@@ -1,4 +1,4 @@
-@use "../../scss/"as *;
+@use "../../scss/" as *;
 
 /* Style the accordion section */
 .accordion__section {
@@ -94,9 +94,10 @@
   .contentCmt {
     padding-top: 10px;
     margin-top: 3px;
-    display: flex;  
+    display: flex;
     justify-content: space-between;
     width: 100%;
+
     &_avatar {
       border-radius: 100%;
       height: 2.7em;
@@ -109,42 +110,78 @@
         border-radius: 100%;
       }
     }
+
     &_Username {
       width: 85%;
       display: flex;
       align-items: flex-start;
       flex-direction: column;
+
       .info {
         display: flex;
+
         .nameCmt {
           &:hover {
             text-decoration: underline;
           }
         }
+
         .usernameCmt {
           color: gray;
         }
+
         .timeCreat {
           color: gray;
         }
       }
+
       .replyWho {
         span {
           color: $main-color;
+
           &:hover {
             text-decoration: underline;
           }
         }
       }
+
       .nameCmt {
         font-weight: bold;
       }
+
       .cotentUserCmt {
         p {
           text-align: initial;
         }
       }
+
+      .group-InteractiveCmt {
+        width: inherit;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 20px;
+
+        .interactive {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+
+          button {
+            border: none;
+            background: none;
+            width: inherit;
+
+            i {
+              color: #1D2438;
+              font-size: 16px;
+              font-weight: 400;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
     }
+
     &_moreCmt {
       width: 4%;
     }

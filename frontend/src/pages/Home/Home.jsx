@@ -6,10 +6,11 @@ import FadeLoader from "react-spinners/FadeLoader";
 import { css } from "@emotion/react";
 
 import Comment from '../../components/Comment/Comment';
-
+import ModalImage from "../../components/ModalImage/modal-image";
 import "./home.scss";
-
+import logo from '../../../src/assets/logo.png';
 import PostUser from "./PostUser";
+import PostModal from "../../components/ModalImage/PostModal/PostModal";
 
 
 const Home = () => {
@@ -83,7 +84,6 @@ const Home = () => {
                         </div>
                       )}
                     </div>
-
                   </div>
                 </OutsideClickHandler>
 
@@ -92,18 +92,24 @@ const Home = () => {
                 <div className="post-content-title">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                 </div>
+                
                 <div className="post-content-img">
-                  <img
+                <ModalImage
+                  src="https://images.unsplash.com/photo-1648737155328-0c0012cf2f20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                  // alt={PostModal}
+                  ratio={`5:5`}
+                />
+                  {/* <img
                     src="https://images.unsplash.com/photo-1640622304293-ec9c89c6bac9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
                     alt=""
-                  />
+                  /> */}
                 </div>
               </div>
 
               <div className="post-interactive">
                 <img src="" alt="" />
                 <div className="post-interactive_icon">
-                  <Comment/>
+                  <Comment />
                 </div>
               </div>
             </div>

@@ -97,8 +97,8 @@ function Accordion(props) {
                 <form className="form">
                     <div className="form_avatar">
                         <div className="img">
-                        <img src="https://scontent.fhan2-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=XZyCERJz-dYAX9qGWO5&_nc_ht=scontent.fhan2-2.fna&oh=00_AT8GRXAdPc0bF1h5tf9EwTdL8xggWc38gAKw04QUfVzNDA&oe=6268F326"
-                            alt="" />
+                            <img src="https://scontent.fhan2-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=XZyCERJz-dYAX9qGWO5&_nc_ht=scontent.fhan2-2.fna&oh=00_AT8GRXAdPc0bF1h5tf9EwTdL8xggWc38gAKw04QUfVzNDA&oe=6268F326"
+                                alt="" />
                         </div>
                     </div>
                     <div className="form_contentCmt">
@@ -114,7 +114,6 @@ function Accordion(props) {
                             alt="" />
                     </div>
                     <div className="contentCmt_Username">
-
                         <div className="info">
                             <div className="nameCmt">
                                 <p>Khanh Linh Pham</p>
@@ -134,19 +133,82 @@ function Accordion(props) {
                         <div className="cotentUserCmt">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                         </div>
-                        
+                        <div className="group-InteractiveCmt">
+                            <div className="comment interactive">
+                                <Tooltip id="comment" title="Comment" arrow>
+                                    <button>
+                                        <i class="fal fa-comment"></i>
+                                    </button>
+                                </Tooltip>
+                                <p>1k</p>
+
+                            </div>
+                            <div className="like interactive">
+                                <Tooltip id="heart" title="Like" arrow>
+                                    <button>
+                                        <input type="checkbox" id="checkboxCmt" />
+                                        <label for="checkboxCmt">
+                                            <svg id="heart-svg" viewBox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
+                                                <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
+                                                    <path d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z" id="heart" fill="transparent" stroke="black" stroke-width="2" stroke-linecap="butt" />
+                                                    <circle id="main-circ" fill="#E2264D" opacity="0" cx="29.5" cy="29.5" r="1.5" />
+
+                                                    <g id="grp7" opacity="0" transform="translate(7 6)">
+                                                        <circle id="oval1" fill="#9CD8C3" cx="2" cy="6" r="2" />
+                                                        <circle id="oval2" fill="#8CE8C3" cx="5" cy="2" r="2" />
+                                                    </g>
+
+                                                    <g id="grp6" opacity="0" transform="translate(0 28)">
+                                                        <circle id="oval1" fill="#CC8EF5" cx="2" cy="7" r="2" />
+                                                        <circle id="oval2" fill="#91D2FA" cx="3" cy="2" r="2" />
+                                                    </g>
+
+                                                    <g id="grp3" opacity="0" transform="translate(52 28)">
+                                                        <circle id="oval2" fill="#9CD8C3" cx="2" cy="7" r="2" />
+                                                        <circle id="oval1" fill="#8CE8C3" cx="4" cy="2" r="2" />
+                                                    </g>
+
+                                                    <g id="grp2" opacity="0" transform="translate(44 6)">
+                                                        <circle id="oval2" fill="#CC8EF5" cx="5" cy="6" r="2" />
+                                                        <circle id="oval1" fill="#CC8EF5" cx="2" cy="2" r="2" />
+                                                    </g>
+
+                                                    <g id="grp5" opacity="0" transform="translate(14 50)">
+                                                        <circle id="oval1" fill="#91D2FA" cx="6" cy="5" r="2" />
+                                                        <circle id="oval2" fill="#91D2FA" cx="2" cy="2" r="2" />
+                                                    </g>
+
+                                                    <g id="grp4" opacity="0" transform="translate(35 50)">
+                                                        <circle id="oval1" fill="#F48EA7" cx="6" cy="5" r="2" />
+                                                        <circle id="oval2" fill="#F48EA7" cx="2" cy="2" r="2" />
+                                                    </g>
+
+                                                    <g id="grp1" opacity="0" transform="translate(24)">
+                                                        <circle id="oval1" fill="#9FC7FA" cx="2.5" cy="3" r="2" />
+                                                        <circle id="oval2" fill="#9FC7FA" cx="7.5" cy="2" r="2" />
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </label>
+                                    </button>
+                                </Tooltip>
+                                <p>2k</p>
+
+                            </div>
+                            <div className="share interactive">
+                                <Tooltip id="Share" title="Share" arrow>
+                                    <button>
+                                        <i class="fal fa-share-all"></i>
+                                    </button>
+                                </Tooltip>
+                                <p>10k</p>
+                            </div>
+                        </div>
                     </div>
                     <div className="contentCmt_moreCmt">
                         <i class="fal fa-ellipsis-h-alt"></i>
                     </div>
-                    {/* <div className="cotentUser">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                        </div> */}
                 </div>
-                {/* <div
-                    className="accordion__text"
-                    dangerouslySetInnerHTML={{ __html: props.content }}
-                /> */}
             </div>
         </div>
     );
