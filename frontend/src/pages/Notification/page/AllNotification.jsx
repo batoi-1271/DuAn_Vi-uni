@@ -10,7 +10,6 @@ import "./allnotification.scss";
 
 const AllNotification = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggling = () => setIsOpen(!isOpen);
 
   return (
@@ -47,14 +46,6 @@ const AllNotification = () => {
               <div className="dropContainer">
                 <span>
                   <Link to="#">See less often</Link>
-                  {/* <Stack direction="row" spacing={1}>
-                    <IconButton aria-label="fingerprint" color="secondary">
-                      <Fingerprint />
-                    </IconButton>
-                    <IconButton aria-label="fingerprint" color="success">
-                      <Fingerprint />
-                    </IconButton>
-                  </Stack> */}
                 </span>
               </div>
             )}

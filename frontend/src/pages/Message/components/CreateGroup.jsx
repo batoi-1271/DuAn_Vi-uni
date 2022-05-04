@@ -10,23 +10,13 @@ const CreateGroup = ({ show, close }) => {
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <header className="modal_header">
               <div className="modal_header-title">
-                <h2 className="modal_header-tit">New</h2>
+                <h2 className="modal_header-tit">New Group</h2>
                 <i onClick={() => close()} class="far fa-times"></i>
               </div>
               <i class="fas fa-search"></i>
               <input type="text" placeholder="Search people" />
             </header>
             <main className="modal_content">
-              <div className="modal-groups">
-                <div className="modal-group">
-                  <div className="modal-group-search">
-                    <i class="fas fa-users"></i>
-                  </div>
-                  <div className="modal-group-text">
-                    <p>Creat a group</p>
-                  </div>
-                </div>
-              </div>
               <div className="modal-friend">
                 <div className="modal-friend-follow">
                   <i class="fas fa-user"></i>
