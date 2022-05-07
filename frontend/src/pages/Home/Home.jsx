@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import OutsideClickHandler from 'react-outside-click-handler';
-import { Link } from "react-router-dom";
 
 import FadeLoader from "react-spinners/FadeLoader";
 import { css } from "@emotion/react";
@@ -8,9 +7,9 @@ import { css } from "@emotion/react";
 import Comment from '../../components/Comment/Comment';
 import ModalImage from "../../components/ModalImage/modal-image";
 import "./home.scss";
-import logo from '../../../src/assets/logo.png';
 import PostUser from "./PostUser";
-import PostModal from "../../components/ModalImage/PostModal/PostModal";
+
+import MorePost from "../../components/MorePost/MorePost";
 
 
 const Home = () => {
@@ -68,20 +67,7 @@ const Home = () => {
                     <div className="post-more_Content">
                       <button onClick={toggling}><i class="fas fa-ellipsis-h"></i></button>
                       {isOpen && (
-                        <div className="dropContainer">
-                          <div className="unfollow dropContainer_content">
-                            <i class="fal fa-user-times"></i>
-                            <Link to="#">Unfollow <span>@username</span></Link>
-                          </div>
-                          <div className="report dropContainer_content">
-                            <i class="fal fa-flag"></i>
-                            <Link to="#">Report post</Link>
-                          </div>
-                          <div className="save dropContainer_content">
-                            <i class="fal fa-bookmark"></i>
-                            <Link to="#">Save post</Link>
-                          </div>
-                        </div>
+                        <MorePost/>
                       )}
                     </div>
                   </div>
