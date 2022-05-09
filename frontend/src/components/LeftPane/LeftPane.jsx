@@ -117,7 +117,7 @@ const LeftPane = () => {
                 />
                 
                 {isOpen && (
-                  <div className="dropContainer">
+                  <div className="dropContainerSearch">
                     <div className="dropList">
                     <div className="title">
                       <h4>Recent searches</h4>

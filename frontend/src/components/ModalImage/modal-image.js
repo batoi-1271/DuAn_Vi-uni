@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./modal-image.scss";
 import PostModal from "./PostModal/PostModal";
-import Test from "./Test";
 
 export default class ModalImage extends React.Component {
   constructor(props) {
@@ -102,11 +101,11 @@ export default class ModalImage extends React.Component {
           <img
             className="modal-content"
             src={this.props.src}
+            alt=""
             // alt={this.props.alt + " modal"}
           />
           <div className="caption">
             <PostModal/>
-            <h3>HIHI</h3>
           </div>
         </div>
       </div>

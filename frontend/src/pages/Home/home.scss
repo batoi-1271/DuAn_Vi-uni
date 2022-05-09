@@ -66,7 +66,7 @@ section {
                 position: relative;
             }
 
-            .dropContainer {
+            .dropContainerPrivate {
                 position: absolute;
                 z-index: 999;
 
@@ -81,6 +81,9 @@ section {
                     color: #000;
                     font-size: 1rem;
                     font-weight: 500;
+                    animation-name: growDown;
+                    animation-duration: 0.5s;
+                    transform-origin: top center;
 
                     &:first-child {
                         padding-top: 0.8em;

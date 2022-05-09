@@ -6,6 +6,7 @@ import Tooltip from "@mui/material/Tooltip";
 import './postModal.scss';
 import Heart from "../../Heart/Heart";
 import MorePost from "../../MorePost/MorePost";
+import DetailComment from "../../DetailComment/DetailComment";
 const PostModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggling = () => setIsOpen(!isOpen);
@@ -83,12 +84,12 @@ const PostModal = () => {
                 </div>
             </div>
       </div>
-      <div>
+      {/* DETAIL COMMENT  */}
+      <DetailComment/>
 
-      </div>
     </section>
   );
 }
 
-export default PostModal
+export default PostModal;
 

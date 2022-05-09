@@ -41,7 +41,7 @@ const PostUser = () => {
               {selectedOption ? selectedOption + ' can reply' : 'Everyone'}
             </div>
             {isOpen && (
-              <div className="dropContainer">
+              <div className="dropContainerPrivate">
                 <div className="dropList">
                   <div className="title">
                     <h4>Who can reply?</h4>
