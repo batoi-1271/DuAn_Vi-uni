@@ -1,7 +1,10 @@
 @use '../../scss/' as *;
 .dropContainer {
     z-index: 999;
+    /* please don't change 'position' */
+
     position: absolute;
+    /* there must be 'right' or 'top' for dropContainer */
     top: 0;
     right: 20%;
     width: 280px;

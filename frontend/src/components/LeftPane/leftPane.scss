@@ -14,6 +14,7 @@
 }
 
 .paneLeft {
+    /* please don't change 'position' */
     position: sticky;
     align-self: flex-start;
     padding-top: 10px;
@@ -24,6 +25,7 @@
 
     &__wrap {
         @include flex(center, center);
+        /* please don't change 'position' */
         position: fixed;
         @include header;
         width: 22%;
@@ -49,6 +51,7 @@
             @include flex(center, space-between);
             vertical-align: middle;
             white-space: nowrap;
+            /* please don't change 'position' */
             position: relative;
             border-radius: 50px;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -59,6 +62,7 @@
             }
 
             .icon {
+                /* please don't change 'position' */
                 position: absolute;
                 margin-left: 17px;
                 z-index: 1;
@@ -76,6 +80,7 @@
             }
 
             .dropContainerSearch {
+                /* please don't change 'position' */
                 position: absolute;
                 z-index: 999;
                 top: 100%;

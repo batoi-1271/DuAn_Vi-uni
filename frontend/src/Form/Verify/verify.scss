@@ -21,11 +21,10 @@
 }
 
 .modalContainer_Verify {
+    /* please don't change 'position' */
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    /* there must be 'inset' for .modalContainer_Verify */
+    inset: 0;
     z-index: 999;
     @include flex(center, center);
     background-color: rgba($color: #000000, $alpha: 0.35);
@@ -38,7 +37,9 @@
         height: 670px;
         width: 560px;
         padding: 2rem;
+        /* please don't change 'position' */
         position: absolute;
+        /* there must be 'left' for .modalVerify */
         left: 50%;
         transform: translateX(-50%);
         border-radius: 20px;
@@ -46,11 +47,14 @@
         // animation: showing-up cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
 
         &_header {
+            /* please don't change 'position' */
             position: relative;
             margin-bottom: 50px;
 
             img {
+                /* please don't change 'position' */
                 position: absolute;
+                /* there must be 'top' and 'right' for .modal */
                 right: 50%;
                 top: 0;
                 height: 70px;
@@ -59,7 +63,9 @@
             }
 
             .close {
+                /* please don't change 'position' */
                 position: absolute;
+                /* there must be 'top' and 'left' for .close */
                 top: 0;
                 left: 0;
                 width: 25px;
