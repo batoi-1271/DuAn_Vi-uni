@@ -25,6 +25,7 @@
         width: 92%;
         height: auto;
         padding-left: 20px;
+        /* please don't change 'position' */
         position: relative;
 
         &_header {
@@ -43,6 +44,7 @@
 
             .post-more {
                 &_Content {
+                    /* please don't change 'position' */
                     position: relative;
 
                     button {

@@ -2,11 +2,10 @@
 
 
 .modalUnf {
+    /* please don't change 'position' */
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    /* there must be 'inset' for .header */
+    inset: 0;
     z-index: 999;
     @include flex(center, center);
     background-color: rgba($color: #000000, $alpha: 0.35);
@@ -16,6 +15,7 @@
         width: 300px;
         height: 250px;
         padding: 2rem;
+        /* please don't change 'position' */
         position: absolute;
         border-radius: 20px;
         animation: opacity ease-out 0.5s;

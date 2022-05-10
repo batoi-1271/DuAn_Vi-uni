@@ -10,6 +10,7 @@
 .fiends {
     flex-basis: 45%;
     height: auto;
+    /* please don't change 'position' */
     position: sticky;
     z-index: 99;
     box-shadow: $box-shadow;
