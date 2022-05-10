@@ -82,17 +82,27 @@
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%); 
-                        button {
-                            margin-left: 20px;
-                            width: 65px;
+                        gap: 20px;
+                        label {
+                            text-align: center;
+                            width: 50px;
                             height: 50px;
                             cursor: pointer;
                             border: none;
+                            border-radius: 50%;
                             background: rgba($color: #000000, $alpha: 0.35);
+                            transition: all 0.3s ease;
+
                             &:hover {
-                                border: 1px solid white;
+                                background-color: white;
+                                i {
+                                color: #000000;
+
+                                }
                             }
-                            i {
+                            
+                            .fas, .fal {
+                                line-height: 50px;
                                 font-size: 20px;
                                 color: white;
                             }
@@ -112,20 +122,29 @@
                     }
                     .editAvatar {
                         position: absolute;
-                        top: 30%;
-                        left: 4%;
-                        button {
-                            margin-left: 20px;
-                            width: 55px;
-                            height: 40px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%); 
+                        width: 40px;
+                        height: 40px;
+                        .file-upload {
+                            display: block;
+                            text-align: center;
                             cursor: pointer;
                             border: none;
+                            border-radius: 50%;
+                            transition: all 0.3s ease;
                             background: rgba($color: #000000, $alpha: 0.35);
+
                             &:hover {
-                                border: 1px solid white;
+                                background-color: white;
+                                i {
+                                    color: black;
+                                }
                             }
                             i {
-                                font-size: 15px;
+                                line-height: 40px;
+                                font-size: 20px;
                                 color: white;
                             }
                         }
@@ -169,4 +188,8 @@
             }
         }
     }
+}
+
+input[type="file"] {
+    display: none;
 }

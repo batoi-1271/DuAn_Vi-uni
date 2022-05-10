@@ -9,7 +9,7 @@ const DetailComment = () => {
             <form className="form">
                 <div className="form_avatar">
                     <div className="img">
-                        <img src="https://scontent.fhan2-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=XZyCERJz-dYAX9qGWO5&_nc_ht=scontent.fhan2-2.fna&oh=00_AT8GRXAdPc0bF1h5tf9EwTdL8xggWc38gAKw04QUfVzNDA&oe=6268F326"
+                        <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/280401735_553250362824028_3937194561141962341_n.jpg?_nc_cat=1&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=mN2Dd3qX9LgAX9RZ_wY&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-s6x36oYytoFX97i1oeA7q6OG5L9uvBqULHaXvRGYLIw&oe=627FDA4C"
                             alt="" />
                     </div>
                 </div>
@@ -99,7 +99,7 @@ const DetailComment = () => {
                         <p>Replying to <span>@userName</span></p>
                     </div>
 
-                    <div className="cotentUserCmt">
+                    <div className="contentUserCmt">
                         <p>Jennie and Rosé’s signatures were spotted in a piercing studio! </p>
                         <div className="img">
                             <img src="https://images.unsplash.com/photo-1651955687848-7cdd2d330f34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" />
