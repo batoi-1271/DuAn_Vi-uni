@@ -21,8 +21,10 @@ a {
 
 .header {
     height: $header-height;
+    /* please don't change 'position' */
     position: sticky;
     padding-left: 50px;
+    /* there must be 'left' or 'right' for .header */
     top: 0;
     right: 0;
     z-index: 99;

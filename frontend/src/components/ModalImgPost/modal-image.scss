@@ -7,6 +7,7 @@
 
 .lp-modal-image {
     width: 100%;
+    /* please don't change 'position' */
     position: relative;
 
     &>.image {
@@ -27,8 +28,10 @@
     &>.modal {
         justify-content: space-around;
         display: none;
+        /* please don't change 'position' */
         position: fixed;
         padding-top: 100px;
+        /* there must be 'left' or 'top' for .modal */
         left: 0;
         top: 0;
         width: 100%;
@@ -58,10 +61,13 @@
             // color: #ccc;
             // padding: 10px 0;
             height: 100vh;
+            /* please don't change 'position' */
             position: absolute;
             
             // position: sticky;
             overflow: scroll;
+        /* there must be 'right' or 'top' for .caption */
+
             top: 0;
             right: 0;
             &::-webkit-scrollbar {
@@ -70,7 +76,10 @@
         }
 
         &>.close {
+            /* please don't change 'position' */
             position: absolute;
+
+            /* there must be 'top' or 'left' for close */
             top: 15px;
             left: 35px;
             color: #f1f1f1;

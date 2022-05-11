@@ -15,7 +15,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan2-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=XZyCERJz-dYAX9qGWO5&_nc_ht=scontent.fhan2-2.fna&oh=00_AT8GRXAdPc0bF1h5tf9EwTdL8xggWc38gAKw04QUfVzNDA&oe=6268F326"
+        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/280605852_585512089954697_4925655838119350643_n.jpg?_nc_cat=1&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=ANYQqmN1JlcAX_dqjab&tn=Oo_IUsFpYm_CxD7x&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9lWv0BqsbMDUYpJ_Hn7b1zH0e_9U38kwUaig56M0TCSw&oe=627F1FFA"
       />
     ),
   },
@@ -26,7 +26,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan2-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=XZyCERJz-dYAX9qGWO5&_nc_ht=scontent.fhan2-2.fna&oh=00_AT8GRXAdPc0bF1h5tf9EwTdL8xggWc38gAKw04QUfVzNDA&oe=6268F326"
+        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/280605852_585512089954697_4925655838119350643_n.jpg?_nc_cat=1&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=ANYQqmN1JlcAX_dqjab&tn=Oo_IUsFpYm_CxD7x&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9lWv0BqsbMDUYpJ_Hn7b1zH0e_9U38kwUaig56M0TCSw&oe=627F1FFA"
       />
     ),
   },
@@ -37,7 +37,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan2-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=XZyCERJz-dYAX9qGWO5&_nc_ht=scontent.fhan2-2.fna&oh=00_AT8GRXAdPc0bF1h5tf9EwTdL8xggWc38gAKw04QUfVzNDA&oe=6268F326"
+        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/280605852_585512089954697_4925655838119350643_n.jpg?_nc_cat=1&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=ANYQqmN1JlcAX_dqjab&tn=Oo_IUsFpYm_CxD7x&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9lWv0BqsbMDUYpJ_Hn7b1zH0e_9U38kwUaig56M0TCSw&oe=627F1FFA"
       />
     ),
   },
@@ -48,7 +48,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan2-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=XZyCERJz-dYAX9qGWO5&_nc_ht=scontent.fhan2-2.fna&oh=00_AT8GRXAdPc0bF1h5tf9EwTdL8xggWc38gAKw04QUfVzNDA&oe=6268F326"
+        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/280605852_585512089954697_4925655838119350643_n.jpg?_nc_cat=1&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=ANYQqmN1JlcAX_dqjab&tn=Oo_IUsFpYm_CxD7x&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9lWv0BqsbMDUYpJ_Hn7b1zH0e_9U38kwUaig56M0TCSw&oe=627F1FFA"
       />
     ),
   },
@@ -59,7 +59,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan2-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=XZyCERJz-dYAX9qGWO5&_nc_ht=scontent.fhan2-2.fna&oh=00_AT8GRXAdPc0bF1h5tf9EwTdL8xggWc38gAKw04QUfVzNDA&oe=6268F326"
+        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/280605852_585512089954697_4925655838119350643_n.jpg?_nc_cat=1&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=ANYQqmN1JlcAX_dqjab&tn=Oo_IUsFpYm_CxD7x&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9lWv0BqsbMDUYpJ_Hn7b1zH0e_9U38kwUaig56M0TCSw&oe=627F1FFA"
       />
     ),
   }
@@ -117,7 +117,7 @@ const LeftPane = () => {
                 />
                 
                 {isOpen && (
-                  <div className="dropContainer">
+                  <div className="dropContainerSearch">
                     <div className="dropList">
                     <div className="title">
                       <h4>Recent searches</h4>
