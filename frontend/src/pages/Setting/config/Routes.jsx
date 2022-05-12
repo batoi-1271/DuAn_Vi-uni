@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Security from '../DetailSetting/Security/Security';
+import MenuAccount from '../DetailSetting/YourAccount/MenuAccount';
 import YourAccount from '../DetailSetting/YourAccount/YourAccount';
 
 const Routes = () => {
@@ -8,12 +9,11 @@ const Routes = () => {
     <Switch>
             <Route
                 path='/settings'
-                exact
+                // exact
                 component={YourAccount}
             />
             <Route
                 path='/settings/security_and_account_access'
-                exact
                 component={Security}
             />
         </Switch>

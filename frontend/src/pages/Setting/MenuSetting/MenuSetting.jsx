@@ -36,7 +36,6 @@ const MenuSetting = () => {
   const [modal, setModal] = useState(false);
 
   const active = menuSetting.findIndex((e) => e.path === pathname);
-
   return (
     <div className="menuSetting" id='menuSetting'>
       <div className="menuSetting__header">
@@ -46,12 +45,14 @@ const MenuSetting = () => {
       <div className="menuSetting__main">
         <ul className="header-nav">
           {menuSetting.map((e, i) => (
+            <Link to={e.path}>
             <li key={i} className={`${i === active ? "active" : ""}`}>
-              <Link to={e.path}>
+              
                 {e.display}
-              </Link>
+              
               <i class="fal fa-angle-right"></i>
             </li>
+            </Link>
           ))}
         </ul>
       </div>
