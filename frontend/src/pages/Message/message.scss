@@ -92,12 +92,6 @@
 
     }
 
-
-
-
-
-
-
     .message_head{
         display: flex;
         justify-content: space-between;
@@ -337,6 +331,9 @@
                 align-items: center;
                 margin-top: 20px;
                 cursor: pointer;
+                .file-upload {
+                    cursor: pointer;
+                }
                 .message-new-footer-input{
                     display: flex;
                     border:1px solid red;

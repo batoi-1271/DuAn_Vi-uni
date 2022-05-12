@@ -115,58 +115,6 @@ const Messages = () => {
         />
       ),
     },
-    {
-      id: 6,
-      name: "Nguyen Ba Toi",
-      username: "Toiba2001",
-      time: "Mar 20",
-      content: "Last mesage....",
-      imageUrl: (
-        <img
-          alt="Dương Ngô Tùng"
-          src="https://images.unsplash.com/photo-1650964336686-7f7be9e35f35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
-        />
-      ),
-    },
-    {
-      id: 6,
-      name: "Nguyen Ba Toi",
-      username: "Toiba2001",
-      time: "Mar 20",
-      content: "Last mesage....",
-      imageUrl: (
-        <img
-          alt="Dương Ngô Tùng"
-          src="https://images.unsplash.com/photo-1650902060974-f342251becc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-        />
-      ),
-    },
-    {
-      id: 6,
-      name: "Nguyen Ba Toi",
-      username: "Toiba2001",
-      time: "Mar 20",
-      content: "Last mesage....",
-      imageUrl: (
-        <img
-          alt="Dương Ngô Tùng"
-          src="https://images.unsplash.com/photo-1648737966100-18f790c93a86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-        />
-      ),
-    },
-    {
-      id: 6,
-      name: "Nguyen Ba Toi",
-      username: "Toiba2001",
-      time: "Mar 20",
-      content: "Last mesage....",
-      imageUrl: (
-        <img
-          alt="Dương Ngô Tùng"
-          src="https://images.unsplash.com/photo-1650921906719-d163a7970a95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-        />
-      ),
-    },
   ];
 
   return (
@@ -391,7 +339,11 @@ const Messages = () => {
           </div>
           <div className="message-new-footer">
             <div className="message-new-footer-char">
-              <i class="far fa-image-polaroid"></i>
+              {/* icon EDIT IMG  */}
+              <label for="file-upload" class="file-upload">
+                <i class="fas fa-camera"></i>
+              </label>
+              <input id="file-upload" type="file" />
               <div className="message-new-footer-input">
                 <input
                   className="message-input"

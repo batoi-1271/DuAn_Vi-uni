@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './rightPane.scss';
 import './more.scss';
@@ -119,7 +119,7 @@ const RightPane = () => {
               {isOpen && (
                 <div className="dropContainer">
                   <ul>
-                    <li className='items'><Link to="#"><i class="far fa-cogs"></i>Setting and private</Link></li>
+                    <li className='items'><Link to="/settings"><i class="far fa-cogs"></i>Setting and private</Link></li>
                     <li className='items'><Link to="#"><i class="far fa-question-circle"></i>Help center</Link></li>
                     <li className='items'><Link to="#"><i class="fas fa-fill-drip"></i>Display</Link></li>
                   </ul>
