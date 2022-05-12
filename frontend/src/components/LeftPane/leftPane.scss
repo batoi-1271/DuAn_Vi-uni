@@ -83,6 +83,7 @@
                 /* please don't change 'position' */
                 position: absolute;
                 z-index: 999;
+                /* there must be 'top' for .dropContainerSearch */
                 top: 100%;
 
                 .dropList {

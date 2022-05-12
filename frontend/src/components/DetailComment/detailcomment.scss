@@ -104,8 +104,11 @@
             text-decoration: underline;
           }
         }
+      }.cotentUserCmt {
+        p {
+          text-align: initial;
+        }
       }
-
       .nameCmt {
         font-weight: bold;
       }

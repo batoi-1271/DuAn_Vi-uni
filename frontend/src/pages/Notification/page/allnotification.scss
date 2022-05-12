@@ -64,6 +64,7 @@
     }
 
     .search {
+        /* please don't change 'position' */
         position: relative;
 
         .all-more {
@@ -85,7 +86,9 @@
             }
         }
         .dropContainer {
+            /* please don't change 'position' */
             position: absolute;
+            /* there must be 'top', 'right' and 'left' for .dropContainer */
             top: 50;
             right: 0;
             left: 10;

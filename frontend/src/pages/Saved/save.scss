@@ -2,35 +2,36 @@
 .cards {
     flex-basis: 45%;
     height: auto;
-    .card-header{
+    .card-header {
         @include flex(center, space-between);
         height: $header-height;
         background: $body-bg;
+        /* please don't change 'position' */
         position: fixed;
         z-index: 99;
+        /* there must be 'top' for .card-header */
         top: 0;
         width: 45%;
         padding: 0 2rem 0 2rem;
         box-shadow: $box-shadow;
-        .card-text{
+        .card-text {
             cursor: pointer;
-            h3{
+            h3 {
                 font-size: 20px;
                 font-weight: 700;
             }
         }
-        .post-dot{
+        .post-dot {
             cursor: pointer;
             padding: 10px 15px;
             border-radius: 100%;
             text-align: center;
-            &:hover{
+            &:hover {
                 box-shadow: $box-shadow;
-
             }
         }
     }
-    .save-list{
+    .save-list {
         margin-top: 64px;
     }
 }

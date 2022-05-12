@@ -14,8 +14,10 @@
         align-items: center;
         height: $header-height;
         background: $body-bg;
+        /* please don't change 'position' */
         position: fixed;
         z-index: 99;
+        /* there must be 'top' for .header */
         top: 0;
         width: 45%;
 
@@ -52,6 +54,7 @@
             // height: auto;
             width: inherit;
             .infoContent {
+                /* please don't change 'position' */
                 position: relative;
                 height: auto;
                 // min-height: 510px;

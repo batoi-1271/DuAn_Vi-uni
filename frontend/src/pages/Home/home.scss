@@ -7,6 +7,7 @@ section {
     header {
         @include header;
         @include flex(center, space-between);
+        /* please don't change 'position' */
         position: fixed;
         width: 45%;
         box-shadow: $box-shadow;
@@ -63,10 +64,12 @@ section {
                 color: $main-color;
                 cursor: pointer;
                 user-select: none;
+                /* please don't change 'position' */
                 position: relative;
             }
 
             .dropContainerPrivate {
+                /* please don't change 'position' */
                 position: absolute;
                 z-index: 999;
 

@@ -3,19 +3,20 @@
 .card-media {
     width: 100%;
     height: auto;
-    flex-basis: 45%;
-    padding: 30px 50px;
-    display: flex;
-    flex-wrap: wrap;
+    // padding: 30px 50px;
+    margin-top: 20px;
+    // display: flex;
+    // flex-basis: 45%;
+    // flex-wrap: wrap;
     padding: 0 4px;
-    .card-item{
-        flex: 25%;
-        max-width: 49%;
-        padding: 0 4px;
-        img{
-            margin-top: 8px;
-            vertical-align: middle;
-            border-radius: 15px;
-        }
-    }
+    // .card-item{
+    //     flex: 25%;
+    //     max-width: 49%;
+    //     padding: 0 4px;
+    //     img{
+    //         margin-top: 8px;
+    //         vertical-align: middle;
+    //         border-radius: 15px;
+    //     }
+    // }
 }
