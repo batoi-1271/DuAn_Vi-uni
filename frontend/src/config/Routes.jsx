@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Switch, Route } from "react-router-dom";
+import {BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Friends from "../components/MyFriends/Friends";
 
 import Home from "../pages/Home/Home";
@@ -26,7 +26,7 @@ const Routes = () => {
         path="/saved" 
         component={Save} />
       <Route 
-        path="/Message" 
+        path="/message" 
         component={Messages} />
       <Route 
         path="/notifications" 

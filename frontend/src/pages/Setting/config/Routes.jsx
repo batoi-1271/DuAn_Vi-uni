@@ -1,7 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Security from '../DetailSetting/Security/Security';
-import MenuAccount from '../DetailSetting/YourAccount/MenuAccount';
 import YourAccount from '../DetailSetting/YourAccount/YourAccount';
 
 const Routes = () => {

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import {BrowserRouter as Router, Link, useLocation } from 'react-router-dom';
 import './rightPane.scss';
 import './more.scss';
 import OutsideClickHandler from 'react-outside-click-handler';

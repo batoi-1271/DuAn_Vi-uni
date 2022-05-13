@@ -6,8 +6,6 @@ import MyFriends from "./page/MyFriends";
 const RoutesFr = () => {
   return (
     <Switch>
-      
-
       <Route 
         path="/friends/following" 
         component={Following} 

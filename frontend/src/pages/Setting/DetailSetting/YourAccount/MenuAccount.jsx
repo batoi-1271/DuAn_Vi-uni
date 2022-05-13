@@ -43,7 +43,7 @@ const MenuAccount = () => {
 
   return (
     <>
-      {pathname !== "/settings/account" && pathname !== "/settings/password" && (
+      {pathname !== "/settings/account" && pathname !== "/settings/password" && pathname !== "/settings/account/data" && (
         <div className="menuAccount" id='menuAccount'>
           <div className="YourAccount__header">
             <h2>Your Account</h2>

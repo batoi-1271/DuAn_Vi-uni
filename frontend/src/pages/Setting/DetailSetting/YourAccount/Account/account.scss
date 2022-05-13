@@ -3,3 +3,97 @@
 .Account {
     flex-basis: 65%;
 }
+
+// ITEMS ACCOUNT
+
+.Items {
+    h2 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 0.9rem;
+        // font-weight: 600;
+        color: $spanColor;
+    }
+}
+
+//AcountItems
+.AcountItems {
+    &_content {
+        
+        form {
+            .inputUser {
+                width: 100%;
+                height: 55px;
+                border-radius: 5px;
+                border: 1px solid #A6ABBD;
+                padding-left: 15px;
+                font-size: 1rem;
+            }
+            #btnSave {
+                margin-top: 30px;
+            }
+            .btnSave {
+                float: right;
+                background-color: $main-color;
+                width: 25%;
+                height: 45px;
+                border-radius: 30px;
+                border: 1px solid #1EBADC;
+                color: white;
+                font-weight: bold;
+                font-size: 1.1rem;
+                cursor: pointer;
+                transition: all .3s ease;
+                box-shadow: 0px 3px 1px -2px 
+                    rgba(0, 0, 0, 0.2), 0px 2px 2px 
+                    rgba(0, 0, 0, 0.14), 0px 1px 5px 
+                    rgba(0, 0, 0, 0.12);
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+#btnUpdate {
+    margin-top: 30px;
+    .btnUpdate {
+        width: 100%;
+        height: 55px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 0.9rem;
+        color: rgb(29, 155, 240);
+        transition: all .3s ease;
+        &:hover {
+            background-color: #e8f5fd;
+        }
+    }
+}
+
+#btnDelete {
+    .btnDelete {
+        width: 100%;
+        height: 55px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 0.9rem;
+        color: rgb(244, 33, 46);
+        transition: all .3s ease;
+        &:hover {
+            background-color: #fee8ea;
+        }
+    }
+}
+.country, .Gender {
+    p {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        a {
+            color: $main-color;
+        }
+    }
+}
