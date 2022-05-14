@@ -30,29 +30,6 @@
                 padding-left: 15px;
                 font-size: 1rem;
             }
-            #btnSave {
-                margin-top: 30px;
-            }
-            .btnSave {
-                float: right;
-                background-color: $main-color;
-                width: 25%;
-                height: 45px;
-                border-radius: 30px;
-                border: 1px solid #1EBADC;
-                color: white;
-                font-weight: bold;
-                font-size: 1.1rem;
-                cursor: pointer;
-                transition: all .3s ease;
-                box-shadow: 0px 3px 1px -2px 
-                    rgba(0, 0, 0, 0.2), 0px 2px 2px 
-                    rgba(0, 0, 0, 0.14), 0px 1px 5px 
-                    rgba(0, 0, 0, 0.12);
-                &:hover {
-                    box-shadow: none;
-                }
-            }
         }
     }
 }
@@ -88,7 +65,7 @@
         }
     }
 }
-.country, .Gender {
+.country, .Gender,.age {
     p {
         margin-top: 20px;
         font-size: 0.9rem;
@@ -96,4 +73,8 @@
             color: $main-color;
         }
     }
+}
+
+#ageHead {
+    margin-bottom: 20px;
 }

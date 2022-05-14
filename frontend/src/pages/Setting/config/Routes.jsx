@@ -8,7 +8,7 @@ const Routes = () => {
     <Switch>
             <Route
                 path='/settings'
-                // exact
+                exact
                 component={YourAccount}
             />
             <Route

@@ -21,6 +21,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
 import Profile from '../../../../Profile/Profile';
 
+import TextField from '@mui/material/TextField';
+
 const AcountItems = () => {
     const [expanded, setExpanded] = React.useState(false);
     const handleChange = (panel) => (event, isExpanded) => {
@@ -28,7 +30,7 @@ const AcountItems = () => {
     };
     return (
         <div className='AcountItems'>
-            {/* <Header title="Account information" /> */}
+            <Header title="Account information" />
             <div className='AcountItems_content'>
                 <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                     <AccordionSummary
@@ -40,14 +42,14 @@ const AcountItems = () => {
                             <Items title="User name" content="@username" />
                         </Typography>
                     </AccordionSummary>
-                    <AccordionDetails sx={{ mb: '8%' }}>
+                    <AccordionDetails>
                         <Typography>
                             <form action="">
                                 <div className="User">
                                     <input className='inputUser' type="text" placeholder='Username' value="@username" />
                                 </div>
-                                <div id="btnSave">
-                                    <Link to="#"><input type="button" className='btnSave' value="Save"></input></Link>
+                                <div id="btnUpdate">
+                                    <input type="button" className='btnUpdate' value="Save"></input>
                                 </div>
                             </form>
                         </Typography>
@@ -165,7 +167,7 @@ const AcountItems = () => {
                                             </RadioGroup>
                                         </FormControl>
                                     </Box>
-                                    <p>If you haven’t already specified a gender, this is the one associated with your account based on your profile and activity. 
+                                    <p>If you haven’t already specified a gender, this is the one associated with your account based on your profile and activity.
                                         This information won’t be displayed publicly.</p>
                                 </div>
                                 <div id="btnUpdate">
@@ -177,22 +179,48 @@ const AcountItems = () => {
                 </Accordion>
 
                 {/* START Account creation */}
-
                 <Accordion>
                     <AccordionSummary
                         aria-controls="panel6bh-content"
                         id="panel6bh-header"
                     >
                         <Typography>
-                            <Items title="Birthday" content="Oct 14, 1999" 
-                                content1="Add your date of birth to your " 
-                                span = "profile." href = "/profile"
-                                />
-                                {/* <Link to="/profile">profile</Link> */}
+                            <Items title="Birthday" content="Oct 14, 1999"
+                                content1="Add your date of birth to your "
+                                span="profile." href="/profile"
+                            />
+                            {/* <Link to="/profile">profile</Link> */}
                         </Typography>
                     </AccordionSummary>
                 </Accordion>
                 {/* END Account creation */}
+
+                {/* AGE Account creation */}
+                <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel7bh-content"
+                        id="panel7bh-header"
+                    >
+                        <Typography>
+                            <Items title="Age" content="22" />
+                        </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <p id='ageHead'>These are the age ranges associated with you.</p>
+                        <Typography>
+                            <form action="">
+                                <div className="age">
+                                    <form action="">
+                                        <input className='inputUser' type="text" placeholder='Age' value="22" readOnly/>
+                                    </form>
+                                    <p>Not right? You can add your date of birth to your profile without sharing it publicly.</p>
+                                </div>
+                            </form>
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                {/* AGE Account creation */}
             </div>
         </div>
     )

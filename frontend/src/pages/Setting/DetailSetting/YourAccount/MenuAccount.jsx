@@ -13,7 +13,7 @@ const menuAccount = [
   {
     icon: <i class="fal fa-key"></i>,
     display: "Change your password",
-    intro: "Change your password at qny time.",
+    intro: "Change your password at any time.",
     path: "/settings/password",
   },
   {

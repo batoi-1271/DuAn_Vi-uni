@@ -6,15 +6,14 @@ import MyFriends from "./page/MyFriends";
 const RoutesFr = () => {
   return (
     <Switch>
-      <Route 
-        path="/friends/following" 
-        component={Following} 
-      />
-
-<Route 
-        path="/friends" 
-        exact 
+      <Route
+        path="/friends"
+        exact
         component={MyFriends}
+      />
+      <Route
+        path="/friends/following"
+        component={Following}
       />
     </Switch>
   );
