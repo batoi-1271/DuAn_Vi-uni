@@ -15,7 +15,9 @@ const Header = () => {
                   exact
                   component={AllNotification}
                 />
-                <Route path="/notifications/mention" component={Mention} />
+                <Route 
+                  path="/notifications/mention" 
+                  component={Mention} />
               </Switch>
             </>
           )}

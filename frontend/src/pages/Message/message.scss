@@ -18,7 +18,9 @@
             display: none;
           }
        .message-header-char{
+           /* there must be 'top' for .message-header-char */
            top: 0;
+           /* please don't change 'position' */
            position: fixed;
            width: calc(31% - 4px);  
            background-color: #fff;
@@ -89,12 +91,6 @@
         }
 
     }
-
-
-
-
-
-
 
     .message_head{
         display: flex;
@@ -246,6 +242,7 @@
                     margin-left: 5px;
                     display: none;
                     .more {
+                        /* please don't change 'position' */
                         position: relative;
                         .all-more {
                             button {
@@ -262,7 +259,9 @@
                             }
                         }
                         .more_content {
+                            /* please don't change 'position' */
                             position: absolute;
+                            /* there must be 'top' and 'right' for .more_content */
                             top: 50;
                             right: 0;
                             width: 200px;
@@ -332,6 +331,9 @@
                 align-items: center;
                 margin-top: 20px;
                 cursor: pointer;
+                .file-upload {
+                    cursor: pointer;
+                }
                 .message-new-footer-input{
                     display: flex;
                     border:1px solid red;

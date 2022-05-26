@@ -73,7 +73,7 @@ const HeaderProfile = () => {
                 </div>
                 <div className="bio">
                   {/* <p></p> */}
-                  {/* <p>Ra xã hội làm ăn bươn chải, liều thì ăn nhiều, không liều thì ăn ít. Muốn thành công thì phải chấp nhận trải qua đắng cay ngọt bùi.</p> */}
+                  <p>Ra xã hội làm ăn bươn chải, liều thì ăn nhiều, không liều thì ăn ít. Muốn thành công thì phải chấp nhận trải qua đắng cay ngọt bùi.</p>
                 </div>
                 <div className="dateCreate">
                   <span>

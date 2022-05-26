@@ -92,7 +92,7 @@ const LeftPane = () => {
 
   return (
     <>
-      {pathname !== "/message" && (
+      {pathname !== "/message" && pathname !== "/settings/security_and_account_access" && pathname !== "/settings/account/data" && pathname !== "/settings" && pathname !== "/settings/account" && pathname !== "/settings/password"  && (
         <div ref={headerRef} className="paneLeft" id="paneLeft">
           <div className="paneLeft__wrap container">
             <div className="logo">

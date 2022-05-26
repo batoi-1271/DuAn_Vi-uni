@@ -1,11 +1,10 @@
 @use '../../../scss/' as *;
 
 .modalContainer {
+    /* please don't change 'position' */
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    /* there must be 'inset' for .modalContainer */
+    inset: 0;
     z-index: 999;
     @include flex(center, center);
 
@@ -19,6 +18,7 @@
         border-radius: 20px;
 
         &_header {
+            /* please don't change 'position' */
             position: relative;
             border-bottom: 1px solid  #dddddd;
 
@@ -27,7 +27,9 @@
             }
 
             .close {
+                /* please don't change 'position' */
                 position: absolute;
+                /* there must be 'top' and 'right' for .close */
                 top: 0;
                 right: 0;
                 background: none;
