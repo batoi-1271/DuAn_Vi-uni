@@ -1,4 +1,4 @@
-@use '../../scss/' as *;
+@use '../../scss/'as *;
 
 .content-post {
     margin-top: 5px;
@@ -12,8 +12,72 @@
     }
 
     .post-avatar {
-        // width: 8%;
         height: auto;
+        position: relative;
+
+        &:hover .post-avatar_profile {
+            display: block;
+        }
+
+        .post-avatar_profile {
+            position: absolute;
+            top: 40px;
+            width: 300px;
+            padding: 20px;
+            background: #f4f4f6;
+            z-index: 99999;
+            border-radius: 15px;
+            display: none;
+            box-shadow: $body-bg;
+            .avatar_profile-header {
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    background-color: transparent;
+                    border: 1px solid #ccc;
+                    width: 100px;
+                    padding: 2px 10px;
+                    border-radius: 19px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    &:hover{
+                        background: #ffe5ec;
+                        border: 2px solid #ffc2d1;
+                        color: red;
+                    }
+                }
+                >Button:hover > span {
+                    display: none;
+                  }
+                >Button:hover:before {
+                    content: "Unfollow";
+                  }
+                
+            }
+
+            .avatar_profile-boby {
+                .profile-body-fow {
+                    margin-top: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    button{
+                        border: none;
+                        background-color: transparent;
+                        a{
+                            padding: 0 10px 0 0;
+                            border-radius: 19px;
+                            cursor: pointer;
+                            font-size: 16px;
+                        }
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+               
+            }
+        }
 
         img {
             @include imgAvatar;

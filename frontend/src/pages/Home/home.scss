@@ -30,6 +30,9 @@ section {
         .avatar {
             @include imgAvatar;
             margin-right: 20px;
+            position: relative
+
+           
         }
 
         .contentPost {
@@ -140,5 +143,3 @@ section {
         }
     }
 }
-
-
