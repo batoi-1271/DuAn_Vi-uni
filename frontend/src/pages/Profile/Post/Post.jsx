@@ -1,6 +1,7 @@
-import React,{useEffect,useState} from 'react';
-import Tooltip from '@mui/material/Tooltip';
-import './post.scss';
+import React from "react";
+
+import './post.scss'
+import DetailPost from "../../../components/DetailPost/DetailPost";
 
 
 
@@ -72,71 +73,10 @@ await fetch("http://localhost:80/post/all/me",{
 
 
   return (
-   
-    <div className="card-post"  >
-      {postUser != null ? 
-    Object.entries(postUser.content).map((arr,i) => <div className="content-post">
-      <div className="post-avatar">
-        <img
-          src={arr[1].author.avatar_image.link_image}
-          alt=""
-        />
-      </div>
-      <div className="post-info">
-        <div className="post-info-header">
-          <div className="post-name">
-            <h4>{arr[1].author.last_name} {arr[1].author.first_name}</h4>
-            {/* <p>@DngNgTng1</p> */}
-            <p>22h</p>
-          </div>
-          <div className="post-dot">
-            <i class="fas fa-ellipsis-h"></i>
-          </div>
-        </div>
-        <div className="post-content">
-          <div className="post-content-title">
-            <p>{arr[1].content}</p>
-          </div>
-          <div className="post-content-img">
-            <img
-              src={arr[1].images[0] != null ? arr[1].images[0].link_image : null}
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="post-interactive">
-          <div className="post-interactive-icon">
-            <Tooltip id="comment" title="Comment" arrow>
-              <button>
-                <i class="far fa-comment-dots"></i>
-              </button>
-            </Tooltip>
-            <p>1</p>
-          </div>
-          <div className="post-interactive-icon">
-            <Tooltip id="heart" title="Like" arrow>
-              <button>
-                <i class="fal fa-heart"></i>
-              </button>
-            </Tooltip>
-            <p>1</p>
-          </div>
-          <div className="post-interactive-icon">
-            <Tooltip title="Share" arrow>
-              <button>
-                <i class="far fa-share-square"></i>
-              </button>
-            </Tooltip>
-            <p>1</p>
-          </div>
-        </div>
-      </div>
-    </div>) : null
-   
-      }
-  </div>
-
-);
+    <div className="card-post">
+      <DetailPost/>
+    </div>
+  );
 }
 
 export default Post;

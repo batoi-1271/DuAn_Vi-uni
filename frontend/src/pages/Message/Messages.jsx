@@ -1,29 +1,31 @@
 import React, { useState } from "react";
 import "./message.scss";
-import Box from '@mui/material/Box';
-import Avatar from '@mui/material/Avatar';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-
-import Tooltip from '@mui/material/Tooltip';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
-import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import Box from "@mui/material/Box";
+import Avatar from "@mui/material/Avatar";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import OutsideClickHandler from "react-outside-click-handler";
+import Tooltip from "@mui/material/Tooltip";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import { Link } from "react-router-dom";
 
 import CreateMess from "./components/CreateMess";
 import CreateGroup from "./components/CreateGroup";
 
-
 const Messages = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggling = () => setIsOpen(!isOpen);
+
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
 
-
-  const[modal1, setModal1] = useState(false);
-  const toggle1 = () => setModal1(!modal1)
+  const [modalGroup, setModalGroup] = useState(false);
+  const toggleGroup = () => setModalGroup(!modalGroup);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -44,7 +46,7 @@ const Messages = () => {
       imageUrl: (
         <img
           alt="Dương Ngô Tùng"
-          src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466 "
+          src="https://images.unsplash.com/photo-1650922919699-228aeca40e67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
         />
       ),
     },
@@ -57,7 +59,7 @@ const Messages = () => {
       imageUrl: (
         <img
           alt="Dương Ngô Tùng"
-          src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466 "
+          src="https://images.unsplash.com/photo-1650977559386-ff17720c49fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
         />
       ),
     },
@@ -70,7 +72,7 @@ const Messages = () => {
       imageUrl: (
         <img
           alt="Dương Ngô Tùng"
-          src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466 "
+          src="https://images.unsplash.com/photo-1650575536930-866166c71c26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80s"
         />
       ),
     },
@@ -83,7 +85,7 @@ const Messages = () => {
       imageUrl: (
         <img
           alt="Dương Ngô Tùng"
-          src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466 "
+          src="https://images.unsplash.com/photo-1650968977059-292ab4f496e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
         />
       ),
     },
@@ -96,7 +98,7 @@ const Messages = () => {
       imageUrl: (
         <img
           alt="Dương Ngô Tùng"
-          src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg"
+          src="https://images.unsplash.com/photo-1650909085203-9205d767fd3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
         />
       ),
     },
@@ -109,76 +111,10 @@ const Messages = () => {
       imageUrl: (
         <img
           alt="Dương Ngô Tùng"
-          src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466 "
+          src="https://images.unsplash.com/photo-1650972859777-7ff62609f8fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
         />
       ),
     },
-    {
-      id: 6,
-      name: "Nguyen Ba Toi",
-      username: "Toiba2001",
-      time: "Mar 20",
-      content: "Last mesage....",
-      imageUrl: (
-        <img
-          alt="Dương Ngô Tùng"
-          src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466 "
-        />
-      ),
-    },
-    {
-      id: 6,
-      name: "Nguyen Ba Toi",
-      username: "Toiba2001",
-      time: "Mar 20",
-      content: "Last mesage....",
-      imageUrl: (
-        <img
-          alt="Dương Ngô Tùng"
-          src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466 "
-        />
-      ),
-    },
-    {
-      id: 6,
-      name: "Nguyen Ba Toi",
-      username: "Toiba2001",
-      time: "Mar 20",
-      content: "Last mesage....",
-      imageUrl: (
-        <img
-          alt="Dương Ngô Tùng"
-          src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466 "
-        />
-      ),
-    },
-    {
-      id: 6,
-      name: "Nguyen Ba Toi",
-      username: "Toiba2001",
-      time: "Mar 20",
-      content: "Last mesage....",
-      imageUrl: (
-        <img
-          alt="Dương Ngô Tùng"
-          src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466 "
-        />
-      ),
-    },
-    {
-      id: 6,
-      name: "Nguyen Ba Toi",
-      username: "Toiba2001",
-      time: "Mar 20",
-      content: "Last mesage....",
-      imageUrl: (
-        <img
-          alt="Dương Ngô Tùng"
-          src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466 "
-        />
-      ),
-    },
-
   ];
 
   return (
@@ -248,7 +184,7 @@ const Messages = () => {
                   <MenuItem onClick={() => toggle()}>
                     <MailOutlineIcon sx={{ mr: 2 }} /> Message
                   </MenuItem>
-                  <MenuItem onClick={() => toggle1()}>
+                  <MenuItem onClick={() => toggleGroup()}>
                     <PeopleAltIcon sx={{ mr: 2 }} /> Message group
                   </MenuItem>
                   <Divider />
@@ -306,18 +242,108 @@ const Messages = () => {
                   alt=""
                 />
                 <div className="message-new-header-name">
-                  <a href="">Hào Trần</a>
+                  <a href="">Hao Tran</a>
                   <p>@DngNgTng1</p>
                 </div>
               </div>
               <div className="message-new-icon">
-                <i class="fas fa-cog"></i>
+                {/* <i class="fas fa-cog"></i> */}
+              </div>
+            </div>
+
+            {/* ---------------------------  MAIN ----------------------------- */}
+            <div className="message-chat">
+              <div className="message-chat_me">
+                <div className="message-chat_me-icon">
+                  <i class="fal fa-heart"></i>
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div className="message-chat_form">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Iste vitae dicta animi eaque? Ullam praesentium beatae velit
+                    obcaecati dolore, inventore ex aperiam voluptatum quae nihil
+                    provident. Sequi est aut ab.
+                  </p>
+                </div>
+              </div>
+              <div className="message-chat_user">
+                <div className="message-chat_form-user">
+                  <img
+                    src="https://images.unsplash.com/photo-1650657550895-9355e8662367?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxODZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                    alt=""
+                  />
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Unde laudantium dolor repudiandae, cum pariatur ut. Tempore
+                    laboriosam nobis repudiandae, excepturi natus minus,
+                    corporis, officiis quod voluptas placeat dolore ducimus.
+                    Facere.
+                  </p>
+                </div>
+                <div className="message-chat_icon">
+                  <OutsideClickHandler
+                    onOutsideClick={() => {
+                      setIsOpen(false);
+                    }}
+                  >
+                    <div className="more">
+                      <div className="all-more">
+                        <button onClick={toggling}>
+                          <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                      </div>
+                      {isOpen && (
+                        <div className="more_content">
+                          <span className="more_content-span1">
+                            <i class="fal fa-trash-alt"></i>
+                            <Link className="more_content-text " to="#">
+                              Delete for you
+                            </Link>
+                          </span>
+                          <span className="more_content-span">
+                            <i class="fal fa-flag"></i>
+                            <Link className="more_content-text" to="#">
+                              Report Message
+                            </Link>
+                          </span>
+                          <span className="more_content-span">
+                            <i class="fal fa-clone"></i>
+                            <Link className="more_content-text" to="#">
+                              Copy Message
+                            </Link>
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </OutsideClickHandler>
+
+                  <Tooltip title="Heart" arrow>
+                    <button>
+                      <i class="fal fa-heart"></i>
+                    </button>
+                  </Tooltip>
+                </div>
+              </div>
+
+              <div className="message-chat_me">
+                <div className="message-chat_me-icon">
+                  <i class="fal fa-heart"></i>
+                  <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div className="message-chat_form">
+                  <p>Lorem</p>
+                </div>
               </div>
             </div>
           </div>
           <div className="message-new-footer">
             <div className="message-new-footer-char">
-              <i class="far fa-image-polaroid"></i>
+              {/* icon EDIT IMG  */}
+              <label for="file-upload" class="file-upload">
+                <i class="fas fa-camera"></i>
+              </label>
+              <input id="file-upload" type="file" />
               <div className="message-new-footer-input">
                 <input
                   className="message-input"
@@ -330,8 +356,8 @@ const Messages = () => {
             </div>
           </div>
           <CreateMess show={modal} close={toggle}></CreateMess>
-          
-          <CreateGroup show={modal1} close={toggle1}></CreateGroup>
+
+          <CreateGroup show={modalGroup} close={toggleGroup}></CreateGroup>
         </div>
       </div>
     </>

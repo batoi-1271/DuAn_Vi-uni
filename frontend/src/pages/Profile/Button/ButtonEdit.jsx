@@ -7,9 +7,9 @@ const ButtonEdit = ({ show, close, title, children }) => {
 
     const [textAreaCount, ChangeTextAreaCount] = React.useState(0);
 
-  const recalculate = e => {
-    ChangeTextAreaCount(e.target.value.length);
-  };
+    const recalculate = e => {
+        ChangeTextAreaCount(e.target.value.length);
+    };
 
     return (
 
@@ -17,48 +17,55 @@ const ButtonEdit = ({ show, close, title, children }) => {
             {show ?
 
                 <div className="modalContainer" onClick={() => close()}>
-                    <div className="modal" onClick={(e) => e.stopPropagation()}>
-                        <header className="modal_header">
-                            <i class="fa fa-times close" onClick={() => close()}></i>
-                            <h2 className="modal_header-title">{title}</h2>
-                            <button className="submit">Save</button>
-                        </header>
-                        <div className="modal_content">
-                            <div className="cardContent">
-                                <div className="cardContent_imgCover">
-                                    <img src="https://lovablemessages.com/wp-content/uploads/2021/12/bo-hinh-nen-3d-that-dep-va-that-hap-dan-24-1068x601.jpg" alt="" />
-                                    <div className="editIcon">
-                                        <button>
-                                        <i class="fas fa-camera"></i>
-                                        </button>
-                                        <button>
-                                        <i class="fal fa-times"></i>
-                                        </button>
+                    <form action="">
+                        <div className="modal" onClick={(e) => e.stopPropagation()}>
+                            <header className="modal_header">
+                                <i class="fa fa-times close" onClick={() => close()}></i>
+                                <h2 className="modal_header-title">{title}</h2>
+                                <button className="submit">Save</button>
+                            </header>
+                            <div className="modal_content">
+                                <div className="cardContent">
+                                    <div className="cardContent_imgCover">
+                                        <img src="https://lovablemessages.com/wp-content/uploads/2021/12/bo-hinh-nen-3d-that-dep-va-that-hap-dan-24-1068x601.jpg" alt="" />
+                                        <div className="editIcon">
+
+                                            {/* icon EDIT IMG  */}
+                                            <label for="file-upload" class="file-upload">
+                                                <i class="fas fa-camera"></i>
+                                            </label>
+                                            <input id="file-upload" type="file" />
+
+                                            {/* icon CANCEL  */}
+                                             <label class="file-upload cancel">
+                                                <i class="fal fa-times"></i>
+                                            </label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="cardContent_imgAvatar">
-                                    <img src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_400x400.jpg" alt="" />
-                                    <div className="editAvatar">
-                                        <button>
-                                        <i class="fas fa-camera"></i>
-                                        </button>
+                                    <div className="cardContent_imgAvatar">
+                                        <img src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_400x400.jpg" alt="" />
+                                        <div className="editAvatar">
+                                            <label for="file-upload" class="file-upload">
+                                            <i class="far fa-camera"></i>
+                                            </label>
+                                            <input id="file-upload" type="file" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <footer className="modal_footer">
-                            <form action="">
+                            <footer className="modal_footer">
+
                                 <div className="name">
-                                        <TextField
-                                            id="name"
-                                            label="Name"
-                                            fullWidth
-                                            defaultValue="Dương Ngô Tùng"
-                                            helperText="Some important text"
-                                        />
+                                    <TextField
+                                        id="name"
+                                        label="Name"
+                                        fullWidth
+                                        defaultValue="Dương Ngô Tùng"
+                                        helperText="Some important text"
+                                    />
                                 </div>
                                 <div className="bio">
-                                <p>{textAreaCount}/160</p>
+                                    <p>{textAreaCount}/160</p>
                                     <TextField
                                         id="bio"
                                         label="Bio"
@@ -94,9 +101,10 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                         }}
                                     />
                                 </div>
-                            </form>
-                        </footer>
-                    </div>
+
+                            </footer>
+                        </div>
+                    </form>
                 </div>
 
                 : null}

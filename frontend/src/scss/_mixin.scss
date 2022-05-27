@@ -56,7 +56,7 @@
 
 
 @mixin btnMenu {
-    padding: 5px 0;
+    // padding: 5px 0;
     font-weight: 700;
     position: relative;
     font-size: 1.2rem;
@@ -74,3 +74,27 @@
     justify-content: center;
 }
 
+@mixin btnForm {
+    background-color: #1EBADC;
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+    border: 1px solid #1EBADC;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+
+    &:hover {
+        box-shadow: none;
+    }
+
+    &:active {
+        background-color: $white;
+        border: 2px $main-color solid;
+        color: $main-color;
+        box-shadow: none;
+    }
+}

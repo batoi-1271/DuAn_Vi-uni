@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { Switch, Route } from 'react-router-dom';
+
 import Post from './Post/Post';
 import Media from './Media/Media';
 import Share from './share/Share';
@@ -38,3 +38,4 @@ const RouterProfile = () => {
 }
  
 export default RouterProfile;
+

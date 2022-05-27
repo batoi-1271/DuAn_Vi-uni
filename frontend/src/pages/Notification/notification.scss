@@ -10,6 +10,7 @@
 .notification {
     flex-basis: 45%;
     height: auto;
+    /* please don't change 'position' */
     position: sticky;
     z-index: 99;
     box-shadow: $box-shadow;
@@ -48,9 +49,7 @@
                 &:hover {
                     box-shadow: $box-shadow-1;
                 }
-                &.active {
-                    content: "";
-                    transition: width 0.5s ease;
+                &.active a{
                     color: $main-color;
                     transition: all 300ms ease;
                     

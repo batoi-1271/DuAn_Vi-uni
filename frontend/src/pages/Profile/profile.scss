@@ -4,23 +4,27 @@
     flex-basis: 45%;
     height: auto;
 }
+
 // Header ProFile
 .profile {
     flex-basis: 45%;
-    height: auto;
+    // height: auto;
     &__header {
         display: flex;
         align-items: center;
         height: $header-height;
         background: $body-bg;
+        /* please don't change 'position' */
         position: fixed;
         z-index: 99;
+        /* there must be 'top' for .header */
         top: 0;
         width: 45%;
 
         .backProfile {
-            margin-left: 2rem;
+            margin-left: 0.5rem;
             height: 40px;
+            width: 40px;
             button {
                 width: inherit;
                 height: inherit;
@@ -47,10 +51,13 @@
         }
     }
         &__Info {
+            // height: auto;
             width: inherit;
             .infoContent {
+                /* please don't change 'position' */
                 position: relative;
-                height: 500px;
+                height: auto;
+                // min-height: 510px;
                 width: 100%;
 
                 &__Cover-img {
@@ -67,10 +74,9 @@
                 }
 
                 &__TextInfo {
-                    // width: 100%;
-                    height: 205px;
+                    height: auto;
                     width: 100%;
-                    position: absolute;
+                    // position: absolute;
                     padding: 0 30px;
 
                     .infoUser {
@@ -143,29 +149,32 @@
                 }
             }
 
-            .profileItems-menu {
-                .header-nav {
-                    @include flex(center, space-between);
-                    display: flex;
-                    flex: 1fr 1fr 1fr;
-                    align-content: center;
+            
+        }
+    }
 
-                    li {
-                        padding: 10px 40px;
-                        font-weight: 700;
-                        width: 33%;
-                        text-align: center;
+    .profileItems-menu {
+        width: 100%;
+        .header-nav {
+            @include flex(center, space-between);
+            display: flex;
+            flex: 1fr 1fr 1fr;
+            align-content: center;
 
-                        &.active {
-                            content: "";
-                            transition: width 0.5s ease;
-                            color: $main-color;
-                        }
+            li {
+                padding: 10px 40px;
+                font-weight: 700;
+                width: 33%;
+                text-align: center;
 
-                        &:hover {
-                            box-shadow: $box-shadow;
-                        }
-                    }
+                &.active a{
+                    content: "";
+                    transition: width 0.5s ease;
+                    color: $main-color;
+                }
+
+                &:hover {
+                    box-shadow: $box-shadow;
                 }
             }
         }

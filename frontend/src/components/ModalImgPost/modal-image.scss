@@ -1,0 +1,123 @@
+.lp-modal-image,
+.lp-modal-image * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.lp-modal-image {
+    width: 100%;
+    /* please don't change 'position' */
+    position: relative;
+
+    &>.image {
+        width: 100%;
+        object-fit: cover;
+        opacity: 1;
+        transition: opacity 0.6s ease;
+        -webkit-transition: opacity 0.6s ease;
+        -moz-transition: opacity 0.6s ease;
+        -o-transition: opacity 0.6s ease;
+
+        &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+
+    &>.modal {
+        justify-content: space-around;
+        display: none;
+        /* please don't change 'position' */
+        position: fixed;
+        padding-top: 100px;
+        /* there must be 'left' or 'top' for .modal */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(58, 64, 54, 0.9);
+        // transition-duration: 0.5s;
+        transition-property: background-color;
+        z-index: 99999;
+
+        &>.modal-content {
+            float: left;
+            margin-left: 140px;
+            // margin: auto;
+            display: block;
+            width: 70%;
+            max-width: 780px;
+        }
+
+        &>.caption {
+            float: right;
+            background-color: white;
+            display: block;
+            width: 27%;
+            max-width: 780px;
+            text-align: center;
+            // color: #ccc;
+            // padding: 10px 0;
+            height: 100vh;
+            /* please don't change 'position' */
+            position: absolute;
+            
+            // position: sticky;
+            overflow: scroll;
+        /* there must be 'right' or 'top' for .caption */
+
+            top: 0;
+            right: 0;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &>.close {
+            /* please don't change 'position' */
+            position: absolute;
+
+            /* there must be 'top' or 'left' for close */
+            top: 15px;
+            left: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: color 0.3s;
+            -webkit-transition: color 0.3s;
+            -moz-transition: color 0.3s;
+            -o-transition: color 0.3s;
+
+            &:hover,
+            &:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.lp-modal-image>.modal>.modal-content,
+.lp-modal-image>.modal>.caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .lp-modal-image>.modal>.modal-content {
+        width: 100%;
+    }
+}

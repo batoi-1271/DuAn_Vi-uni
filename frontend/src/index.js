@@ -5,7 +5,7 @@ import Viuni from './Viuni';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Viuni/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );

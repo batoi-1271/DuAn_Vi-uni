@@ -1,0 +1,115 @@
+@use "../../../scss/"as *;
+
+.PostModal {
+    &_header {
+        padding-top: 10px;
+        margin: auto;
+        @include flex(flex-start, space-between);
+        width: 95%;
+        height: 60px;
+        margin-bottom: 10px;
+
+        &_avatar {
+            border-radius: 100%;
+            height: 3em;
+            width: 3em;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 100% !important;
+            }
+        }
+
+        &_info {
+            width: 75%;
+            text-align: left;
+
+            &_username {
+                color: gray;
+                font-weight: initial;
+            }
+        }
+
+        &_more {
+            &_Content {
+                position: relative;
+
+                button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    transition: all 100ms ease;
+
+                    i {
+                        font-size: 1.2em;
+                    }
+
+                    &:hover {
+                        background-color: $body-bg;
+                        color: $main-color;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &_content {
+        text-align: left;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 25px;
+        &_status {
+            p {
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+        }
+
+        &_time {
+            margin-top: 20px;
+
+            p {
+                font-size: 1rem;
+                color: gray;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &_interactive {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        border-top: 1px solid rgb(238, 238, 238);
+        border-bottom: 1px solid rgb(238, 238, 238);
+
+        .interactive {
+            width: 20%;
+            display: flex;
+            align-items: center;
+
+            button {
+                border: none;
+                background: none;
+        
+                i {
+                  color: #1D2438;
+                  font-size: 20px;
+                  font-weight: 400;
+                  margin-right: 10px;
+                  cursor: pointer;
+                }
+              }
+        }
+    }
+}

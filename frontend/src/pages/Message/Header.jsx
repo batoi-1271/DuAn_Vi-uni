@@ -1,6 +1,5 @@
 import React from "react";
-import {Switch, BrowserRouter, Route } from "react-router-dom";
-
+import { Switch, BrowserRouter, Route } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -16,10 +15,9 @@ const Header = () => {
                   exact
                   component={AllNotification}
                 />
-                <Route
-                  path="/notifications/mention"
-                  component={Mention}
-                />
+                <Route 
+                  path="/notifications/mention" 
+                  component={Mention} />
               </Switch>
             </>
           )}

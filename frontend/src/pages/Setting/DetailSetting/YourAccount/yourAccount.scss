@@ -1,0 +1,61 @@
+@use "../../../../scss/" as *;
+
+#YourAccount, #menuAccount {
+    flex-basis: 65%;
+    border-left: 1px solid #bde0fe;
+
+}
+
+.YourAccount, .menuAccount {
+    &__header {
+        height: $header-height + 1.3rem;
+        padding-left: 20px;
+
+        h2 {
+            line-height: $header-height + 1.3rem;
+        }
+    }
+    &__describe {
+        padding-left: 20px;
+
+    }
+    &__main {
+        .header-nav {
+            margin-top: 20px;
+            li {
+                height: 90px;
+                @include flex(center, space-between);
+                transition: all 0.3s ease;
+                .icon {
+                    width: 10%;
+                    text-align: center;
+                    i {
+                        font-size: 1.5rem;
+                    }
+                }
+                .intro {
+                    width: 80%;
+                    h4 {
+                        font-weight: initial;
+                        font-size: 1.2rem;
+                    }
+                    p {
+                        color: #677681;
+                        font-size: 0.9rem;
+                    }
+                }
+                .arrow {
+                    text-align: center;
+                    font-size: 1.9rem;
+                    width: 10%;
+                }
+                &.active,
+                &:hover{
+                    border-right: 2px solid $main-color;
+                    background-color: $white;
+                    color: initial !important;
+                }
+            }
+        }
+    }
+}

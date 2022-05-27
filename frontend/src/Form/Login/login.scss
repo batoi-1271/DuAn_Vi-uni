@@ -3,9 +3,6 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-a {
-    color: $main-color;
-}
 .login {
     @include flex(center, space-between);
     width: 100%;
@@ -44,7 +41,14 @@ a {
             }
         }
         .form {
+            // margin: initial;
+            // padding: initial;
             width: 400px;
+            display: initial;
+            form {
+            width: 400px;
+
+            }
             .username input, .pass input {
                 margin-bottom: 20px;
                 border-radius: 10px;
@@ -75,7 +79,9 @@ a {
                       }
                 }
                 .forgotPass {
+
                     a {
+                        cursor: pointer;
                         font-weight: 500;
                     }
                 }
@@ -111,6 +117,11 @@ a {
                         box-shadow: none;
                     }
                 }
+            }
+        }
+        .textSignup {
+            a {
+                cursor: pointer;
             }
         }
         

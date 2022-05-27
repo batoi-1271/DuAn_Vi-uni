@@ -15,7 +15,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466"
+        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/281869074_727238868473215_7090323050632306506_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yd1-ZYh7LOUAX9X5dX7&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9c461f65GIkhqJlU2VJg4pPwdrgY5w8oji4B19gQ-dMg&oe=6293A075"
       />
     ),
   },
@@ -26,7 +26,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466"
+        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/281869074_727238868473215_7090323050632306506_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yd1-ZYh7LOUAX9X5dX7&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9c461f65GIkhqJlU2VJg4pPwdrgY5w8oji4B19gQ-dMg&oe=6293A075"
       />
     ),
   },
@@ -37,7 +37,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466"
+        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/281869074_727238868473215_7090323050632306506_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yd1-ZYh7LOUAX9X5dX7&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9c461f65GIkhqJlU2VJg4pPwdrgY5w8oji4B19gQ-dMg&oe=6293A075"
       />
     ),
   },
@@ -48,7 +48,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466"
+        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/281869074_727238868473215_7090323050632306506_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yd1-ZYh7LOUAX9X5dX7&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9c461f65GIkhqJlU2VJg4pPwdrgY5w8oji4B19gQ-dMg&oe=6293A075"
       />
     ),
   },
@@ -59,7 +59,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/278366916_1385487798583512_8287024958249099446_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=H5ZHyrrTLEAAX9daaZ9&_nc_ht=scontent.fhan14-2.fna&oh=00_AT-kI68r6kGE3gKkDWbpYNTZo9tN8T4Om64cvwdPIwwrLg&oe=62630466"
+        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/281869074_727238868473215_7090323050632306506_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yd1-ZYh7LOUAX9X5dX7&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9c461f65GIkhqJlU2VJg4pPwdrgY5w8oji4B19gQ-dMg&oe=6293A075"
       />
     ),
   }
@@ -92,7 +92,7 @@ const LeftPane = () => {
 
   return (
     <>
-      {pathname !== "/message" && (
+      {pathname !== "/message" && pathname !== "/settings/security_and_account_access" && pathname !== "/settings/account/data" && pathname !== "/settings" && pathname !== "/settings/account" && pathname !== "/settings/password"  && (
         <div ref={headerRef} className="paneLeft" id="paneLeft">
           <div className="paneLeft__wrap container">
             <div className="logo">
@@ -117,7 +117,7 @@ const LeftPane = () => {
                 />
                 
                 {isOpen && (
-                  <div className="dropContainer">
+                  <div className="dropContainerSearch">
                     <div className="dropList">
                     <div className="title">
                       <h4>Recent searches</h4>

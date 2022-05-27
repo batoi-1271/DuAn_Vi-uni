@@ -1,0 +1,32 @@
+@use '../../scss/' as *;
+
+.formForgot{
+    width: 400px;
+    .nameFormgot{
+        height: 350px;
+        flex: 1;
+    }
+    .form-inputFormgot{
+        padding-left: 20px;
+        height: 40px;
+        width: 100%;
+        border-radius: 10px;
+        font-size: 14px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        
+        &:focus{
+            border: 1px solid $main-color;
+        }
+    }
+  
+  
+    .nextFormgot{
+        margin-top: 50px;
+        width: 100%;
+        .btnNextFormgot{
+            @include btnForm;
+        }
+    }
+ }
+ 

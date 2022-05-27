@@ -2,6 +2,7 @@ import React, {useRef } from "react";
 import "../Notification/notification.scss";
 import {Link, useLocation } from "react-router-dom";
 
+
 const headerAc = [
   {
     display: "All",
@@ -15,10 +16,10 @@ const headerAc = [
 
 const HeaderNoti = () => { 
   const { pathname } = useLocation();
-
   const active = headerAc.findIndex((e) => e.path === pathname);
 
   return (
+    
     <div className="notification">
       <div className="notification__header">
         <h2>Notification</h2>

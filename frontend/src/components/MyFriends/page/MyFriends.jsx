@@ -53,6 +53,7 @@ const MyFriends = () => {
         </div>
 
       </div>
+      
       <div className="friends-lish">
         <div className="friends-lish-profile">
           <div className="friends-lish-avt">

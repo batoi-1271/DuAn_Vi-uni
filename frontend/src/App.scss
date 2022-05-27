@@ -16,7 +16,6 @@
 html {
     font-size: 100%;
     
-
     @include tablet {
         font-size: 80%;
     }
@@ -30,7 +29,6 @@ body {
     font-family: $font-family;
     font-weight: 400;
     line-height: 1.5;
-
     background-color: $body-bg;
     color: $txt-color;
 
@@ -48,11 +46,6 @@ a {
     color: unset;
 }
 
-@media (hover: hover) {
-    a:hover {
-        color: $main-color;
-    }
-}
 
 button,
 input {

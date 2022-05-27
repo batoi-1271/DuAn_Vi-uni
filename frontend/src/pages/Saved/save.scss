@@ -2,96 +2,36 @@
 .cards {
     flex-basis: 45%;
     height: auto;
-    .card-header{
-        display: flex;
-        align-items: center;
+    .card-header {
+        @include flex(center, space-between);
         height: $header-height;
-        justify-content: space-between;
         background: $body-bg;
+        /* please don't change 'position' */
         position: fixed;
         z-index: 99;
+        /* there must be 'top' for .card-header */
         top: 0;
         width: 45%;
         padding: 0 2rem 0 2rem;
         box-shadow: $box-shadow;
-        .card-text{
+        .card-text {
             cursor: pointer;
-            h3{
+            h3 {
                 font-size: 20px;
                 font-weight: 700;
             }
         }
-        .post-dot{
+        .post-dot {
             cursor: pointer;
             padding: 10px 15px;
             border-radius: 100%;
             text-align: center;
-            &:hover{
+            &:hover {
                 box-shadow: $box-shadow;
-
             }
         }
     }
-    .save-list{
+    .save-list {
         margin-top: 64px;
-        .content-post{
-            padding: 10px 10px 30px 30px;
-
-            display: flex;
-            cursor: pointer;
-            .post-avatar{
-                width: 8%;
-                height: auto;
-                cursor: pointer;
-                img {
-                    @include imgAvatar;
-                    
-                }
-            }
-            .post-info{
-                width: 92%;
-                height: auto;
-                padding-left: 20px;
-                .post-info-header{
-                    display: flex;
-                    justify-content: space-between;
-                    padding: 5px 0px;
-                    .post-name{
-                        display: flex;
-                        p{
-                            padding-left: 5px;
-                            opacity: 0.6;
-                        }
-                    }
-                }
-                .post-content{
-                    .post-content-img{
-                        padding-top:10px ;
-                        img{
-                            border-radius: 15px;
-    
-                        }
-                    }
-                }
-                .post-interactive{
-                    padding: 5px 0 20px 5px;
-                    display: flex;
-                    align-items: center;
-                    text-align: center;
-                    i{
-                        
-                        display: flex;
-                        width: 33%;
-                        cursor: pointer;
-                        color: rgb(168, 148, 148);
-                        p{
-                            padding-left: 15px;
-                            color: black;
-                        }
-                    }
-                }
-            }
-    
-        }
     }
 }

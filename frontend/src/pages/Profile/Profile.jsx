@@ -1,9 +1,10 @@
 import React from "react";
-import "../Profile/profile.scss";
-import { BrowserRouter, Route, Link, useLocation } from "react-router-dom";
+import { BrowserRouter, Route} from "react-router-dom";
+
 import HeaderProfile from "./HeaderProfile";
 import RouterProfile from "./RouterProfile";
 
+import "../Profile/profile.scss";
 
 const Profile = () => {
   return (

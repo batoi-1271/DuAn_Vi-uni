@@ -1,11 +1,14 @@
 @use '../../scss/'as *;
 
 .moreRight {
+    /* please don't change 'position' */
     position: relative;
 
     .dropContainer {
+        /* please don't change 'position' */
         position: absolute;
         bottom: 100%;
+        /* there must be 'left' or 'right' for .header */
         right: 0;
         left: 0;
         height: 200px;
@@ -34,7 +37,9 @@
                 }
                 &::after {
                     content: "";
+                    /* please don't change 'position' */
                     position: absolute;
+                    /* there must be 'left' or 'bottom' for .header */
                     bottom: 0;
                     left: 50%;
                     transform: translateX(-50%);
@@ -57,7 +62,9 @@
 
 
 .dropAccount {
+    /* please don't change 'position' */
     position: absolute;
+    /* there must be 'bottom' for .dropAccount */
     bottom: 130%;
     right: 0;
     left: 0;
@@ -72,15 +79,17 @@
     // box-shadow: $box-shadow;
 
     &::after{
+        /* please don't change 'position' */
         position: absolute;
         content: "";
+        /* there must be 'left' and 'bottom' for .header */
         bottom: -40px;
         left: 50%;
         transform: translateX(-50%);
         border-width: 20px 20px;
         border-style:solid;
         border-color: $white transparent transparent transparent;
-        z-index: 999999;
+        z-index: 999;
     }
  
     .accountTog {

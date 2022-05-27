@@ -31,11 +31,11 @@ const HeaderProfile = () => {
       {pathname.includes("/profile") && (
         <div className="profile">
           <div className="profile__header">
-          <div className="backProfile">
+            <div className="backProfile">
               <button type="button" onClick={history.goBack}>
-              <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-left"></i>
               </button>
-        </div>
+            </div>
             <div className="profileName-user">
               <h3>Dương Ngô Tùng</h3>
               <p>3 Posts </p>
@@ -49,11 +49,12 @@ const HeaderProfile = () => {
                   alt=""
                 />
               </div>
+
               <div className="infoContent__TextInfo">
                 <div className="infoUser">
                   <div className="infoUser__userAvatar">
                     <img
-                      src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg"
+                      src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/273716337_5253722654673043_8378353710474997808_n.jpg?_nc_cat=108&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=v37aVhKpA_UAX8KafEZ&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8Y3uGQvEdNVfmVJCTGSH9XIxRoEKYtF5k1vEYx_F1zbg&oe=627EADFA"
                       alt=""
                     />
                   </div>
@@ -76,10 +77,10 @@ const HeaderProfile = () => {
                 </div>
                 <div className="dateCreate">
                   <span>
-                  <i class="fas fa-birthday-cake"/> Born October 14, 2001
+                    <i class="fas fa-birthday-cake" /> Born October 14, 2001
                   </span>
                   <span>
-                  <i class="fas fa-calendar-alt"></i> Joined December
+                    <i class="fas fa-calendar-alt"></i> Joined December
                     2021
                   </span>
                 </div>
@@ -92,8 +93,8 @@ const HeaderProfile = () => {
                   </Link>
                 </div>
               </div>
-            </div>
-            <div className="profileItems-menu">
+
+              <div className="profileItems-menu">
               <ul className="header-nav">
                 {headerAc.map((e, i) => (
                   <li key={i} className={`${i === active ? "active" : ""}`}>
@@ -102,6 +103,8 @@ const HeaderProfile = () => {
                 ))}
               </ul>
             </div>
+            </div>
+            
           </div>
         </div>
       )}

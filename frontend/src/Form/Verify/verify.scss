@@ -1,0 +1,149 @@
+@use '../../scss/'as *;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+.modalContainer_Verify {
+    /* please don't change 'position' */
+    position: fixed;
+    /* there must be 'inset' for .modalContainer_Verify */
+    inset: 0;
+    z-index: 999;
+    @include flex(center, center);
+    background-color: rgba($color: #000000, $alpha: 0.35);
+    --growth-from: 0.7;
+    --growth-to: 1;
+    animation: growth linear 0.1s;
+
+    .modalVerify {
+        background-color: $body-bg;
+        height: 670px;
+        width: 560px;
+        padding: 2rem;
+        /* please don't change 'position' */
+        position: absolute;
+        /* there must be 'left' for .modalVerify */
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 20px;
+        animation: fadeIn ease-in 0.3s;
+        // animation: showing-up cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
+
+        &_header {
+            /* please don't change 'position' */
+            position: relative;
+            margin-bottom: 50px;
+
+            img {
+                /* please don't change 'position' */
+                position: absolute;
+                /* there must be 'top' and 'right' for .modal */
+                right: 50%;
+                top: 0;
+                height: 70px;
+                width: 40px;
+                object-fit: cover;
+            }
+
+            .close {
+                /* please don't change 'position' */
+                position: absolute;
+                /* there must be 'top' and 'left' for .close */
+                top: 0;
+                left: 0;
+                width: 25px;
+                height: 25px;
+                border: none;
+                background: none;
+                cursor: pointer;
+                font-size: 25px;
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+
+        &_content {
+
+            padding: 40px;
+
+            .form {
+                width: 100%;
+
+                .form-input {
+                    padding-left: 20px;
+                    height: 40px;
+                    width: 100%;
+                    border-radius: 10px;
+                    font-size: 14px;
+                    margin-top: 10px;
+                    border: 1px solid #ccc;
+
+                    &:focus {
+                        border: 1px solid $main-color;
+                    }
+                }
+
+                .text-date {
+                    margin: 20px 0;
+
+                    p {
+                        line-height: 20px;
+                        margin-top: 10px;
+                        font-size: 14px;
+                    }
+                }
+
+                .dateRegister {
+
+                    margin-bottom: 20px;
+
+                    .form-date {
+                        height: 40px;
+                        padding-left: 10px;
+                    }
+                }
+
+                .nextRegister {
+                    margin-top: 50px;
+                    width: 100%;
+
+                    .btnNext {
+                        @include btnForm;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@keyframes showing-up {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 5%;
+        opacity: 1;
+    }
+}
