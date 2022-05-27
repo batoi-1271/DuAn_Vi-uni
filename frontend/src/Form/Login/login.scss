@@ -41,7 +41,14 @@ body {
             }
         }
         .form {
+            // margin: initial;
+            // padding: initial;
             width: 400px;
+            display: initial;
+            form {
+            width: 400px;
+
+            }
             .username input, .pass input {
                 margin-bottom: 20px;
                 border-radius: 10px;
