@@ -11,6 +11,7 @@ import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Badge from '@mui/material/Badge';
 import Avatar from '@mui/material/Avatar';
+import { touchRippleClasses } from '@mui/material';
 
 const headerNav = [
   {
@@ -42,7 +43,10 @@ const headerNav = [
 
 ]
 
-
+const logout = () =>{
+  localStorage.removeItem("accessToken")
+  window.location.reload(false);
+}
 const RightPane = () => {
 
   // STYLE ACTIVE AVATAR
@@ -77,7 +81,7 @@ const RightPane = () => {
   }));
 
   const { pathname } = useLocation();
-
+  
   const headerRef = useRef(null);
 
   const [modal, setModal] = useState(false);
@@ -90,7 +94,7 @@ const RightPane = () => {
   const toggling = () => setIsOpen(!isOpen);
 
   const active = headerNav.findIndex(e => e.path === pathname);
-
+  
   return (
     <div ref={headerRef} className="header" id='header'>
       <div className="header__wrap container">
@@ -133,6 +137,7 @@ const RightPane = () => {
 
           <div className='post'>
             <Button variant="contained" onClick={() => Toggle()}>Post</Button>
+       
             <Modal show={modal} close={Toggle} title="Create post">
               <PostUser />
             </Modal>
@@ -161,8 +166,10 @@ const RightPane = () => {
                 </div>
                 <ul className='itemAcc'>
                   <li className='add'><Link to="#">Add an existing account</Link></li>
-                  <li className='logout'><Link to="#">Log out <span>@DuongNgoTug</span></Link></li>
+                  <li className='logout' onClick={() => {logout()}} ><Link to="#" >Log out <span>@DuongNgoTug</span></Link></li>
+              
                 </ul>
+             
               </div>
             )}
 
@@ -210,6 +217,7 @@ const RightPane = () => {
             <li><Link to="#">Ads info</Link></li>
             <li><Link to="#">More</Link></li>
             <li><Link to="#">© 2022 Vi-Uni, Inc.</Link></li>
+          
           </ul>
           
       </div>

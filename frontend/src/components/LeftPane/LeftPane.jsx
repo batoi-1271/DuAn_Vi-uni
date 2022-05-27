@@ -157,7 +157,9 @@ const LeftPane = () => {
                     <div className="username">@{e.username}</div>
                   </div>
                   <div className="addFr">
+              
                     {isAdded ? (
+              
                       <Button
                         variant="contained"
                         onClick={cancelFriend}
@@ -166,6 +168,7 @@ const LeftPane = () => {
                         Cancel
                       </Button>
                     ) : (
+                      
                       <Button
                         variant="contained"
                         className="add-btn"
