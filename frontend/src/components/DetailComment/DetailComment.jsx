@@ -136,6 +136,8 @@ const DetailComment = () => {
                     <i class="fal fa-ellipsis-h-alt"></i>
                 </div>
             </div>
+            <button className="btn-MoreCmt">View more comment</button>
+
         </>
     )
 }
