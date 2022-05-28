@@ -54,7 +54,7 @@ const HeaderProfile = () => {
                 <div className="infoUser">
                   <div className="infoUser__userAvatar">
                     <img
-                      src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/273716337_5253722654673043_8378353710474997808_n.jpg?_nc_cat=108&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=v37aVhKpA_UAX8KafEZ&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8Y3uGQvEdNVfmVJCTGSH9XIxRoEKYtF5k1vEYx_F1zbg&oe=627EADFA"
+                      src="https://scontent.fhan2-4.fna.fbcdn.net/v/t1.6435-9/61126501_562569430817430_3500967725759463424_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=T_NcSF-1hRgAX8UanoN&_nc_ht=scontent.fhan2-4.fna&oh=00_AT8-3T42UKKeM0X2XmdsaKpeOLHL8OQdj7-j-TviaCvREQ&oe=62B5316A"
                       alt=""
                     />
                   </div>
