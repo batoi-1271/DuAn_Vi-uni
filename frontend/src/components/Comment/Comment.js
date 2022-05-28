@@ -52,7 +52,6 @@ function Accordion(props) {
                 style={{ maxHeight: `${setHeight}` }}
                 className="accordion__content">
                 <DetailComment/>
-                <button className="btn-MoreCmt">View more comment</button>
             </div>
         </div>
     );
