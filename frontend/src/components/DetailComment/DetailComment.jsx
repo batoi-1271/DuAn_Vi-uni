@@ -26,10 +26,9 @@ const DetailComment = (props) => {
       }
       const id = 15
     useEffect(()=>{
-           
-        const result =  fetch(`http://localhost:80/user/me`,{
+        const result =  fetch(`http://viuni.tk/user/me`,{
             headers:{
-             'Authorization': 'Bearer' + localStorage.getItem('accessToken'),
+             'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
            }
 
          })
@@ -49,7 +48,7 @@ const DetailComment = (props) => {
            const fectchData = async () =>{
               
            
-              const result = await fetch(`http://localhost:80/comment/all/${idPost}`,{
+              const result = await fetch(`http://viuni.tk/comment/all/${idPost}`,{
                     method: "POST",  
                      headers:{
                       'Authorization': 'Bearer ' + accessToken,
@@ -73,7 +72,7 @@ const DetailComment = (props) => {
    const RequestComment = async () =>{
     const contentCmt = {content}
  
-    const result = await fetch(`http://localhost:80/comment/${idPost}`,{
+    const result = await fetch(`http://viuni.tk/comment/${idPost}`,{
         method: "POST",
         headers:{
             'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
@@ -105,10 +104,10 @@ const DetailComment = (props) => {
                      }
                        console.log(newContent)
                     return {...prev, content:  nextcontent}
-                    // return {...prev};
+                
                 } else {
-              
-                    return {...prev, content:  newContent}
+                    const old = [...prev.content, result].sort((a, b) => new Date(b.created_date) - new Date(a.created_date));
+                    return {...prev, content:  old}
                 }
             })
               

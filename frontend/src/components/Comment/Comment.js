@@ -17,7 +17,7 @@ function Accordion(props) {
         );
     }
    const idpost = props.dataFromParent;
-
+     
     return (
         <div className="accordion__section">
             <div className="group-Interactive">
@@ -49,7 +49,7 @@ function Accordion(props) {
             </div>
             <div
                 ref={content}
-                style={{ maxHeight: `${setHeight}` }}
+                // style={{ maxHeight: `${setHeight}` }}
                 className="accordion__content">
                 <DetailComment  dataFromParent={idpost} />
             </div>

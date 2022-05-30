@@ -24,7 +24,8 @@ export default class Login extends React.Component {
             body:JSON.stringify(this.state),
             redirect:'follow'
         };
-        fetch("http://localhost:80/auth/login",requestOptions)
+        
+        fetch("http://viuni.tk/auth/login",requestOptions)
         .then(response => {
            
                 if(response.ok){

@@ -54,7 +54,7 @@ const  fetchs = (urls,headers) => {
           },
           body: formData
       };
-      await  fetch("http://localhost:80/upload",postFileData)
+      await  fetch("http://viuni.tk/upload",postFileData)
       .then(response => {
          
               if(response.ok){
@@ -84,7 +84,7 @@ const  fetchs = (urls,headers) => {
     
        body:JSON.stringify(post)
   };
-  fetchs("http://localhost:80/post",postData)
+  fetchs("http://viuni.tk/post",postData)
 
 
 
@@ -108,10 +108,10 @@ const  fetchs = (urls,headers) => {
       
          body:JSON.stringify(post)
     };
-    fetchs("http://localhost:80/post",postData)
+    fetchs("http://viuni.tk/post",postData)
      }
     
-
+     window.location.reload();
 
 }
 

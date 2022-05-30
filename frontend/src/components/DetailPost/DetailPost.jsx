@@ -22,7 +22,7 @@ const DetailPost = () => {
          "index" : 0,
          "size": 1
     })
-    
+   
     const scrollToEnd = () =>{
       // setdemo(demo + 1)
       const size = page.size +6;
@@ -30,20 +30,20 @@ const DetailPost = () => {
       console.log(size)
      }
      window.onscroll = function(){
-       if(window.innerHeight + document.documentElement.scrollTop >=
+       if(window.innerHeight + document.documentElement.scrollTop >
          document.documentElement.offsetHeight
          ){
            scrollToEnd()
            setPageCount(totalPage)
-
+            
          }
      }
-  
+{  console.log(  document.documentElement.offsetHeight)}
   
     useEffect(async ()=>{
     const paging = page
     console.log(paging)
-  await fetch("http://localhost:80/post/all/me",{
+  await fetch("http://viuni.tk/post/all/me",{
         method: "POST",  
          headers:{
           'Authorization': 'Bearer ' + accessToken,
@@ -130,7 +130,7 @@ const DetailPost = () => {
                   <button onClick={toggling}>
                     <i class="fas fa-ellipsis-h"></i>
                   </button>
-                  {isOpen && <MorePost />}
+                  {isOpen && <MorePost dataFromParent= {arr[1].author.last_name + arr[1].author.first_name}/>}
                 </div>
               </div>
             </OutsideClickHandler>
@@ -138,7 +138,7 @@ const DetailPost = () => {
           <div className="post-content">
             <div className="post-content-title">
             <p>{arr[1].content}</p>
-            <p>{arr[1].id}</p>
+
             </div>
 
             <div className="post-content-img">
