@@ -10,7 +10,7 @@ import DetailComment from "../../DetailComment/DetailComment";
 const PostModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggling = () => setIsOpen(!isOpen);
-
+  
   return (
     <section>
       <div className="PostModal">
@@ -85,7 +85,7 @@ const PostModal = () => {
             </div>
       </div>
       {/* DETAIL COMMENT  */}
-      <DetailComment/>
+      <DetailComment />
 
     </section>
   );

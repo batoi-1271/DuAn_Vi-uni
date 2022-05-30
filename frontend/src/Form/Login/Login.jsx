@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import bgLogin from "../../assets/bgLogin.jpg";
 import logo from "../../assets/logo.png";
 import "./login.scss";
-import App from "../../App";
+import App from "../../Viuni";
 export default class Login extends React.Component {
     constructor(props){
         super(props)
@@ -24,7 +24,7 @@ export default class Login extends React.Component {
             body:JSON.stringify(this.state),
             redirect:'follow'
         };
-        fetch("http://localhost:80/auth/login",requestOptions)
+        fetch("http://viuni.tk/auth/login",requestOptions)
         .then(response => {
            
                 if(response.ok){

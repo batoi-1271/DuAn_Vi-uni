@@ -1,6 +1,5 @@
 import React, {useState } from "react";
 import "./home.scss";
-
 import OutsideClickHandler from "react-outside-click-handler";
 import { Link } from "react-router-dom";
 function PostUser () {
@@ -17,7 +16,7 @@ function PostUser () {
    const onOptionClicked = (value) =>  () => {
      setSelectedOption(value);
     setIsOpen(false);
-    console.log(selectedOption);
+
   };
   const setParams = (event)=>{
     setData({[event.target.name] : event.target.value})
@@ -25,80 +24,9 @@ function PostUser () {
 
 
 const[content,setContent]=useState('')
-const[address,setAddress]=useState('')
-
-const[privacy,setPrivacy]=useState('')
-
-// const   RequestUpload = async  () => {
-//   const file = document.getElementById("file");
-//   const formData = new FormData();
-//   for (let index = 0; index < file.files.length; index++) {
-//       formData.append('files', file.files[index]);  
-//   }
-//      if(file.files[0] != null){
-//       var postFileData = {
-//           method: "POST",
-//           headers:{
-//               'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
-//               //  "Content-Type": "multipart/form-data; boundary=----WebKitFormBoundaryDZNoUooBnBqrBPqT"
-//           },
-//           body: formData
-//       };
-//       await  fetch("http://localhost:80/upload",postFileData)
-//       .then(response => {
-         
-//               if(response.ok){
-//                   return response.json()
-//               }
-//               throw Error(response.status)
-          
-//       })
-//       .then(result => {
-//          setImage(result[0].id)
-         
-//       })
-//       .catch(error => {
-//           console.log('error',error)
-                  
-//       });
-     
-//      }
- 
-   
-  
-//     var  postData = {
-//       method: "POST",
-//       headers:{
-//           'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
-//           "Content-Type":"application/json"
-         
-//       },
-    
-//        body:JSON.stringify(data)
-//   };
-
-//    await  fetch("http://localhost:80/post",postData)
-//   .then(response => {
-     
-//           if(response.ok){
-//               return response.json()
-//           }
-//           throw Error(response.status)
-      
-//   })
-//   .then(result => {
-
-     
-//   })
-//   .catch(error => {
-//       console.log('error',error)
-              
-//   });
 
 
 
-
-// }
 const  fetchs = (urls,headers) => {
   fetch(urls,headers)
           . then(response => { 
@@ -126,7 +54,7 @@ const  fetchs = (urls,headers) => {
           },
           body: formData
       };
-      await  fetch("http://localhost:80/upload",postFileData)
+      await  fetch("http://viuni.tk/upload",postFileData)
       .then(response => {
          
               if(response.ok){
@@ -156,21 +84,8 @@ const  fetchs = (urls,headers) => {
     
        body:JSON.stringify(post)
   };
-  fetchs("http://localhost:80/post",postData)
-  //    fetch("http://localhost:80/post",postData)
-  // .then(response => {
-     
-  //         if(response.ok){
-  //             return response.json()
-  //         }
-  //         throw Error(response.status)
-      
-  // })
+  fetchs("http://viuni.tk/post",postData)
 
-  // .catch(error => {
-  //     console.log('error',error)
-              
-  // });
 
 
       })
@@ -193,7 +108,7 @@ const  fetchs = (urls,headers) => {
       
          body:JSON.stringify(post)
     };
-    fetchs("http://localhost:80/post",postData)
+    fetchs("http://viuni.tk/post",postData)
      }
     
 
@@ -222,7 +137,8 @@ const  fetchs = (urls,headers) => {
           </div>
           <div className="contentPost">
             <div className="contentPost__user">
-              <textarea type="text" placeholder="What's happening?" />
+            <textarea type="text" placeholder="What's happening?" name = "content"   onChange={(e)=>setContent(e.target.value)} 
+             />
             </div>
 
             <OutsideClickHandler
@@ -232,7 +148,7 @@ const  fetchs = (urls,headers) => {
             >
               <div className="privacy">
                 <div className="select" onClick={toggling}>
-                  {selectedOption ? selectedOption + " can reply" : "Everyone"}
+                {selectedOption ? selectedOption.name + ' can reply' : 'Everyone'}
                 </div>
                 {isOpen && (
                   <div className="dropContainerPrivate">
@@ -244,13 +160,14 @@ const  fetchs = (urls,headers) => {
                           can always reply.
                         </p>
                       </div>
-                      {options.map((option) => (
-                        <div
-                          className="items"
-                          onClick={onOptionClicked(option)}
-                          key={Math.random()}
-                        >
-                          {option}
+                      {privicys.map((privicy) => (
+                    <div
+                      className="items"
+                      onClick=  {onOptionClicked(privicy)}
+                      key={privicy.id}
+                      
+                    >
+                  {privicy.name}
                         </div>
                       ))}
                     </div>
@@ -263,18 +180,23 @@ const  fetchs = (urls,headers) => {
         <div className="iconPost">
           <div className="content">
             <div className="icon">
-              <a href="">
-                <i class="fas fa-image"></i>
-              </a>
-              <a href="">
-                <i class="fas fa-map-marker-alt"></i>
-              </a>
-              <a href="">
-                <i class="far fa-laugh"></i>
-              </a>
+              {/* <a href="">
+              <i class="fas fa-image"></i>
+            </a> */}
+                <input type="file" id = "file" multiple />
+            <a href="">
+              <i class="fas fa-map-marker-alt"></i>
+            </a>
+        
+            <a href="">
+            <i class="far fa-laugh"></i>
+            </a>
             </div>
             <div className="btnPost">
-              <Button variant="contained">Post</Button>
+             {/* <input type="button" name="" id="" variant="contained" value="send"   onClick = {sendData}/> */}
+            {/* <input type="button" name="" id="" variant="contained" value="send"  onClick={renData}/> */}
+            <button type="button" onClick={sendData}  variant="contained" >Post</button>
+            {/* <Button variant="contained"  onClick = {sendData}>Post </Button> */}
             </div>
           </div>
         </div>

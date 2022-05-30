@@ -1,5 +1,9 @@
-import React, {useState } from "react";
-import "./home.scss";
+import React, { useState, useEffect } from "react";
+
+import FadeLoader from "react-spinners/FadeLoader";
+import { css } from "@emotion/react";
+
+import DetailPost from '../../components/DetailPost/DetailPost'
 import PostUser from "./PostUser";
 
 import "./home.scss";

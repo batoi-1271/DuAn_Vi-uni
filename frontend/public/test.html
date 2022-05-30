@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let cmts = {
+        "content": [
+            {
+                "id": 2,
+                "content": "11111111111",
+                "created_date": "2022-05-28T07:29:42.537+00:00",
+                "author": {
+                    "id": 3,
+                    "username": "clone1",
+                    "last_name": "Nguyễn Sỹ ",
+                    "first_name": "Hoàng",
+                    "avatar_image": {
+                        "id": 24,
+                        "link_image": "https://res.cloudinary.com/viuni/image/upload/v1648223671/bnzxscsqdt9dumujsnr0.png"
+                    }
+                },
+                "image": null
+            },
+            {
+                "id": 30,
+                "content": "Bai viet lastest",
+                "created_date": "2022-05-28T17:17:47.171+00:00",
+                "author": {
+                    "id": 1,
+                    "username": "admin",
+                    "last_name": "Nguyễn Gia",
+                    "first_name": "Trường",
+                    "avatar_image": {
+                        "id": 12,
+                        "link_image": "https://res.cloudinary.com/viuni/image/upload/v1648222897/co0r2uq0khne1l23gc49.jpg"
+                    }
+                },
+                "image": null
+            }
+        ],
+        "pageable": {
+            "sort": {
+                "empty": true,
+                "unsorted": true,
+                "sorted": false
+            },
+            "offset": 0,
+            "pageNumber": 0,
+            "pageSize": 5,
+            "paged": true,
+            "unpaged": false
+        },
+        "last": true,
+        "totalPages": 1,
+        "totalElements": 4,
+        "size": 5,
+        "number": 0,
+        "sort": {
+            "empty": true,
+            "unsorted": true,
+            "sorted": false
+        },
+        "first": true,
+        "numberOfElements": 4,
+        "empty": false
+    }
+
+
+    const data = {
+        id: 1,
+        content: 'content',
+        created_at: '2022-05-28T07:29:42.537+00:00',
+        author: {
+            id: 3,
+            username: 'clone1',
+            last_name: 'Nguyễn Sỹ ',
+            first_name: 'Hoàng',
+            avatar_image: {
+                id: 24,
+                link_image: 'https://res.cloudinary.com/viuni/image/upload/v1648223671/bnzxscsqdt9dumujsnr0.png'
+            }
+        },
+        image: null
+    }
+
+    let all = [...cmts.content, data]
+    // all.map((item, i) => {
+    //     console.log(item);
+    //     return item
+    // })
+    //all.push(data)
+    console.log('All: ', all);
+
+    </script>
+</body>
+</html>

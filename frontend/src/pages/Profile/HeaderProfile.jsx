@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import "./profile.scss";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import ButtonEdit from "./Button/ButtonEdit";
@@ -26,10 +26,64 @@ const HeaderProfile = () => {
   const history = useHistory();
 
   const active = headerAc.findIndex((e) => e.path === pathname);
+
+  const [user,setUser] = useState();
+  
+useEffect(()=>{
+         
+    
+         
+      
+         const result =  fetch(`http://viuni.tk/user/me`,{
+                headers:{
+                 'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
+               }
+
+             })
+                 .then(response  => {
+                     if(response.ok){
+                         return response.json()
+                     }
+                     throw Error(response.status)
+                 })
+                 .then((result) => {
+                  setUser(result)
+                  console.log(result)
+               
+                    
+                 })
+      
+        
+      
+     
+
+ },[0]);
+  const d = user != null ? new Date(user.created_date) : null;
+  const bird =  user != null ? new Date(user.dob) : null;
+ const demo = {
+  "id": 3,
+  "username": "clone1",
+  "gender": true,
+  "dob": "2001-01-01",
+  "bio": null,
+  "created_date": "2022-03-07T16:57:24.926+00:00",
+  "last_name": "Nguyễn Sỹ ",
+  "first_name": "Hoàng",
+  "avatar_image": {
+      "id": 24,
+      "link_image": "https://res.cloudinary.com/viuni/image/upload/v1648223671/bnzxscsqdt9dumujsnr0.png"
+  },
+  "cover_image": null,
+  "hometown": null,
+  "current_city": null
+}
+{console.log(demo.username)}
   return (
     <>
       {pathname.includes("/profile") && (
-        <div className="profile">
+         
+        //  Object.entries(user.content).map((arr,i) => 
+        user != null ?  <div className="profile">
           <div className="profile__header">
             <div className="backProfile">
               <button type="button" onClick={history.goBack}>
@@ -37,7 +91,7 @@ const HeaderProfile = () => {
               </button>
             </div>
             <div className="profileName-user">
-              <h3>Dương Ngô Tùng</h3>
+              <h3>{user.last_name  != null ? user.last_name : null} {user.first_name  != null ? user.first_name : null}</h3>
               <p>3 Posts </p>
             </div>
           </div>
@@ -45,7 +99,7 @@ const HeaderProfile = () => {
             <div className="infoContent">
               <div className="infoContent__Cover-img">
                 <img
-                  src="https://images.unsplash.com/photo-1640622308238-70e5f22fe0be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                  src={user.cover_image != null ? user.cover_image : null}
                   alt=""
                 />
               </div>
@@ -54,7 +108,7 @@ const HeaderProfile = () => {
                 <div className="infoUser">
                   <div className="infoUser__userAvatar">
                     <img
-                      src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/273716337_5253722654673043_8378353710474997808_n.jpg?_nc_cat=108&ccb=1-6&_nc_sid=8bfeb9&_nc_ohc=v37aVhKpA_UAX8KafEZ&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8Y3uGQvEdNVfmVJCTGSH9XIxRoEKYtF5k1vEYx_F1zbg&oe=627EADFA"
+                      src={user.avatar_image != null ? user.avatar_image.link_image : null}
                       alt=""
                     />
                   </div>
@@ -68,20 +122,20 @@ const HeaderProfile = () => {
                   </div>
                 </div>
                 <div className="userName">
-                  <h3>Dương Ngô Tùng</h3>
-                  <p>@DngNgTng1</p>
+                  <h3></h3>
+                  {/* <p>@DngNgTng1</p> */}
                 </div>
                 <div className="bio">
                   {/* <p></p> */}
-                  <p>Ra xã hội làm ăn bươn chải, liều thì ăn nhiều, không liều thì ăn ít. Muốn thành công thì phải chấp nhận trải qua đắng cay ngọt bùi.</p>
+                  <p>{user.bio  != null ? user.bio : null}</p>
                 </div>
                 <div className="dateCreate">
                   <span>
-                    <i class="fas fa-birthday-cake" /> Born October 14, 2001
+                    <i class="fas fa-birthday-cake" /> Born  {bird  != null ? bird.getDate() : null}/{bird  != null ? bird.getMonth()+1 : null}/{bird  != null ? bird.getFullYear() : null}
                   </span>
                   <span>
-                    <i class="fas fa-calendar-alt"></i> Joined December
-                    2021
+                    <i class="fas fa-calendar-alt"></i> Joined  {d  != null ? d.getDate() : null}/{d  != null ? d.getFullYear() : null}
+                    
                   </span>
                 </div>
                 <div className="friends">
@@ -107,6 +161,7 @@ const HeaderProfile = () => {
             
           </div>
         </div>
+          : null
       )}
     </>
   );

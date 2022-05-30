@@ -10,13 +10,13 @@ function Accordion(props) {
     const [setHeight, setHeightState] = useState("0px");
 
     const content = useRef(null);
-
     function toggleAccordion() {
         setActiveState(setActive === "" ? "active" : "");
         setHeightState(
             setActive === "active" ? "0px" : `${content.current.scrollHeight}px`
         );
     }
+   const idpost = props.dataFromParent;
 
     return (
         <div className="accordion__section">
@@ -51,7 +51,7 @@ function Accordion(props) {
                 ref={content}
                 style={{ maxHeight: `${setHeight}` }}
                 className="accordion__content">
-                <DetailComment/>
+                <DetailComment  dataFromParent={idpost} />
             </div>
         </div>
     );
