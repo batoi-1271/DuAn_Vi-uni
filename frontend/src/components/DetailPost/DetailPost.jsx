@@ -43,7 +43,7 @@ const DetailPost = () => {
     useEffect(async ()=>{
     const paging = page
     console.log(paging)
-  await fetch("http://viuni.tk/post/all/me",{
+  await fetch("http://localhost:80/post/all/me",{
         method: "POST",  
          headers:{
           'Authorization': 'Bearer ' + accessToken,
