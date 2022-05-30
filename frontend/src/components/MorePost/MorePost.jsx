@@ -9,6 +9,14 @@ const MorePost = () => {
                 <i class="fal fa-user-times"></i>
                 <Link to="#">Unfollow <span>@username</span></Link>
             </div>
+            <div className="unfollow dropContainer_content">
+                <i class="fal fa-file-edit"></i>
+                <Link to="#">Edit post</Link>
+            </div>
+            <div className="unfollow dropContainer_content">
+                <i class="fal fa-trash"></i>
+                <Link to="#">Delete</Link>
+            </div>
             <div className="report dropContainer_content">
                 <i class="fal fa-flag"></i>
                 <Link to="#">Report post</Link>

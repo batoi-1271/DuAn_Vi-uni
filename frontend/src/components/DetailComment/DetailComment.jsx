@@ -1,9 +1,14 @@
 import React, { useState, useEffect, useReducer } from 'react';
 import Heart from '../Heart/Heart';
 import Tooltip from "@mui/material/Tooltip";
+import OutsideClickHandler from 'react-outside-click-handler';
 
 import './detailcomment.scss';
+import MoreCmt from '../MoreCmt/MoreCmt';
 const DetailComment = (props) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggling = () => setIsOpen(!isOpen);
+
     const accessToken = localStorage.getItem('accessToken');
     const [page, setPage] = useState({
         "index": 0,
@@ -116,9 +121,6 @@ const DetailComment = (props) => {
 
 
     }
-
-
-
     return (
         <>
             <form className="form">
@@ -190,9 +192,14 @@ const DetailComment = (props) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="contentCmt_moreCmt">
-                            <i class="fal fa-ellipsis-h-alt"></i>
-                        </div>
+                        <OutsideClickHandler onOutsideClick={() => { setIsOpen(false) }}>
+                            <div className="contentCmt_moreCmt">
+                                <i class="fal fa-ellipsis-h-alt" onClick={toggling}></i>
+                            </div>
+                        </OutsideClickHandler>
+                        {isOpen && (
+                            <MoreCmt />
+                        )}
                     </div>
 
                 ) : null}
