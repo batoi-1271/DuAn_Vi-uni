@@ -32,9 +32,9 @@ const HeaderProfile = () => {
 useEffect(()=>{
          
     
-         
+          // http://viuni.tk/user/me
       
-         const result =  fetch(`http://viuni.tk/user/me`,{
+         const result =  fetch(`http://localhost:80/user/me`,{
                 headers:{
                  'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
                }
