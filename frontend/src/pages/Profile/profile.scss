@@ -97,21 +97,26 @@
                         }
 
                         &__userEdit {
-                            button {
-                                padding: 8px 20px;
-                                border-radius: 10px;
-                                @include colorGradient;
-                                width: 150px;
-                                height: 45px;
-                                border-radius: 50px;
-                                font-weight: bold;
-                                border: none;
-                                cursor: pointer;
-                                color: #fff;
+                            
+                        }
+                        .btnAdd {
+                            display: flex;
+                            gap: 10px;
+                        }
+                        button {
+                            padding: 8px 20px;
+                            border-radius: 10px;
+                            @include colorGradient;
+                            width: 150px;
+                            height: 45px;
+                            border-radius: 50px;
+                            font-weight: bold;
+                            border: none;
+                            cursor: pointer;
+                            color: #fff;
 
-                                &:hover {
-                                    box-shadow: $box-shadow-1;
-                                }
+                            &:hover {
+                                box-shadow: $box-shadow-1;
                             }
                         }
                     }
