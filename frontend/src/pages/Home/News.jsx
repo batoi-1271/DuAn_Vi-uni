@@ -1,347 +1,217 @@
-import React, { useRef, useState,useEffect} from "react";
-import { Link, useLocation } from "react-router-dom";
-import OutsideClickHandler from 'react-outside-click-handler';
-import axios from "axios";
-import "./leftPane.scss";
-import Button from "@mui/material/Button";
-import logo from "../../assets/logo.png";
+import React, { useState } from "react";
+import "./home.scss";
+import OutsideClickHandler from "react-outside-click-handler";
+import { Link } from "react-router-dom";
 
-const users = [
-  {
-    id: 1,
-    name: "Nguyen Ba",
-    username: "Toiba2001",
-    imageUrl: (
-      <img
-        alt="Dương Ngô Tùng"
-        src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
-      />
-    ),
-  },
-  {
-    id: 2,
-    name: "Nguyen Ba Toi",
-    username: "Toiba2001",
-    imageUrl: (
-      <img
-        alt="Dương Ngô Tùng"
-        src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
-      />
-    ),
-  },
-  {
-    id: 3,
-    name: "Nguyen Ba Toi",
-    username: "Toiba2001",
-    imageUrl: (
-      <img
-        alt="Dương Ngô Tùng"
-        src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
-      />
-    ),
-  },
-  {
-    id: 3,
-    name: "Nguyen Ba Toi",
-    username: "Toiba2001",
-    imageUrl: (
-      <img
-        alt="Dương Ngô Tùng"
-        src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
-      />
-    ),
-  },
-  {
-    id: 3,
-    name: "Nguyen Ba Toi",
-    username: "Toiba2001",
-    imageUrl: (
-      <img
-        alt="Dương Ngô Tùng"
-        src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
-      />
-    ),
-  }
-];
-const LeftPane = () => {
-  // ===================
-  const [alluser, setalluser] = useState([]);
-  useEffect(() => {
-
-    async function getdata() {
-      // const res = await axios.get('http://viuni.tk/home');
-      const res =  axios('http://viuni.tk/home',
-      {
-        method: 'GET',
-        headers: {
-                  'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
-                  "Content-Type":"application/json"
-              }
-      }
-      )
-      return res
-    }
-        async function getuser() {
-      // const res = await axios.get('http://viuni.tk/home');
-      const res =  axios('http://viuni.tk/home',
-      {
-        method: 'GET',
-        headers: {
-                  'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
-                  "Content-Type":"application/json"
-              }
-      }
-      )
-      return res
-    }
-    getuser().then(res => { 
-      console.log(res); 
-      setalluser(res.data);
-    })
-    .catch(err => {  
-      console.log(err)})
-
-    getdata().then(res => {
-      console.log(res);
-      setSuggestions(res.data);
-    })
-      .catch(err => {
-        console.log(err)
-      })
-  }, [])
-
-
-  //====================
-  const { pathname } = useLocation();
-
-  const headerRef = useRef(null);
-
-  const [isAdded, setAdded] = useState([]);
-
-  const [isFollow, setFollow] = useState([]);
-
-  
-  const addFriend = (id) => {
-   
-    setAdded(prev => {
-      const isChecked = isAdded.includes(id)
-      if (isChecked) {
-         console.log("del f",id)
-        const delresquest = (id) => {
-           axios({
-           method: 'DELETE',
-           url:`http://viuni.tk/follow/remove/${id}`,
-           headers: {
-                    'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
-                    "Content-Type":"application/json"
-              }}
-           ).then(res => console.log('deleting data',res)).catch(err => console.log(err))
-         }
-         delresquest(id)
-        return isAdded.filter(item => item !== id)
-
-      } else {
-         console.log("add f",id)
-         const postresquest = (id) => {
-           var today = new Date();
-           var date = today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear()+" "+today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-           axios({
-             method: 'POST',
-             url:`http://viuni.tk/follow/add/${id}`,
-             headers: {
-                    'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
-                    "Content-Type":"application/json"
-              },
-           }).then(res => console.log('posting data',res)).catch(err => console.log(err))
-         }
-         postresquest(id)
-         return [...prev, id]
-      }
-    })
-  };
-    const Follow = (id) => {
-    setFollow(prev => {
-      const isChecked = isFollow.includes(id)
-      if (isChecked) {
-        return isFollow.filter(item => item !== id)
-      } else
-        return [...prev, id]
-    })
-  };
-
-  const cancelFriend = () => {
-    setAdded(false);
-  };
-  const historySearch = ["Gia Truong", "Sy Hoang", "Hoang Duc", "Thanh An"];
-  const [suggestions, setSuggestions] = useState([]);
+function PostUser() {
+  const privicys = [
+    { id: 1, name: 'Everyone' },
+    { id: 2, name: 'Friends' },
+    { id: 3, name: 'Only me' }
+  ];
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
-
   const toggling = () => setIsOpen(!isOpen);
-
+  const [data, setData] = useState()
+  //  const [images,setImage] = useState()
   const onOptionClicked = (value) => () => {
     setSelectedOption(value);
     setIsOpen(false);
-    console.log(selectedOption);
 
   };
-
-  const onChangeHandler = (text) => {
-    let matches = []
-    matches = alluser.filter(user => {
-      const regex = new RegExp(`${text}`, "gi");
-      return user.username.match(regex);
-    })
-    setSuggestions(matches);
-    setSelectedOption(text);
+  const setParams = (event) => {
+    setData({ [event.target.name]: event.target.value })
   }
 
+
+  const [content, setContent] = useState('')
+
+
+
+  const fetchs = (urls, headers) => {
+    fetch(urls, headers)
+      .then(response => {
+        console.log(response)
+      })
+      .catch(error => {
+        console.log('error', error)
+
+      });
+  }
+  const sendData = async () => {
+    // console.log(data)
+    // RequestUpload();
+    const file = document.getElementById("file-upload");
+    const formData = new FormData();
+    for (let index = 0; index < file.files.length; index++) {
+      formData.append('files', file.files[index]);
+    }
+    if (file.files[0] != null) {
+      var postFileData = {
+        method: "POST",
+        headers: {
+          'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
+          //  "Content-Type": "multipart/form-data; boundary=----WebKitFormBoundaryDZNoUooBnBqrBPqT"
+        },
+        body: formData
+      };
+      await fetch("http://viuni.tk/upload", postFileData)
+        .then(response => {
+
+          if (response.ok) {
+            return response.json()
+          }
+          throw Error(response.status)
+
+        })
+        .then(result => {
+
+
+          const images = [result[0].id];
+          console.log(images)
+          const privacy = selectedOption != null ? selectedOption.id : 1
+
+          const post = { content, privacy, images }
+
+
+
+          var postData = {
+            method: "POST",
+            headers: {
+              'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
+              "Content-Type": "application/json"
+
+            },
+
+            body: JSON.stringify(post)
+          };
+          fetchs("http://viuni.tk/post", postData)
+
+
+
+        })
+        .catch(error => {
+          console.log('error', error)
+
+        });
+
+    } else {
+      const privacy = selectedOption != null ? selectedOption.id : 1
+
+      const post = { content, privacy }
+      var postData = {
+        method: "POST",
+        headers: {
+          'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
+          "Content-Type": "application/json"
+
+        },
+
+        body: JSON.stringify(post)
+      };
+      fetchs("http://viuni.tk/post", postData)
+    }
+
+    window.location.reload();
+
+  }
+
+  // const renData = () => {
+  //   const Privecy = selectedOption != null ? selectedOption.id : 1 
+  //   const student={content,Privecy}
+  //   console.log(student)
+  // }
+
   return (
-    <>
-      {pathname !== "/message" && (
-        <div ref={headerRef} className="paneLeft" id="paneLeft">
-          <div className="paneLeft__wrap container">
-            <div className="logo">
-              <Link to="/">
-                <img src={logo} alt="" />
-              </Link>
+    <section>
+      <form action="">
+        <div className="postUser" id="postUser">
+          <div className="avatar">
+
+
+            <Link to="./profile">
+              <img
+                alt="Dương Ngô Tùng"
+                src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg"
+              />
+            </Link>
+          </div>
+          <div className="contentPost">
+            <div className="contentPost__user">
+              <textarea type="text" placeholder="What's happening?" name="content" onChange={(e) => setContent(e.target.value)}
+              />
             </div>
-            <OutsideClickHandler onOutsideClick={() => {setIsOpen(false)}}>
-              <div className="search">
-                <span className="icon">
-                  <i class="fa fa-search"></i>
-                </span>
-                <input
-                name="search"
-                  type="text"
-                  onClick={toggling}
-                  placeholder="Search Vi-uni"
-                  value={selectedOption}
-                  autoComplete="off"
-                  onChange={e => onChangeHandler(e.target.value)}
-                />
+
+            <OutsideClickHandler
+              onOutsideClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              <div className="privacy">
+                <div className="select" onClick={toggling}>
+                  {selectedOption ? selectedOption.name + ' can reply' : 'Everyone'}
+                </div>
                 {isOpen && (
-                  <div className="dropContainer">
+                  <div className="dropContainerPrivate">
                     <div className="dropList">
-                    <div className="title">
-                      <h4>Recent searches</h4>
-                      <span>
-                        <a href="">Edit</a>
-                      </span>
-                    </div>
-                    { suggestions && suggestions.map((option,i) => (
-                      <div
-                        className="items"
-                        onClick={onOptionClicked(option.username)}
-                        key={i}
-                      >
-                        {option.username}
-                        <button type="button" className="delete" aria-label="delete">
-                          <span><i class="fab fa-xing"></i></span>
-                        </button>
+                      <div className="title">
+                        <h4>Who can reply?</h4>
+                        <p>
+                          Choose who can reply to this Tweet. Anyone mentioned
+                          can always reply.
+                        </p>
                       </div>
-                    ))}
+                      {privicys.map((privicy) => (
+                        <div
+                          className="items"
+                          onClick={onOptionClicked(privicy)}
+                          key={privicy.id}
+
+                        >
+                          {privicy.name}
+                        </div>
+                      ))}
                     </div>
                   </div>
                 )}
               </div>
-
-        </OutsideClickHandler>
-          </div>
-
-          <div className="paneLeft_Box">
-            <h3>You might like</h3>
-            <ul className="paneLeftInfo">
-            {
-                alluser.map((alluser,e) => {
-                  return (
-                    <li className="infoUser moreu" key={alluser.id}  >
-                      <img className="avatar" src={alluser.avatar_image.link_image} />
-                      <div className="info">
-                        <div className="name"> {alluser.last_name} {alluser.first_name}</div>
-                        <div className="username">@{alluser.username}</div>
-                      </div>
-                      <div className="addFr">
-                    {isAdded.includes(alluser.id) ? (
-                      <Button 
-                        key={alluser.id} 
-                        variant="contained"
-                        onClick={() => addFriend(alluser.id)}
-                        className="add-btn-disabled"
-                      >
-                        Cancel
-                      </Button>
-                    ) : (
-                      <Button
-                        key={alluser.id} 
-                        variant="contained"
-                        className="add-btn"
-                        onClick={() => addFriend(alluser.id)}
-                      >
-                        ADD
-                      </Button>
-                    )}
-                  </div>
-                    </li>
-                  )
-                })
-              }
-            </ul>
-            <div className="seemore">
-                <Link to="#" id="seemore">See more</Link>
-            </div>
-          </div>
-
-          <div className="paneLeft_Box follow">
-            <h3>Following</h3>
-            <ul className="paneLeftInfo">
-            {
-                alluser.map((alluser,e) => {
-                  return (
-                    // follow  
-                    <li className="infoUser flw" key={alluser.id} >
-                      <img className="avatar" src={alluser.avatar_image.link_image}/>
-                      <div className="info">
-                        <div className="name">{alluser.last_name} {alluser.first_name} </div>
-                        <div className="username">@{alluser.username}</div>
-                      </div>
-                      <div className="addFr">
-                    {isFollow.includes(alluser.id) ? (
-                      <Button 
-                        key={alluser.id} 
-                        variant="contained"
-                        onClick={() => Follow(alluser.id)}
-                        className="add-btn-disabled"
-                      >
-                        Cancel
-                      </Button>
-                    ) : (
-                      <Button
-                        key={alluser.id} 
-                        variant="contained"
-                        className="add-btn"
-                        onClick={() => Follow(alluser.id)}
-                      >
-                        ADD
-                      </Button>
-                    )}
-                  </div>
-                    </li>
-                  )
-                })
-              }
-            </ul>
-            <div className="seemore">
-                <Link to="/friends/following" id="seemore">See more</Link>
-            </div>
-            {/* <span>
-              <Link to="/friends/following" className="seemore">See more</Link>
-            </span> */}
+            </OutsideClickHandler>
           </div>
         </div>
-      )}
-    </>
+        <div className="iconPost">
+          <div className="content">
+            <div className="icon">
+              <label for="file-upload" class="file-upload">
+                <i class="fas fa-camera"></i>
+              </label>
+              <input id="file-upload" type="file" />
+
+              {/* <a href="">
+              <i class="fas fa-image"></i>
+            </a> */}
+              {/* <input type="file" id="file" multiple /> */}
+              <a href="">
+                <i class="fas fa-map-marker-alt"></i>
+              </a>
+
+              <a href="">
+                <i class="far fa-laugh"></i>
+              </a>
+            </div>
+            <div className="btnPost">
+              {/* <input type="button" name="" id="" variant="contained" value="send"   onClick = {sendData}/> */}
+              {/* <input type="button" name="" id="" variant="contained" value="send"  onClick={renData}/> */}
+              <button type="button" onClick={sendData} variant="contained" >Post</button>
+              {/* <Button variant="contained"  onClick = {sendData}>Post </Button> */}
+            </div>
+          </div>
+        </div>
+      </form>
+
+
+    </section>
+
   );
 };
 
-export default LeftPane;
+export default PostUser;

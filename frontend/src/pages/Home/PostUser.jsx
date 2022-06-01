@@ -41,7 +41,7 @@ function PostUser() {
   const sendData = async () => {
     // console.log(data)
     // RequestUpload();
-    const file = document.getElementById("file");
+    const file = document.getElementById("file-upload");
     const formData = new FormData();
     for (let index = 0; index < file.files.length; index++) {
       formData.append('files', file.files[index]);
@@ -189,7 +189,7 @@ function PostUser() {
               {/* <a href="">
               <i class="fas fa-image"></i>
             </a> */}
-              <input type="file" id="file" multiple />
+              {/* <input type="file" id="file" multiple /> */}
               <a href="">
                 <i class="fas fa-map-marker-alt"></i>
               </a>
