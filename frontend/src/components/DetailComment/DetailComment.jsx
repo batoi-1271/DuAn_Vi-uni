@@ -88,7 +88,10 @@ const DetailComment = (props) => {
         }
 
     }, [filters]);
-  
+    const refresh = (iduser) => {
+        // window.location.reload();
+        window.location = `/profile?id=${iduser}`;
+    }
     const RequestComment = async () => {
         const contentCmt = { content }
 
@@ -140,7 +143,7 @@ const DetailComment = (props) => {
             <form className="form">
                 <div className="form_avatar">
                     <div className="img">
-                        <img src={user != null && user.avatar_image != null ? user.avatar_image.link_image : null}
+                        <img  src={user != null && user.avatar_image != null ? user.avatar_image.link_image : null}
                             alt="" />
                     </div>
                 </div>
@@ -157,14 +160,15 @@ const DetailComment = (props) => {
                 Object.entries(comment.content).map((arr, i) =>
                     <div className="contentCmt">
                         <div className="contentCmt_avatar">
-                            <img src={arr[1].author.avatar_image != null ? arr[1].author.avatar_image.link_image : null}
+                        <img onClick={() => refresh(arr[1].author.id)} src={arr[1].author.avatar_image != null ? arr[1].author.avatar_image.link_image : null}
                                 alt="" />
+                           
                         </div>
                         <div className="contentCmt_Username">
                             <div className="info">
                                 <div className="nameCmt">
-                                    <p><Link to = { "/profile?id=" + arr[1].author.id}  >{arr[1].author.last_name} {arr[1].author.first_name}</Link></p>
-                                    {/* <p>{arr[1].author.last_name} {arr[1].author.first_name}</p> */}
+                                    {/* <p><Link onClick={() => refresh(arr[1].author.id)}  to = { "/profile?id=" + arr[1].author.id}  >{arr[1].author.last_name} {arr[1].author.first_name}</Link></p> */}
+                                    <p onClick={() => refresh(arr[1].author.id)}>{arr[1].author.last_name} {arr[1].author.first_name}</p>
                                 </div>
                                 <div className="usernameCmt">
                                     <p>&nbsp;@_im_Linh_ </p>

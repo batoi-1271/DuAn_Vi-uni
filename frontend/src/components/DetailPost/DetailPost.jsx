@@ -111,17 +111,23 @@ const DetailPost = () => {
         {postUser != null ?
         Object.entries(postUser.content).map((arr,i) =>  <div className="content-post">
           <div className="post-avatar">
+          <Link to = { "/profile?id=" + arr[1].author.id}  >
           <img
             src={arr[1].author.avatar_image != null ? arr[1].author.avatar_image.link_image : null}
             alt=""
           />
+          </Link>
+        
+       
             <div className="post-avatar_profile">
         
               <div className="avatar_profile-header">
                 <img
                  src={arr[1].author.avatar_image != null ? arr[1].author.avatar_image.link_image : null}
                  alt=""
+                
                 />
+             
                 <button>
                   <span>Following</span>
                 </button>
@@ -171,7 +177,7 @@ const DetailPost = () => {
             <div className="post-content">
               <div className="post-content-title">
               <p>{arr[1].content}</p>
-        
+            
               </div>
   
               <div className="post-content-img">
