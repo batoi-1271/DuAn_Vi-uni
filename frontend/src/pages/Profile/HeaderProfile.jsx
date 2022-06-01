@@ -99,7 +99,7 @@ useEffect(()=>{
             <div className="infoContent">
               <div className="infoContent__Cover-img">
                 <img
-                  src={user.cover_image != null ? user.cover_image : null}
+                  src={user.cover_image != null ? user.cover_image.link_image : null}
                   alt=""
                 />
               </div>

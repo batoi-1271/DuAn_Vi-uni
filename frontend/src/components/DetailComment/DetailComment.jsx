@@ -27,24 +27,25 @@ const DetailComment = (props) => {
     const id = 15
     useEffect(() => {
 
-        const result = fetch(`http://viuni.tk/user/me`, {
-            headers: {
-                'Authorization': 'Bearer' + localStorage.getItem('accessToken'),
-            }
+        const result =  fetch(`http://viuni.tk/user/me`,{
+            headers:{
+             'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
+           }
 
-        })
-            .then(response => {
-                if (response.ok) {
-                    return response.json()
-                }
-                throw Error(response.status)
-            })
-            .then((result) => {
-                setUser(result)
-                console.log(result)
+         })
+             .then(response  => {
+                 if(response.ok){
+                     return response.json()
+                 }
+                 throw Error(response.status)
+             })
+             .then((result) => {
+              setUser(result)
+              console.log(result)
+           
+                
+             })
 
-
-            })
         if (idPost != null) {
             const fectchData = async () => {
 

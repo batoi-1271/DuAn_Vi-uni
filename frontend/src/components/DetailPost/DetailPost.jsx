@@ -90,10 +90,10 @@ const DetailPost = () => {
             totalPage = result.content.length
             
           })
-          setLoading(true);
-          setTimeout(() => {
-            setLoading(false);
-          }, 1000);
+          // setLoading(true);
+          // setTimeout(() => {
+          //   setLoading(false);
+          // }, 1000);
 
   }, [pageCount]);
     
@@ -170,7 +170,7 @@ const DetailPost = () => {
             <div className="post-content">
               <div className="post-content-title">
               <p>{arr[1].content}</p>
-              <p>{arr[1].id}</p>
+            
               </div>
   
               <div className="post-content-img">
