@@ -4,8 +4,8 @@ import './morepost.scss';
 
 const MorePost = (props) => {
     const fullName = props.dataFromParent;
-    const demo = () => {
-        {console.log("hello")}
+    const DelPost = () => {
+          
     }
     return (
         <div className="dropContainer">
@@ -15,11 +15,11 @@ const MorePost = (props) => {
             </div>
             <div className="unfollow dropContainer_content">
                 <i class="fal fa-file-edit"></i>
-                <Link to="#" onClick={demo}>Edit post</Link>
+                <Link to="#" >Edit post</Link>
             </div>
             <div className="unfollow dropContainer_content">
                 <i class="fal fa-trash"></i>
-                <Link to="#">Delete</Link>
+                <Link to="#" onClick={DelPost}>Delete</Link>
             </div>
             <div className="report dropContainer_content">
                 <i class="fal fa-flag"></i>
