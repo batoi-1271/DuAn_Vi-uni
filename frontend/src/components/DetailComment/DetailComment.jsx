@@ -2,7 +2,7 @@ import React, { useState, useEffect, useReducer } from 'react';
 import Heart from '../Heart/Heart';
 import Tooltip from "@mui/material/Tooltip";
 import OutsideClickHandler from 'react-outside-click-handler';
-
+import { Link } from 'react-router-dom'
 import './detailcomment.scss';
 import MoreCmt from '../MoreCmt/MoreCmt';
 const DetailComment = (props) => {
@@ -163,7 +163,8 @@ const DetailComment = (props) => {
                         <div className="contentCmt_Username">
                             <div className="info">
                                 <div className="nameCmt">
-                                    <p>{arr[1].author.last_name} {arr[1].author.first_name}</p>
+                                    <p><Link to = { "/profile?id=" + arr[1].author.id}  >{arr[1].author.last_name} {arr[1].author.first_name}</Link></p>
+                                    {/* <p>{arr[1].author.last_name} {arr[1].author.first_name}</p> */}
                                 </div>
                                 <div className="usernameCmt">
                                     <p>&nbsp;@_im_Linh_ </p>

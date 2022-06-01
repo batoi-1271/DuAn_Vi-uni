@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./profile.scss";
+
 import { Link, useLocation, useHistory } from "react-router-dom";
 import ButtonEdit from "./Button/ButtonEdit";
 
@@ -22,19 +23,19 @@ const HeaderProfile = () => {
   const { pathname } = useLocation();
   const [modal, setModal] = useState(false);
   const Toggle = () => setModal(!modal);
-
-  const history = useHistory();
+  let location = useLocation()
+  const query  = new URLSearchParams(location.search)
 
   const active = headerAc.findIndex((e) => e.path === pathname);
 
   const [user, setUser] = useState();
 
   useEffect(() => {
+     
 
-
-    // http://viuni.tk/user/me
-
-    const result = fetch(`http://viuni.tk/user/me`, {
+    const id  = query.get("id") != null ? query.get("id") : "me";
+    {console.log(id)}
+    const result = fetch(`http://viuni.tk/user/${id}`, {
       headers: {
         'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
       }
@@ -86,9 +87,9 @@ const HeaderProfile = () => {
         user != null ? <div className="profile">
           <div className="profile__header">
             <div className="backProfile">
-              <button type="button" onClick={history.goBack}>
+              {/* <button type="button" onClick={history.goBack}>
                 <i class="fas fa-arrow-left"></i>
-              </button>
+              </button> */}
             </div>
             <div className="profileName-user">
               <h3>{user.last_name != null ? user.last_name : null} {user.first_name != null ? user.first_name : null}</h3>
