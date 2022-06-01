@@ -36,11 +36,11 @@ const DetailPost = () => {
   const [postUser,setPostUser]= useState(null);
   const accessToken = localStorage.getItem('accessToken');
   const [pageCount, setPageCount] = useState(0)
-   const [paging, setpaging] = useState()
     const [page,setpage] = useState ({
          "index" : 0,
          "size": 1
     })
+
    
     const scrollToEnd = () =>{
       // setdemo(demo + 1)
@@ -86,7 +86,6 @@ const DetailPost = () => {
     
             // }
             setPostUser(result)
-            console.log("count: ", result.content.length);
             totalPage = result.content.length
             
           })

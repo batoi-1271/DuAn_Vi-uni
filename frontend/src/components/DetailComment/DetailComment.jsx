@@ -14,6 +14,20 @@ const DetailComment = (props) => {
         "index": 0,
         "size": 5
     });
+    const [filters, setFilters] = useState({
+        "index": 0,
+        "size": 5
+    })
+    const ViewMoreComment = () => {
+        setPage({
+            "index": 0,
+            "size": page.size +5
+        })
+        setFilters(page)
+
+   
+    }
+
     const [user, setUser] = useState();
     const [content, setContent] = useState();
     const [pageCount, setPageCount] = useState(0)
@@ -53,7 +67,7 @@ const DetailComment = (props) => {
 
         if (idPost != null) {
             const fectchData = async () => {
-
+            
 
                 const result = await fetch(`http://viuni.tk/comment/all/${idPost}`, {
                     method: "POST",
@@ -68,13 +82,12 @@ const DetailComment = (props) => {
                 const jsonResult = await result.json()
                 // console.log('data: ', jsonResult);
                 SetComment(jsonResult)
-
-
+        
             }
             fectchData()
         }
 
-    }, [pageCount]);
+    }, [filters]);
 
     const RequestComment = async () => {
         const contentCmt = { content }
@@ -119,7 +132,7 @@ const DetailComment = (props) => {
                 })
 
             })
-
+         
 
     }
     return (
@@ -205,7 +218,7 @@ const DetailComment = (props) => {
 
                 ) : null}
 
-            <button className="btn-MoreCmt">View more comment</button>
+            <button className="btn-MoreCmt" onClick={ViewMoreComment}>View more comment</button>
 
         </>
     )
