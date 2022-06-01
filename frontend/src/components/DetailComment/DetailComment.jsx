@@ -88,7 +88,7 @@ const DetailComment = (props) => {
         }
 
     }, [filters]);
-
+  
     const RequestComment = async () => {
         const contentCmt = { content }
 
