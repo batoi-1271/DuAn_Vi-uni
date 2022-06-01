@@ -1,6 +1,9 @@
-import React from 'react'
+import { Button } from '@mui/material';
+import React, { useRef, useState } from 'react';
+
 import { Link } from "react-router-dom";
-import './morepost.scss';
+import Editpost from "../EditPost/Editpost";
+import "./morepost.scss";
 
 const MorePost = (props) => {
 
@@ -29,10 +32,16 @@ const MorePost = (props) => {
                 <i class="fal fa-user-times"></i>
                 <Link to="#">Unfollow <span>@{fullName != null ? fullName : null}</span></Link>
             </div>
-            <div className="unfollow dropContainer_content">
-                <i class="fal fa-file-edit"></i>
-                <Link to="#" >Edit post</Link>
-            </div>
+            <div className="edit dropContainer_content">
+        <i class="fal fa-file-edit"></i>
+        {/* <Link to="#">Edit post</Link> */}
+        <button variant="contained" onClick={() => Toggle()}>
+            Edit post
+        </button>
+        <Editpost show={modal} close={Toggle} title="">
+          <h3>Hello</h3>
+        </Editpost>
+      </div>
             <div className="unfollow dropContainer_content">
                 <i class="fal fa-trash"></i>
                 <Link to="#" onClick={DelPost}>Delete</Link>
@@ -50,4 +59,5 @@ const MorePost = (props) => {
     )
 }
 
-export default MorePost
+
+export default MorePost;

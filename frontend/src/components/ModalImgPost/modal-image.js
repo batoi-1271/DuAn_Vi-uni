@@ -98,12 +98,14 @@ export default class ModalImage extends React.Component {
           <span className="close" onClick={this.hideModal}>
             ×
           </span>
-          <img
-            className="modal-content"
-            src={this.props.src}
-            alt=""
-            // alt={this.props.alt + " modal"}
-          />
+          <div className="modal-img">  
+            <img
+              className="modal-content"
+              src={this.props.src}
+              alt=""
+              // alt={this.props.alt + " modal"}
+            />
+          </div>
           <div className="caption">
             <PostModal/>
           </div>
