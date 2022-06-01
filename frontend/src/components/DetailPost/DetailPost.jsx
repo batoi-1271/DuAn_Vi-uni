@@ -161,7 +161,7 @@ const DetailPost = () => {
                     <button onClick={toggling}>
                       <i class="fas fa-ellipsis-h"></i>
                     </button>
-                    {isOpen && <MorePost />}
+                    {isOpen && <MorePost idPost={arr[1].id}/>}
                   </div>
                 </div>
               </OutsideClickHandler>
@@ -169,7 +169,7 @@ const DetailPost = () => {
             <div className="post-content">
               <div className="post-content-title">
               <p>{arr[1].content}</p>
-            
+        
               </div>
   
               <div className="post-content-img">

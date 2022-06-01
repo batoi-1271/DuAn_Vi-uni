@@ -88,7 +88,7 @@ const DetailComment = (props) => {
         }
 
     }, [filters]);
-
+  
     const RequestComment = async () => {
         const contentCmt = { content }
 
@@ -152,6 +152,7 @@ const DetailComment = (props) => {
                 </div>
             </form>
 
+        
             {comment != null ?
                 Object.entries(comment.content).map((arr, i) =>
                     <div className="contentCmt">
