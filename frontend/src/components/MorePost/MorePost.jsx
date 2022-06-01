@@ -9,18 +9,18 @@ const MorePost = (props) => {
     const idPost = 53;
     const DelPost = async () => {
 
-    // const deletePost = {
-    //     method: 'PUT', 
-    //     headers: {
+    const deletePost = {
+        method: 'DELETE', 
+        headers: {
         
-    //     },
+        },
      
-    //    }
+       }
      
-    //   await fetch(`http://viuni.tk/post/${idPost}`, deletePost) 
-    //    .then(response => response.json())
-    //    .then(data => console.log(data)) 
-    //    .catch(err => console.log(err)) 
+      await fetch(`http://viuni.tk/post/${idPost}`, deletePost) 
+       .then(response => response.json())
+       .then(data => console.log(data)) 
+       .catch(err => console.log(err)) 
 
 }
     return (

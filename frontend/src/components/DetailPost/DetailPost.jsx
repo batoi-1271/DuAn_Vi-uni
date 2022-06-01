@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 import MorePost from "../../components/MorePost/MorePost";
 import ModalImage from "../../components/ModalImgPost/modal-image";
-
+import { Link } from 'react-router-dom'
 import FadeLoader from "react-spinners/FadeLoader";
 import { css } from "@emotion/react";
 
@@ -116,7 +116,7 @@ const DetailPost = () => {
             alt=""
           />
             <div className="post-avatar_profile">
-              {/* -----------header------------ */}
+        
               <div className="avatar_profile-header">
                 <img
                  src={arr[1].author.avatar_image != null ? arr[1].author.avatar_image.link_image : null}
@@ -146,7 +146,8 @@ const DetailPost = () => {
           <div className="post-info">
             <div className="post-info_header">
               <div className="post-name">
-              <h4>{arr[1].author.last_name} {arr[1].author.first_name}</h4>
+              {/* <h4>{arr[1].author.last_name} {arr[1].author.first_name}</h4> */}
+              <h4><Link to = ''>{arr[1].author.last_name} {arr[1].author.first_name}</Link></h4>
                 <p>@HaoTran</p>
                 <p>22h</p>
               </div>
