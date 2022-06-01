@@ -46,7 +46,7 @@ const ButtonEdit = ({ show, close, title, children }) => {
                                         <img src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_400x400.jpg" alt="" />
                                         <div className="editAvatar">
                                             <label for="file-upload" class="file-upload">
-                                            <i class="far fa-camera"></i>
+                                                <i class="far fa-camera"></i>
                                             </label>
                                             <input id="file-upload" type="file" />
                                         </div>
