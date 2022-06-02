@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react';
 
 import { Link } from "react-router-dom";
-import './morepost.scss';
+import EditPost from "../EditPost/EditPost";
+import "./morepost.scss";
 
 const MorePost = (props) => {
     const [modal, setModal] = useState(false);
@@ -33,10 +34,13 @@ const MorePost = (props) => {
                 <i class="fal fa-user-times"></i>
                 <Link to="#">Unfollow <span>@{fullName != null ? fullName : null}</span></Link>
             </div>
-            <div className="unfollow dropContainer_content">
-                <i class="fal fa-file-edit"></i>
-                <Link to="#" >Edit post</Link>
-            </div>
+            <div className="edit dropContainer_content">
+        <i class="fal fa-file-edit"></i>
+        {/* <Link to="#">Edit post</Link> */}
+        <Link variant="contained" onClick={() => Toggle()}>Edit post</Link>
+                <EditPost show={modal} close={Toggle}>
+                </EditPost>
+      </div>
             <div className="unfollow dropContainer_content">
                 <i class="fal fa-trash"></i>
                 <Link to="#" onClick={DelPost}>Delete</Link>
