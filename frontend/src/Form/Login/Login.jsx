@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import bgLogin from "../../assets/bgLogin.jpg";
 import logo from "../../assets/logo.png";
 import Register from '../Register/Register';
+import ForgotPass from '../ForgotPass/Forgotpass';
 import "./login.scss";
 import App from "../../Viuni";
 const Login = () => {
@@ -79,8 +80,9 @@ const [user,setUser] = useState();
                             </label>
                         </div>
                         <div className="forgotPass">
-                            <a href="#">Forgot password?</a>
-                        </div>
+                                <a  onClick={() => toggleForgot()}>Forgot password?</a>
+                                <ForgotPass show={modalForgot} close={toggleForgot}></ForgotPass>
+                            </div>
                     </div>
                     <div className="text">
                         <p>By signing in, you agree to the <a href='#'>Terms of Service</a> and <a href='#'>Privacy Policy</a>, including <a href='#'>Cookie Use</a>.</p>
