@@ -2,11 +2,12 @@ import { Button } from '@mui/material';
 import React, { useRef, useState } from 'react';
 
 import { Link } from "react-router-dom";
-import Editpost from "../EditPost/Editpost";
+import EditPost from "../EditPost/EditPost";
 import "./morepost.scss";
 
 const MorePost = (props) => {
-
+    const [modal, setModal] = useState(false);
+    const Toggle = () => setModal(!modal);
     const fullName = props.dataFromParent;
     // const idPost = props.idPost;
     const idPost = 53;
@@ -38,12 +39,9 @@ const MorePost = (props) => {
             <div className="edit dropContainer_content">
         <i class="fal fa-file-edit"></i>
         {/* <Link to="#">Edit post</Link> */}
-        <button variant="contained" onClick={() => Toggle()}>
-            Edit post
-        </button>
-        <Editpost show={modal} close={Toggle} title="">
-          <h3>Hello</h3>
-        </Editpost>
+        <Link variant="contained" onClick={() => Toggle()}>Edit post</Link>
+                <EditPost show={modal} close={Toggle}>
+                </EditPost>
       </div>
             <div className="unfollow dropContainer_content">
                 <i class="fal fa-trash"></i>

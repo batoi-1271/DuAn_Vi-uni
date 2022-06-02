@@ -59,56 +59,7 @@ section {
             }
         }
 
-        .privacy {
-
-            .select {
-                font-weight: bold;
-                font-size: 1rem;
-                color: $main-color;
-                cursor: pointer;
-                user-select: none;
-                /* please don't change 'position' */
-                position: relative;
-            }
-
-            .dropContainerPrivate {
-                /* please don't change 'position' */
-                position: absolute;
-                z-index: 999;
-
-                .dropList {
-                    width: 350px;
-                    padding: 0;
-                    margin: 0;
-                    padding-left: 1em;
-                    background: #ffffff;
-                    border: 2px solid #e5e5e5;
-                    box-sizing: border-box;
-                    color: #000;
-                    font-size: 1rem;
-                    font-weight: 500;
-                    animation-name: growDown;
-                    animation-duration: 0.5s;
-                    transform-origin: top center;
-
-                    &:first-child {
-                        padding-top: 0.8em;
-                    }
-
-                    .title {
-                        margin-bottom: 1em;
-                    }
-
-                    .items {
-                        cursor: pointer;
-                        user-select: none;
-                        list-style: none;
-                        margin-bottom: 1em;
-                    }
-                }
-            }
-
-        }
+        
     }
 
     .iconPost {
@@ -154,4 +105,54 @@ section {
             }
         }
     }
+}
+.privacy {
+
+    .select {
+        font-weight: bold;
+        font-size: 1rem;
+        color: $main-color;
+        cursor: pointer;
+        user-select: none;
+        /* please don't change 'position' */
+        position: relative;
+    }
+
+    .dropContainerPrivate {
+        /* please don't change 'position' */
+        position: absolute;
+        z-index: 999;
+
+        .dropList {
+            width: 350px;
+            padding: 0;
+            margin: 0;
+            padding-left: 1em;
+            background: #ffffff;
+            border: 2px solid #e5e5e5;
+            box-sizing: border-box;
+            color: #000;
+            font-size: 1rem;
+            font-weight: 500;
+            animation-name: growDown;
+            animation-duration: 0.5s;
+            transform-origin: top center;
+
+            &:first-child {
+                padding-top: 0.8em;
+            }
+
+            .title {
+                margin-bottom: 1em;
+            }
+
+            .items {
+                cursor: pointer;
+                user-select: none;
+                list-style: none;
+                margin-bottom: 1em;
+            }
+        }
+    }
+
 }

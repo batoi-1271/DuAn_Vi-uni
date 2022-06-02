@@ -1,1 +1,155 @@
-@use '../../scss/' as *;
+
+@use '../../scss/'as *;
+
+.modalEdit_Post {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    @include flex(center, center);
+    background-color: rgba($color: #000000, $alpha: 0.35);
+
+    &_modal {
+        width: 550px;
+        height: 610px;
+        margin-top: 20px;
+        background-color: white;
+
+        // padding: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        animation: showing-up ease-out 0.3s;
+        overflow: hidden;    
+        // position: fixed;
+
+        .modal_header {
+            align-items: center;
+            display: flex;
+            height: 60px;
+            // background-color: red;   
+            justify-content: space-between;
+            padding: 0 10px;
+            border-bottom: 1px solid #A6ABBD;
+
+            h4 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .modal_main {
+            .main {
+                width: 100%;
+                padding: 10px 10px 0px 10px;
+                height: 350px;
+                // background-color: red;
+                overflow-y: scroll;
+
+                &-content {
+                    height: 500px;
+
+                }
+                .main-img {
+                    // background-color: red;
+                    height: 600px;
+                    width: 100%;
+                    border: 1px solid #A6ABBD;
+                    border-radius: 5px;
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-content: center;
+                    justify-content: center;
+                    align-items: center;
+                    .content-img {
+                        width:98%;
+                        max-width:98%;
+                        height: 590px;
+                        // padding: 5px 0;
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 590px;
+                        }
+                    }
+                    
+                }
+                .add-img {
+                    height: 50px;
+                    // background-color: aqua;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    span {
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        background-color: white;
+                        text-align: center;
+                        border-radius: 50%;
+                        .fa-mobile-android-alt {
+                            font-size: 20px;
+                            line-height: 30px;
+                        }
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                    button {
+                        font-weight: bold;
+                    }
+                }
+                
+            }
+            .edit_item {
+                // height: 500px;
+                // background-color: red;
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                flex-direction: column;
+                margin-top: 10px;
+                .item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 50px;
+                    width: 94%;
+                    // background-color: red;
+                    border: 1px solid #A6ABBD;
+                    border-radius: 10px;
+                    padding: 0px 10px;
+                    .icon {
+                        i {
+                            color: $main-color;
+                        }
+                    }
+                }
+                .btnSave {
+                    width: 90%;
+                    height: 50px;
+                    // background-color: red;
+                    border-radius: 10px;
+
+                    margin-top: 5px;
+                    button {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                        @include colorGradient;
+                        color: white;
+                        font-size: 16px;
+                        font-weight: bold;
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
