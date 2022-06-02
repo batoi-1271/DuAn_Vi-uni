@@ -4,6 +4,7 @@ import axios from "axios";
 import { Link, useLocation, useHistory } from "react-router-dom";
  import "./following.scss";
  import "./myfriends.scss";
+ import avatar from "../../../assets/avatar.png";
  import Unfriend from "../../TogUnfriend/Unfriend";
  
   const Following = () => {
@@ -40,7 +41,7 @@ import { Link, useLocation, useHistory } from "react-router-dom";
           <div className="friends-lish-profile">
             <div className="friends-lish-avt">
               <img
-                src={alluser.avatar_image.link_image}
+                src={alluser.avatar_image.link_image ? alluser.avatar_image.link_image : avatar}
                 alt=""
               />
             </div>
@@ -51,7 +52,6 @@ import { Link, useLocation, useHistory } from "react-router-dom";
           </div>
           <div className="friends-lish-fow">
             <Button onClick={() => Toggle()}><span>Friend</span></Button>
-
             <Unfriend show={modal} close={Toggle}/>
             <i class="fas fa-ellipsis-h"></i>
           </div>

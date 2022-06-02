@@ -1,10 +1,14 @@
 import { Button } from "@mui/material";
 import React, { useRef, useState,useEffect} from "react";
+import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import Unfriend from "../../TogUnfriend/Unfriend";
+ import avatar from "../../../assets/avatar.png";
 import "./myfriends.scss";
 
 const MyFriends = () => {
+  const { pathname } = useLocation();
+  const headerRef = useRef(null);
   const [modal, setModal] = useState(false);
     const [alluser, setalluser] = useState([]);
   const Toggle = () => setModal(!modal);
@@ -38,12 +42,12 @@ const MyFriends = () => {
           <div className="friends-lish-profile">
             <div className="friends-lish-avt">
               <img
-                src={alluser.avatar_image.link_image}
+                src={alluser.avatar_image.link_image ? alluser.avatar_image.link_image : avatar}
                 alt=""
               />
             </div>
             <div className="friends-lish-name">
-              <h3> {alluser.last_name} {alluser.first_name}</h3>
+               <h3> {alluser.last_name} {alluser.first_name}</h3>
               <p>@{alluser.username}</p>
             </div>
           </div>
