@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect} from "react";
 import { Link, useLocation } from "react-router-dom";
 import OutsideClickHandler from 'react-outside-click-handler';
-
+import axios from "axios";
 import "./leftPane.scss";
-
 import Button from "@mui/material/Button";
 import logo from "../../assets/logo.png";
+import avatar from "../../assets/avatar.png";
 
 const users = [
   {
@@ -15,7 +15,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/281869074_727238868473215_7090323050632306506_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yd1-ZYh7LOUAX9X5dX7&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9c461f65GIkhqJlU2VJg4pPwdrgY5w8oji4B19gQ-dMg&oe=6293A075"
+        src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
       />
     ),
   },
@@ -26,7 +26,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/281869074_727238868473215_7090323050632306506_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yd1-ZYh7LOUAX9X5dX7&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9c461f65GIkhqJlU2VJg4pPwdrgY5w8oji4B19gQ-dMg&oe=6293A075"
+        src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
       />
     ),
   },
@@ -37,7 +37,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/281869074_727238868473215_7090323050632306506_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yd1-ZYh7LOUAX9X5dX7&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9c461f65GIkhqJlU2VJg4pPwdrgY5w8oji4B19gQ-dMg&oe=6293A075"
+        src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
       />
     ),
   },
@@ -48,7 +48,7 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/281869074_727238868473215_7090323050632306506_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yd1-ZYh7LOUAX9X5dX7&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9c461f65GIkhqJlU2VJg4pPwdrgY5w8oji4B19gQ-dMg&oe=6293A075"
+        src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
       />
     ),
   },
@@ -59,26 +59,141 @@ const users = [
     imageUrl: (
       <img
         alt="Dương Ngô Tùng"
-        src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/281869074_727238868473215_7090323050632306506_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=yd1-ZYh7LOUAX9X5dX7&_nc_ht=scontent.fhan14-2.fna&oh=00_AT9c461f65GIkhqJlU2VJg4pPwdrgY5w8oji4B19gQ-dMg&oe=6293A075"
+        src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/150101361_1111174082681553_5093732990613340508_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=0debeb&_nc_ohc=xHRrVSO7r0MAX8dCslx&_nc_oc=AQkmf6pGhaK9LJoUNB7T2bSKbvLhYHiMSyn1h-gxsaGUFU8ULZa8lnxvPCSmyo7i6Wo&_nc_ht=scontent-hkg4-1.xx&oh=00_AT-mHd0RWW3BqAq9oFvccT5a0_3b0dIfAjSCOulovhxXAg&oe=62581550"
       />
     ),
   }
 ];
 const LeftPane = () => {
+  // ===================
+  const [alluser, setalluser] = useState([]);
+  const [isAdded, setAdded] = useState([]);
+  const [isFollow, setFollow] = useState([]);
+  useEffect(() => {
+    async function getdata() {
+      // const res = await axios.get('http://viuni.tk/home');
+      const res =  axios('http://viuni.tk/home',
+      {
+        method: 'GET',
+        headers: {
+                  'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
+                  "Content-Type":"application/json"
+              }
+      }
+      )
+      return res
+    }
+      async function getuser() {
+      // const res = await axios.get('http://viuni.tk/home');
+      const res =  axios('http://viuni.tk/home',
+      {
+        method: 'GET',
+        headers: {
+                  'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
+                  "Content-Type":"application/json"
+              }
+      }
+      )
+      return res
+    }
+      getuser().then(res => {
+      console.log(res);
+      setalluser(res.data);
+    })
+      .catch(err => {
+        console.log(err)
+      })
+
+    getdata().then(res => {
+      console.log(res);
+      setSuggestions(res.data);
+    })
+      .catch(err => {
+        console.log(err)
+      })
+  }, [])
+
+
+  //====================
   const { pathname } = useLocation();
 
   const headerRef = useRef(null);
+  const addFriend = (id) => {
+   
+    setAdded(prev => {
+      const isChecked = isAdded.includes(id)
+      if (isChecked) {
+         console.log("del f rq",id)
+        const delresquest = (id) => {
+           axios({
+           method: 'POST',
+           url:`http://viuni.tk/friendrequest/remove/${id}`,
+           headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
+                    "Content-Type":"application/json"
+              }}
+           ).then(res => console.log('deleting data',res)).catch(err => console.log(err))
+         }
+         delresquest(id)
+        return isAdded.filter(item => item !== id)
 
-  const [isAdded, setAdded] = useState(false);
-  const addFriend = () => {
-    setAdded(true);
+      } else {
+         console.log("send rq",id)
+         const postresquest = (id) => {
+           axios({
+             method: 'POST',
+             url:`http://viuni.tk/friendrequest/add/${id}`,
+             headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
+                    "Content-Type":"application/json"
+              },
+           }).then(res => console.log('posting data',res)).catch(err => console.log(err))
+         }
+         postresquest(id)
+         return [...prev, id]
+      }
+    })
+  };
+    const Follow = (id) => {
+    setFollow(prev => {
+      const isChecked = isFollow.includes(id)
+      if (isChecked) {
+       console.log("del fl",id)
+        const delresquest = (id) => {
+           axios({
+           method: 'POST',
+           url:`http://viuni.tk/follow/remove/${id}`,
+           headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
+                    "Content-Type":"application/json"
+              }}
+           ).then(res => console.log('deleting data',res)).catch(err => console.log(err))
+         }
+         delresquest(id)
+        return isFollow.filter(item => item !== id)
+      } else {
+         console.log("add fl",id)
+         const postresquest = (id) => {
+           axios({
+             method: 'POST',
+             url:`http://viuni.tk/follow/add/${id}`,
+             headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem("accessToken"),
+                    "Content-Type":"application/json"
+              },
+           }).then(res => console.log('posting data',res)).catch(err => console.log(err))
+         }
+         postresquest(id)
+         return [...prev, id]
+      }
+    })
   };
 
   const cancelFriend = () => {
     setAdded(false);
   };
   const historySearch = ["Gia Truong", "Sy Hoang", "Hoang Duc", "Thanh An"];
-
+  const [suggestions, setSuggestions] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -88,11 +203,22 @@ const LeftPane = () => {
     setSelectedOption(value);
     setIsOpen(false);
     console.log(selectedOption);
+
   };
+
+  const onChangeHandler = (text) => {
+    let matches = []
+    matches = alluser.filter(user => {
+      const regex = new RegExp(`${text}`, "gi");
+      return user.username.match(regex);
+    })
+    setSuggestions(matches);
+    setSelectedOption(text);
+  }
 
   return (
     <>
-      {pathname !== "/message" && pathname !== "/settings/security_and_account_access" && pathname !== "/settings/account/data" && pathname !== "/settings" && pathname !== "/settings/account" && pathname !== "/settings/password"  && (
+      {pathname !== "/message" && (
         <div ref={headerRef} className="paneLeft" id="paneLeft">
           <div className="paneLeft__wrap container">
             <div className="logo">
@@ -100,7 +226,6 @@ const LeftPane = () => {
                 <img src={logo} alt="" />
               </Link>
             </div>
-
             <OutsideClickHandler onOutsideClick={() => {setIsOpen(false)}}>
               <div className="search">
                 <span className="icon">
@@ -113,11 +238,10 @@ const LeftPane = () => {
                   placeholder="Search Vi-uni"
                   value={selectedOption}
                   autoComplete="off"
-                  onChange={(e) => setSelectedOption(e.target.value)}
+                  onChange={e => onChangeHandler(e.target.value)}
                 />
-                
                 {isOpen && (
-                  <div className="dropContainerSearch">
+                  <div className="dropContainer">
                     <div className="dropList">
                     <div className="title">
                       <h4>Recent searches</h4>
@@ -125,14 +249,13 @@ const LeftPane = () => {
                         <a href="">Edit</a>
                       </span>
                     </div>
-
-                    {historySearch.map((option) => (
+                    { suggestions && suggestions.map((option,i) => (
                       <div
                         className="items"
-                        onClick={onOptionClicked(option)}
-                        key={Math.random()}
+                        onClick={onOptionClicked(option.username)}
+                        key={i}
                       >
-                        {option}
+                        {option.username}
                         <button type="button" className="delete" aria-label="delete">
                           <span><i class="fab fa-xing"></i></span>
                         </button>
@@ -149,61 +272,84 @@ const LeftPane = () => {
           <div className="paneLeft_Box">
             <h3>You might like</h3>
             <ul className="paneLeftInfo">
-              {users.map((e, i) => (
-                <li key={i} className="infoUser">
-                  <div className="avatar">{e.imageUrl}</div>
-                  <div className="info">
-                    <div className="name">{e.name}</div>
-                    <div className="username">@{e.username}</div>
-                  </div>
-                  <div className="addFr">
-              
-                    {isAdded ? (
-              
-                      <Button
+            {
+                alluser.map((alluser,e) => {
+                  return (
+                    <li className="infoUser moreu" key={alluser.id} >
+                      <img className="avatar" src={alluser.avatar_image.link_image ? alluser.avatar_image.link_image : avatar} alt="" />
+                      <div className="info">
+                        <div className="name"> {alluser.last_name} {alluser.first_name}</div>
+                        <div className="username">@{alluser.username}</div>
+                      </div>
+                      <div className="addFr">
+                    {isAdded.includes(alluser.id) ? (
+                      <Button 
+                        key={alluser.id} 
                         variant="contained"
-                        onClick={cancelFriend}
+                        onClick={() => addFriend(alluser.id)}
                         className="add-btn-disabled"
                       >
                         Cancel
                       </Button>
                     ) : (
-                      
                       <Button
+                        key={alluser.id} 
                         variant="contained"
                         className="add-btn"
-                        id={e.id}
-                        onClick={addFriend}
+                        onClick={() => addFriend(alluser.id)}
                       >
                         ADD
                       </Button>
                     )}
                   </div>
-                </li>
-              ))}
+                    </li>
+                  )
+                })
+              }
             </ul>
             <div className="seemore">
-                <Link to="#" id="seemore">See more</Link>
+                <Link to="/friends" id="seemore">See more</Link>
             </div>
           </div>
 
           <div className="paneLeft_Box follow">
             <h3>Following</h3>
             <ul className="paneLeftInfo">
-              {users.map((e, i) => (
-                <li key={i} className="infoUser">
-                  <div className="avatar">{e.imageUrl}</div>
-                  <div className="info">
-                    <div className="name">{e.name}</div>
-                    <div className="username">@{e.username}</div>
+            {
+                alluser.map((alluser,e) => {
+                  return (
+                    // follow  
+                    <li className="infoUser flw" key={alluser.id} >
+                      <img className="avatar" src={alluser.avatar_image.link_image ? alluser.avatar_image.link_image : avatar} alt="" />
+                      <div className="info">
+                        <div className="name">{alluser.last_name} {alluser.first_name} </div>
+                        <div className="username">@{alluser.username}</div>
+                      </div>
+                      <div className="addFr">
+                    {isFollow.includes(alluser.id) ? (
+                      <Button 
+                        key={alluser.id} 
+                        variant="contained"
+                        onClick={() => Follow(alluser.id)}
+                        className="add-btn-disabled"
+                      >
+                        cancel
+                      </Button>
+                    ) : (
+                      <Button
+                        key={alluser.id} 
+                        variant="contained"
+                        className="add-btn"
+                        onClick={() => Follow(alluser.id)}
+                      >
+                        add
+                      </Button>
+                    )}
                   </div>
-                  <div className="addFr">
-                    <Button variant="contained" onClick={addFriend}>
-                      Add
-                    </Button>
-                  </div>
-                </li>
-              ))}
+                    </li>
+                  )
+                })
+              }
             </ul>
             <div className="seemore">
                 <Link to="/friends/following" id="seemore">See more</Link>

@@ -20,7 +20,6 @@ const Unfriend = ({ show, close }) => {
                         </main>
                     </div>
                 </div>
-
                 : null}
         </>
     )
