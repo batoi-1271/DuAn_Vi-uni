@@ -3,16 +3,19 @@ import "./home.scss";
 import OutsideClickHandler from "react-outside-click-handler";
 import { Link } from "react-router-dom";
 
-function PostUser() {
+function PostUser(props) {
   const privicys = [
     { id: 1, name: 'Everyone' },
     { id: 2, name: 'Friends' },
     { id: 3, name: 'Only me' }
   ];
+
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const toggling = () => setIsOpen(!isOpen);
   const [data, setData] = useState()
+  const user  = props.user;
+
   //  const [images,setImage] = useState()
   const onOptionClicked = (value) => () => {
     setSelectedOption(value);
@@ -41,7 +44,7 @@ function PostUser() {
   const sendData = async () => {
     // console.log(data)
     // RequestUpload();
-    const file = document.getElementById("file");
+    const file = document.getElementById("file-upload");
     const formData = new FormData();
     for (let index = 0; index < file.files.length; index++) {
       formData.append('files', file.files[index]);
@@ -132,7 +135,7 @@ function PostUser() {
             <Link to="./profile">
               <img
                 alt="Dương Ngô Tùng"
-                src="https://pbs.twimg.com/profile_images/1472366803342925826/R9TYcoFx_bigger.jpg"
+                src={user != null && user.avatar_image != null ? user.avatar_image.link_image : null}
               />
             </Link>
           </div>
@@ -186,10 +189,6 @@ function PostUser() {
               </label>
               <input id="file-upload" type="file" />
 
-              {/* <a href="">
-              <i class="fas fa-image"></i>
-            </a> */}
-              <input type="file" id="file" multiple />
               <a href="">
                 <i class="fas fa-map-marker-alt"></i>
               </a>
@@ -199,10 +198,9 @@ function PostUser() {
               </a>
             </div>
             <div className="btnPost">
-              {/* <input type="button" name="" id="" variant="contained" value="send"   onClick = {sendData}/> */}
-              {/* <input type="button" name="" id="" variant="contained" value="send"  onClick={renData}/> */}
+        
               <button type="button" onClick={sendData} variant="contained" >Post</button>
-              {/* <Button variant="contained"  onClick = {sendData}>Post </Button> */}
+
             </div>
           </div>
         </div>

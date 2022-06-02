@@ -1,0 +1,17 @@
+@use "../../../scss/" as *;
+.following {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  width: 100%;
+  padding: 0 150px;
+  height: 100vh;
+}
+/*# sourceMappingURL=following.css.map */
