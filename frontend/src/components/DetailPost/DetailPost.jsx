@@ -2,15 +2,14 @@ import React, { useState, useEffect } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 import MorePost from "../../components/MorePost/MorePost";
 import ModalImage from "../../components/ModalImgPost/modal-image";
-
+import { Link,useLocation } from 'react-router-dom'
 import FadeLoader from "react-spinners/FadeLoader";
 import { css } from "@emotion/react";
 
 import Comment from "../../components/Comment/Comment";
-
 import "./detailPost.scss";
 var totalPage = 0;
-const DetailPost = () => {
+const DetailPost = (props) => {
 
   const [loading, setLoading] = useState(false);
   const override = css`
@@ -19,7 +18,7 @@ const DetailPost = () => {
     left: 52%;
     transform: translate(-60%, -52%);
   `;
-
+  const user  = props.user;
   // useEffect(() => {
   //   setLoading(true);
   //   setTimeout(() => {
@@ -36,12 +35,14 @@ const DetailPost = () => {
   const [postUser,setPostUser]= useState(null);
   const accessToken = localStorage.getItem('accessToken');
   const [pageCount, setPageCount] = useState(0)
+
     const [page,setpage] = useState ({
          "index" : 0,
          "size": 1
     })
+    let location = useLocation()
+    const query  = new URLSearchParams(location.search)
 
-   
     const scrollToEnd = () =>{
       // setdemo(demo + 1)
       const size = page.size +6;
@@ -58,11 +59,13 @@ const DetailPost = () => {
          }
      }
 {  console.log(  document.documentElement.offsetHeight)}
-  
     useEffect(async ()=>{
     const paging = page
-    console.log(paging)
-    await fetch("http://viuni.tk/post/all/me",{
+   
+    const id  = query.get("id") != null ? query.get("id") : "me";
+    const urlLocation = location.pathname == "/" ? "newsfeed" : `post/all/${id}`;
+    {console.log(urlLocation)}
+    await fetch(`http://viuni.tk/post/all/${id}`,{
         method: "POST",  
          headers:{
           'Authorization': 'Bearer ' + accessToken,
@@ -79,12 +82,7 @@ const DetailPost = () => {
               throw Error(response.status)
           })
           .then((result) => {
-            // if(result != null && postUser == null){
-      
-            //   setPostUser(result)
-            //   console.log("res: ", result);
-    
-            // }
+           
             setPostUser(result)
             totalPage = result.content.length
             
@@ -111,17 +109,23 @@ const DetailPost = () => {
         {postUser != null ?
         Object.entries(postUser.content).map((arr,i) =>  <div className="content-post">
           <div className="post-avatar">
+          <Link to = { "/profile?id=" + arr[1].author.id}  >
           <img
             src={arr[1].author.avatar_image != null ? arr[1].author.avatar_image.link_image : null}
             alt=""
           />
+          </Link>
+        
+       
             <div className="post-avatar_profile">
-              {/* -----------header------------ */}
+        
               <div className="avatar_profile-header">
                 <img
                  src={arr[1].author.avatar_image != null ? arr[1].author.avatar_image.link_image : null}
                  alt=""
+                
                 />
+             
                 <button>
                   <span>Following</span>
                 </button>
@@ -133,7 +137,7 @@ const DetailPost = () => {
                 <div className="profile-body-fow">
                   <button>
                     {" "}
-                    <a href="">1k Following</a>
+                    <a href="">1k Following </a>
                   </button>
                   <button>
                     <a href="">2k Followers</a>
@@ -146,7 +150,9 @@ const DetailPost = () => {
           <div className="post-info">
             <div className="post-info_header">
               <div className="post-name">
-              <h4>{arr[1].author.last_name} {arr[1].author.first_name}</h4>
+              {/* <h4>{arr[1].author.last_name} {arr[1].author.first_name}</h4> */}
+              {/* "/profile?id=${arr[1].author.last_name}" */}
+              <h4><Link to = { "/profile?id=" + arr[1].author.id}  >{arr[1].author.last_name} {arr[1].author.first_name}</Link></h4>
                 <p>@HaoTran</p>
                 <p>22h</p>
               </div>
@@ -161,7 +167,7 @@ const DetailPost = () => {
                     <button onClick={toggling}>
                       <i class="fas fa-ellipsis-h"></i>
                     </button>
-                    {isOpen && <MorePost />}
+                    {isOpen && <MorePost idPost={arr[1].id}/>}
                   </div>
                 </div>
               </OutsideClickHandler>
@@ -188,7 +194,7 @@ const DetailPost = () => {
             <div className="post-interactive">
               <img src="" alt="" />
               <div className="post-interactive_icon">
-                <Comment dataFromParent={arr[1].id}/>
+                <Comment dataFromParent={arr[1].id} user = {user} post = {arr}/>
               </div>
             </div>
           </div>

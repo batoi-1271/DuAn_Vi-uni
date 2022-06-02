@@ -2,13 +2,12 @@ import React, { useState, useEffect, useReducer } from 'react';
 import Heart from '../Heart/Heart';
 import Tooltip from "@mui/material/Tooltip";
 import OutsideClickHandler from 'react-outside-click-handler';
-
 import './detailcomment.scss';
 import MoreCmt from '../MoreCmt/MoreCmt';
 const DetailComment = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggling = () => setIsOpen(!isOpen);
-
+    const userInfo  = props.user;
     const accessToken = localStorage.getItem('accessToken');
     const [page, setPage] = useState({
         "index": 0,
@@ -46,24 +45,7 @@ const DetailComment = (props) => {
     const id = 15
     useEffect(() => {
 
-        const result =  fetch(`http://viuni.tk/user/me`,{
-            headers:{
-             'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
-           }
-
-         })
-             .then(response  => {
-                 if(response.ok){
-                     return response.json()
-                 }
-                 throw Error(response.status)
-             })
-             .then((result) => {
-              setUser(result)
-              console.log(result)
-           
-                
-             })
+       
 
         if (idPost != null) {
             const fectchData = async () => {
@@ -88,7 +70,10 @@ const DetailComment = (props) => {
         }
 
     }, [filters]);
-
+    const refresh = (iduser) => {
+        // window.location.reload();
+        window.location = `/profile?id=${iduser}`;
+    }
     const RequestComment = async () => {
         const contentCmt = { content }
 
@@ -110,7 +95,7 @@ const DetailComment = (props) => {
             })
             .then((result) => {
 
-                console.log(result)
+               
                 SetComment(prev => {
 
 
@@ -140,7 +125,7 @@ const DetailComment = (props) => {
             <form className="form">
                 <div className="form_avatar">
                     <div className="img">
-                        <img src={user != null && user.avatar_image != null ? user.avatar_image.link_image : null}
+                        <img  src={userInfo != null && userInfo.avatar_image != null ? userInfo.avatar_image.link_image : null}
                             alt="" />
                     </div>
                 </div>
@@ -152,17 +137,20 @@ const DetailComment = (props) => {
                 </div>
             </form>
 
+        
             {comment != null ?
                 Object.entries(comment.content).map((arr, i) =>
                     <div className="contentCmt">
                         <div className="contentCmt_avatar">
-                            <img src={arr[1].author.avatar_image != null ? arr[1].author.avatar_image.link_image : null}
+                        <img onClick={() => refresh(arr[1].author.id)} src={arr[1].author.avatar_image != null ? arr[1].author.avatar_image.link_image : null}
                                 alt="" />
+                           
                         </div>
                         <div className="contentCmt_Username">
                             <div className="info">
                                 <div className="nameCmt">
-                                    <p>{arr[1].author.last_name} {arr[1].author.first_name}</p>
+                                    {/* <p><Link onClick={() => refresh(arr[1].author.id)}  to = { "/profile?id=" + arr[1].author.id}  >{arr[1].author.last_name} {arr[1].author.first_name}</Link></p> */}
+                                    <p onClick={() => refresh(arr[1].author.id)}>{arr[1].author.last_name} {arr[1].author.first_name}</p>
                                 </div>
                                 <div className="usernameCmt">
                                     <p>&nbsp;@_im_Linh_ </p>

@@ -1,0 +1,6 @@
+@use '../../scss/' as *;
+.list {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+}
+/*# sourceMappingURL=list.css.map */

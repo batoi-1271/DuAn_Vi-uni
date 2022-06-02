@@ -1,0 +1,9 @@
+@use '../../../scss/' as *;
+.card-post {
+  width: 100%;
+  height: auto;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  padding: 0;
+}
+/*# sourceMappingURL=post.css.map */

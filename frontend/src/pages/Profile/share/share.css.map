@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,IAAI,CAAJ,qBAAI;AAEJ,AAAA,UAAU,CAAC;EACP,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,GAAG;EACf,OAAO,EAAE,GAAG;CACf",
+    "sources": [
+        "share.scss"
+    ],
+    "names": [],
+    "file": "share.css"
+}
