@@ -39,7 +39,7 @@ const MorePost = (props) => {
         {/* <Link to="#">Edit post</Link> */}
         <Link variant="contained" onClick={() => Toggle()}>Edit post</Link>
                 <EditPost show={modal} close={Toggle}>
-                </EditPost>
+                </EditPost >
       </div>
             <div className="unfollow dropContainer_content">
                 <i class="fal fa-trash"></i>
