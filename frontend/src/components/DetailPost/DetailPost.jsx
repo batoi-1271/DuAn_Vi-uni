@@ -9,7 +9,7 @@ import { css } from "@emotion/react";
 import Comment from "../../components/Comment/Comment";
 import "./detailPost.scss";
 var totalPage = 0;
-const DetailPost = () => {
+const DetailPost = (props) => {
 
   const [loading, setLoading] = useState(false);
   const override = css`
@@ -18,7 +18,7 @@ const DetailPost = () => {
     left: 52%;
     transform: translate(-60%, -52%);
   `;
-
+  const user  = props.user;
   // useEffect(() => {
   //   setLoading(true);
   //   setTimeout(() => {
@@ -196,7 +196,7 @@ const DetailPost = () => {
             <div className="post-interactive">
               <img src="" alt="" />
               <div className="post-interactive_icon">
-                <Comment dataFromParent={arr[1].id}/>
+                <Comment dataFromParent={arr[1].id} user = {user}/>
               </div>
             </div>
           </div>

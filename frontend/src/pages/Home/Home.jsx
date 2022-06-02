@@ -19,8 +19,25 @@ const Home = () => {
     left: 52%;
     transform: translate(-60%, -52%);
   `;
+  const [user, setUser] = useState();
+  useEffect( async () => {
+    const result = await fetch(`http://viuni.tk/user/me`,{
+      headers:{
+       'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
+     }
 
-  useEffect(() => {
+   })
+       .then(response  => {
+           if(response.ok){
+               return response.json()
+           }
+           throw Error(response.status)
+       })
+       .then((result) => {
+        setUser(result)
+          
+       })
+
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
@@ -32,7 +49,7 @@ const Home = () => {
       <header className="home">
         <h2>Home</h2>
       </header>
-      <PostUser />
+      <PostUser  user = {user} />
       {loading ? (
         <FadeLoader
           color={"#36BBD7"}
@@ -43,7 +60,7 @@ const Home = () => {
         />
       ) : (
         <div className="home__post">
-          <DetailPost/>
+          <DetailPost user = {user}/>
         </div>
       )}
     </section>

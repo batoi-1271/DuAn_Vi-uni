@@ -2,13 +2,12 @@ import React, { useState, useEffect, useReducer } from 'react';
 import Heart from '../Heart/Heart';
 import Tooltip from "@mui/material/Tooltip";
 import OutsideClickHandler from 'react-outside-click-handler';
-import { Link } from 'react-router-dom'
 import './detailcomment.scss';
 import MoreCmt from '../MoreCmt/MoreCmt';
 const DetailComment = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggling = () => setIsOpen(!isOpen);
-
+    const userInfo  = props.user;
     const accessToken = localStorage.getItem('accessToken');
     const [page, setPage] = useState({
         "index": 0,
@@ -46,24 +45,7 @@ const DetailComment = (props) => {
     const id = 15
     useEffect(() => {
 
-        const result =  fetch(`http://viuni.tk/user/me`,{
-            headers:{
-             'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
-           }
-
-         })
-             .then(response  => {
-                 if(response.ok){
-                     return response.json()
-                 }
-                 throw Error(response.status)
-             })
-             .then((result) => {
-              setUser(result)
-              console.log(result)
-           
-                
-             })
+       
 
         if (idPost != null) {
             const fectchData = async () => {
@@ -113,7 +95,7 @@ const DetailComment = (props) => {
             })
             .then((result) => {
 
-                console.log(result)
+               
                 SetComment(prev => {
 
 
@@ -143,7 +125,7 @@ const DetailComment = (props) => {
             <form className="form">
                 <div className="form_avatar">
                     <div className="img">
-                        <img  src={user != null && user.avatar_image != null ? user.avatar_image.link_image : null}
+                        <img  src={userInfo != null && userInfo.avatar_image != null ? userInfo.avatar_image.link_image : null}
                             alt="" />
                     </div>
                 </div>
