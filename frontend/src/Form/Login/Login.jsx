@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import bgLogin from "../../assets/bgLogin.jpg";
 import logo from "../../assets/logo.png";
+import Register from '../Register/Register';
 import "./login.scss";
 import App from "../../Viuni";
 const Login = () => {
+    const [modal, setModal] = useState(false);
+    const toggle = () => setModal(!modal);
+
+
+    const [modalForgot, setModalForgot] = useState(false);
+    const toggleForgot = () => setModalForgot(!modalForgot);
+
 const checkToken = localStorage.getItem("accessToken") != null 
 const [user,setUser] = useState(); 
    const setParams = (event)=>{
@@ -41,7 +49,7 @@ const [user,setUser] = useState();
     }
     return ( 
         <>
-        return <div>
+         <div>
         { checkToken ? 
         <App /> :<div className='login'>
         <div className='imgLogin'>
@@ -84,8 +92,9 @@ const [user,setUser] = useState();
                 </form>
             </div>
             <div className="textSignup">
-                <p>Don't have an account? <a href='#'>Sign up</a></p>
-            </div>
+                    <p>Don't have an account? <a onClick={() => toggle()}>Sign up</a></p>
+                    <Register show={modal} close={toggle}></Register>
+                </div>
         </div>
     </div>
     } 
