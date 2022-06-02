@@ -3,26 +3,18 @@ import bgLogin from "../../assets/bgLogin.jpg";
 import logo from "../../assets/logo.png";
 import "./login.scss";
 import App from "../../Viuni";
-export default class Login extends React.Component {
-    
-    constructor(props){
-        super(props)
-        this.state ={
-            isLogin:localStorage.getItem("accessToken") != null 
-        }
+const Login = () => {
+const checkToken = localStorage.getItem("accessToken") != null 
+const [user,setUser] = useState(); 
+   const setParams = (event)=>{
+        setUser({[event.target.name] : event.target.value})
     }
-    setParams = (event)=>{
-        this.setState({[event.target.name] : event.target.value})
-    }
-    logout = () =>{
-        localStorage.removeItem("accessToken")
-        window.location.reload(false);
-    }
-    login = () =>{
+ 
+   const  login = () =>{
         var requestOptions = {
             method: 'POST',
             headers:{"Content-Type":"application/json"},
-            body:JSON.stringify(this.state),
+            body:JSON.stringify(user),
             redirect:'follow'
         };
         fetch("http://viuni.tk/auth/login",requestOptions)
@@ -47,9 +39,10 @@ export default class Login extends React.Component {
         });
 
     }
-    render(){ 
-        return <div>
-        {this.state.isLogin ? 
+    return ( 
+        <>
+         <div>
+        { checkToken ? 
         <App /> :<div className='login'>
         <div className='imgLogin'>
             <img src={bgLogin} alt="" />
@@ -65,10 +58,10 @@ export default class Login extends React.Component {
             <div className="form">
                 <form action="">
                     <div className="username">
-                        <input type="text" placeholder='Email or username' name = "username" onChange={this.setParams}/>
+                        <input type="text" placeholder='Email or username' name = "username" onChange={setParams}/>
                     </div>
                     <div className="pass">
-                        <input type="password" name = "password" onChange={this.setParams} />
+                        <input type="password" name = "password" onChange={setParams} />
                     </div>
                     <div className='afterInput'>
                         <div className="remember">
@@ -86,7 +79,7 @@ export default class Login extends React.Component {
                     </div>
                     <div className="btnLogin">
                         {/* <input type="submit" value="SIGN IN" id='signin' onClick={this.login}/> */}
-                        <button type='button' id='signin'  onClick={this.login} >SIGN IN</button>
+                        <button type='button' id='signin'  onClick={login} >SIGN IN</button>
                     </div>
                 </form>
             </div>
@@ -98,6 +91,9 @@ export default class Login extends React.Component {
     </div>
     } 
     </div>  
+      </>
+    );
 }
-   
-}
+
+
+export default Login;
