@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 import MorePost from "../../components/MorePost/MorePost";
 import ModalImage from "../../components/ModalImgPost/modal-image";
-
+import { Link,useLocation } from 'react-router-dom'
 import FadeLoader from "react-spinners/FadeLoader";
 import { css } from "@emotion/react";
 
 import Comment from "../../components/Comment/Comment";
-
 import "./detailPost.scss";
 var totalPage = 0;
 const DetailPost = () => {
@@ -40,7 +39,8 @@ const DetailPost = () => {
          "index" : 0,
          "size": 1
     })
-
+    let location = useLocation()
+    const query  = new URLSearchParams(location.search)
    
     const scrollToEnd = () =>{
       // setdemo(demo + 1)
@@ -58,11 +58,11 @@ const DetailPost = () => {
          }
      }
 {  console.log(  document.documentElement.offsetHeight)}
-  
     useEffect(async ()=>{
     const paging = page
-    console.log(paging)
-    await fetch("http://viuni.tk/post/all/me",{
+    const id  = query.get("id") != null ? query.get("id") : "me";
+
+    await fetch(`http://viuni.tk/post/all/${id}`,{
         method: "POST",  
          headers:{
           'Authorization': 'Bearer ' + accessToken,
@@ -111,17 +111,23 @@ const DetailPost = () => {
         {postUser != null ?
         Object.entries(postUser.content).map((arr,i) =>  <div className="content-post">
           <div className="post-avatar">
+          <Link to = { "/profile?id=" + arr[1].author.id}  >
           <img
             src={arr[1].author.avatar_image != null ? arr[1].author.avatar_image.link_image : null}
             alt=""
           />
+          </Link>
+        
+       
             <div className="post-avatar_profile">
-              {/* -----------header------------ */}
+        
               <div className="avatar_profile-header">
                 <img
                  src={arr[1].author.avatar_image != null ? arr[1].author.avatar_image.link_image : null}
                  alt=""
+                
                 />
+             
                 <button>
                   <span>Following</span>
                 </button>
@@ -146,7 +152,9 @@ const DetailPost = () => {
           <div className="post-info">
             <div className="post-info_header">
               <div className="post-name">
-              <h4>{arr[1].author.last_name} {arr[1].author.first_name}</h4>
+              {/* <h4>{arr[1].author.last_name} {arr[1].author.first_name}</h4> */}
+              {/* "/profile?id=${arr[1].author.last_name}" */}
+              <h4><Link to = { "/profile?id=" + arr[1].author.id}  >{arr[1].author.last_name} {arr[1].author.first_name}</Link></h4>
                 <p>@HaoTran</p>
                 <p>22h</p>
               </div>
@@ -169,7 +177,7 @@ const DetailPost = () => {
             <div className="post-content">
               <div className="post-content-title">
               <p>{arr[1].content}</p>
-        
+            
               </div>
   
               <div className="post-content-img">
