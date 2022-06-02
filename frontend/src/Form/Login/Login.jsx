@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import bgLogin from "../../assets/bgLogin.jpg";
 import logo from "../../assets/logo.png";
+import Register from '../Register/Register';
 import "./login.scss";
 import App from "../../Viuni";
 const Login = () => {
+    const [modal, setModal] = useState(false);
+    const toggle = () => setModal(!modal);
+
+
+    const [modalForgot, setModalForgot] = useState(false);
+    const toggleForgot = () => setModalForgot(!modalForgot);
+
 const checkToken = localStorage.getItem("accessToken") != null 
 const [user,setUser] = useState(); 
    const setParams = (event)=>{
