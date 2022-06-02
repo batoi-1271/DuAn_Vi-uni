@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useRef, useState } from 'react';
+
 import { Link } from "react-router-dom";
 import './morepost.scss';
 
 const MorePost = (props) => {
-
+    const [modal, setModal] = useState(false);
+    const Toggle = () => setModal(!modal);
+    
     const fullName = props.dataFromParent;
     // const idPost = props.idPost;
     const idPost = 53;
