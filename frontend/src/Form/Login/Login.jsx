@@ -4,6 +4,7 @@ import logo from "../../assets/logo.png";
 import "./login.scss";
 import App from "../../Viuni";
 export default class Login extends React.Component {
+    
     constructor(props){
         super(props)
         this.state ={
@@ -90,8 +91,9 @@ export default class Login extends React.Component {
                 </form>
             </div>
             <div className="textSignup">
-                <p>Don't have an account? <a href='#'>Sign up</a></p>
-            </div>
+                    <p>Don't have an account? <a onClick={() => toggle()}>Sign up</a></p>
+                    <Register show={modal} close={toggle}></Register>
+                </div>
         </div>
     </div>
     } 
