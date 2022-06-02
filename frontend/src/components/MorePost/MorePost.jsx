@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 
 import { Link } from "react-router-dom";
-import EditPost from "../EditPost/EditPost";
+import EditPost from "../EditPost/Editpost";
 import "./morepost.scss";
 
 const MorePost = (props) => {

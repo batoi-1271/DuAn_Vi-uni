@@ -7,18 +7,20 @@ import App from "../../Viuni";
 const Login = () => {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
-
+ 
 
     const [modalForgot, setModalForgot] = useState(false);
     const toggleForgot = () => setModalForgot(!modalForgot);
 
 const checkToken = localStorage.getItem("accessToken") != null 
-const [user,setUser] = useState(); 
-   const setParams = (event)=>{
-        setUser({[event.target.name] : event.target.value})
-    }
+const [username,SetUserName] = useState(); 
+const [password,setPassWord] = useState(); 
+//    const setParams = (event)=>{
+//         setUser({[event.target.name] : event.target.value})
+//     }
  
    const  login = () =>{
+       const user = {username,password}
         var requestOptions = {
             method: 'POST',
             headers:{"Content-Type":"application/json"},
@@ -38,12 +40,13 @@ const [user,setUser] = useState();
            
             localStorage.setItem("accessToken",result.jwtToken)
             window.location.reload(false);
+          
     
         })
         .catch(error => {
             console.log('error',error)
-            alert("UserName,password wrong")
-            
+            // alert("UserName,password wrong")
+     
         });
 
     }
@@ -66,10 +69,10 @@ const [user,setUser] = useState();
             <div className="form">
                 <form action="">
                     <div className="username">
-                        <input type="text" placeholder='Email or username' name = "username" onChange={setParams}/>
+                        <input type="text" placeholder='Email or username' name = "username" onChange={(e) => SetUserName(e.target.value)}/>
                     </div>
                     <div className="pass">
-                        <input type="password" name = "password" onChange={setParams} />
+                        <input type="password" name = "password" onChange={(e) => setPassWord(e.target.value)} />
                     </div>
                     <div className='afterInput'>
                         <div className="remember">
