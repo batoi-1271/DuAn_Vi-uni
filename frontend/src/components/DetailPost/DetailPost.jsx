@@ -35,13 +35,14 @@ const DetailPost = (props) => {
   const [postUser,setPostUser]= useState(null);
   const accessToken = localStorage.getItem('accessToken');
   const [pageCount, setPageCount] = useState(0)
+
     const [page,setpage] = useState ({
          "index" : 0,
          "size": 1
     })
     let location = useLocation()
     const query  = new URLSearchParams(location.search)
-   
+
     const scrollToEnd = () =>{
       // setdemo(demo + 1)
       const size = page.size +6;
@@ -60,8 +61,10 @@ const DetailPost = (props) => {
 {  console.log(  document.documentElement.offsetHeight)}
     useEffect(async ()=>{
     const paging = page
+   
     const id  = query.get("id") != null ? query.get("id") : "me";
-
+    const urlLocation = location.pathname == "/" ? "newsfeed" : `post/all/${id}`;
+    {console.log(urlLocation)}
     await fetch(`http://viuni.tk/post/all/${id}`,{
         method: "POST",  
          headers:{
@@ -79,12 +82,7 @@ const DetailPost = (props) => {
               throw Error(response.status)
           })
           .then((result) => {
-            // if(result != null && postUser == null){
-      
-            //   setPostUser(result)
-            //   console.log("res: ", result);
-    
-            // }
+           
             setPostUser(result)
             totalPage = result.content.length
             
@@ -139,7 +137,7 @@ const DetailPost = (props) => {
                 <div className="profile-body-fow">
                   <button>
                     {" "}
-                    <a href="">1k Following</a>
+                    <a href="">1k Following </a>
                   </button>
                   <button>
                     <a href="">2k Followers</a>
@@ -196,7 +194,7 @@ const DetailPost = (props) => {
             <div className="post-interactive">
               <img src="" alt="" />
               <div className="post-interactive_icon">
-                <Comment dataFromParent={arr[1].id} user = {user}/>
+                <Comment dataFromParent={arr[1].id} user = {user} post = {arr}/>
               </div>
             </div>
           </div>
