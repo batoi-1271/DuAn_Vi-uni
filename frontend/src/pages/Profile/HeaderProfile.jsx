@@ -113,22 +113,22 @@ const HeaderProfile = () => {
                       alt=""
                     />
                   </div>
-                  {/* <div className="infoUser__userEdit">
+                  <div className="infoUser__userEdit">
                     <button className="btnProfile" onClick={() => Toggle()}>Edit profile</button>
                     <ButtonEdit
                       show={modal}
                       close={Toggle}
                       title="Edit profile"
                     ></ButtonEdit>
-                  </div> */}
-                  <div className="btnAdd">
+                  </div>
+                  {/* <div className="btnAdd">
                     <div className="infoUser__add">
                       <button className="btnProfile">Add friend</button>
                     </div>
                     <div className="infoUser__follow">
                       <button className="btnProfile">Follow</button>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="userName">
                   <h3></h3>

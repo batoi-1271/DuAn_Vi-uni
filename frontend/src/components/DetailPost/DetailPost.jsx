@@ -83,14 +83,15 @@ const DetailPost = (props) => {
           })
           .then((result) => {
            
-           
+             console.log(result)
             if(result.length === 0){
               setPostUser(null)
             }else{
               setPostUser(result)
+              console.log(postUser)
             }
             // totalPage = result.content.length
-               console.log(postUser)
+            
                
             
           })
