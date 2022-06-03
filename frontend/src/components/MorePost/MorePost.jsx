@@ -18,14 +18,16 @@ const MorePost = (props) => {
         method: 'POST', 
         headers: {
             'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
+            "Content-Type": "application/json"
         },
      
        }
      
       await fetch(`http://viuni.tk/post/delete/${idPost}`, deletePost) 
        .then(response => response.json())
-       .then(data => console.log(data)) 
+       .then(data => console.log(data)  ) 
        .catch(err => console.log(err)) 
+       window.location.reload();
     
 }
     return (

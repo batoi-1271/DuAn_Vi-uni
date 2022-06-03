@@ -65,7 +65,7 @@ const DetailPost = (props) => {
     const id  = query.get("id") != null ? query.get("id") : "me";
     const urlLocation = location.pathname == "/" ? "newsfeed" : `post/all/${id}`;
     {console.log(urlLocation)}
-    await fetch(`http://viuni.tk/post/all/${id}`,{
+    await fetch(`http://viuni.tk/${urlLocation}`,{
         method: "POST",  
          headers:{
           'Authorization': 'Bearer ' + accessToken,
@@ -83,8 +83,15 @@ const DetailPost = (props) => {
           })
           .then((result) => {
            
-            setPostUser(result)
-            totalPage = result.content.length
+           
+            if(result.length === 0){
+              setPostUser(null)
+            }else{
+              setPostUser(result)
+            }
+            // totalPage = result.content.length
+               console.log(postUser)
+               
             
           })
           // setLoading(true);
@@ -93,7 +100,7 @@ const DetailPost = (props) => {
           // }, 1000);
 
   }, [pageCount]);
-    
+
   return (
     <>
     {loading ? (
@@ -102,10 +109,10 @@ const DetailPost = (props) => {
        speedMultiplier={2}
        css={override}
        loading={loading}
-       size={30}
      />
       ) : (
         <div className="card-post">
+          
         {postUser != null ?
         Object.entries(postUser.content).map((arr,i) =>  <div className="content-post">
           <div className="post-avatar">
