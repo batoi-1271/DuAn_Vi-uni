@@ -15,28 +15,28 @@ import { touchRippleClasses } from '@mui/material';
 
 const headerNav = [
   {
-    icon: <i class="fas fa-house-user"></i>,
+    icon: <i className="fas fa-house-user"></i>,
     display: 'Home',
     path: '/'
   },
   {
-    icon: <i class="far fa-bells"></i>,
+    icon: <i className="far fa-bells"></i>,
     display: 'Notifications',
     path: '/notifications'
   },
   {
-    icon: <i class="far fa-comments-alt"></i>,
-    display: 'Message',
-    path: '/message'
+    icon: <i className="far fa-comments-alt"></i>,
+    display: 'Messages',
+    path: '/messages'
   },
   {
-    icon: <i class="far fa-bookmark"></i>,
+    icon: <i className="far fa-bookmark"></i>,
     display: 'Saved',
     path: '/saved'
   },
   
   {
-    icon: <i class="far fa-user"></i>,
+    icon: <i className="far fa-user"></i>,
     display: 'Profile',
     path: '/profile'
   },
@@ -118,14 +118,14 @@ const RightPane = () => {
           <OutsideClickHandler onOutsideClick={() => { setIsOpen(false) }}>
             <div className="moreRight">
               <div className='more'>
-                <button onClick={toggling}><i class="far fa-ellipsis-h" />More</button>
+                <button onClick={toggling}><i className="far fa-ellipsis-h" />More</button>
               </div>
               {isOpen && (
                 <div className="dropContainer">
                   <ul>
-                    <li className='items'><Link to="/settings"><i class="far fa-cogs"></i>Setting and private</Link></li>
-                    <li className='items'><Link to="#"><i class="far fa-question-circle"></i>Help center</Link></li>
-                    <li className='items'><Link to="#"><i class="fas fa-fill-drip"></i>Display</Link></li>
+                    <li className='items'><Link to="/settings"><i className="far fa-cogs"></i>Setting and private</Link></li>
+                    <li className='items'><Link to="#"><i className="far fa-question-circle"></i>Help center</Link></li>
+                    <li className='items'><Link to="#"><i className="fas fa-fill-drip"></i>Display</Link></li>
                   </ul>
                 </div>
               )}
@@ -197,7 +197,7 @@ const RightPane = () => {
                 <div className="username">@DngNgTng1</div>
               </div>
               <div className="edit">
-                <i class="fas fa-ellipsis-h"></i>
+                <i className="fas fa-ellipsis-h"></i>
               </div>
             </button>
 

@@ -4,7 +4,8 @@ import {BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Friends from "../components/MyFriends/Friends";
 
 import Home from "../pages/Home/Home";
-import Messages from "../pages/Message/Messages";
+import Message from "../pages/Message/Messages";
+import Messages from "../pages/Messages"
 import Notification from "../pages/Notification/Notification";
 import Profile from "../pages/Profile/Profile";
 import Save from "../pages/Saved/Save";
@@ -27,6 +28,9 @@ const Routes = () => {
         component={Save} />
       <Route 
         path="/message" 
+        component={Message} />
+      <Route 
+        path="/messages" 
         component={Messages} />
       <Route 
         path="/notifications" 
