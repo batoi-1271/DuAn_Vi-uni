@@ -2,6 +2,18 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap");
 
+@font-face {
+    font-family: 'Segoe UI Historic';
+    src: local('Arial');
+    unicode-range: U+530-5f4, U+10a0-10ff;
+  }
+  
+:root {
+--primary: #00d1e9;
+--text-color: #1c1e21;
+--text-description-color: #65676b;
+}
+
 * {
     padding: 0;
     margin: 0;

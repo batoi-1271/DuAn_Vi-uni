@@ -218,7 +218,7 @@ const LeftPane = () => {
 
   return (
     <>
-      {pathname !== "/message" && (
+      {(pathname !== "/messages" && (pathname !== "/messages" && pathname.search('messages') === -1))  && (
         <div ref={headerRef} className="paneLeft" id="paneLeft">
           <div className="paneLeft__wrap container">
             <div className="logo">
@@ -229,7 +229,7 @@ const LeftPane = () => {
             <OutsideClickHandler onOutsideClick={() => {setIsOpen(false)}}>
               <div className="search">
                 <span className="icon">
-                  <i class="fa fa-search"></i>
+                  <i className="fa fa-search"></i>
                 </span>
                 <input
                 name="search"
@@ -257,7 +257,7 @@ const LeftPane = () => {
                       >
                         {option.username}
                         <button type="button" className="delete" aria-label="delete">
-                          <span><i class="fab fa-xing"></i></span>
+                          <span><i className="fab fa-xing"></i></span>
                         </button>
                       </div>
                     ))}
